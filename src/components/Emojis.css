@@ -1,0 +1,50 @@
+.emojiimg, .aubergine{
+    width: 100px;
+    height: 100px;
+    /* box-shadow: 5px 10px 6px #030303; */
+    border-radius: 15%;
+    transition: all .5s ease-in-out;
+}
+
+.emojiimg:hover{
+    transform: scale(1.5);
+    transition: all .5s ease-in-out;
+    
+}
+
+.emojibarre {
+    display:flex;
+    justify-content: space-around;
+    width:70vw;
+    background: #403B3B 0% 0% no-repeat padding-box;
+    box-shadow: 5px 10px 6px #030303;
+    opacity: 1;
+    border-radius: 40px;
+    padding : 20px; 
+    margin: 70px auto;
+    
+}  
+
+.container {
+    position: relative;
+}
+
+figcaption {
+    display : flex;
+    position: absolute;
+    left: 50%;
+    top: 150%;
+    font-size: 0;
+    transform: translate(-50%, -50%);
+    font-family: 'Bebas Neue', cursive;
+    color: #FFDB58;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+div:hover>figcaption {
+    
+    font-size: 1.5em;
+    opacity: 1;
+    transition: all .5s ease-in-out;
+}
