@@ -1,4 +1,6 @@
 import './App.css'
+import Home from './screens/Home'
+import Catalogue from './screens/Catalogue'
 import { Routes, Route } from 'react-router-dom'
 
 function App() {
