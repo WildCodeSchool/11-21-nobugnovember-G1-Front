@@ -1,20 +1,17 @@
 .emojiimg, .aubergine{
-width: 100px;
-height: 100px;
-/* box-shadow: 5px 10px 6px #030303; */
-border-radius: 15%;
-
+    width: 100px;
+    height: 100px;
+    /* box-shadow: 5px 10px 6px #030303; */
+    border-radius: 15%;
+    transition: all .5s ease-in-out;
 }
 
 .emojiimg:hover{
-    transform: scale(1.2);
-    transition: all .1s ease-in-out;
+    transform: scale(1.5);
+    transition: all .5s ease-in-out;
     
 }
-.aubergine:hover{
-    transform: scale(7) rotate(150turn) translate(-90px, 190px, 50px);
-    transition: all 1s ease-in-out;
-}
+
 .emojibarre {
     display:flex;
     justify-content: space-around;
@@ -33,14 +30,21 @@ border-radius: 15%;
 }
 
 figcaption {
-    display : none; 
-}
-
-:hover>figcaption {
     display : flex;
     position: absolute;
     left: 50%;
     top: 150%;
+    font-size: 0;
     transform: translate(-50%, -50%);
+    font-family: 'Bebas Neue', cursive;
+    color: #FFDB58;
+    opacity: 0;
+    transition: all .5s ease-in-out;
 }
 
+div:hover>figcaption {
+    
+    font-size: 1.5em;
+    opacity: 1;
+    transition: all .5s ease-in-out;
+}

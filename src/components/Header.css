@@ -1,0 +1,31 @@
+.nav-style {
+    display: flex;
+    align-items: center;
+    background-color: #2d2e31;
+    padding: 10px;
+}
+
+
+li {
+    font-size: 26px;
+    display: inline;
+    text-decoration: none;
+    /* margin-left: 30px; */
+    color: white;
+    text-align: center;
+    margin: 0 50px;
+    
+}
+
+li:hover{
+    color: #FFDC6C;
+}
+
+.logo-nav{
+    display: flex;
+    
+    height: auto;
+    width: 12vw;
+}
+
+

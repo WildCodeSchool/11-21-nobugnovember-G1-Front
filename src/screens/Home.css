@@ -1,3 +1,17 @@
+.logo {
+    padding-top: 30px;
+    width: 15vw;
+    height: auto;
+}
+
+
+.logoDiv{
+    display: flex;
+    align-content: center;
+    height: auto;
+}
+
+
 .home {
     background-color: #2d2e31;
     height: 100vh;
@@ -5,5 +19,18 @@
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 100px;
+    font-family: 'Bebas Neue', cursive;
+    text-shadow: #e0e0e0 1px 1px 0;
+}
+
+.Coco {
+    width: 20%;
+    height: 20%;
+    border-radius: 20px;
+
+}
+
+.ytp-cued-thumbnail-overlay-image {
+    background-image: url("https://mocah.org/thumbs/359134-4k-wallpaper.jpg");
 }

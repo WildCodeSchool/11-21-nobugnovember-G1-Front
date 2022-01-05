@@ -1,5 +1,5 @@
 import Header from '../components/Header'
-const Catalogue = () => {
+const MiniJeux = () => {
   return(
   <div>
     <Header />
@@ -7,4 +7,4 @@ const Catalogue = () => {
   )
 }
 
-export default Catalogue
+export default MiniJeux

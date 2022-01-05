@@ -1,5 +1,4 @@
 import logo from '../assets/logoprot5.png'
-import './Logo.css'
 
 const Logo = () => {
   return (
