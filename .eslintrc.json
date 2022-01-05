@@ -1,5 +1,5 @@
 {
-	"parser": "eslint-parser",
+	"parser": "@eslint/eslint-parser",
 	"plugins": ["prettier"],
 	"extends": ["eslint:recommended", "plugin:react/recommended", "prettier"],
 	"env": { "browser": true, "node": true, "jest": true },
