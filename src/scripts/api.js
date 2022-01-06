@@ -1,4 +1,4 @@
-function apiCall (titleType,genre,apiKey){
+function apiCall (titleType="movies&tv_series",genre,apiKey){
     const requestOptions = {
       method: 'GET',
       redirect: 'follow'
