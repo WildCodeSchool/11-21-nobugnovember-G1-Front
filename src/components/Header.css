@@ -4,7 +4,11 @@
     background-color: #2d2e31;
     padding: 10px;
 }
-
+.burger {
+    
+    display: flex;
+    align-content: center;
+}
 
 li {
     font-size: 26px;
