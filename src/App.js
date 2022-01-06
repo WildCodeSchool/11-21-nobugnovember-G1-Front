@@ -9,6 +9,19 @@ import { Routes, Route } from 'react-router-dom'
 function App() {
   return (
     <div className='App'>
+      {
+        function apiCall=(titleType,genre) => {
+        const requestOptions = {
+          method: 'GET',
+          redirect: 'follow'
+        };
+         return (
+           fetch('https://imdb-api.com/en/API/Title/k_1234567/tt1832382', requestOptions)
+          .then(response => response.text())
+          .then(result => console.log(result))
+          .catch(error => console.log('error', error))}
+        )
+      }
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/Catalogue' element={<Catalogue />} />
