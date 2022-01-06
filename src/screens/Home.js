@@ -8,7 +8,7 @@ const Home = () => {
       <Logo />
 
       <h1>Quel est votre mood ? </h1>
-      <Emojis />
+      <Emojis  />
       <br />
       <iframe /* A SUPPRIMER, NE PAS OUBLIER LE CSS DANS HOME CSS " Coco" */
         className='Coco'

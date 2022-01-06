@@ -20,9 +20,10 @@ const Emojis = () => {
                               {emotion:"Emoji peur",correspondance:"horror"},
                               {emotion:"Emoji auberg",correspondance:""}
     ]
-   const selection = correspondanceTab.filter (element => element.emotion === event.target.alt)
-   /*Ajouter selection[0].correspondance dans un useState pour récupérer le filtre correspondant à la selection
+    const selection = correspondanceTab.filter (element => element.emotion === event.target.alt)
+    localStorage.setItem('maSelection',selection[0].correspondance)
     /*console.log(selection[0].correspondance)*/
+
 
   }
   return (
