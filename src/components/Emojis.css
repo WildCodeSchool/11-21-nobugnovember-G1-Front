@@ -22,15 +22,31 @@
     border-radius: 40px;
     padding : 20px; 
     margin: 70px auto;
+    flex-flow: row wrap;
     
 }  
 
+.container {
+    display: flex; 
+    flex-direction: column;
+    text-align: center;
+}
+
+figcaption {
+
+    font-family: 'Bebas Neue', cursive;
+    font-size: 0;
+    color: #FFDB58;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+    padding-top: 30px;
+}
+/*
 .container {
     position: relative;
 }
 
 figcaption {
-    display : flex;
     position: absolute;
     left: 50%;
     top: 150%;
@@ -40,11 +56,28 @@ figcaption {
     color: #FFDB58;
     opacity: 0;
     transition: all .5s ease-in-out;
-}
+}*/
 
 div:hover>figcaption {
-    
     font-size: 1.5em;
     opacity: 1;
     transition: all .5s ease-in-out;
+} 
+
+.emojibarre>div {
+    padding: 10px; 
+}
+
+@media screen and (min-width: 1260px) { 
+    .container {
+        position: relative;
+    }
+
+    figcaption {
+        position: absolute;
+        left: 50%;
+        top: 150%;
+        transform: translate(-50%, -50%);
+    }
+
 }

@@ -6,10 +6,11 @@ const Home = () => {
   return (
     <div className='home'>
       <Logo />
-
-      <h1>Quel est votre mood ? </h1>
-      <Emojis />
-      <br />
+      <div className='main'>
+        <h1>Quel est votre mood ? </h1>
+        <Emojis />
+      </div>
+        <br />
       <iframe /* A SUPPRIMER, NE PAS OUBLIER LE CSS DANS HOME CSS " Coco" */
         className='Coco'
         width='560'
