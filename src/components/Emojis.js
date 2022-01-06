@@ -11,15 +11,19 @@ import './Emojis.css'
 
 const Emojis = () => {
   const handleChange = () =>{
-    console.log ("coucou");
-    const correspondanceTab=[ {emotion:"Emoji joyeux",filter:"comedy"},
-                              {emotion:"Emoji pleure",filter:"drama"},
-                              {emotion:"Emoji surprise",filter:"fantasy,sci_fi"},
-                              {emotion:"Emoji amoureux",filter:"romance"},
-                              {emotion:"Emoji colere",filter:"action,war"},
-                              {emotion:"Emoji peur",filter:"horror"},
-                              {emotion:"Emoji auberg",filter:""}
+
+    const correspondanceTab=[ {emotion:"Emoji joyeux",correspondance:"comedy"},
+                              {emotion:"Emoji pleure",correspondance:"drama"},
+                              {emotion:"Emoji surprise",correspondance:"fantasy,sci_fi"},
+                              {emotion:"Emoji amoureux",correspondance:"romance"},
+                              {emotion:"Emoji colere",correspondance:"action,war"},
+                              {emotion:"Emoji peur",correspondance:"horror"},
+                              {emotion:"Emoji auberg",correspondance:""}
     ]
+   const selection = correspondanceTab.filter (element => element.emotion === event.target.alt)
+   /*Ajouter selection[0].correspondance dans un useState pour récupérer le filtre correspondant à la selection
+    /*console.log(selection[0].correspondance)*/
+
   }
   return (
     <div className='emojibarre'>
