@@ -21,7 +21,8 @@
     opacity: 1;
     border-radius: 40px;
     padding : 20px; 
-    margin: 70px auto;
+    margin: auto;
+    margin-top: 230px;
     flex-flow: row wrap;
     
 }  
@@ -41,22 +42,7 @@ figcaption {
     transition: all .5s ease-in-out;
     padding-top: 30px;
 }
-/*
-.container {
-    position: relative;
-}
 
-figcaption {
-    position: absolute;
-    left: 50%;
-    top: 150%;
-    font-size: 0;
-    transform: translate(-50%, -50%);
-    font-family: 'Bebas Neue', cursive;
-    color: #FFDB58;
-    opacity: 0;
-    transition: all .5s ease-in-out;
-}*/
 
 div:hover>figcaption {
     font-size: 1.5em;

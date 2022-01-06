@@ -1,7 +1,5 @@
 .logo {
-    padding-top: 2%;
-    /* width: 15vw; */
-    width: 172px;
+    width: 13vw;
     height: auto; 
 }
 
@@ -16,11 +14,13 @@
 
 .home {
     background-color: #2d2e31;
-    color: white
+    color: white;
+    height: 100vh;
+    
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 4vw;
     font-family: 'Bebas Neue', cursive;
     text-shadow: #e0e0e0 1px 1px 0;
 }
@@ -28,26 +28,36 @@ h1 {
 .main {
     width: 85vw; 
     margin: auto; 
-    padding: 10% 0 10% 0;
+    padding: 1% 0 10% 0;
 }
 
-.Coco {
-    width: 20%;
-    height: 20%;
-    border-radius: 20px;
+@media screen and (max-width: 750px) { 
+    .emojibarre {
+        margin-top: 60px !important;
+    }
 
+    .logo {
+        width: 19vw;
+    }
+
+    h1 {
+        font-size: 7vw;
+    }
 }
-
-.ytp-cued-thumbnail-overlay-image {
-    background-image: url("https://mocah.org/thumbs/359134-4k-wallpaper.jpg");
-}
-
 @media screen and (max-width: 650px) { 
     .logoDiv {
         justify-content: center ;
     }
 
     h1 {
-        font-size: 7vw;
+        font-size: 9vw;
+    }
+
+    .logo {
+        width: 37vw;
+    }
+
+    .emojibarre {
+        margin-top: 44px !important;
     }
 }
