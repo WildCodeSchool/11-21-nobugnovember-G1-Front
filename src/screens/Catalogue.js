@@ -1,3 +1,4 @@
+import Cards from '../components/Cards'
 import Header from '../components/Header'
 
 import './Catalogue.css'
@@ -7,7 +8,21 @@ const Catalogue = () => {
     <div className='catalogPage'>
       <div className='catalogContainer'>
         <Header />
-        <div className='testFrost'>Test</div>
+      </div>
+      <div className='movie-grid'>
+        <Cards />
+        <Cards />
+        <Cards />
+        <Cards />
+        <Cards />
+        <Cards />
+        <Cards />
+        <Cards />
+        <Cards />
+        <Cards />
+        <Cards />
+        <Cards />
+        <Cards />
       </div>
     </div>
   )
