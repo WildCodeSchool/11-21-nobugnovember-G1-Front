@@ -13,7 +13,7 @@ li {
     /* margin-left: 30px; */
     color: white;
     text-align: center;
-    margin: 0 50px;
+    /* margin: 0 50px; */
     
 }
 
@@ -22,8 +22,7 @@ li:hover{
 }
 
 .logo-nav{
-    display: flex;
-    
+    display: flex;    
     height: auto;
     width: 12vw;
 }
