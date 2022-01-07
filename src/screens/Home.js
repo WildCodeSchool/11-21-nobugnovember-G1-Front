@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className='home'>
       <Logo />
-<<<<<<< HEAD
+
 
       <h1>Quel est votre mood ? </h1>
       <Emojis  />
@@ -17,13 +17,10 @@ const Home = () => {
         height='315'
         src='https://www.youtube.com/embed/QR5hB59NaOw'
         title='YouTube video player'
-        frameborder='0'
-=======
-      <div className='main'>
-        <h1>Quel est votre mood ? </h1>
-        <Emojis />
-      </div>
->>>>>>> 3302a4cfd60445fd370ff8f5b4df0fbb085684ac
+        frameborder='0'></iframe>
+
+
+
         
       </div>
   )
