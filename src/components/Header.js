@@ -1,6 +1,7 @@
 import logo from '../assets/logoprot5.png'
 import { NavLink } from 'react-router-dom'
 import './Header.css'
+import EmojiChanger from './EmojiChanger'
 
 const Header = () => {
   return (
@@ -26,7 +27,7 @@ const Header = () => {
         </NavLink>
       </ul>
 
-      {/* <MoodChanger /> */}
+      <EmojiChanger />
     </div>
   )
 }
