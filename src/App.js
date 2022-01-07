@@ -5,9 +5,13 @@ import Films from './screens/Films'
 import MiniJeux from './screens/MiniJeux'
 import { Routes, Route } from 'react-router-dom'
 
+
 function App() {
+
+
   return (
     <div className='App'>
+
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/Catalogue' element={<Catalogue />} />
