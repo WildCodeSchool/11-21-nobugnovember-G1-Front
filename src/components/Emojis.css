@@ -1,6 +1,6 @@
 .emojiimg, .aubergine{
-    width: 100px;
-    height: 100px;
+    width: 8vw;
+    height: auto;
     /* box-shadow: 5px 10px 6px #030303; */
     border-radius: 15%;
     transition: all .5s ease-in-out;
@@ -21,8 +21,7 @@
     opacity: 1;
     border-radius: 40px;
     padding : 20px; 
-    margin: auto;
-    margin-top: 230px;
+    margin: 10vh auto 0 auto;
     flex-flow: row wrap;
     
 }  
@@ -36,7 +35,7 @@
 figcaption {
 
     font-family: 'Bebas Neue', cursive;
-    font-size: 0;
+    font-size: 0em;
     color: #FFDB58;
     opacity: 0;
     transition: all .5s ease-in-out;
@@ -50,11 +49,8 @@ div:hover>figcaption {
     transition: all .5s ease-in-out;
 } 
 
-.emojibarre>div {
-    padding: 10px; 
-}
 
-@media screen and (min-width: 1260px) { 
+@media screen and (min-width: 750px) { 
     .container {
         position: relative;
     }
@@ -66,4 +62,33 @@ div:hover>figcaption {
         transform: translate(-50%, -50%);
     }
 
+    
+}
+
+@media screen and (max-width: 750px) { 
+    .emojiimg, .aubergine{
+        width: 90px;
+        height: auto;
+        padding: 10px;
+    }
+
+    .emojibarre {
+        flex-flow: row wrap;
+    }  
+
+    figcaption {
+        font-size: 1em;
+        padding-top: 12px;
+    }
+
+    div:hover>figcaption {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 650px) { 
+    .emojiimg, .aubergine{
+        width: 100px;
+        height: auto;
+    }
 }
