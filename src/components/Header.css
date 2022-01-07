@@ -3,7 +3,7 @@
     /* min-width: 100vw; */
     /* position: fixed; */
     display: flex;
-    align-items: center;
+    align-items: center; /* ALIGNEMENT DE MOODY LINKS et EMOTICONES */
     /* background-color: #2d2e31; */
     background-color: transparent;
     /* padding: 10px; */

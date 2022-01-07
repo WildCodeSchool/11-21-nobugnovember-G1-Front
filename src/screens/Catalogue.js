@@ -19,7 +19,7 @@ const Catalogue = () => {
   return (
     <div className='catalogPage'>
       <div className='catalogContainer'>
-        <Header />
+        <Header className='headerband' />
         <div className='movie-grid'>
           {resultat.map(element => (
             <Cards title={element.title} />
