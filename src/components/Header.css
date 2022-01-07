@@ -3,7 +3,7 @@
     /* min-width: 100vw; */
     /* position: fixed; */
     display: flex;
-    align-items: center;
+    align-items: center; /* ALIGNEMENT DE MOODY LINKS et EMOTICONES */
     /* background-color: #2d2e31; */
     background-color: transparent;
     /* padding: 10px; */
@@ -16,7 +16,6 @@
 
 ul, a {
     display: flex;
-    padding: 15px;
 }
 
 li {
@@ -37,4 +36,10 @@ li:hover{
     height: auto;
     width: 13vw;
     padding-top: 1vh;
+}
+
+@media screen and (max-width: 750px){
+    li {
+        font-size: 3.5vw;
+    }
 }
