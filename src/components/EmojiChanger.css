@@ -103,31 +103,31 @@
         top: 30px;
         right: 30px;
         /* background-color: #565658; */
-        background-image: linear-gradient(135deg, #2d2e31 0%, #3b3b3b 100%); /********** COULEUR BANDE EMOJI **************/
-        height: 70px;
+        background-image: linear-gradient(
+    135deg, #2d2e31 0%, #3b3b3b 100%);
+        height: 50px;
         border-radius: 70px;
-        /* padding: 10px; */
+        padding-right: 0;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: row;
     }
     
-    .search-box:hover > .search-txt{
-        width: 510px;
+    .search-box:hover > .search-txt {
+        width: 100%;
         transition: width 0.4s;
         display: flex;
         justify-content: flex-end;
         position: relative;
-        padding: 0 12px 0 0;
+        padding-right: 7px;
         overflow: hidden;
     }
     
     .search-box:hover > .lienSelection{
         /* background: white; */    /********** INUTILE ? **********/
         position: absolute; 
-    
-    }
+        }
     
     .emojis:hover {
         filter: grayscale(0%)Brightness(100%)
@@ -137,28 +137,25 @@
             display:none;
         }
     
-    .emojis {
-        width: 60px;
-        filter: grayscale(100%) Brightness(50%) contrast(130%);
-    }
+        .emojis {
+            width: 40px;
+            filter: grayscale(100%) Brightness(50%) contrast(130%);
+        }
     
-    .emojiactif {
-        display:flex;
-        width: 60px;
-        filter: brightness(100%)
-    }
+        .emojiactif {
+            display: flex;
+            width: 40px;
+            filter: brightness(100%);}
     
-    .lienSelection{
-        /* color: #e84118; */
-        width: 70px;
-        height: 70px;
-        border-radius: 50%;
-        /* background: #2d2e31; */ /*********** COULEUR AUTOUR DES EMOJIS = INUTILE EN SOI***************/
-        /*couleur background base #2f3640 */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    
+        .lienSelection {
+            /* color: #e84118; */
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            /* background: #2d2e31; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
     }
     
     .search-txt{
