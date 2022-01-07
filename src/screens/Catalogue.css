@@ -44,10 +44,16 @@
 .movie-grid {
     width: 100%;
     height: 100%;
+    padding-bottom: 100px;
     display: flex;
     flex-wrap: wrap; 
     justify-content: center;
     /* background-color: #2d2e31; */
     /* background: rgb(110,139,137);
     background: linear-gradient(180deg, rgba(110,139,137,1) 7%, rgba(102,66,68,1) 100%); */
+}
+
+.footer {
+    background-color: transparent;
+    margin-top: 1rem;
 }

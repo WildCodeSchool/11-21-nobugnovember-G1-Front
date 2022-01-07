@@ -3,6 +3,7 @@ import Header from '../components/Header'
 import { useEffect, useState } from 'react'
 import './Catalogue.css'
 import apiCall from '../scripts/api'
+import Footer from '../components/Footer'
 
 const Catalogue = () => {
   const apiKey = 'k_gcprl00i'
@@ -24,6 +25,7 @@ const Catalogue = () => {
             <Cards title={element.title} />
           ))}
         </div>
+        <Footer />
       </div>
     </div>
   )
