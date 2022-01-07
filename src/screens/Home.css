@@ -3,7 +3,6 @@
     height: auto; 
 }
 
-
 .logoDiv{
     padding: 15px; 
     display: flex;
@@ -23,7 +22,6 @@ h1 {
     font-size: 4.5vw;
     margin-top: 10vh;
     font-family: 'Bebas Neue', cursive;
-    text-shadow: #e0e0e0 1px 1px 0;
 }
 
 .main {
@@ -51,6 +49,7 @@ h1 {
 
     h1 {
         font-size: 9vw;
+        margin-top: 3vh;
     }
 
     .logo {

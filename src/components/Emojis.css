@@ -88,7 +88,7 @@ div:hover>figcaption {
 
 @media screen and (max-width: 650px) { 
     .emojiimg, .aubergine{
-        width: 100px;
+        width: 70px;
         height: auto;
     }
 }
