@@ -15,14 +15,17 @@ const Catalogue = () => {
   useEffect(() => {
     apiCall(typeTitle, filtreApi, apiKey).then(res => setResultat(res.results))
   }, [])
-  //console.log(apiCall('movies','drama','k_70cu350y'))
   return (
     <div className='catalogPage'>
       <div className='catalogContainer'>
         <Header className='headerband' />
         <div className='movie-grid'>
           {resultat.map(element => (
-            <Cards title={element.title} />
+            <Cards
+              title={element.title}
+              poster={element.image}
+              description={element.description}
+            />
           ))}
         </div>
         <Footer />
