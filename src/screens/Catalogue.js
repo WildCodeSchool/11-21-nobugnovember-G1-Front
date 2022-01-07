@@ -7,7 +7,7 @@ const Catalogue = () => {
   return (
     <div className='catalogPage'>
       <div className='catalogContainer'>
-        <Header />
+        <Header className='headerband' />
         <div className='movie-grid'>
           <Cards />
           <Cards />

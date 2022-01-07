@@ -1,3 +1,11 @@
+.headerband{ /* HEADER */
+    z-index: 0;
+}
+
+.movie-grid{ /* DIV CARTES*/
+    z-index: 10;
+}
+
 .catalogPage {
     /* background-image: url(../assets/leather.jpg); */
     background-color: rgb(148, 48, 48);
