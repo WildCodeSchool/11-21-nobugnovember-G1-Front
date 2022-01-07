@@ -37,3 +37,9 @@ li:hover{
     width: 13vw;
     padding-top: 1vh;
 }
+
+@media screen and (max-width: 750px){
+    li {
+        font-size: 3.5vw;
+    }
+}
