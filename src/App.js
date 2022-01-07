@@ -5,6 +5,7 @@ import Series from './screens/Series'
 import Films from './screens/Films'
 import MiniJeux from './screens/MiniJeux'
 import { Routes, Route } from 'react-router-dom'
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/Series' element={<Series />} />
         <Route path='/MiniJeux' element={<MiniJeux />} />
       </Routes>
+      <Footer />
     </div>
   )
 }

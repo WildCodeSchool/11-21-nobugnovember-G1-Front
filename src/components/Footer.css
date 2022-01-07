@@ -1,0 +1,28 @@
+.footer {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #2d2e31;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.link{
+    margin-left: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #FFDC6C;
+    transition: 200ms ease-in;
+}
+
+.media {
+    margin-left: 10px;
+}
