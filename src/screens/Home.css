@@ -1,29 +1,63 @@
 .logo {
-    padding-top: 30px;
-    width: 15vw;
-    height: auto;
+    width: 13vw;
+    height: auto; 
 }
 
 
 .logoDiv{
+    padding: 15px; 
     display: flex;
-    align-content: center;
-    height: auto;
+    /* align-content: center; */
+    height: auto; 
 }
 
 
 .home {
     background-color: #2d2e31;
+    color: white;
     height: 100vh;
-    color: white
+    text-align: center;
 }
 
 h1 {
-    font-size: 100px;
+    font-size: 4vw;
     font-family: 'Bebas Neue', cursive;
     text-shadow: #e0e0e0 1px 1px 0;
 }
 
-.ytp-cued-thumbnail-overlay-image {
-    background-image: url("https://mocah.org/thumbs/359134-4k-wallpaper.jpg");
+.main {
+    width: 85vw; 
+    margin: auto; 
+    padding: 1% 0 10% 0;
+}
+
+@media screen and (max-width: 750px) { 
+    .emojibarre {
+        margin-top: 60px !important;
+    }
+
+    .logo {
+        width: 19vw;
+    }
+
+    h1 {
+        font-size: 7vw;
+    }
+}
+@media screen and (max-width: 650px) { 
+    .logoDiv {
+        justify-content: center ;
+    }
+
+    h1 {
+        font-size: 9vw;
+    }
+
+    .logo {
+        width: 37vw;
+    }
+
+    .emojibarre {
+        margin-top: 44px !important;
+    }
 }

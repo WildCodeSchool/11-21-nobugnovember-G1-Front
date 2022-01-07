@@ -6,10 +6,8 @@ const Home = () => {
   return (
     <div className='home'>
       <Logo />
-
       <h1>Quel est votre mood ? </h1>
-      <Emojis />
-      <br />
+      <Emojis  />
     </div>
   )
 }
