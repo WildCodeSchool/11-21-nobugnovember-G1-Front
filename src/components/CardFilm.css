@@ -1,0 +1,54 @@
+.catalogPage {
+    background-color: rgb(148, 48, 48);
+    background: rgb(110,139,137);
+    background: linear-gradient(180deg, rgba(110,139,137,1) 7%, rgba(102,66,68,1) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+}
+
+.catalogContainer {
+    background: rgb(110,139,137);
+    background: linear-gradient(180deg, rgba(110,139,137,1) 7%, rgba(102,66,68,1) 100%);
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+}
+
+.testFrost {
+    z-index: 1;
+}
+
+.jaquette {
+    width: 15vw;
+    height: 20hv;
+    border-radius: 10px;
+}
+
+.infoContainer {
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+}
+
+.holderInfo {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2%;
+}
+
+.titre {
+    color: white;
+    font-size: 3vh;
+    text-align: center;
+}
+
+.year {
+    color: white;
+    font-size: 2vh;
+    text-align: center;
+}

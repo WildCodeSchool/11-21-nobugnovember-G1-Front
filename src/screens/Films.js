@@ -1,8 +1,9 @@
-import Header from '../components/Header'
+import CardFilm from '../components/CardFilm'
+
 const Films = () => {
   return(
   <div>
-    <Header />
+  <CardFilm />
   </div>
   )
 }
