@@ -2,6 +2,7 @@ import Header from '../components/Header'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import Cards from '../components/Cards'
+import Loading from '../components/Loading'
 const Series = () => {
   const [isLoading,setIsLoading] = useState(true);
   const [resultat, setResultat] = useState([])
@@ -28,6 +29,7 @@ const Series = () => {
         />
       ))}
     </div>
+    {isLoading?<Loading />:""}
   </div>
   )
 }
