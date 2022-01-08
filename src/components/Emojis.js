@@ -22,7 +22,6 @@ const Emojis = () => {
     ]
     const selection = correspondanceTab.filter (element => element.emotion === event.target.alt)
     localStorage.setItem('maSelection',selection[0].correspondance)
-
   }
   return (
     <div className='emojibarre'>
