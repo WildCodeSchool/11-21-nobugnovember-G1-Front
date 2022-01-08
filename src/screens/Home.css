@@ -3,7 +3,6 @@
     height: auto; 
 }
 
-
 .logoDiv{
     padding: 15px; 
     display: flex;
@@ -15,23 +14,22 @@
 .home {
     background-color: #2d2e31;
     color: white;
-    height: 100vh;
+    min-height: 100vh;
     text-align: center;
 }
 
 h1 {
-    font-size: 4vw;
+    font-size: 4.5vw;
+    margin-top: 10vh;
     font-family: 'Bebas Neue', cursive;
-    text-shadow: #e0e0e0 1px 1px 0;
 }
 
 .main {
-    width: 85vw; 
-    margin: auto; 
-    padding: 1% 0 10% 0;
+    width: 85vw;
+    margin: auto;
 }
 
-@media screen and (max-width: 750px) { 
+@media screen and (max-width: 750px) {
     .emojibarre {
         margin-top: 60px !important;
     }
@@ -51,6 +49,7 @@ h1 {
 
     h1 {
         font-size: 9vw;
+        margin-top: 3vh;
     }
 
     .logo {
