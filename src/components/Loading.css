@@ -1,0 +1,11 @@
+.loading-container{
+    display:flex;
+    justify-content: center;
+    color:#feda55;
+ }
+/*.loading-img{*/
+/*    animation-delay: 0s;*/
+/*    transform: rotate(10turn);*/
+/*    transition: all 10s;*/
+
+/*}*/

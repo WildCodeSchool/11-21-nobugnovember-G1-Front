@@ -3,9 +3,12 @@ import Header from '../components/Header'
 import { useEffect, useState } from 'react'
 import './Catalogue.css'
 import Footer from '../components/Footer'
+import Loading from '../components/Loading'
 import axios from 'axios'
 
 const Catalogue = () => {
+  const [isLoading,setIsLoading] = useState(true);
+
   const apiKey = 'k_gcprl00i'
   const titleType = 'movies&tv_series'
   const [filtreApi, setFiltreApi] = useState(
@@ -15,7 +18,8 @@ const Catalogue = () => {
   useEffect(()=>{
     axios.get(`https://imdb-api.com/API/AdvancedSearch/${apiKey}?title_type=${titleType}&genres=${filtreApi}&count=100`)
       .then((response)=>response.data)
-      .then((data)=>{setResultat(data.results);console.log(data.results)});
+      .then((data)=>{setResultat(data.results);
+      setIsLoading(false);});
   },[])
   return (
     <div className='catalogPage'>
@@ -30,6 +34,7 @@ const Catalogue = () => {
             />
           ))}
         </div>
+        {isLoading?<Loading />:""}
         <Footer />
       </div>
     </div>
