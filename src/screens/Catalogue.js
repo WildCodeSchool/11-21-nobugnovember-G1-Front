@@ -6,8 +6,10 @@ import Footer from '../components/Footer'
 import Loading from '../components/Loading'
 import axios from 'axios'
 import EmojiChanger from '../components/EmojiChanger'
+import joyeux from '../assets/joyeux.png'
 
 const Catalogue = () => {
+  const [selectedEmoji,setSelectedEmoji]=useState(joyeux)
   const [isLoading,setIsLoading] = useState(true);
 
   const apiKey = 'k_gcprl00i'
@@ -17,7 +19,7 @@ const Catalogue = () => {
   )
   const [resultat, setResultat] = useState([])
   useEffect(()=>{
-    axios.get(`https://imdb-api.com/API/AdvancedSearch/${apiKey}?title_type=${titleType}&genres=${filtreApi}&count=100`)
+      axios.get(`https://imdb-api.com/API/AdvancedSearch/${apiKey}?title_type=${titleType}&genres=${filtreApi}&count=100`)
       .then((response)=>response.data)
       .then((data)=>{setResultat(data.results);
       setIsLoading(false);});
