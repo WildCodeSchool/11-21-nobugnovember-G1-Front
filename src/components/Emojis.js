@@ -9,21 +9,22 @@ import surprise from '../assets/surprise.png'
 
 import './Emojis.css'
 
-const Emojis = () => {
+const Emojis = (props) => {
   const handleChange = () => {
     const correspondanceTab = [
-      { emotion: 'Emoji joyeux', correspondance: 'comedy' },
-      { emotion: 'Emoji pleure', correspondance: 'drama' },
-      { emotion: 'Emoji surprise', correspondance: 'fantasy,sci_fi' },
-      { emotion: 'Emoji amoureux', correspondance: 'romance' },
-      { emotion: 'Emoji colere', correspondance: 'action,war' },
-      { emotion: 'Emoji peur', correspondance: 'horror' },
-      { emotion: 'Emoji auberg', correspondance: '' }
+      { emotion: 'Emoji joyeux', correspondance: 'comedy',emoji: joyeux },
+      { emotion: 'Emoji pleure', correspondance: 'drama',emoji: pleure },
+      { emotion: 'Emoji surprise', correspondance: 'fantasy,sci_fi',emoji: surprise },
+      { emotion: 'Emoji amoureux', correspondance: 'romance',emoji: amour },
+      { emotion: 'Emoji colere', correspondance: 'action,war',emoji: colere },
+      { emotion: 'Emoji peur', correspondance: 'horror',emoji: peur },
+      { emotion: 'Emoji auberg', correspondance: '',emoji: aubergine }
     ]
     const selection = correspondanceTab.filter(
       element => element.emotion === event.target.alt
     )
-    localStorage.setItem('maSelection', selection[0].correspondance)
+    props.setEmojiSelected(selection[0])
+    //localStorage.setItem('maSelection', selection[0].correspondance)
   }
   return (
     <div>

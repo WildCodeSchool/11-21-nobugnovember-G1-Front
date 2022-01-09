@@ -8,14 +8,14 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { useState } from 'react'
 function App() {
-
+  const [emojiSelected,setEmojiSelected]=useState('')
   return (
     <div className='App'>
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/Catalogue' element={<Catalogue />} />
-        <Route path='/Films' element={<Films />} />
-        <Route path='/Series' element={<Series  />} />
+        <Route path='/' element={<Home emojiSelected={emojiSelected} setEmojiSelected={setEmojiSelected}/>} />
+        <Route path='/Catalogue' element={<Catalogue emojiSelected={emojiSelected} setEmojiSelected={setEmojiSelected}/>} />
+        <Route path='/Films' element={<Films emojiSelected={emojiSelected} setEmojiSelected={setEmojiSelected} />} />
+        <Route path='/Series' element={<Series  emojiSelected={emojiSelected} setEmojiSelected={setEmojiSelected} />} />
         <Route path='/MiniJeux' element={<MiniJeux />} />
       </Routes>
     </div>

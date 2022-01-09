@@ -4,12 +4,12 @@ import '../components/Footer.css'
 import Emojis from '../components/Emojis'
 import Footer from '../components/Footer'
 
-const Home = () => {
+const Home = (props) => {
   return (
     <div className='home'>
       <Logo />
       <h1>Quel est votre mood ? </h1>
-      <Emojis />
+      <Emojis emojiSelected={props.emojiSelected} setEmojiSelected={props.setEmojiSelected}/>
       <Footer />
     </div>
   )

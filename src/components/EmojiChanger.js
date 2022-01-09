@@ -10,10 +10,8 @@ import surprise from '../assets/surprise.png'
 import './EmojiChanger.css'
 import { useEffect, useState } from 'react'
 
-const EmojiChanger = () => {
-  const [selectedEmoji,setSelectedEmoji]=useState(joyeux)
-
-  const handleChange = () => {
+const EmojiChanger = (props) => {
+   const handleChange = () => {
     const correspondanceTab = [
       { emotion: 'Emoji joyeux', correspondance: 'comedy',emoji: joyeux },
       { emotion: 'Emoji pleure', correspondance: 'drama',emoji: pleure },
@@ -26,9 +24,9 @@ const EmojiChanger = () => {
     const selection = correspondanceTab.filter(
       element => element.emotion === event.target.alt
     )
-    setSelectedEmoji(selection[0])
-    console.log(selection[0].emoji)
-    localStorage.setItem('maSelection', selection[0])
+    props.setEmojiSelected(selection[0])
+    //console.log(selection[0].emoji)
+    //localStorage.setItem('maSelection', selection[0])
   }
   return (
     <div class='search-box'>
@@ -57,7 +55,7 @@ const EmojiChanger = () => {
       </div>
       <div className='boiteSelection'>
         <NavLink to='/Catalogue' className='lienSelection'>
-          <img className='emojiactif' src={selectedEmoji.emoji} alt={selectedEmoji.emotion}></img>
+          <img className='emojiactif' src={props.emojiSelected.emoji} alt={props.emojiSelected.emotion}></img>
         </NavLink>
       </div>
     </div>
