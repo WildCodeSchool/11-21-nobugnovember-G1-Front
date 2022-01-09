@@ -3,9 +3,9 @@
     justify-content: center;
     color:#feda55;
  }
-/*.loading-img{*/
-/*    animation-delay: 0s;*/
-/*    transform: rotate(10turn);*/
-/*    transition: all 10s;*/
+.loading-img{
+    height: 350px;
+    width: 350px;
+    transition: all 10s;
 
-/*}*/
+}
