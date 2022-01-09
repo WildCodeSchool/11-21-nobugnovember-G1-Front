@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 const Loading = () =>{
   useEffect(()=>{
     const imgLoading = document.querySelector('.loading-img');
-    imgLoading.style.transform="rotate(10turn)";
+    imgLoading.style.transform="rotate(12turn)";
   },[])
   return(
     <div className='loading-container'>

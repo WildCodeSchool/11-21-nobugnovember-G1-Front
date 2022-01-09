@@ -5,6 +5,7 @@ import './Catalogue.css'
 import Footer from '../components/Footer'
 import Loading from '../components/Loading'
 import axios from 'axios'
+import EmojiChanger from '../components/EmojiChanger'
 
 const Catalogue = () => {
   const [isLoading,setIsLoading] = useState(true);
@@ -27,7 +28,7 @@ const Catalogue = () => {
         <Header className='headerband' />
         <div className='movie-grid'>
           {resultat.map(element => (
-            <Cards
+            <Cards key={element.key}
               title={element.title}
               poster={element.image}
               description={element.description}

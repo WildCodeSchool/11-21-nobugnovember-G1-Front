@@ -6,8 +6,7 @@ import MiniJeux from './screens/MiniJeux'
 import { Routes, Route } from 'react-router-dom'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-
-
+import { useState } from 'react'
 function App() {
 
   return (
