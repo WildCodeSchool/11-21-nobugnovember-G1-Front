@@ -12,7 +12,7 @@ const Catalogue = (props) => {
 
   const [isLoading,setIsLoading] = useState(true);
 
-  const apiKey = 'k_gcprl00i'
+  const apiKey = 'k_0nug4wnp'//'k_gcprl00i'
   const titleType = 'movies&tv_series'
   const [resultat, setResultat] = useState([])
   useEffect(()=>{
