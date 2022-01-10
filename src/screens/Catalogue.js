@@ -20,7 +20,7 @@ const Catalogue = (props) => {
       .then((response)=>response.data)
       .then((data)=>{setResultat(data.results);
       setIsLoading(false);});
-  },[])
+  },[props.emojiSelected.correspondance])
   return (
     <div className='catalogPage'>
       <div className='catalogContainer'>
