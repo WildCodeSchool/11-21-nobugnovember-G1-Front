@@ -9,21 +9,22 @@ import surprise from '../assets/surprise.png'
 
 import './Emojis.css'
 
-const Emojis = () => {
+const Emojis = (props) => {
   const handleChange = () => {
     const correspondanceTab = [
-      { emotion: 'Emoji joyeux', correspondance: 'comedy' },
-      { emotion: 'Emoji pleure', correspondance: 'drama' },
-      { emotion: 'Emoji surprise', correspondance: 'fantasy,sci_fi' },
-      { emotion: 'Emoji amoureux', correspondance: 'romance' },
-      { emotion: 'Emoji colere', correspondance: 'action,war' },
-      { emotion: 'Emoji peur', correspondance: 'horror' },
-      { emotion: 'Emoji auberg', correspondance: '' }
+      { emotion: 'Emoji joyeux', correspondance: 'comedy',emoji: joyeux },
+      { emotion: 'Emoji pleure', correspondance: 'drama',emoji: pleure },
+      { emotion: 'Emoji surprise', correspondance: 'fantasy,sci_fi',emoji: surprise },
+      { emotion: 'Emoji amoureux', correspondance: 'romance',emoji: amour },
+      { emotion: 'Emoji colere', correspondance: 'action,war',emoji: colere },
+      { emotion: 'Emoji peur', correspondance: 'horror',emoji: peur },
+      { emotion: 'Emoji auberg', correspondance: '',emoji: aubergine }
     ]
     const selection = correspondanceTab.filter(
       element => element.emotion === event.target.alt
     )
-    localStorage.setItem('maSelection', selection[0].correspondance)
+    props.setEmojiSelected(selection[0])
+    //localStorage.setItem('maSelection', selection[0].correspondance)
   }
   return (
     <div>
@@ -40,57 +41,69 @@ const Emojis = () => {
           <figcaption>Joyeux</figcaption>
         </div>
         <div className='container'>
-          <img
-            onClick={handleChange}
-            className='emojiimg'
-            src={pleure}
-            alt='Emoji pleure'
-          ></img>
+          <NavLink to='/Catalogue' className=''>
+            <img
+              onClick={handleChange}
+              className='emojiimg'
+              src={pleure}
+              alt='Emoji pleure'
+            ></img>
+          </NavLink>
           <figcaption>Triste</figcaption>
         </div>
         <div className='container'>
-          <img
-            onClick={handleChange}
-            className='emojiimg'
-            src={surprise}
-            alt='Emoji surprise'
-          ></img>
+          <NavLink to='/Catalogue' className=''>
+            <img
+              onClick={handleChange}
+              className='emojiimg'
+              src={surprise}
+              alt='Emoji surprise'
+            ></img>
+            </NavLink>
           <figcaption>Surpris</figcaption>
         </div>
         <div className='container'>
-          <img
-            onClick={handleChange}
-            className='emojiimg'
-            src={amour}
-            alt='Emoji amoureux'
-          ></img>
+          <NavLink to='/Catalogue' className=''>
+            <img
+              onClick={handleChange}
+              className='emojiimg'
+              src={amour}
+              alt='Emoji amoureux'
+            ></img>
+          </NavLink>
           <figcaption>Amoureux</figcaption>
         </div>
         <div className='container'>
-          <img
-            onClick={handleChange}
-            className='emojiimg'
-            src={colere}
-            alt='Emoji colere'
-          ></img>
+          <NavLink to='/Catalogue' className=''>
+            <img
+              onClick={handleChange}
+              className='emojiimg'
+              src={colere}
+              alt='Emoji colere'
+            ></img>
+          </NavLink>
           <figcaption>Enervé</figcaption>
         </div>
         <div className='container'>
-          <img
-            onClick={handleChange}
-            className='emojiimg'
-            src={peur}
-            alt='Emoji peur'
-          ></img>
+          <NavLink to='/Catalogue' className=''>
+            <img
+              onClick={handleChange}
+              className='emojiimg'
+              src={peur}
+              alt='Emoji peur'
+            ></img>
+          </NavLink>
           <figcaption>Effrayé</figcaption>
         </div>
         <div className='container'>
-          <img
-            onClick={handleChange}
-            className='emojiimg'
-            src={aubergine}
-            alt='Emoji auberg'
-          ></img>
+          <NavLink to='/Catalogue' className=''>
+            <img
+              onClick={handleChange}
+              className='emojiimg'
+              src={aubergine}
+              alt='Emoji auberg'
+            ></img>
+          </NavLink>
           <figcaption>Coquin</figcaption>
         </div>
       </div>
