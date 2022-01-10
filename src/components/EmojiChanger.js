@@ -29,8 +29,8 @@ const EmojiChanger = (props) => {
     //localStorage.setItem('maSelection', selection[0])
   }
   return (
-    <div class='search-box'>
-      <div class='search-txt'>
+    <div className='search-box'>
+      <div className='search-txt'>
         <NavLink to='/Catalogue' className='lienSelection'>
           <img className='emojis' src={joyeux} alt='Emoji joyeux' onClick={handleChange}></img>
         </NavLink>

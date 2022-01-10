@@ -6,7 +6,7 @@ import Loading from '../components/Loading'
 const Films = (props) => {
   const [isLoading,setIsLoading] = useState(true);
 
-  const apiKey = 'k_gcprl00i'
+  const apiKey = 'k_0nug4wnp'//'k_gcprl00i'
   const titleType = 'movies'
   const [resultat, setResultat] = useState([])
   useEffect(()=>{
@@ -17,7 +17,7 @@ const Films = (props) => {
   },[])
   return(
   <div>
-    <Header />
+    <Header emojiSelected={props.emojiSelected} setEmojiSelected={props.setEmojiSelected} />
     <div className='movie-grid'>
       {resultat.map(element => (
         <Cards

@@ -5,12 +5,10 @@ import Cards from '../components/Cards'
 import Loading from '../components/Loading'
 const Series = (props) => {
   const [isLoading,setIsLoading] = useState(true);
-  const [resultat, setResultat] = useState([])
-  const apiKey = 'k_gcprl00i'
+
+  const apiKey = 'k_0nug4wnp'//'k_gcprl00i'
   const titleType = 'tv_series'
-    // const [filtreApi, setFiltreApi] = useState(
-  //   localStorage.getItem('maSelection')
-  // )
+  const [resultat, setResultat] = useState([])
   useEffect(()=>{
     axios.get(`https://imdb-api.com/API/AdvancedSearch/${apiKey}?title_type=${titleType}&genres=${props.emojiSelected.correspondance}&count=100`)
       .then((response)=>response.data)
@@ -19,7 +17,7 @@ const Series = (props) => {
   },[])
   return(
   <div>
-    <Header />
+    <Header emojiSelected={props.emojiSelected} setEmojiSelected={props.setEmojiSelected}/>
     <div className='movie-grid'>
       {resultat.map(element => (
         <Cards
