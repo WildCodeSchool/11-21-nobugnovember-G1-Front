@@ -5,8 +5,8 @@ import Cards from '../components/Cards'
 import Loading from '../components/Loading'
 const Films = (props) => {
   const [isLoading,setIsLoading] = useState(true);
+  const apiKey=process.env.REACT_APP_API_KEY;
 
-  const apiKey = 'k_0nug4wnp'//'k_gcprl00i'
   const titleType = 'movies'
   const [resultat, setResultat] = useState([])
   useEffect(()=>{
