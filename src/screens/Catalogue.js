@@ -14,12 +14,12 @@ const Catalogue = (props) => {
   const apiKey=process.env.REACT_APP_API_KEY;
 
   const titleType = 'movies&tv_series'
-  const [resultat, setResultat] = useState([])
+  //const [resultat, setResultat] = useState([])
   useEffect(()=>{
     setIsLoading(true);
       axios.get(`https://imdb-api.com/API/AdvancedSearch/${apiKey}?title_type=${titleType}&genres=${props.emojiSelected.correspondance}&count=100`)
       .then((response)=>response.data)
-      .then((data)=>{setResultat(data.results);
+      .then((data)=>{props.setResultat(data.results);
       setIsLoading(false);});
   },[props.emojiSelected.correspondance])
   return (
@@ -28,7 +28,7 @@ const Catalogue = (props) => {
         <Header className='headerband' emojiSelected={props.emojiSelected} setEmojiSelected={props.setEmojiSelected}/>
         {isLoading?<Loading />:
         <div className='movie-grid'>
-          {resultat.map(element => (
+          {props.resultat.map(element => (
             <Cards key={element.key}
               title={element.title}
               poster={element.image}

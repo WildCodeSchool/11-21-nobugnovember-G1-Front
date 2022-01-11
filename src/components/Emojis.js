@@ -24,7 +24,7 @@ const Emojis = (props) => {
       element => element.emotion === event.target.alt
     )
     props.setEmojiSelected(selection[0])
-    //localStorage.setItem('maSelection', selection[0].correspondance)
+
   }
   return (
     <div>
