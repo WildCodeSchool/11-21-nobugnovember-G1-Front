@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 import './Header.css'
 import EmojiChanger from './EmojiChanger'
 
-const Header = (props) => {
+const Header = props => {
   return (
     <div className='nav-style'>
       <NavLink to='/' className=''>
@@ -27,7 +27,10 @@ const Header = (props) => {
         </NavLink>
       </ul>
 
-      <EmojiChanger emojiSelected={props.emojiSelected} setEmojiSelected={props.setEmojiSelected}/>
+      <EmojiChanger
+        emojiSelected={props.emojiSelected}
+        setEmojiSelected={props.setEmojiSelected}
+      />
     </div>
   )
 }

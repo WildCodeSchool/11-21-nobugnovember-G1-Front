@@ -8,13 +8,12 @@ import axios from 'axios'
 import EmojiChanger from '../components/EmojiChanger'
 import joyeux from '../assets/joyeux.png'
 
-const Catalogue = (props) => {
-
-  const [isLoading,setIsLoading] = useState(true);
-  const apiKey=process.env.REACT_APP_API_KEY;
+const Catalogue = props => {
+  const [isLoading, setIsLoading] = useState(false)
+  const apiKey = process.env.REACT_APP_API_KEY
 
   const titleType = 'movies&tv_series'
-  //const [resultat, setResultat] = useState([])
+
   useEffect(()=>{
     setIsLoading(true);
       axios.get(`https://imdb-api.com/API/AdvancedSearch/${apiKey}?title_type=${titleType}&genres=${props.emojiSelected.correspondance}&count=100`)
@@ -36,6 +35,7 @@ const Catalogue = (props) => {
             />
           ))}
         </div>}
+
 
         <Footer />
       </div>
