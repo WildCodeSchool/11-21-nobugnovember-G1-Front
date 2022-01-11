@@ -9,13 +9,14 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 import { useState } from 'react'
 function App() {
   const [emojiSelected,setEmojiSelected]=useState('')
+  const [resultat, setResultat] = useState([])
   return (
     <div className='App'>
       <Routes>
         <Route path='/' element={<Home emojiSelected={emojiSelected} setEmojiSelected={setEmojiSelected}/>} />
-        <Route path='/Catalogue' element={<Catalogue emojiSelected={emojiSelected} setEmojiSelected={setEmojiSelected}/>} />
-        <Route path='/Films' element={<Films emojiSelected={emojiSelected} setEmojiSelected={setEmojiSelected} />} />
-        <Route path='/Series' element={<Series  emojiSelected={emojiSelected} setEmojiSelected={setEmojiSelected} />} />
+        <Route path='/Catalogue' element={<Catalogue emojiSelected={emojiSelected} setEmojiSelected={setEmojiSelected} resultat={resultat} setResultat={setResultat}/>} />
+        <Route path='/Films' element={<Films emojiSelected={emojiSelected} setEmojiSelected={setEmojiSelected} resultat={resultat} setResultat={setResultat}/>} />
+        <Route path='/Series' element={<Series  emojiSelected={emojiSelected} setEmojiSelected={setEmojiSelected} resultat={resultat} setResultat={setResultat}/>} />
         <Route path='/MiniJeux' element={<MiniJeux />} />
       </Routes>
     </div>
