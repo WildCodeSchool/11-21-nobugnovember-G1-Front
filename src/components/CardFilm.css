@@ -1,4 +1,5 @@
 .catalogPage {
+    background-image: url(../);
     background-color: rgb(148, 48, 48);
     background: rgb(110,139,137);
     background: linear-gradient(180deg, rgba(110,139,137,1) 7%, rgba(102,66,68,1) 100%);
@@ -33,22 +34,85 @@
     padding-left: 40px;
     padding-right: 40px;
     display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    z-index: -5;
 }
+
+
+.titre {
+    margin-bottom: 1vw;
+    font-size: 4vh;
+    
+}
+
+.year {  
+    font-size: 2vh;
+    margin-bottom: 1vw;
+}
+    
+
 
 .holderInfo {
     display: flex;
     flex-direction: column;
-    padding-left: 2%;
+    width: 50%; 
+    color: white;
+    padding: 0 3vw;
+    
+    
+}
+.trailer {
+    border-radius: 5%;
+    
 }
 
-.titre {
-    color: white;
-    font-size: 3vh;
-    text-align: center;
-}
-
-.year {
-    color: white;
+.info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: center;
+    width: 45%;
+    align-items: center;
+    margin-bottom: 1vw;
     font-size: 2vh;
+}
+
+
+#pegi {
+    background-color: #65655d;
+    width: 6vw;
+    height: 3vh;
     text-align: center;
+    border-radius: 10%;
+}
+
+.holderPegi {
+    padding-left: 20px;
+}
+
+.popcorn {
+    height: 30px;
+    width: 55px;
+    padding-left: 20px;
+}
+
+.synopsis {
+    font-size: 2vh;
+    margin-bottom: 3vw;
+}
+
+.infoProd {
+    margin-bottom: 0.5vw;
+    font-size: 1.5vh;
+}
+
+.textGrey {
+    color: #333;
+    font-style:normal;
+    font-weight: bold;
+    font-size: 1.5vh;
+    
+
 }
