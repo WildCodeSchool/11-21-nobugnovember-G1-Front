@@ -3,12 +3,12 @@ import Catalogue from './screens/Catalogue'
 import Series from './screens/Series'
 import Films from './screens/Films'
 import MiniJeux from './screens/MiniJeux'
+import CardFilm from './components/CardFilm'
 import { Routes, Route } from 'react-router-dom'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab } from '@fortawesome/free-brands-svg-icons'
 import { useState } from 'react'
 function App() {
   const [emojiSelected, setEmojiSelected] = useState('')
+  const [resultat, setResultat] = useState([])
   return (
     <div className='App'>
       <Routes>
@@ -27,6 +27,8 @@ function App() {
             <Catalogue
               emojiSelected={emojiSelected}
               setEmojiSelected={setEmojiSelected}
+              resultat={resultat}
+              setResultat={setResultat}
             />
           }
         />
@@ -36,6 +38,8 @@ function App() {
             <Films
               emojiSelected={emojiSelected}
               setEmojiSelected={setEmojiSelected}
+              resultat={resultat}
+              setResultat={setResultat}
             />
           }
         />
@@ -45,10 +49,33 @@ function App() {
             <Series
               emojiSelected={emojiSelected}
               setEmojiSelected={setEmojiSelected}
+              resultat={resultat}
+              setResultat={setResultat}
             />
           }
         />
-        <Route path='/MiniJeux' element={<MiniJeux />} />
+        <Route
+          path='/MiniJeux'
+          element={
+            <MiniJeux
+              emojiSelected={emojiSelected}
+              setEmojiSelected={setEmojiSelected}
+              resultat={resultat}
+              setResultat={setResultat}
+            />
+          }
+        />
+        <Route
+          path='/FicheFilm'
+          element={
+            <CardFilm
+              emojiSelected={emojiSelected}
+              setEmojiSelected={setEmojiSelected}
+              resultat={resultat}
+              setResultat={setResultat}
+            />
+          }
+        />
       </Routes>
     </div>
   )

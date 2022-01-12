@@ -1,0 +1,20 @@
+.quizz-button{
+    width: 200px;
+    height: 100px;
+    font-size: 10px;
+    
+}
+.button-grid{
+    display: flex;
+    justify-content: space-around;
+}
+h2 {
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}

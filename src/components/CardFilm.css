@@ -1,0 +1,174 @@
+.cardFilm {
+    background-image: url(../assets/background.jpg); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+}
+
+.cardFilmContainer {
+    min-height: 100vh;
+    background: none;
+    background-repeat: no-repeat !important;   
+    background-attachment: fixed !important;
+    background-size: cover !important;
+    margin: 0;
+    position: relative;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px)!important;
+}
+
+.testFrost {
+    z-index: 1;
+}
+
+.jaquette {
+    width: auto;
+    height: 50vh;
+    border-radius: 10px;
+}
+
+.infoContainer {
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    z-index: -5;
+}
+
+.titre {
+    margin-bottom: 1vw;
+    font-size: 4vh;
+    
+}
+
+.year {  
+    font-size: 2vh;
+    margin-bottom: 1vw;
+}
+    
+
+
+.holderInfo {
+    display: flex;
+    flex-direction: column;
+    width: 50%; 
+    color: white;
+    padding: 0 3vw;
+}
+
+.trailer {
+    border-radius: 5%;
+    width: 560px;
+    height: 315px;
+    
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: center;
+    width: 45%;
+    align-items: center;
+    margin-bottom: 1vw;
+    font-size: 2vh;
+}
+
+
+#pegi {
+    background-color: #65655d;
+    width: 6vw;
+    height: 3vh;
+    text-align: center;
+    border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+}
+
+.holderPegi {
+    padding-left: 20px;
+}
+
+.popcorn {
+    height: 30px;
+    width: 55px;
+    padding-left: 20px;
+}
+
+.synopsis {
+    font-size: 2vh;
+    margin-bottom: 3vw;
+}
+
+.playButton {
+    background: #FFDC6C;
+    width: 5vw;
+    height: 2.5vh;
+    margin-top: 3%;
+    border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+    cursor: pointer;
+    border-style: none;
+}
+
+.infoProd {
+    margin-bottom: 0.5vw;
+    font-size: 1.9vh;
+}
+
+.textGrey {
+    color: #333;
+    font-style:normal;
+    font-weight: bold;
+    font-size: 1.9vh;
+}
+
+.casting {
+    color: white;
+    margin-top: 2vh;
+    padding-left: 5vh;
+    font-size: 3vh;
+}
+
+.castingListe {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.imgCast {
+    object-fit: cover;
+    width: 300px;
+    height: auto;
+}
+
+.divCarre {
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 50%;
+    transform: scale(0.5)
+}
+
+.infoCasting {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.actorName {
+    position: absolute;
+    bottom: 15%;
+    color: white;
+}
+
+.roleName {
+    position: absolute;
+    bottom: 8%;
+    color: #1f1f1d;
+}
