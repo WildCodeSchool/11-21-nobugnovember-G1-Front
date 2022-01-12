@@ -1,23 +1,21 @@
-.catalogPage {
-    background-image: url(../);
-    background-color: rgb(148, 48, 48);
-    background: rgb(110,139,137);
-    background: linear-gradient(180deg, rgba(110,139,137,1) 7%, rgba(102,66,68,1) 100%);
+.cardFilm {
+    background-image: url(../assets/background.jpg); 
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    height: 100vh;
+    width: 100%;
 }
 
-.catalogContainer {
-    background: rgb(110,139,137);
-    background: linear-gradient(180deg, rgba(110,139,137,1) 7%, rgba(102,66,68,1) 100%);
-    margin: 0;
+.cardFilmContainer {
     min-height: 100vh;
+    background: none;
+    background-repeat: no-repeat !important;   
+    background-attachment: fixed !important;
+    background-size: cover !important;
+    margin: 0;
     position: relative;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px)!important;
 }
 
 .testFrost {
@@ -25,8 +23,8 @@
 }
 
 .jaquette {
-    width: 15vw;
-    height: 20hv;
+    width: auto;
+    height: 50vh;
     border-radius: 10px;
 }
 
@@ -38,7 +36,6 @@
     flex-direction: row;
     z-index: -5;
 }
-
 
 .titre {
     margin-bottom: 1vw;
@@ -59,11 +56,12 @@
     width: 50%; 
     color: white;
     padding: 0 3vw;
-    
-    
 }
+
 .trailer {
     border-radius: 5%;
+    width: 560px;
+    height: 315px;
     
 }
 
@@ -85,7 +83,7 @@
     width: 6vw;
     height: 3vh;
     text-align: center;
-    border-radius: 10%;
+    border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
 }
 
 .holderPegi {
@@ -103,16 +101,74 @@
     margin-bottom: 3vw;
 }
 
+.playButton {
+    background: #FFDC6C;
+    width: 5vw;
+    height: 2.5vh;
+    margin-top: 3%;
+    border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+    cursor: pointer;
+    border-style: none;
+}
+
 .infoProd {
     margin-bottom: 0.5vw;
-    font-size: 1.5vh;
+    font-size: 1.9vh;
 }
 
 .textGrey {
     color: #333;
     font-style:normal;
     font-weight: bold;
-    font-size: 1.5vh;
-    
+    font-size: 1.9vh;
+}
 
+.casting {
+    color: white;
+    margin-top: 2vh;
+    padding-left: 5vh;
+    font-size: 3vh;
+}
+
+.castingListe {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.imgCast {
+    object-fit: cover;
+    width: 300px;
+    height: auto;
+}
+
+.divCarre {
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 50%;
+    transform: scale(0.5)
+}
+
+.infoCasting {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.actorName {
+    position: absolute;
+    bottom: 15%;
+    color: white;
+}
+
+.roleName {
+    position: absolute;
+    bottom: 8%;
+    color: #1f1f1d;
 }
