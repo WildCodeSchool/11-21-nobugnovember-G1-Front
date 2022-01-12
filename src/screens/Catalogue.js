@@ -7,19 +7,11 @@ import Loading from '../components/Loading'
 import axios from 'axios'
 
 const Catalogue = props => {
-<<<<<<< HEAD
-  const [isLoading, setIsLoading] = useState(true)
-  const apiKey = process.env.REACT_APP_API_KEY
-
-  const titleType = 'movies&tv_series'
-  const [resultat, setResultat] = useState([])
-=======
   const [isLoading, setIsLoading] = useState(false)
   const apiKey = process.env.REACT_APP_API_KEY
 
   const titleType = 'movies&tv_series'
 
->>>>>>> 843cb7754e73da25d07fc9dcea8480f7e5b8e60e
   useEffect(() => {
     setIsLoading(true)
     axios
@@ -28,11 +20,7 @@ const Catalogue = props => {
       )
       .then(response => response.data)
       .then(data => {
-<<<<<<< HEAD
-        setResultat(data.results)
-=======
         props.setResultat(data.results)
->>>>>>> 843cb7754e73da25d07fc9dcea8480f7e5b8e60e
         setIsLoading(false)
       })
   }, [props.emojiSelected.correspondance])
@@ -48,11 +36,7 @@ const Catalogue = props => {
           <Loading />
         ) : (
           <div className='movie-grid'>
-<<<<<<< HEAD
-            {resultat.map(element => (
-=======
             {props.resultat.map(element => (
->>>>>>> 843cb7754e73da25d07fc9dcea8480f7e5b8e60e
               <Cards
                 key={element.key}
                 title={element.title}
