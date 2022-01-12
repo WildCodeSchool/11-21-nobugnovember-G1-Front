@@ -104,7 +104,7 @@ const questionsJoyeux = [
 
 const questionsTriste = [
   {
-    questionText: `Comment s'appelle le bateau dans "Titanic" ?`,
+    questionText: `Comment s'appelle le paquebot dans "Titanic" ?`,
     answerOptions: [
       { answerText: `Santa Maria`, isCorrect: false },
       { answerText: `Titanic`, isCorrect: true },
@@ -432,7 +432,7 @@ const questionsColere = [
     ]
   },
   {
-    questionText: `Comment s'appelle la femme dont Tommy Shelbee est fou amoureux ?`,
+    questionText: `Comment s'appelle la femme dont Tommy Shelby est fou amoureux ?`,
     answerOptions: [
       { answerText: `Linda`, isCorrect: false },
       { answerText: `Grace`, isCorrect: true },

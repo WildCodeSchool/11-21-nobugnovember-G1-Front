@@ -1,100 +1,135 @@
 import { useState } from 'react'
 import './Quizz.css'
 export default function Quizz() {
-  const questionsCoquineries = [
+  const questionsTriste = [
     {
-      questionText: "Katsuni c'est :",
+      questionText: `Comment s'appelle le paquebot dans "Titanic" ?`,
       answerOptions: [
-        { answerText: `Une marque de litière `, isCorrect: false },
-        { answerText: `Un personnage d\`animé`, isCorrect: false },
-        { answerText: `Un phénomene naturel`, isCorrect: false },
-        { answerText: `Une actrice X`, isCorrect: true }
+        { answerText: `Santa Maria`, isCorrect: false },
+        { answerText: `Titanic`, isCorrect: true },
+        { answerText: `Mayflower`, isCorrect: false },
+        { answerText: `Charles de Gaulle`, isCorrect: false }
       ]
     },
     {
-      questionText: `De quel film vient le personnage de Morphanus ?`,
+      questionText: `Dans "Million Dollar Baby", qu'arrive t'il à la boxeuse à la fin du film ?`,
       answerOptions: [
-        { answerText: `Les bronzés font du ski`, isCorrect: false },
-        { answerText: `Les visiteuses`, isCorrect: false },
-        { answerText: `Matrique`, isCorrect: true },
-        { answerText: `Austin Popers`, isCorrect: false }
+        { answerText: `Elle devient championne du monde`, isCorrect: false },
+        { answerText: `Elle devient entraineuse de boxe`, isCorrect: false },
+        { answerText: `Elle chûte et devient tétrapligue`, isCorrect: true },
+        { answerText: `Elle se casse les mains`, isCorrect: false }
       ]
     },
     {
-      questionText: `Dans American Pie 2, à quoi correspond Billy Bob ?`,
+      questionText: `De quoi parle le film "Hatchi" ?`,
       answerOptions: [
-        { answerText: `Une poupée gonflable`, isCorrect: false },
-        { answerText: `Un vibromasseur`, isCorrect: true },
-        { answerText: `Un nom de film`, isCorrect: false },
-        { answerText: `Le surnom d\`un personnage`, isCorrect: false }
+        { answerText: `Un chien qui attend son maitre`, isCorrect: true },
+        { answerText: `Un enfant recherchant son père`, isCorrect: false },
+        { answerText: `Un poisson qui recherche sa famille`, isCorrect: false },
+        { answerText: `Un étudiant qui cherche l'amour`, isCorrect: false }
       ]
     },
     {
-      questionText: `Quel nom de film n'est pas un film digne de la catégorie "Aubergine" ?"`,
+      questionText: `Dans "The NoteBook / N'oublie Jamais", de quelle maladie est atteinte Allie ? `,
       answerOptions: [
-        { answerText: `Cyrano de Vergerac`, isCorrect: false },
-        { answerText: `Le Père Noël en a une dure`, isCorrect: false },
-        { answerText: `Le Parfum`, isCorrect: true },
-        { answerText: `Rodéo sur Juliette`, isCorrect: false }
+        { answerText: `Gilles de la Tourette`, isCorrect: false },
+        { answerText: `Parkinson`, isCorrect: false },
+        { answerText: `Cancer`, isCorrect: false },
+        { answerText: `Alzheimer`, isCorrect: true }
       ]
     },
     {
-      questionText: `Lequels de ces films n'existe pas ?`,
+      questionText: `Dans "PS. I LOVE YOU", qu'a fait le défunt mari avant de mourir ?`,
       answerOptions: [
-        { answerText: `French erection`, isCorrect: false },
-        { answerText: `Ça Glisse au Pays des Merveilles`, isCorrect: false },
-        { answerText: `Partouzes en haute mer`, isCorrect: false },
-        { answerText: `Jason Burne`, isCorrect: true }
+        {
+          answerText: `Il a mis en place un jeu de gages à executer afin que sa femme retrouve la joie de vivre malgré sa perte`,
+          isCorrect: false
+        },
+        {
+          answerText: `Il a légué son richissime héritage quelques heures avant sa mort`,
+          isCorrect: false
+        },
+        {
+          answerText: `Il a passé une soirée avec son ex copine`,
+          isCorrect: false
+        },
+        {
+          answerText: `Il a participé à un match de rugby avant de se casser les deux coudes contre un arbre`,
+          isCorrect: true
+        }
       ]
     },
     {
-      questionText: `Dans Austin Powers quel forme prend sa pilosité de torse ? `,
+      questionText: `Dans "Le Pianiste", où se cache le pianiste au début du film ?`,
       answerOptions: [
-        { answerText: `Un pénis`, isCorrect: true },
-        { answerText: `Une bouche`, isCorrect: false },
-        { answerText: `Un revolver`, isCorrect: false },
-        { answerText: `La tour Montparnasse Infernale`, isCorrect: false }
+        { answerText: `Dans le grenier`, isCorrect: true },
+        { answerText: `Dans la cave`, isCorrect: false },
+        { answerText: `Dans le garage`, isCorrect: false },
+        { answerText: `Sous l'escalier de l'hotel`, isCorrect: false }
       ]
     },
     {
-      questionText: `Qui prononce "J'aime me beurrer la biscotte" dans OSS 117 ?`,
+      questionText: `Dans "Les petits mouchoirs", que fait le personnage de Jean Dujardin ?`,
       answerOptions: [
-        { answerText: `Princesse Al Tarouk`, isCorrect: true },
-        { answerText: `Loktar`, isCorrect: false },
-        { answerText: `Hubert Bonisseur de la Bath`, isCorrect: true },
-        { answerText: 'Raymond Pelletier', isCorrect: false }
+        {
+          answerText: `Il recherche sa femme en Corse et part travailler en Italie`,
+          isCorrect: false
+        },
+        {
+          answerText: `Il danse en boîte, conduit un scooter, meurt à l'hopital`,
+          isCorrect: true
+        },
+        {
+          answerText: `Il réussit un concours de police et devient lieutenant en brigade`,
+          isCorrect: false
+        },
+        {
+          answerText: `Il vend du crack et devient un riche dealer parisien`,
+          isCorrect: false
+        }
       ]
     },
     {
-      questionText: 'Qui ne joue pas dans le film les Valseuses ?',
+      questionText: `Quel nom porte la batte de baseball de Negan dans The Walking Dead ? `,
       answerOptions: [
-        { answerText: `Gérard Jugnot`, isCorrect: false },
-        { answerText: `Gérard Depardieu`, isCorrect: false },
-        { answerText: `Thierry Lhermitte`, isCorrect: false },
-        { answerText: `Pierre Richard`, isCorrect: true }
+        {
+          answerText: `Molly`,
+          isCorrect: false
+        },
+        { answerText: `Rebecca`, isCorrect: false },
+        { answerText: `Lucille`, isCorrect: true },
+        { answerText: `Cindy`, isCorrect: false }
       ]
     },
     {
-      questionText:
-        "Quelle actrice joue la celebre scene d'interrogatoire dans basic instinct ? ",
+      questionText: `Dans le dernier épisode de Desperate Housewives, que se passe t-il ?`,
       answerOptions: [
-        { answerText: `Sharon Stone`, isCorrect: true },
-        { answerText: `Megan Fox`, isCorrect: false },
-        { answerText: `Adriana Karambeu`, isCorrect: false },
-        { answerText: `Monica Bellucci`, isCorrect: false }
+        {
+          answerText: `Gabrielle Solis se fait écraser par un camion et meurt sur le coup`,
+          isCorrect: false
+        },
+        { answerText: `Victor Newman tue Carlos Solis`, isCorrect: false },
+        { answerText: `Mike se fait tirer dessus et meurt`, isCorrect: true },
+        { answerText: `Le jardinier tue Gabrielle Solis`, isCorrect: false }
       ]
     },
     {
-      questionText:
-        'Avec quoi joue Doofy dans sa chambre dans le film Scary Movie ? ',
+      questionText: 'Dans la ligne Verte, pourquoi John Coffey est en prison ?',
       answerOptions: [
-        { answerText: `Un aspirateur`, isCorrect: true },
-        { answerText: `Un hand-spinner`, isCorrect: false },
-        { answerText: `Une Gameboy`, isCorrect: false },
-        { answerText: `Une figurine`, isCorrect: false }
+        { answerText: `Homicide sur 2 policiers`, isCorrect: false },
+        { answerText: `Viol et homicide sur 2 fillettes`, isCorrect: true },
+        {
+          answerText: `Il aurait volé un ballon à Decathlon`,
+          isCorrect: false
+        },
+        {
+          answerText: `Conduite d'une voiture en état d'ivresse `,
+          isCorrect: false
+        }
       ]
     }
   ]
+
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [score, setScore] = useState(0)
   const [showScore, setShowScore] = useState(false)
@@ -103,7 +138,7 @@ export default function Quizz() {
       setScore(score + 1)
     }
     const nextQuestion = currentQuestion + 1
-    if (nextQuestion < questionsCoquineries.length) {
+    if (nextQuestion < questionsTriste.length) {
       setCurrentQuestion(nextQuestion)
     } else {
       setShowScore(true)
@@ -111,24 +146,37 @@ export default function Quizz() {
   }
 
   return (
-    <div className='quizz-page'>
-      <div className='quizz-container'>
-        {showScore ? (
-          <div>
-            <p>Bravo Milhan, ton score est de {score} réponses justes /10 ! </p>
-          </div>
-        ) : (
-          <div>
-            <h2 className='nombre-question'>
-              Question {currentQuestion + 1}/{questionsCoquineries.length}
+    <div className='quizz-container'>
+      {/* Conteneur général du quizz */}
+      {/* CONDITION Conteneur Texte Résultat APPARAIT A LA FIN */}
+      {showScore ? (
+        <div>
+          {/* DIV CONTENANT LE TABLEAU DE SCORE FINAL */}
+          <p>Bravo Milhan, ton score est de {score} réponses justes /10 ! </p>
+        </div>
+      ) : (
+        <div>
+          {/* DIV CONTENANT LE CONTENEUR SUIVI QUEST  */}
+          <div className='title-suiviquestion-container'>
+            {/* DIV CONTENANT LE SUIVI NUMERO QUIZZ */}
+            <h2 className='title-suiviquestion'>
+              Question {currentQuestion + 1}/{questionsTriste.length}
             </h2>
+          </div>
+          {/* FIN DIV SUIVI NUMERO QUIZZ */}
 
-            <h1 className='questions'>
-              {' '}
-              {questionsCoquineries[currentQuestion].questionText}
-            </h1>
+          <div className='ConteneurQuestionReponse'>
+            <div className='questions-container'>
+              {/* DEBUT DIV QUESTION*/}
+              <h1 className='questions'>
+                {questionsTriste[currentQuestion].questionText}
+              </h1>
+            </div>
+            {/* FIN DIV QUESTION*/}
+
             <div className='button-grid'>
-              {questionsCoquineries[currentQuestion].answerOptions.map(
+              {/* DIV CONTENANT LES OPTIONS REPONSES*/}
+              {questionsTriste[currentQuestion].answerOptions.map(
                 (element, index) => (
                   <button
                     onClick={() => handleAnswer(element.isCorrect)}
@@ -139,9 +187,10 @@ export default function Quizz() {
                 )
               )}
             </div>
+            {/* FIN DIV DE L'OPTION REPONSES*/}
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   )
 }
@@ -160,7 +209,7 @@ export default function Quizz() {
                                       J'espère que tu n'as rien prévu cette semaine? Tu pourrais en profiter pour replonger dans les Films & Séries :p
             ___________
           ==> si score <=3            {playerName}, tu me donnes envie de casser l'écran ? Tu as fait un score à s'en jeter du pont. Tu as un score de {score} à ce questionnaire!
-                                      Tu as besoin d'allumer ton écran pour pouvoir regarder des Films et Séries pour savoir de quoi ils parlent. 
+                                      Tu as besoin d'allumer ton écran pour pouvoir regarder des Films et Séries afin savoir de quoi ils parlent. 
                                       Ecoutez les récits de tes amis ne fait pas de toi un cinéphile. Maintenant, tu es au courant.                           
                                       
                       ___________            ___________            ___________            ___________

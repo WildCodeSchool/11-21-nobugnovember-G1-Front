@@ -1,35 +1,87 @@
-.quizz-page {
+@media screen and (min-width: 300px) and (max-width: 650px) { /* TELEPHONE SIZE*/
+  
+  .quizz-container {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    /* border: 10px solid black; */
+    height: 1;
+   width: 100vw;
+    }
+
+.title-suiviquestion-container { 
+        width: 100%;
+        margin-top: 3%;
+        border: 2px solid red;
+        display: flex;
+        justify-content: flex-end;
+        
+        }
+
+.title-suiviquestion { 
+    text-align: left;
+    border-bottom: 5px solid black;
+    width: fit-content;
+margin-right: 30px;
+    }    
+
+.ConteneurQuestionReponse{
+    /* border: 3px solid green; */
+    width: 100%;
+    margin-top: 10%; 
+} 
+
+
+
+.questions{
     display: flex;
     justify-content: center;
-    
-}
-.quizz-button{
-    width: 200px;
+    align-items: center;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 0px 30px 5px 30px;
+    background-color: white;
+    padding: 3% 5%;
     height: 100px;
-    font-size: 16px;
-    background-color: darkorange;
-    
-}
-.button-grid{
-    display: flex;
-    justify-content: space-around;
-}
-.nombre-question { 
-    text-align: center;
-}
-.questions{
-    font-size: 50px;
-    text-align: center;
-    margin: auto;
+/* JE N ARRIVE PAS A ALIGNER VERTICALEMENT LA QUESTION DANS LE CONTAINER PARENT*/
+    ;
 }
 
-.quizz-container {
+
+.button-grid{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* padding: 20px; */
+    /* border: 2px solid red; */
+    width: 100%;
+    padding : 2% 0px;
+        /* flex-wrap: nowrap; */
+    }
+
+.quizz-button{
     display: flex;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
-    align-content: center;
-    border: 10px solid red;
-    height: auto;
-    
+    height: 100px;
+    width: 300px;
+    font-size: 16px;
+    margin: 10px;
+    padding: 0 5%;
+    text-align: justify;
+    background-color: #FFDC6C;
+    border-radius: 15px;
+    box-shadow: violet;
+}
+}
+
+
+@media screen and (min-width: 651px) and (max-width: 1000px) { /* TABLETTE SIZE*/
+
+}
+
+@media screen and (min-width: 1001px){ /* PC SIZE*/
+
 }
 
