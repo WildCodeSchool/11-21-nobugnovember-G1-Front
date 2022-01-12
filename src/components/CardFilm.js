@@ -7,6 +7,8 @@ import cast3 from '../assets/cast3.jpg'
 import cast4 from '../assets/cast4.jpg'
 import cast5 from '../assets/cast5.jpg'
 import cast6 from '../assets/cast6.jpg'
+import ReactStars from 'react-rating-stars-component'
+
 
 import '../components/CardFilm.css'
 
@@ -24,6 +26,7 @@ const CardFilm = (props) => {
                             <div className='info'><p className='duration'>2 h 06 mins</p>
                                 <div className='holderPegi'><p id='pegi'>Tout public</p></div>
                                 <img src={popcorn} className='popcorn' alt='porpcorn'></img> <p>88%</p> 
+                                <ReactStars  classNames={'ratingStars'} count={5} size={25} activeColor={'#FFDC6C'} isHalf={true} edit={true} />
                             </div>
                             <div className='synopsis'>
                                 <p>Arthur Fleck, comédien raté, rencontre des voyous violents en errant dans les rues de Gotham City déguisé en clown. Méprisé par la société, Fleck s'enfonce peu à peu dans la démence et devient le génie criminel connu sous le nom de Joker, un dangereux tueur psychotique.

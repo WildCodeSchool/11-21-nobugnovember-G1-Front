@@ -71,7 +71,7 @@
     flex-wrap: nowrap;
     flex-direction: row;
     align-content: center;
-    width: 45%;
+    width: 60%;
     align-items: center;
     margin-bottom: 1vw;
     font-size: 2vh;
@@ -93,6 +93,10 @@
 .popcorn {
     height: 30px;
     width: 55px;
+    padding-left: 20px;
+}
+
+.ratingStars {
     padding-left: 20px;
 }
 
