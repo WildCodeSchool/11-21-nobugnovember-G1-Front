@@ -1,4 +1,4 @@
-import Header from '../components/Header' 
+import Header from './Header' 
 import affiche from '../assets/affichetest.jpg'
 import popcorn from '../assets/popcorn.png'
 import cast1 from '../assets/cast1.jpg'
@@ -10,12 +10,12 @@ import cast6 from '../assets/cast6.jpg'
 
 import '../components/CardFilm.css'
 
-const CardFilm = () => {
+const CardFilm = (props) => {
     return (
         <div>
             <div className='cardFilm'>
                 <div className='cardFilmContainer'>
-                    <Header />
+                    <Header emojiSelected={props.emojiSelected} setEmojiSelected={props.setEmojiSelected} />
                     <div className='infoContainer'>
                         <img src={affiche} className='jaquette' alt='jaquette'></img>
                         <div className='holderInfo'>
