@@ -27,10 +27,10 @@ const Header = props => {
         </NavLink>
       </ul>
 
-      {/* <EmojiChanger
+      <EmojiChanger
         emojiSelected={props.emojiSelected}
         setEmojiSelected={props.setEmojiSelected}
-      /> */}
+      />
     </div>
   )
 }
