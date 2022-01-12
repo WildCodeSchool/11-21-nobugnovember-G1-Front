@@ -5,8 +5,6 @@ import './Catalogue.css'
 import Footer from '../components/Footer'
 import Loading from '../components/Loading'
 import axios from 'axios'
-import EmojiChanger from '../components/EmojiChanger'
-import joyeux from '../assets/joyeux.png'
 
 const Catalogue = props => {
   const [isLoading, setIsLoading] = useState(false)

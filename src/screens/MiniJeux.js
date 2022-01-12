@@ -1,10 +1,10 @@
 import Header from '../components/Header'
 import loadingSvg from '../assets/loadingImg.svg'
 
-const MiniJeux = () => {
+const MiniJeux = (props) => {
   return (
     <div>
-      <Header />
+      <Header emojiSelected={props.emojiSelected} setEmojiSelected={props.setEmojiSelected} />
       {/* <img src={loadingSvg} /> */}
     </div>
   )
