@@ -1,4 +1,4 @@
-@media screen and (min-width: 300px) and (max-width: 650px) { /* TELEPHONE SIZE*/
+
   
   .quizz-container {
     display: flex;
@@ -44,14 +44,13 @@ margin-right: 30px;
     background-color: white;
     padding: 3% 5%;
     height: 100px;
-/* JE N ARRIVE PAS A ALIGNER VERTICALEMENT LA QUESTION DANS LE CONTAINER PARENT*/
     ;
 }
 
 
 .button-grid{
     display:flex;
-    justify-content: center;
+    /* justify-content: center; */
     flex-wrap: wrap;
     /* padding: 20px; */
     /* border: 2px solid red; */
@@ -72,16 +71,9 @@ margin-right: 30px;
     text-align: justify;
     background-color: #FFDC6C;
     border-radius: 15px;
-    box-shadow: violet;
-}
-}
-
-
-@media screen and (min-width: 651px) and (max-width: 1000px) { /* TABLETTE SIZE*/
-
+    
 }
 
-@media screen and (min-width: 1001px){ /* PC SIZE*/
 
-}
+
 
