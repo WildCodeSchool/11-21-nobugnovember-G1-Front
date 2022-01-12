@@ -1,9 +1,25 @@
-import CardFilm from '../components/CardFilm'
+import Header from '../components/Header'
+import { useEffect, useState } from 'react'
+import axios from 'axios'
+import Cards from '../components/Cards'
+import Loading from '../components/Loading'
+const Films = (props) => {
+  const [isLoading,setIsLoading] = useState(true);
+  const apiKey=process.env.REACT_APP_API_KEY;
 
-const Films = () => {
   return(
   <div>
-  <CardFilm />
+    <Header emojiSelected={props.emojiSelected} setEmojiSelected={props.setEmojiSelected} />
+    <div className='movie-grid'>
+      {props.resultat.filter((element)=> !element.description.includes('–')).map(element => (
+        <Cards
+          title={element.title}
+          poster={element.image}
+          description={element.description}
+        />
+      ))}
+    </div>
+    {isLoading?<Loading />:""}
   </div>
   )
 }

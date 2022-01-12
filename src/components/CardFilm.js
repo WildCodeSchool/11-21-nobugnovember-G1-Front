@@ -1,6 +1,4 @@
 import Header from '../components/Header' 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar } from '@fortawesome/free-solid-svg-icons'
 import affiche from '../assets/affichetest.jpg'
 import popcorn from '../assets/popcorn.png'
 import cast1 from '../assets/cast1.jpg'
