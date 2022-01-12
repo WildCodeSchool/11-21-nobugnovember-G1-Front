@@ -4,6 +4,7 @@ import Series from './screens/Series'
 import Films from './screens/Films'
 import MiniJeux from './screens/MiniJeux'
 import CardFilm from './components/CardFilm'
+import CardSerie from './components/CardSerie'
 import { Routes, Route } from 'react-router-dom'
 // import { library } from '@fortawesome/fontawesome-svg-core'
 // import { fab } from '@fortawesome/free-brands-svg-icons'
@@ -20,6 +21,7 @@ function App() {
         <Route path='/Series' element={<Series  emojiSelected={emojiSelected} setEmojiSelected={setEmojiSelected} resultat={resultat} setResultat={setResultat}/>} />
         <Route path='/MiniJeux' element={<MiniJeux emojiSelected={emojiSelected} setEmojiSelected={setEmojiSelected} resultat={resultat} setResultat={setResultat}/>} />
         <Route path='/FicheFilm' element={<CardFilm emojiSelected={emojiSelected} setEmojiSelected={setEmojiSelected} resultat={resultat} setResultat={setResultat}/>} />
+        <Route path='/FicheSerie' element={<CardSerie emojiSelected={emojiSelected} setEmojiSelected={setEmojiSelected} resultat={resultat} setResultat={setResultat}/>} />
       </Routes>
     </div>
   )

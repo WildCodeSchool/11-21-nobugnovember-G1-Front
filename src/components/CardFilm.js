@@ -23,7 +23,8 @@ const CardFilm = (props) => {
                         <div className='holderInfo'>
                             <h3 className='titre'>Joker</h3>
                             <p className='year'>2020</p>
-                            <div className='info'><p className='duration'>2 h 06 mins</p>
+                            <div className='info'>
+                                <p className='duration'>2 h 06 mins</p>
                                 <div className='holderPegi'><p id='pegi'>Tout public</p></div>
                                 <img src={popcorn} className='popcorn' alt='porpcorn'></img> <p>88%</p> 
                                 <ReactStars  classNames={'ratingStars'} count={5} size={25} activeColor={'#FFDC6C'} isHalf={true} edit={true} />
@@ -41,7 +42,7 @@ const CardFilm = (props) => {
                         </div>
                         {/* <iframe className='trailer' width="560" height="315" src="https://www.youtube.com/embed/OoTx1cYC5u8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true">
                         </iframe>             */}
-                        <video className='trailer' controls src="https://imdb-video.media-imdb.com/vi1723318041/1434659607842-pgv4ql-1567008550851.mp4?Expires=1642032222&Signature=DYUxmsqKaNPDsAJelPufbkQ9WECMpZ9CZcsg57cC1pQFFJZw7DvYuPiJlv0Hs6QEb-rtpbhweFVFO2sxT8-Ey9r07JhdqBHqEKW~r-L7a4-UpTOkl71vWT7-EhaoYcQ6MLBz6lk~IHbxgVFIvJEfcm03I8QRFvDyNxMLum3BFKdJWFNz4eNPyiYR2HU49mgkSLGu1lIt8LnhP~opmNk7EiTObqUBtSJ8QEq-gUSGTHqh-SmXh3wFbsFMepAXEF7bFv1C5Sptv1CTEUqb2YQlJ8zPtNOTqQ2ERsBMQUuBmJwB947FmNk8ORHrkjv8hhVYJa3-lF~5Up~WaNeWyrib4Q__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"></video>
+                        <video className='trailer' poster='https://m.media-amazon.com/images/M/MV5BOTU0ZGVmY2MtMTM1OS00YmNlLWE1NGUtMGYyMjI1MjY1NWUzXkEyXkFqcGdeQWFybm8@._V1_QL75_UX500_CR0,1,500,281_.jpg' controls src="https://imdb-video.media-imdb.com/vi1723318041/1434659607842-pgv4ql-1567008550851.mp4?Expires=1642032222&Signature=DYUxmsqKaNPDsAJelPufbkQ9WECMpZ9CZcsg57cC1pQFFJZw7DvYuPiJlv0Hs6QEb-rtpbhweFVFO2sxT8-Ey9r07JhdqBHqEKW~r-L7a4-UpTOkl71vWT7-EhaoYcQ6MLBz6lk~IHbxgVFIvJEfcm03I8QRFvDyNxMLum3BFKdJWFNz4eNPyiYR2HU49mgkSLGu1lIt8LnhP~opmNk7EiTObqUBtSJ8QEq-gUSGTHqh-SmXh3wFbsFMepAXEF7bFv1C5Sptv1CTEUqb2YQlJ8zPtNOTqQ2ERsBMQUuBmJwB947FmNk8ORHrkjv8hhVYJa3-lF~5Up~WaNeWyrib4Q__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"></video>
                     </div>
                     <h4 className='casting'>Casting</h4> 
                     <div className='castingListe'>
