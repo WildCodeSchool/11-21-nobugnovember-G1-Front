@@ -1,20 +1,35 @@
+.quizz-page {
+    display: flex;
+    justify-content: center;
+    
+}
 .quizz-button{
     width: 200px;
     height: 100px;
-    font-size: 10px;
+    font-size: 16px;
+    background-color: darkorange;
     
 }
 .button-grid{
     display: flex;
     justify-content: space-around;
 }
-h2 {
+.nombre-question { 
     text-align: center;
 }
-h1{
+.questions{
+    font-size: 50px;
     text-align: center;
+    margin: auto;
 }
 
-p {
-    text-align: center;
+.quizz-container {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    align-content: center;
+    border: 10px solid red;
+    height: auto;
+    
 }
+

@@ -1,70 +1,97 @@
 import { useState } from 'react'
 import './Quizz.css'
 export default function Quizz() {
-  const questionsJoyeux = [
+  const questionsCoquineries = [
     {
-      questionText:
-        'Quelle citation est attitrée au personnage principal de The Mask ?',
+      questionText: "Katsuni c'est :",
       answerOptions: [
-        { answerText: 'ENOOOOOOOOOORME !', isCorrect: false },
-        { answerText: 'PAS MAAAAAAAAAL !', isCorrect: false },
-        { answerText: 'SPLEEEEEEENDIDE !', isCorrect: true },
-        { answerText: 'OH MY GOD! BECKY LOOK AT HER BUTT !', isCorrect: false }
+        { answerText: `Une marque de litière `, isCorrect: false },
+        { answerText: `Un personnage d\`animé`, isCorrect: false },
+        { answerText: `Un phénomene naturel`, isCorrect: false },
+        { answerText: `Une actrice X`, isCorrect: true }
+      ]
+    },
+    {
+      questionText: `De quel film vient le personnage de Morphanus ?`,
+      answerOptions: [
+        { answerText: `Les bronzés font du ski`, isCorrect: false },
+        { answerText: `Les visiteuses`, isCorrect: false },
+        { answerText: `Matrique`, isCorrect: true },
+        { answerText: `Austin Popers`, isCorrect: false }
+      ]
+    },
+    {
+      questionText: `Dans American Pie 2, à quoi correspond Billy Bob ?`,
+      answerOptions: [
+        { answerText: `Une poupée gonflable`, isCorrect: false },
+        { answerText: `Un vibromasseur`, isCorrect: true },
+        { answerText: `Un nom de film`, isCorrect: false },
+        { answerText: `Le surnom d\`un personnage`, isCorrect: false }
+      ]
+    },
+    {
+      questionText: `Quel nom de film n'est pas un film digne de la catégorie "Aubergine" ?"`,
+      answerOptions: [
+        { answerText: `Cyrano de Vergerac`, isCorrect: false },
+        { answerText: `Le Père Noël en a une dure`, isCorrect: false },
+        { answerText: `Le Parfum`, isCorrect: true },
+        { answerText: `Rodéo sur Juliette`, isCorrect: false }
+      ]
+    },
+    {
+      questionText: `Lequels de ces films n'existe pas ?`,
+      answerOptions: [
+        { answerText: `French erection`, isCorrect: false },
+        { answerText: `Ça Glisse au Pays des Merveilles`, isCorrect: false },
+        { answerText: `Partouzes en haute mer`, isCorrect: false },
+        { answerText: `Jason Burne`, isCorrect: true }
+      ]
+    },
+    {
+      questionText: `Dans Austin Powers quel forme prend sa pilosité de torse ? `,
+      answerOptions: [
+        { answerText: `Un pénis`, isCorrect: true },
+        { answerText: `Une bouche`, isCorrect: false },
+        { answerText: `Un revolver`, isCorrect: false },
+        { answerText: `La tour Montparnasse Infernale`, isCorrect: false }
+      ]
+    },
+    {
+      questionText: `Qui prononce "J'aime me beurrer la biscotte" dans OSS 117 ?`,
+      answerOptions: [
+        { answerText: `Princesse Al Tarouk`, isCorrect: true },
+        { answerText: `Loktar`, isCorrect: false },
+        { answerText: `Hubert Bonisseur de la Bath`, isCorrect: true },
+        { answerText: 'Raymond Pelletier', isCorrect: false }
+      ]
+    },
+    {
+      questionText: 'Qui ne joue pas dans le film les Valseuses ?',
+      answerOptions: [
+        { answerText: `Gérard Jugnot`, isCorrect: false },
+        { answerText: `Gérard Depardieu`, isCorrect: false },
+        { answerText: `Thierry Lhermitte`, isCorrect: false },
+        { answerText: `Pierre Richard`, isCorrect: true }
       ]
     },
     {
       questionText:
-        'Dans quel film entend-on "Tu es un laidron mais tu es bien bonne !" ?',
+        "Quelle actrice joue la celebre scene d'interrogatoire dans basic instinct ? ",
       answerOptions: [
-        { answerText: 'Very Bad Trip', isCorrect: false },
-        { answerText: 'Les visiteurs', isCorrect: true },
-        { answerText: 'Brice de Nice', isCorrect: false },
-        { answerText: 'Austin Powers', isCorrect: false }
+        { answerText: `Sharon Stone`, isCorrect: true },
+        { answerText: `Megan Fox`, isCorrect: false },
+        { answerText: `Adriana Karambeu`, isCorrect: false },
+        { answerText: `Monica Bellucci`, isCorrect: false }
       ]
     },
     {
-      questionText: 'Quel personnage célèbre est joué par Rowan Atkinson ?',
+      questionText:
+        'Avec quoi joue Doofy dans sa chambre dans le film Scary Movie ? ',
       answerOptions: [
-        { answerText: 'Dr Strange', isCorrect: false },
-        { answerText: 'Mr Bean', isCorrect: true },
-        { answerText: 'The Arrow', isCorrect: false },
-        { answerText: 'The Witcher', isCorrect: false }
-      ]
-    },
-    {
-      questionText: `De quel film provient l'expression : " Pas de bras, pas de chocolat !"`,
-      answerOptions: [
-        { answerText: 'Les Bronzés font du ski', isCorrect: false },
-        { answerText: 'Oss 117', isCorrect: false },
-        { answerText: 'Babysitter', isCorrect: false },
-        { answerText: 'Intouchables', isCorrect: true }
-      ]
-    },
-    {
-      questionText: 'Quel sport collectif est pratiqué dans le film "Rrrrrrr!"',
-      answerOptions: [
-        { answerText: 'Froggy-Pong', isCorrect: false },
-        { answerText: 'Yorkmouth', isCorrect: false },
-        { answerText: 'Fourche-Ball', isCorrect: false },
-        { answerText: 'Biche-Volley', isCorrect: true }
-      ]
-    },
-    {
-      questionText: 'Dans quel film aperçoit-on "Double Gras" ? ',
-      answerOptions: [
-        { answerText: 'Austin Powers', isCorrect: true },
-        { answerText: 'Oss 117', isCorrect: false },
-        { answerText: 'Fatal Bazooka', isCorrect: false },
-        { answerText: 'La tour Montparnasse Infernale', isCorrect: false }
-      ]
-    },
-    {
-      questionText: 'Dans quel film aperçoit-on "Double Gras" ? ',
-      answerOptions: [
-        { answerText: 'Austin Powers', isCorrect: true },
-        { answerText: 'Oss 117', isCorrect: false },
-        { answerText: 'Fatal Bazooka', isCorrect: false },
-        { answerText: 'La tour Montparnasse Infernale', isCorrect: false }
+        { answerText: `Un aspirateur`, isCorrect: true },
+        { answerText: `Un hand-spinner`, isCorrect: false },
+        { answerText: `Une Gameboy`, isCorrect: false },
+        { answerText: `Une figurine`, isCorrect: false }
       ]
     }
   ]
@@ -76,7 +103,7 @@ export default function Quizz() {
       setScore(score + 1)
     }
     const nextQuestion = currentQuestion + 1
-    if (nextQuestion < questionsJoyeux.length) {
+    if (nextQuestion < questionsCoquineries.length) {
       setCurrentQuestion(nextQuestion)
     } else {
       setShowScore(true)
@@ -84,32 +111,69 @@ export default function Quizz() {
   }
 
   return (
-    <div className='app'>
-      {showScore ? (
-        <div>
-          <p>Your score is {score}</p>
-        </div>
-      ) : (
-        <div>
-          <h1>
-            Question {currentQuestion + 1}/{questionsJoyeux.length}
-          </h1>
-
-          <h2> {questionsJoyeux[currentQuestion].questionText}</h2>
-          <div className='button-grid'>
-            {questionsJoyeux[currentQuestion].answerOptions.map(
-              (element, index) => (
-                <button
-                  onClick={() => handleAnswer(element.isCorrect)}
-                  className='quizz-button'
-                >
-                  {element.answerText}
-                </button>
-              )
-            )}
+    <div className='quizz-page'>
+      <div className='quizz-container'>
+        {showScore ? (
+          <div>
+            <p>Bravo Milhan, ton score est de {score} réponses justes /10 ! </p>
           </div>
-        </div>
-      )}
+        ) : (
+          <div>
+            <h2 className='nombre-question'>
+              Question {currentQuestion + 1}/{questionsCoquineries.length}
+            </h2>
+
+            <h1 className='questions'>
+              {' '}
+              {questionsCoquineries[currentQuestion].questionText}
+            </h1>
+            <div className='button-grid'>
+              {questionsCoquineries[currentQuestion].answerOptions.map(
+                (element, index) => (
+                  <button
+                    onClick={() => handleAnswer(element.isCorrect)}
+                    className='quizz-button'
+                  >
+                    {element.answerText}
+                  </button>
+                )
+              )}
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   )
+}
+
+{
+  /* Faire une DIV DE RESULTAT avec :
+
+          Titre Différent selon score 
+          ==> si score === 10  =        Wow !! Felicitations {playerName} , tu as atteinds le score maximal de 10 réponses correctes à ce questionnaire!
+                                      Tente ta chance aux quizz des autres emojis pour voir si tu es un expert en Film & Série!
+            ___________
+          ==> si score entre >6 et <10  Bravo {playerName} , tu as obtenus {score} réponses correctes à ce questionnaire!
+                                      Retente ta chance et essais d'obtenir 10 réponses justes !
+             ___________         
+          ==> si score >3 && <7       {playerName}, tu ne te sentais pas bien aujourd'hui ? Tu as seulement {score} réponses juste à ce questionnaire!
+                                      J'espère que tu n'as rien prévu cette semaine? Tu pourrais en profiter pour replonger dans les Films & Séries :p
+            ___________
+          ==> si score <=3            {playerName}, tu me donnes envie de casser l'écran ? Tu as fait un score à s'en jeter du pont. Tu as un score de {score} à ce questionnaire!
+                                      Tu as besoin d'allumer ton écran pour pouvoir regarder des Films et Séries pour savoir de quoi ils parlent. 
+                                      Ecoutez les récits de tes amis ne fait pas de toi un cinéphile. Maintenant, tu es au courant.                           
+                                      
+                      ___________            ___________            ___________            ___________
+
+          Résultats des réponses : 
+            const resultatExport = clickchoice = (if true = V else if false = F)
+
+            (tableau avec bordure)
+          Question 1 : 
+          {Questions[].Questiontext}
+          Résultat suite à réponse = {resultExport} soit V soit F (ou icone :) )
+          Quest 2 3 4 5 6 7 8 9 10 + Rep 2 3 4 5 6 7 8 9 10 idem
+
+          Lien pour allez sur le quizz lié aux autres emojis QUIZZ
+          */
 }
