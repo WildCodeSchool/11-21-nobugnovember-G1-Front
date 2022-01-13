@@ -8,17 +8,17 @@ const Cards = ({
   isShowing,
   data
 }) => {
-  console.log('test3', getProps)
+  // console.log('test3', getProps)
   // console.log('test', toggle)
   // console.log('test2', isShowing)
-  console.log('test1', data)
+  // console.log('test1', data)
   // console.log('test4', datas)
   const handleClick = data => {
     setGetProps(data)
     setIsActive(true)
     toggle()
-    console.log('test2', getProps)
-    console.log('test poster', data.poster)
+    // console.log('test2', getProps)
+    // console.log('test poster', data.poster)
   }
 
   return (
