@@ -7,18 +7,27 @@ import peur from '../assets/peur.png'
 import pleure from '../assets/pleure.png'
 import surprise from '../assets/surprise.png'
 
+import amour2 from '../quizzdata/amour.json'
+import aubergine2 from '../quizzdata/aubergine.json'
+import colere2 from '../quizzdata/colere.json'
+import joyeux2 from '../quizzdata/joyeux.json'
+import peur2 from '../quizzdata/peur.json'
+import surprise2 from '../quizzdata/surprise.json'
+import triste2 from '../quizzdata/triste.json'
+
+
 import './Emojis.css'
 
 const Emojis = (props) => {
   const handleChange = () => {
     const correspondanceTab = [
-      { emotion: 'Emoji joyeux', correspondance: 'comedy',emoji: joyeux },
-      { emotion: 'Emoji pleure', correspondance: 'drama',emoji: pleure },
-      { emotion: 'Emoji surprise', correspondance: 'fantasy,sci_fi',emoji: surprise },
-      { emotion: 'Emoji amoureux', correspondance: 'romance',emoji: amour },
-      { emotion: 'Emoji colere', correspondance: 'action,war',emoji: colere },
-      { emotion: 'Emoji peur', correspondance: 'horror',emoji: peur },
-      { emotion: 'Emoji auberg', correspondance: '',emoji: aubergine }
+      { emotion: 'Emoji joyeux', correspondance: 'comedy',emoji: joyeux, quizzSelected: joyeux2},
+      { emotion: 'Emoji pleure', correspondance: 'drama',emoji: pleure, quizzSelected: triste2},
+      { emotion: 'Emoji surprise', correspondance: 'fantasy,sci_fi',emoji: surprise, quizzSelected:surprise2},
+      { emotion: 'Emoji amoureux', correspondance: 'romance',emoji: amour, quizzSelected:amour2},
+      { emotion: 'Emoji colere', correspondance: 'action,war',emoji: colere, quizzSelected:colere2},
+      { emotion: 'Emoji peur', correspondance: 'horror',emoji: peur, quizzSelected:peur2},
+      { emotion: 'Emoji auberg', correspondance: '',emoji: aubergine, quizzSelected:aubergine2}
     ]
     const selection = correspondanceTab.filter(
       element => element.emotion === event.target.alt

@@ -1,14 +1,16 @@
-import { useState } from 'react'
+import {useState } from 'react'
 import './Quizz.css'
-import amour from '../quizzdata/amour.json'
-import aubergine from '../quizzdata/aubergine.json'
-import colere from '../quizzdata/colere.json'
-import joyeux from '../quizzdata/joyeux.json'
-import peur from '../quizzdata/peur.json'
-import surprise from '../quizzdata/surprise.json'
-import triste from '../quizzdata/triste.json'
+import amour2 from '../quizzdata/amour.json'
+import aubergine2 from '../quizzdata/aubergine.json'
+import colere2 from '../quizzdata/colere.json'
+import joyeux2 from '../quizzdata/joyeux.json'
+import peur2 from '../quizzdata/peur.json'
+import surprise2 from '../quizzdata/surprise.json'
+import triste2 from '../quizzdata/triste.json'
 
 export default function Quizz(props) {
+  const questionnaire=props.emojiSelected.quizzSelected;
+
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [score, setScore] = useState(0)
   const [showScore, setShowScore] = useState(false)
@@ -18,7 +20,7 @@ export default function Quizz(props) {
     }
 
     const nextQuestion = currentQuestion + 1
-    if (nextQuestion < props.emojiSelected.emoji.length) {
+    if (nextQuestion < questionnaire.length) {
       setCurrentQuestion(nextQuestion)
     } else {
       setShowScore(true)
@@ -27,6 +29,7 @@ export default function Quizz(props) {
 
   return (
     <div className='quizz-container'>
+      {console.log(`Test: ${questionnaire} et ${props.emojiSelected.quizzSelected}`)}
       {/* Conteneur général du quizz */}
       {/* CONDITION Conteneur Texte Résultat APPARAIT A LA FIN */}
       {showScore ? (
@@ -40,7 +43,7 @@ export default function Quizz(props) {
           <div className='title-suiviquestion-container'>
             {/* DIV CONTENANT LE SUIVI NUMERO QUIZZ */}
             <h2 className='title-suiviquestion'>
-              Question {currentQuestion + 1}/{props.emojiSelected.emoji.length}
+              Question {currentQuestion + 1}/{questionnaire.length}
             </h2>
           </div>
           {/* FIN DIV SUIVI NUMERO QUIZZ */}
@@ -49,14 +52,14 @@ export default function Quizz(props) {
             <div className='questions-container'>
               {/* DEBUT DIV QUESTION*/}
               <h1 className='questions'>
-                {props.emojiSelected.emoji[currentQuestion].questionText}
+                {questionnaire[currentQuestion].questionText}
               </h1>
             </div>
             {/* FIN DIV QUESTION*/}
 
             <div className='button-grid'>
               {/* DIV CONTENANT LES OPTIONS REPONSES*/}
-              {props.emojiSelected.emoji[currentQuestion].answerOptions.map(
+              {questionnaire[currentQuestion].answerOptions.map(
                 (element, index) => (
                   <button
                     onClick={() => handleAnswer(element.isCorrect)}
