@@ -1,73 +1,135 @@
 import { useState } from 'react'
 import './Quizz.css'
 export default function Quizz() {
-  const questionsJoyeux = [
+  const questionsTriste = [
     {
-      questionText:
-        'Quelle citation est attitrée au personnage principal de The Mask ?',
+      questionText: `Comment s'appelle le paquebot dans "Titanic" ?`,
       answerOptions: [
-        { answerText: 'ENOOOOOOOOOORME !', isCorrect: false },
-        { answerText: 'PAS MAAAAAAAAAL !', isCorrect: false },
-        { answerText: 'SPLEEEEEEENDIDE !', isCorrect: true },
-        { answerText: 'OH MY GOD! BECKY LOOK AT HER BUTT !', isCorrect: false }
+        { answerText: `Santa Maria`, isCorrect: false },
+        { answerText: `Titanic`, isCorrect: true },
+        { answerText: `Mayflower`, isCorrect: false },
+        { answerText: `Charles de Gaulle`, isCorrect: false }
       ]
     },
     {
-      questionText:
-        'Dans quel film entend-on "Tu es un laidron mais tu es bien bonne !" ?',
+      questionText: `Dans "Million Dollar Baby", qu'arrive t'il à la boxeuse à la fin du film ?`,
       answerOptions: [
-        { answerText: 'Very Bad Trip', isCorrect: false },
-        { answerText: 'Les visiteurs', isCorrect: true },
-        { answerText: 'Brice de Nice', isCorrect: false },
-        { answerText: 'Austin Powers', isCorrect: false }
+        { answerText: `Elle devient championne du monde`, isCorrect: false },
+        { answerText: `Elle devient entraineuse de boxe`, isCorrect: false },
+        { answerText: `Elle chûte et devient tétrapligue`, isCorrect: true },
+        { answerText: `Elle se casse les mains`, isCorrect: false }
       ]
     },
     {
-      questionText: 'Quel personnage célèbre est joué par Rowan Atkinson ?',
+      questionText: `De quoi parle le film "Hatchi" ?`,
       answerOptions: [
-        { answerText: 'Dr Strange', isCorrect: false },
-        { answerText: 'Mr Bean', isCorrect: true },
-        { answerText: 'The Arrow', isCorrect: false },
-        { answerText: 'The Witcher', isCorrect: false }
+        { answerText: `Un chien qui attend son maitre`, isCorrect: true },
+        { answerText: `Un enfant recherchant son père`, isCorrect: false },
+        { answerText: `Un poisson qui recherche sa famille`, isCorrect: false },
+        { answerText: `Un étudiant qui cherche l'amour`, isCorrect: false }
       ]
     },
     {
-      questionText: `De quel film provient l'expression : " Pas de bras, pas de chocolat !"`,
+      questionText: `Dans "The NoteBook / N'oublie Jamais", de quelle maladie est atteinte Allie ? `,
       answerOptions: [
-        { answerText: 'Les Bronzés font du ski', isCorrect: false },
-        { answerText: 'Oss 117', isCorrect: false },
-        { answerText: 'Babysitter', isCorrect: false },
-        { answerText: 'Intouchables', isCorrect: true }
+        { answerText: `Gilles de la Tourette`, isCorrect: false },
+        { answerText: `Parkinson`, isCorrect: false },
+        { answerText: `Cancer`, isCorrect: false },
+        { answerText: `Alzheimer`, isCorrect: true }
       ]
     },
     {
-      questionText: 'Quel sport collectif est pratiqué dans le film "Rrrrrrr!"',
+      questionText: `Dans "PS. I LOVE YOU", qu'a fait le défunt mari avant de mourir ?`,
       answerOptions: [
-        { answerText: 'Froggy-Pong', isCorrect: false },
-        { answerText: 'Yorkmouth', isCorrect: false },
-        { answerText: 'Fourche-Ball', isCorrect: false },
-        { answerText: 'Biche-Volley', isCorrect: true }
+        {
+          answerText: `Il a mis en place un jeu de gages à executer afin que sa femme retrouve la joie de vivre malgré sa perte`,
+          isCorrect: false
+        },
+        {
+          answerText: `Il a légué son richissime héritage quelques heures avant sa mort`,
+          isCorrect: false
+        },
+        {
+          answerText: `Il a passé une soirée avec son ex copine`,
+          isCorrect: false
+        },
+        {
+          answerText: `Il a participé à un match de rugby avant de se casser les deux coudes contre un arbre`,
+          isCorrect: true
+        }
       ]
     },
     {
-      questionText: 'Dans quel film aperçoit-on "Gras Double" ? ',
+      questionText: `Dans "Le Pianiste", où se cache le pianiste au début du film ?`,
       answerOptions: [
-        { answerText: 'Austin Powers', isCorrect: true },
-        { answerText: 'Oss 117', isCorrect: false },
-        { answerText: 'Fatal Bazooka', isCorrect: false },
-        { answerText: 'La tour Montparnasse Infernale', isCorrect: false }
+        { answerText: `Dans le grenier`, isCorrect: true },
+        { answerText: `Dans la cave`, isCorrect: false },
+        { answerText: `Dans le garage`, isCorrect: false },
+        { answerText: `Sous l'escalier de l'hotel`, isCorrect: false }
       ]
     },
     {
-      questionText: 'Dans quel film aperçoit-on "Double Gras" ? ',
+      questionText: `Dans "Les petits mouchoirs", que fait le personnage de Jean Dujardin ?`,
       answerOptions: [
-        { answerText: 'Austin Powers', isCorrect: true },
-        { answerText: 'Oss 117', isCorrect: false },
-        { answerText: 'Fatal Bazooka', isCorrect: false },
-        { answerText: 'La tour Montparnasse Infernale', isCorrect: false }
+        {
+          answerText: `Il recherche sa femme en Corse et part travailler en Italie`,
+          isCorrect: false
+        },
+        {
+          answerText: `Il danse en boîte, conduit un scooter, meurt à l'hopital`,
+          isCorrect: true
+        },
+        {
+          answerText: `Il réussit un concours de police et devient lieutenant en brigade`,
+          isCorrect: false
+        },
+        {
+          answerText: `Il vend du crack et devient un riche dealer parisien`,
+          isCorrect: false
+        }
+      ]
+    },
+    {
+      questionText: `Quel nom porte la batte de baseball de Negan dans The Walking Dead ? `,
+      answerOptions: [
+        {
+          answerText: `Molly`,
+          isCorrect: false
+        },
+        { answerText: `Rebecca`, isCorrect: false },
+        { answerText: `Lucille`, isCorrect: true },
+        { answerText: `Cindy`, isCorrect: false }
+      ]
+    },
+    {
+      questionText: `Dans le dernier épisode de Desperate Housewives, que se passe t-il ?`,
+      answerOptions: [
+        {
+          answerText: `Gabrielle Solis se fait écraser par un camion et meurt sur le coup`,
+          isCorrect: false
+        },
+        { answerText: `Victor Newman tue Carlos Solis`, isCorrect: false },
+        { answerText: `Mike se fait tirer dessus et meurt`, isCorrect: true },
+        { answerText: `Le jardinier tue Gabrielle Solis`, isCorrect: false }
+      ]
+    },
+    {
+      questionText: 'Dans la ligne Verte, pourquoi John Coffey est en prison ?',
+      answerOptions: [
+        { answerText: `Homicide sur 2 policiers`, isCorrect: false },
+        { answerText: `Viol et homicide sur 2 fillettes`, isCorrect: true },
+        {
+          answerText: `Il aurait volé un ballon à Decathlon`,
+          isCorrect: false
+        },
+        {
+          answerText: `Conduite d'une voiture en état d'ivresse `,
+          isCorrect: false
+        }
       ]
     }
   ]
+
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [score, setScore] = useState(0)
   const [showScore, setShowScore] = useState(false)
@@ -76,7 +138,7 @@ export default function Quizz() {
       setScore(score + 1)
     }
     const nextQuestion = currentQuestion + 1
-    if (nextQuestion < questionsJoyeux.length) {
+    if (nextQuestion < questionsTriste.length) {
       setCurrentQuestion(nextQuestion)
     } else {
       setShowScore(true)
@@ -84,32 +146,83 @@ export default function Quizz() {
   }
 
   return (
-    <div className='app'>
+    <div className='quizz-container'>
+      {/* Conteneur général du quizz */}
+      {/* CONDITION Conteneur Texte Résultat APPARAIT A LA FIN */}
       {showScore ? (
         <div>
-          <p>Your score is {score}</p>
+          {/* DIV CONTENANT LE TABLEAU DE SCORE FINAL */}
+          <p>Bravo Milhan, ton score est de {score} réponses justes /10 ! </p>
         </div>
       ) : (
         <div>
-          <h1>
-            Question {currentQuestion + 1}/{questionsJoyeux.length}
-          </h1>
+          {/* DIV CONTENANT LE CONTENEUR SUIVI QUEST  */}
+          <div className='title-suiviquestion-container'>
+            {/* DIV CONTENANT LE SUIVI NUMERO QUIZZ */}
+            <h2 className='title-suiviquestion'>
+              Question {currentQuestion + 1}/{questionsTriste.length}
+            </h2>
+          </div>
+          {/* FIN DIV SUIVI NUMERO QUIZZ */}
 
-          <h2> {questionsJoyeux[currentQuestion].questionText}</h2>
-          <div className='button-grid'>
-            {questionsJoyeux[currentQuestion].answerOptions.map(
-              (element, index) => (
-                <button
-                  onClick={() => handleAnswer(element.isCorrect)}
-                  className='quizz-button'
-                >
-                  {element.answerText}
-                </button>
-              )
-            )}
+          <div className='ConteneurQuestionReponse'>
+            <div className='questions-container'>
+              {/* DEBUT DIV QUESTION*/}
+              <h1 className='questions'>
+                {questionsTriste[currentQuestion].questionText}
+              </h1>
+            </div>
+            {/* FIN DIV QUESTION*/}
+
+            <div className='button-grid'>
+              {/* DIV CONTENANT LES OPTIONS REPONSES*/}
+              {questionsTriste[currentQuestion].answerOptions.map(
+                (element, index) => (
+                  <button
+                    onClick={() => handleAnswer(element.isCorrect)}
+                    className='quizz-button'
+                  >
+                    {element.answerText}
+                  </button>
+                )
+              )}
+            </div>
+            {/* FIN DIV DE L'OPTION REPONSES*/}
           </div>
         </div>
       )}
     </div>
   )
+}
+
+{
+  /* Faire une DIV DE RESULTAT avec :
+
+          Titre Différent selon score 
+          ==> si score === 10  =        Wow !! Felicitations {playerName} , tu as atteinds le score maximal de 10 réponses correctes à ce questionnaire!
+                                      Tente ta chance aux quizz des autres emojis pour voir si tu es un expert en Film & Série!
+            ___________
+          ==> si score entre >6 et <10  Bravo {playerName} , tu as obtenus {score} réponses correctes à ce questionnaire!
+                                      Retente ta chance et essais d'obtenir 10 réponses justes !
+             ___________         
+          ==> si score >3 && <7       {playerName}, tu ne te sentais pas bien aujourd'hui ? Tu as seulement {score} réponses juste à ce questionnaire!
+                                      J'espère que tu n'as rien prévu cette semaine? Tu pourrais en profiter pour replonger dans les Films & Séries :p
+            ___________
+          ==> si score <=3            {playerName}, tu me donnes envie de casser l'écran ? Tu as fait un score à s'en jeter du pont. Tu as un score de {score} à ce questionnaire!
+                                      Tu as besoin d'allumer ton écran pour pouvoir regarder des Films et Séries afin savoir de quoi ils parlent. 
+                                      Ecoutez les récits de tes amis ne fait pas de toi un cinéphile. Maintenant, tu es au courant.                           
+                                      
+                      ___________            ___________            ___________            ___________
+
+          Résultats des réponses : 
+            const resultatExport = clickchoice = (if true = V else if false = F)
+
+            (tableau avec bordure)
+          Question 1 : 
+          {Questions[].Questiontext}
+          Résultat suite à réponse = {resultExport} soit V soit F (ou icone :) )
+          Quest 2 3 4 5 6 7 8 9 10 + Rep 2 3 4 5 6 7 8 9 10 idem
+
+          Lien pour allez sur le quizz lié aux autres emojis QUIZZ
+          */
 }
