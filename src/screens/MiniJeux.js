@@ -8,7 +8,10 @@ const MiniJeux = props => {
         emojiSelected={props.emojiSelected}
         setEmojiSelected={props.setEmojiSelected}
       />
-      <Quizz />
+      <Quizz
+        emojiSelected={props.emojiSelected}
+        setEmojiSelected={props.setEmojiSelected}
+      />
     </div>
   )
 }

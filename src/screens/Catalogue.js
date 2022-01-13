@@ -5,7 +5,6 @@ import './Catalogue.css'
 import Footer from '../components/Footer'
 import Loading from '../components/Loading'
 import axios from 'axios'
-
 const Catalogue = props => {
   const [isLoading, setIsLoading] = useState(false)
   const apiKey = process.env.REACT_APP_API_KEY

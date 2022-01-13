@@ -1,136 +1,14 @@
 import { useState } from 'react'
 import './Quizz.css'
+import amour from '../quizzdata/amour.json'
+import aubergine from '../quizzdata/aubergine.json'
+import colere from '../quizzdata/colere.json'
+import joyeux from '../quizzdata/joyeux.json'
+import peur from '../quizzdata/peur.json'
+import surprise from '../quizzdata/surprise.json'
 import triste from '../quizzdata/triste.json'
-export default function Quizz() {
-  // const questionsTriste = [
-  //   {
-  //     questionText: `Comment s'appelle le paquebot dans "Titanic" ?`,
-  //     answerOptions: [
-  //       { answerText: `Santa Maria`, isCorrect: false },
-  //       { answerText: `Titanic`, isCorrect: true },
-  //       { answerText: `Mayflower`, isCorrect: false },
-  //       { answerText: `Charles de Gaulle`, isCorrect: false }
-  //     ]
-  //   },
-  //   {
-  //     questionText: `Dans "Million Dollar Baby", qu'arrive t'il à la boxeuse à la fin du film ?`,
-  //     answerOptions: [
-  //       { answerText: `Elle devient championne du monde`, isCorrect: false },
-  //       { answerText: `Elle devient entraineuse de boxe`, isCorrect: false },
-  //       { answerText: `Elle chûte et devient tétrapligue`, isCorrect: true },
-  //       { answerText: `Elle se casse les mains`, isCorrect: false }
-  //     ]
-  //   },
-  //   {
-  //     questionText: `De quoi parle le film "Hatchi" ?`,
-  //     answerOptions: [
-  //       { answerText: `Un chien qui attend son maitre`, isCorrect: true },
-  //       { answerText: `Un enfant recherchant son père`, isCorrect: false },
-  //       { answerText: `Un poisson qui recherche sa famille`, isCorrect: false },
-  //       { answerText: `Un étudiant qui cherche l'amour`, isCorrect: false }
-  //     ]
-  //   },
-  //   {
-  //     questionText: `Dans "The NoteBook / N'oublie Jamais", de quelle maladie est atteinte Allie ? `,
-  //     answerOptions: [
-  //       { answerText: `Gilles de la Tourette`, isCorrect: false },
-  //       { answerText: `Parkinson`, isCorrect: false },
-  //       { answerText: `Cancer`, isCorrect: false },
-  //       { answerText: `Alzheimer`, isCorrect: true }
-  //     ]
-  //   },
-  //   {
-  //     questionText: `Dans "PS. I LOVE YOU", qu'a fait le défunt mari avant de mourir ?`,
-  //     answerOptions: [
-  //       {
-  //         answerText: `Il a mis en place un jeu de gages à executer afin que sa femme retrouve la joie de vivre malgré sa perte`,
-  //         isCorrect: false
-  //       },
-  //       {
-  //         answerText: `Il a légué son richissime héritage quelques heures avant sa mort`,
-  //         isCorrect: false
-  //       },
-  //       {
-  //         answerText: `Il a passé une soirée avec son ex copine`,
-  //         isCorrect: false
-  //       },
-  //       {
-  //         answerText: `Il a participé à un match de rugby avant de se casser les deux coudes contre un arbre`,
-  //         isCorrect: true
-  //       }
-  //     ]
-  //   },
-  //   {
-  //     questionText: `Dans "Le Pianiste", où se cache le pianiste au début du film ?`,
-  //     answerOptions: [
-  //       { answerText: `Dans le grenier`, isCorrect: true },
-  //       { answerText: `Dans la cave`, isCorrect: false },
-  //       { answerText: `Dans le garage`, isCorrect: false },
-  //       { answerText: `Sous l'escalier de l'hotel`, isCorrect: false }
-  //     ]
-  //   },
-  //   {
-  //     questionText: `Dans "Les petits mouchoirs", que fait le personnage de Jean Dujardin ?`,
-  //     answerOptions: [
-  //       {
-  //         answerText: `Il recherche sa femme en Corse et part travailler en Italie`,
-  //         isCorrect: false
-  //       },
-  //       {
-  //         answerText: `Il danse en boîte, conduit un scooter, meurt à l'hopital`,
-  //         isCorrect: true
-  //       },
-  //       {
-  //         answerText: `Il réussit un concours de police et devient lieutenant en brigade`,
-  //         isCorrect: false
-  //       },
-  //       {
-  //         answerText: `Il vend du crack et devient un riche dealer parisien`,
-  //         isCorrect: false
-  //       }
-  //     ]
-  //   },
-  //   {
-  //     questionText: `Quel nom porte la batte de baseball de Negan dans The Walking Dead ? `,
-  //     answerOptions: [
-  //       {
-  //         answerText: `Molly`,
-  //         isCorrect: false
-  //       },
-  //       { answerText: `Rebecca`, isCorrect: false },
-  //       { answerText: `Lucille`, isCorrect: true },
-  //       { answerText: `Cindy`, isCorrect: false }
-  //     ]
-  //   },
-  //   {
-  //     questionText: `Dans le dernier épisode de Desperate Housewives, que se passe t-il ?`,
-  //     answerOptions: [
-  //       {
-  //         answerText: `Gabrielle Solis se fait écraser par un camion et meurt sur le coup`,
-  //         isCorrect: false
-  //       },
-  //       { answerText: `Victor Newman tue Carlos Solis`, isCorrect: false },
-  //       { answerText: `Mike se fait tirer dessus et meurt`, isCorrect: true },
-  //       { answerText: `Le jardinier tue Gabrielle Solis`, isCorrect: false }
-  //     ]
-  //   },
-  //   {
-  //     questionText: 'Dans la ligne Verte, pourquoi John Coffey est en prison ?',
-  //     answerOptions: [
-  //       { answerText: `Homicide sur 2 policiers`, isCorrect: false },
-  //       { answerText: `Viol et homicide sur 2 fillettes`, isCorrect: true },
-  //       {
-  //         answerText: `Il aurait volé un ballon à Decathlon`,
-  //         isCorrect: false
-  //       },
-  //       {
-  //         answerText: `Conduite d'une voiture en état d'ivresse `,
-  //         isCorrect: false
-  //       }
-  //     ]
-  //   }
-  // ]
 
+export default function Quizz(props) {
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [score, setScore] = useState(0)
   const [showScore, setShowScore] = useState(false)
@@ -140,7 +18,7 @@ export default function Quizz() {
     }
 
     const nextQuestion = currentQuestion + 1
-    if (nextQuestion < questionsTriste.length) {
+    if (nextQuestion < props.emojiSelected.emoji.length) {
       setCurrentQuestion(nextQuestion)
     } else {
       setShowScore(true)
@@ -149,7 +27,6 @@ export default function Quizz() {
 
   return (
     <div className='quizz-container'>
-      {console.log(triste.questionText)}
       {/* Conteneur général du quizz */}
       {/* CONDITION Conteneur Texte Résultat APPARAIT A LA FIN */}
       {showScore ? (
@@ -163,7 +40,7 @@ export default function Quizz() {
           <div className='title-suiviquestion-container'>
             {/* DIV CONTENANT LE SUIVI NUMERO QUIZZ */}
             <h2 className='title-suiviquestion'>
-              Question {currentQuestion + 1}/{questionsTriste.length}
+              Question {currentQuestion + 1}/{props.emojiSelected.emoji.length}
             </h2>
           </div>
           {/* FIN DIV SUIVI NUMERO QUIZZ */}
@@ -172,14 +49,14 @@ export default function Quizz() {
             <div className='questions-container'>
               {/* DEBUT DIV QUESTION*/}
               <h1 className='questions'>
-                {questionsTriste[currentQuestion].questionText}
+                {props.emojiSelected.emoji[currentQuestion].questionText}
               </h1>
             </div>
             {/* FIN DIV QUESTION*/}
 
             <div className='button-grid'>
               {/* DIV CONTENANT LES OPTIONS REPONSES*/}
-              {questionsTriste[currentQuestion].answerOptions.map(
+              {props.emojiSelected.emoji[currentQuestion].answerOptions.map(
                 (element, index) => (
                   <button
                     onClick={() => handleAnswer(element.isCorrect)}
