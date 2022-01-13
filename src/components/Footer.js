@@ -6,7 +6,6 @@ import {
   faInstagram,
   faTwitter
 } from '@fortawesome/free-brands-svg-icons'
-import { hover } from '@testing-library/user-event/dist/hover'
 
 export default function Footer() {
   return (
@@ -17,10 +16,10 @@ export default function Footer() {
         </a>
       </div>
       <div className='social'>
-        <FontAwesomeIcon icon={faFacebook} className='media'></FontAwesomeIcon>
-        <FontAwesomeIcon icon={faYoutube} className='media'></FontAwesomeIcon>
-        <FontAwesomeIcon icon={faInstagram} className='media'></FontAwesomeIcon>
-        <FontAwesomeIcon icon={faTwitter} className='media'></FontAwesomeIcon>
+        <a href=''><FontAwesomeIcon icon={faFacebook} className='media'></FontAwesomeIcon></a>
+        <a target="_blank" href='https://www.youtube.com/channel/UCNQ9CVHt4ZBYe_82S22jvPQ'><FontAwesomeIcon icon={faYoutube} className='media'></FontAwesomeIcon></a>
+        <a target="_blank" href='https://www.instagram.com/moody_vod/'><FontAwesomeIcon icon={faInstagram} className='media'></FontAwesomeIcon></a>
+        <a target="_blank" href='https://twitter.com/MoodyVODFR'><FontAwesomeIcon icon={faTwitter} className='media'></FontAwesomeIcon></a>
       </div>
     </div>
   )
