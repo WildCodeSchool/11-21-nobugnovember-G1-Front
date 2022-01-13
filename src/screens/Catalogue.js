@@ -12,7 +12,7 @@ const Catalogue = props => {
   const { isShowing, toggle } = useModal()
 
   const [isLoading, setIsLoading] = useState(false)
-  const apiKey = 'k_w03gyfxl'
+  const apiKey = 'k_lp14to4a'
   const titleType = 'movies&tv_series'
 
   const [isActive, setIsActive] = useState(false)
@@ -30,6 +30,7 @@ const Catalogue = props => {
     props.setResultat(dataAPI)
   }
 
+  /***************** APPEL API GENERAL *******************/
   useEffect(() => {
     const appelAPI = () => {
       setIsLoading(true)
@@ -56,9 +57,24 @@ const Catalogue = props => {
     /*********************************************************/
   }, [props.emojiSelected.correspondance])
 
+  const [getDetails, setGetDetails] = useState({})
+
+  /*************** Appel API Details Film ****************************/
   useEffect(() => {
-    console.log('test getProps', getProps)
-  }, [getProps])
+    const appelAPIFilm = () => {
+      axios
+        .get(
+          `https://imdb-api.com/fr/API/Title/${apiKey}/${getProps.id}/FullActor,FullCast,Posters,Images,Trailer,Ratings,`
+        )
+        .then(res => res.data)
+        .then(res => {
+          setGetDetails(res)
+          console.log('lolol', getDetails)
+        })
+    }
+    isShowing && appelAPIFilm()
+  }, [isShowing])
+
   return (
     <div className='catalogPage'>
       <div className='catalogContainer'>
@@ -67,6 +83,7 @@ const Catalogue = props => {
           isShowing={isShowing}
           hide={toggle}
           retourFunc={retourFunc}
+          getDetails={getDetails}
         />
 
         <Header

@@ -21,6 +21,7 @@
     z-index: 1050;
     overflow: hidden;
     border-radius: 2%;
+    background-position: center;
 }
 
 .cardFilmContainer {
@@ -63,7 +64,6 @@
     padding-right: 40px;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     flex-direction: row;
     z-index: -5;
     padding-top: 2%;
@@ -164,10 +164,9 @@
 
 .castingListe {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-around;
     align-items: center;
+    justify-content: flex-start;
 }
 
 .imgCast {
