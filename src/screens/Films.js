@@ -25,7 +25,6 @@ const Films = props => {
             />
           ))}
       </div>
-
     </div>
   )
 }

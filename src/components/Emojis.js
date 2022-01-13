@@ -15,25 +15,58 @@ import peur2 from '../quizzdata/peur.json'
 import surprise2 from '../quizzdata/surprise.json'
 import triste2 from '../quizzdata/triste.json'
 
-
 import './Emojis.css'
 
-const Emojis = (props) => {
+const Emojis = props => {
   const handleChange = () => {
     const correspondanceTab = [
-      { emotion: 'Emoji joyeux', correspondance: 'comedy',emoji: joyeux, quizzSelected: joyeux2},
-      { emotion: 'Emoji pleure', correspondance: 'drama',emoji: pleure, quizzSelected: triste2},
-      { emotion: 'Emoji surprise', correspondance: 'fantasy,sci_fi',emoji: surprise, quizzSelected:surprise2},
-      { emotion: 'Emoji amoureux', correspondance: 'romance',emoji: amour, quizzSelected:amour2},
-      { emotion: 'Emoji colere', correspondance: 'action,war',emoji: colere, quizzSelected:colere2},
-      { emotion: 'Emoji peur', correspondance: 'horror',emoji: peur, quizzSelected:peur2},
-      { emotion: 'Emoji auberg', correspondance: '',emoji: aubergine, quizzSelected:aubergine2}
+      {
+        emotion: 'Emoji joyeux',
+        correspondance: 'comedy',
+        emoji: joyeux,
+        quizzSelected: joyeux2
+      },
+      {
+        emotion: 'Emoji pleure',
+        correspondance: 'drama',
+        emoji: pleure,
+        quizzSelected: triste2
+      },
+      {
+        emotion: 'Emoji surprise',
+        correspondance: 'fantasy,sci_fi',
+        emoji: surprise,
+        quizzSelected: surprise2
+      },
+      {
+        emotion: 'Emoji amoureux',
+        correspondance: 'romance',
+        emoji: amour,
+        quizzSelected: amour2
+      },
+      {
+        emotion: 'Emoji colere',
+        correspondance: 'action,war',
+        emoji: colere,
+        quizzSelected: colere2
+      },
+      {
+        emotion: 'Emoji peur',
+        correspondance: 'horror',
+        emoji: peur,
+        quizzSelected: peur2
+      },
+      {
+        emotion: 'Emoji auberg',
+        correspondance: '',
+        emoji: aubergine,
+        quizzSelected: aubergine2
+      }
     ]
     const selection = correspondanceTab.filter(
       element => element.emotion === event.target.alt
     )
     props.setEmojiSelected(selection[0])
-
   }
   return (
     <div>
@@ -68,7 +101,7 @@ const Emojis = (props) => {
               src={surprise}
               alt='Emoji surprise'
             ></img>
-            </NavLink>
+          </NavLink>
           <figcaption>Surpris</figcaption>
         </div>
         <div className='container'>

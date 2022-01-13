@@ -1,4 +1,4 @@
-import {useState } from 'react'
+import { useState } from 'react'
 import './Quizz.css'
 import amour2 from '../quizzdata/amour.json'
 import aubergine2 from '../quizzdata/aubergine.json'
@@ -9,7 +9,7 @@ import surprise2 from '../quizzdata/surprise.json'
 import triste2 from '../quizzdata/triste.json'
 
 export default function Quizz(props) {
-  const questionnaire=props.emojiSelected.quizzSelected;
+  const questionnaire = props.emojiSelected.quizzSelected
 
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [score, setScore] = useState(0)
@@ -29,31 +29,55 @@ export default function Quizz(props) {
 
   return (
     <div className='quizz-container'>
-      {console.log(`Test: ${questionnaire} et ${props.emojiSelected.quizzSelected}`)}
+      {console.log(
+        `Test: ${questionnaire} et ${props.emojiSelected.quizzSelected}`
+      )}
       {/* Conteneur général du quizz */}
       {/* CONDITION Conteneur Texte Résultat APPARAIT A LA FIN */}
       {showScore ? (
         <div>
-          {/* DIV CONTENANT LE TABLEAU DE SCORE FINAL */}
-          <p>Bravo Milhan, ton score est de {score} réponses justes /10 ! </p>
+          <div className='titre-tableau-resultat'>
+            <h2>
+              RESULTAT QUIZZ{' '}
+              <span style={{ fontSize: '7vw' }}> [ EMOTION ]</span>{' '}
+            </h2>
+          </div>
+          <div className='tableau-titre-resultat'>
+            {/* DIV CONTENANT LE TABLEAU DE SCORE FINAL */}
+            <h2>
+              <p>Bravo [userName] !</p>
+              <p className='phrase-pre-score'>Ton score est de </p>
+
+              <p className='score-final'>{score}/10 !</p>
+            </h2>
+          </div>
+          <div className='tableau-resultat'>
+            <p className='phrase-pre-resultat'>DETAILS DES RESULTATS </p>
+            <ul style={{ display: 'flex', justifyContent: 'space-around' }}>
+              <li className='resultat-positif'>{score} réponses correctes</li>
+              <li className='resultat-negatif'>
+                {10 - score} réponses fausses
+              </li>
+            </ul>
+          </div>
         </div>
       ) : (
         <div>
           {/* DIV CONTENANT LE CONTENEUR SUIVI QUEST  */}
           <div className='title-suiviquestion-container'>
             {/* DIV CONTENANT LE SUIVI NUMERO QUIZZ */}
-            <h2 className='title-suiviquestion'>
+            <h4 className='title-suiviquestion'>
               Question {currentQuestion + 1}/{questionnaire.length}
-            </h2>
+            </h4>
           </div>
           {/* FIN DIV SUIVI NUMERO QUIZZ */}
 
           <div className='ConteneurQuestionReponse'>
             <div className='questions-container'>
               {/* DEBUT DIV QUESTION*/}
-              <h1 className='questions'>
+              <h2 className='questions'>
                 {questionnaire[currentQuestion].questionText}
-              </h1>
+              </h2>
             </div>
             {/* FIN DIV QUESTION*/}
 
