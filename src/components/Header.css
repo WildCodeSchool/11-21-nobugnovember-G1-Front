@@ -22,7 +22,7 @@ li {
     font-size: 2vw;
     display: inline;
     text-decoration: none;
-    /* margin-left: 30px; */
+    margin: 0 20px;
     color: white;
     text-align: center;    
 }

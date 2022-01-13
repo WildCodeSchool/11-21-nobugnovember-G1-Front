@@ -1,11 +1,17 @@
 import Header from '../components/Header'
 import loadingSvg from '../assets/loadingImg.svg'
-
-const MiniJeux = () => {
+import Quizz from '../components/Quizz'
+const MiniJeux = props => {
   return (
-    <div>
-      <Header />
-      {/* <img src={loadingSvg} /> */}
+    <div className='catalogPage'>
+      <Header
+        emojiSelected={props.emojiSelected}
+        setEmojiSelected={props.setEmojiSelected}
+      />
+      <Quizz
+        emojiSelected={props.emojiSelected}
+        setEmojiSelected={props.setEmojiSelected}
+      />
     </div>
   )
 }
