@@ -5,13 +5,22 @@ import './Catalogue.css'
 import Footer from '../components/Footer'
 import Loading from '../components/Loading'
 import axios from 'axios'
-import { Link, Outlet } from 'react-router-dom'
+import useModal from '../components/useModale'
+import CardFilm from '../components/CardFilm'
 
 const Catalogue = props => {
-  const [isLoading, setIsLoading] = useState(false)
-  const apiKey = process.env.REACT_APP_API_KEY
+  const { isShowing, toggle } = useModal()
 
+  const [isLoading, setIsLoading] = useState(false)
+  const apiKey = 'k_yd4wrbrt'
   const titleType = 'movies&tv_series'
+
+  const [isActive, setIsActive] = useState(false)
+  const retourFunc = () => {
+    toggle()
+    setIsActive(!isActive)
+  }
+  const [getProps, setGetProps] = useState({})
 
   useEffect(() => {
     setIsLoading(true)
@@ -25,10 +34,20 @@ const Catalogue = props => {
         setIsLoading(false)
       })
   }, [props.emojiSelected.correspondance])
+
+  useEffect(() => {
+    console.log('test getProps', getProps)
+  }, [getProps])
   return (
     <div className='catalogPage'>
       <div className='catalogContainer'>
-        <Outlet />
+        <CardFilm
+          getProps={getProps}
+          isShowing={isShowing}
+          hide={toggle}
+          retourFunc={retourFunc}
+        />
+
         <Header
           className='headerband'
           emojiSelected={props.emojiSelected}
@@ -37,16 +56,20 @@ const Catalogue = props => {
         {isLoading ? (
           <Loading />
         ) : (
-          <div className='movie-grid'>
-            {props.resultat.map((element, index) => (
-              <Link to='/Catalogue/FicheFilm' key={index}>
-                <Cards
-                  key={element.key}
-                  title={element.title}
-                  poster={element.image}
-                  description={element.description}
-                />
-              </Link>
+          <div className={isActive ? 'none' : 'movie-grid'}>
+            {props.resultat.map(element => (
+              <Cards
+                // key={element.key}
+                // title={element.title}
+                // poster={element.image}
+                // description={element.description}
+                toggle={toggle}
+                isShowing={isShowing}
+                setIsActive={setIsActive}
+                setGetProps={setGetProps}
+                getProps={getProps}
+                data={element}
+              />
             ))}
           </div>
         )}

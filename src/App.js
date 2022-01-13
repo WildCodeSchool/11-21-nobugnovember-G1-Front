@@ -5,8 +5,6 @@ import Films from './screens/Films'
 import MiniJeux from './screens/MiniJeux'
 import CardFilm from './components/CardFilm'
 import { Routes, Route } from 'react-router-dom'
-// import { library } from '@fortawesome/fontawesome-svg-core'
-// import { fab } from '@fortawesome/free-brands-svg-icons'
 import { useState } from 'react'
 function App() {
   const [emojiSelected, setEmojiSelected] = useState('')
@@ -33,8 +31,8 @@ function App() {
               setResultat={setResultat}
             />
           }
-        >
-          <Route
+        />
+        {/* <Route
             path='/Catalogue/FicheFilm'
             element={
               <CardFilm
@@ -45,7 +43,7 @@ function App() {
               />
             }
           />
-        </Route>
+        </Route> */}
         <Route
           path='/Films'
           element={

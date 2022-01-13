@@ -1,18 +1,31 @@
+.popUpModal {
+    z-index: 1060;
+    position: absolute;
+    top: 33px;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 86%;
+}
+
+
 .cardFilm {
     background-image: url(../assets/background.jpg); 
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     background-size: cover;
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 1050;
+    overflow: hidden;
+    border-radius: 2%;
 }
 
 .cardFilmContainer {
     min-height: 100vh;
-    background: none;
+    background : rgb(26 25 25 / 54%);
     background-repeat: no-repeat !important;   
     background-attachment: fixed !important;
     background-size: cover !important;
@@ -20,6 +33,19 @@
     position: relative;
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px)!important;
+    z-index: 1060;
+}
+
+.closeModal {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2%;
+    padding-top: 2%;
+    color: #292928;
+}
+
+.closeIcone:hover {
+    color: white;  
 }
 
 .testFrost {
@@ -37,8 +63,10 @@
     padding-right: 40px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     flex-direction: row;
     z-index: -5;
+    padding-top: 2%;
 }
 
 .titre {
@@ -63,9 +91,9 @@
 }
 
 .trailer {
-    border-radius: 5%;
-    width: 560px;
-    height: 315px;
+    border-radius: 10px 10px 10px 10px / 10px 10px 10px 10px;
+    width: 400px;
+    height: 295px;
     
 }
 
@@ -75,7 +103,7 @@
     flex-wrap: nowrap;
     flex-direction: row;
     align-content: center;
-    width: 45%;
+    width: 55%;
     align-items: center;
     margin-bottom: 1vw;
     font-size: 2vh;
@@ -175,4 +203,14 @@
     position: absolute;
     bottom: 8%;
     color: #1f1f1d;
+}
+
+.cardFilmOverlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100vw;
+height: 100vh;
+z-index: 1040;
+background-color: rgba(0, 0, 0, 0.5);
 }

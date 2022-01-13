@@ -40,6 +40,17 @@
     display: flex;
     flex-wrap: wrap; 
     justify-content: center;
+    /* position: fixed; */
+}
+
+/* TEST */
+.none {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
     position: fixed;
 }
 
