@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './Quizz.css'
-import joyeux from '../quizzdata/joyeux.json'
+import triste from '../quizzdata/triste.json'
 export default function Quizz() {
   // const questionsTriste = [
   //   {
@@ -149,7 +149,7 @@ export default function Quizz() {
 
   return (
     <div className='quizz-container'>
-      {console.log(joyeux.questionText)}
+      {console.log(triste.questionText)}
       {/* Conteneur général du quizz */}
       {/* CONDITION Conteneur Texte Résultat APPARAIT A LA FIN */}
       {showScore ? (

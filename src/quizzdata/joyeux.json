@@ -1,4 +1,4 @@
-
+[
 {
     "questionText": "Quelle citation est attitrée au personnage principal de The Mask ?",
     "answerOptions": [
@@ -89,3 +89,4 @@
       { "answerText": "Bill Tremendous", "isCorrect": false }
     ]
   }
+]
