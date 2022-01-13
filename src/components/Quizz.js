@@ -50,7 +50,7 @@ export default function Quizz() {
       ]
     },
     {
-      questionText: 'Dans quel film aperçoit-on "Double Gras" ? ',
+      questionText: 'Dans quel film aperçoit-on "Gras Double" ? ',
       answerOptions: [
         { answerText: 'Austin Powers', isCorrect: true },
         { answerText: 'Oss 117', isCorrect: false },
