@@ -1,4 +1,3 @@
-import Header from './Header' 
 import affiche from '../assets/affichetest.jpg'
 import popcorn from '../assets/popcorn.png'
 import cast1 from '../assets/cast1.jpg'
@@ -8,6 +7,8 @@ import cast4 from '../assets/cast4.jpg'
 import cast5 from '../assets/cast5.jpg'
 import cast6 from '../assets/cast6.jpg'
 import ReactStars from 'react-rating-stars-component'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTimesCircle  } from '@fortawesome/free-solid-svg-icons'
 
 
 import '../components/CardFilm.css'
@@ -17,7 +18,9 @@ const CardFilm = (props) => {
         <div>
             <div className='cardFilm'>
                 <div className='cardFilmContainer'>
-                    <Header emojiSelected={props.emojiSelected} setEmojiSelected={props.setEmojiSelected} />
+                    <div className='closeModal'>
+                        <FontAwesomeIcon icon={faTimesCircle} size='3x' className='closeIcone' />
+                    </div>
                     <div className='infoContainer'>
                         <img src={affiche} className='jaquette' alt='jaquette'></img>
                         <div className='holderInfo'>
@@ -89,7 +92,7 @@ const CardFilm = (props) => {
                             <p className='roleName'>Detective Burkeas Detective Burke</p>
                         </div>
                     </div>
-                    <div></div><iframe SRC="https://uqload.org/embed-na65en0j8853.html" FRAMEBORDER='0' MARGINWIDTH='0' MARGINHEIGHT='0' SCROLLING='NO' WIDTH='640' HEIGHT='360' allowfullscreen='true'></iframe> 
+                    {/* <iframe SRC="https://uqload.org/embed-na65en0j8853.html" FRAMEBORDER='0' MARGINWIDTH='0' MARGINHEIGHT='0' SCROLLING='NO' WIDTH='640' HEIGHT='360' allowfullscreen='true'></iframe>  */}
                 </div>             
             </div>
         </div>

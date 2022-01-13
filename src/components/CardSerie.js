@@ -8,6 +8,8 @@ import castS4 from '../assets/castS4.jpg'
 import castS5 from '../assets/castS5.jpg'
 import castS6 from '../assets/castS6.jpg'
 import ReactStars from 'react-rating-stars-component'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTimesCircle  } from '@fortawesome/free-solid-svg-icons'
 
 
 import '../components/CardSerie.css'
@@ -17,7 +19,9 @@ const CardSerie = (props) => {
         <div>
             <div className='cardSerie'>
                 <div className='cardSerieContainer'>
-                    <Header emojiSelected={props.emojiSelected} setEmojiSelected={props.setEmojiSelected} />
+                <div className='closeModal'>
+                        <FontAwesomeIcon icon={faTimesCircle} size='3x' className='closeIcone'/>
+                    </div>
                     <div className='infoContainer'>
                         <img src={affiche} className='jaquette' alt='jaquette'></img>
                         <div className='holderInfo'>

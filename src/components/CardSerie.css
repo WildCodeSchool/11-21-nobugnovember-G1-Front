@@ -47,8 +47,10 @@
     font-size: 2vh;
     margin-bottom: 1vw;
 }
-    
 
+.divCarre:hover {
+    outline: #FFDC6C solid 4px;
+}
 
 .holderInfo {
     display: flex;
