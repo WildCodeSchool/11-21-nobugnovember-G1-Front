@@ -128,6 +128,9 @@ font-size: 20px;
 .score-final {
     color:#dbbf1c;
     font-size: 1.7em;
+    text-shadow: 2px 3px 3px black;
+}
+
 }
 
 .tableau-resultat {
