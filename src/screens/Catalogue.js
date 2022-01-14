@@ -11,9 +11,7 @@ import joyeux from '../assets/joyeux.png'
 const Catalogue = props => {
   const [isLoading, setIsLoading] = useState(false)
   const apiKey = process.env.REACT_APP_API_KEY
-
   const titleType = 'movies&tv_series'
-
   useEffect(()=>{
     console.log(props.change)
       if(props.change){

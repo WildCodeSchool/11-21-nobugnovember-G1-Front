@@ -26,9 +26,6 @@ const EmojiChanger = (props) => {
     )
     props.setChange(true)
     props.setEmojiSelected(selection[0])
-
-     //console.log(selection[0].emoji)
-    //localStorage.setItem('maSelection', selection[0])
   }
   return (
     <div className='search-box'>
