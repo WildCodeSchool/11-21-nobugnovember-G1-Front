@@ -12,7 +12,7 @@ const Catalogue = props => {
   const { isShowing, toggle } = useModal()
 
   const [isLoading, setIsLoading] = useState(false)
-  const apiKey = 'k_lp14to4a'
+  const apiKey = 'k_0nug4wnp'
   const titleType = 'movies&tv_series'
 
   const [isActive, setIsActive] = useState(false)
@@ -57,7 +57,7 @@ const Catalogue = props => {
     /*********************************************************/
   }, [props.emojiSelected.correspondance])
 
-  const [getDetails, setGetDetails] = useState({})
+  const [getDetails, setGetDetails] = useState([])
 
   /*************** Appel API Details Film ****************************/
   useEffect(() => {

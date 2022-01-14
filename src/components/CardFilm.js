@@ -1,14 +1,7 @@
 import ReactDOM from 'react-dom'
 
-import Header from './Header'
-import affiche from '../assets/affichetest.jpg'
 import popcorn from '../assets/popcorn.png'
-import cast1 from '../assets/cast1.jpg'
-import cast2 from '../assets/cast2.jpg'
-import cast3 from '../assets/cast3.jpg'
-import cast4 from '../assets/cast4.jpg'
-import cast5 from '../assets/cast5.jpg'
-import cast6 from '../assets/cast6.jpg'
+import ActorCard from './ActorCard'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 
@@ -39,16 +32,16 @@ const CardFilm = ({ getProps, retourFunc, isShowing, getDetails }) =>
                       <h3 className='titre'>{getProps.title}</h3>
                       <p className='year'>{getDetails.year}</p>
                       <div className='info'>
-                        <p className='duration'>{getDetails.runtimeStr}</p>
+                        <p className='duration'>{getProps.runtimeStr}</p>
                         <div className='holderPegi'>
-                          <p id='pegi'>{getDetails.contentRating}</p>
+                          <p id='pegi'>{getProps.contentRating}</p>
                         </div>
                         <img
                           src={popcorn}
                           className='popcorn'
                           alt='porpcorn'
                         ></img>{' '}
-                        <p>{getDetails.metacriticRating}</p>
+                        <p>{getDetails.metacriticRating} %</p>
                       </div>
                       <div className='synopsis'>
                         <p>{getDetails.plotLocal}</p>
@@ -75,93 +68,23 @@ const CardFilm = ({ getProps, retourFunc, isShowing, getDetails }) =>
                         {getDetails.genres}
                       </p>
                     </div>
-                    {/* <iframe
+                    <video
+                      controls
                       className='trailer'
                       width='560'
                       height='315'
-                      src={getDetails.trailer.linkEmbed}
-                      title='YouTube video player'
+                      // src={`https://imdb-video.media-imdb.com/${getDetails.trailer.videoId}/1434659607842-pgv4ql-1596404706743.mp4?Expires=1642245486&Signature=AKAxTmMtuaNHs5B1-BIA-N-f0yzaNkpsqkImKPcLsTaLPA2sMQWgXaXy5ZBjXEGdq0Y-AQiF4E3i2izZHRYCGq52zv5qXqpINdfkb4Zcd6q~ZQprfCYD97jjVOqBuK~pcphcZZfj~BUfKP3WrCab-TB0RGVI83V6chs6Dpnop8r5crNw~em5GnVDGjwJaqFIrMSTUbzbEHpHn3SQdS1HOonZPgl3~cbrx7u7iIX6FO0rolREELgHkCpY4Fj7EsvfDSySZAxACqlRf-QfBf-mYeNpdeW9PQ2kvwIfbY4KElshQ8Rs68f1~0q8ZSygotJ~Z1jJ-8g556j3Yw8LQvSq7w__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA`}
                       frameborder='0'
                       allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                       allowfullscreen='true'
-                    ></iframe> */}
+                    ></video>
                   </div>
-
-                  {/******************************************
                   <h4 className='casting'>Casting</h4>
-                  <div className='castingListe'>                 
-
-
-                    {getDetails.actorList.map(actor => (
-                      <div className='infoCasting'>
-                        <div className='divCarre'>
-                          <img
-                            src={actor.image}
-                            className='imgCast'
-                            alt='casting'
-                          ></img>
-                        </div>
-                        <p className='actorName'>{actor.name}</p>
-                        <p className='roleName'>{actor.asCharacter}</p>
-                      </div>
-                    ))}
-
-                      /*******************************************/}
-
-                  <div className='infoCasting'>
-                    <div className='divCarre'>
-                      <img
-                        src={getDetails.actorList}
-                        className='imgCast'
-                        alt='casting'
-                      ></img>
-                    </div>
-                    <p className='actorName'>{getDetails.stars}</p>
-                    <p className='roleName'>Arthur Fleckas Arthur Flec</p>
-                  </div>
-
-                  <div className='infoCasting'>
-                    <div className='divCarre'>
-                      <img src={cast2} className='imgCast' alt='casting'></img>
-                    </div>
-                    <p className='actorName'>Robert De Niro</p>
-                    <p className='roleName'>
-                      Murray Franklinas Murray Franklin
-                    </p>
-                  </div>
-                  <div className='infoCasting'>
-                    <div className='divCarre'>
-                      <img src={cast3} className='imgCast' alt='casting'></img>
-                    </div>
-                    <p className='actorName'>Zazie Beetz</p>
-                    <p className='roleName'>Arthur Fleckas Arthur Flec</p>
-                  </div>
-                  <div className='infoCasting'>
-                    <div className='divCarre'>
-                      <img src={cast4} className='imgCast' alt='casting'></img>
-                    </div>
-                    <p className='actorName'>Frances Conroy</p>
-                    <p className='roleName'>Penny Fleckas Penny Fleck</p>
-                  </div>
-                  <div className='infoCasting'>
-                    <div className='divCarre'>
-                      <img src={cast5} className='imgCast' alt='casting'></img>
-                    </div>
-                    <p className='actorName'>Brett Cullen</p>
-                    <p className='roleName'>Sophie Dumondas Sophie Dumond</p>
-                  </div>
-                  <div className='infoCasting'>
-                    <div className='divCarre'>
-                      <img src={cast6} className='imgCast' alt='casting'></img>
-                    </div>
-                    <p className='actorName'>Shea Whigham</p>
-                    <p className='roleName'>???????????????</p>
-                  </div>
+                  <ActorCard getDetails={getDetails} />
                 </div>
               </div>
             </div>
           </div>
-          {/* </div> */}
         </>,
         document.body
       )
