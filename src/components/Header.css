@@ -40,6 +40,7 @@ li:hover{
 
 @media screen and (max-width: 750px){
     li {
-        font-size: 3.5vw;
+        font-size: 2.5vw;
+        margin: 0 10px;
     }
 }

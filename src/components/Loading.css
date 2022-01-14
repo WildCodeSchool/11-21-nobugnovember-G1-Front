@@ -4,8 +4,9 @@
     color:#feda55;
  }
 .loading-img{
-    height: 350px;
-    width: 350px;
+    height: 150px;
+    width: 150px;
+    margin-top: 20%;
     animation: rotating 1s linear infinite;
 }
 
@@ -15,5 +16,12 @@
     }
     to {
         transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width : 800px){
+    .loading-img{
+        height: 80px;
+        width: 80px; 
     }
 }
