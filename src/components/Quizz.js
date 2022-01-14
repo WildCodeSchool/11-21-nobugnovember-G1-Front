@@ -7,7 +7,7 @@ import joyeux2 from '../quizzdata/joyeux.json'
 import peur2 from '../quizzdata/peur.json'
 import surprise2 from '../quizzdata/surprise.json'
 import triste2 from '../quizzdata/triste.json'
-
+import TableauScore from './TableauScore'
 export default function Quizz(props) {
   const questionnaire = props.emojiSelected.quizzSelected
 
@@ -35,32 +35,7 @@ export default function Quizz(props) {
       {/* Conteneur général du quizz */}
       {/* CONDITION Conteneur Texte Résultat APPARAIT A LA FIN */}
       {showScore ? (
-        <div>
-          <div className='titre-tableau-resultat'>
-            <h2>
-              RESULTAT QUIZZ{' '}
-              <span style={{ fontSize: '7vw' }}> [ EMOTION ]</span>{' '}
-            </h2>
-          </div>
-          <div className='tableau-titre-resultat'>
-            {/* DIV CONTENANT LE TABLEAU DE SCORE FINAL */}
-            <h2>
-              <p>Bravo [userName] !</p>
-              <p className='phrase-pre-score'>Ton score est de </p>
-
-              <p className='score-final'>{score}/10 !</p>
-            </h2>
-          </div>
-          <div className='tableau-resultat'>
-            <p className='phrase-pre-resultat'>DETAILS DES RESULTATS </p>
-            <ul style={{ display: 'flex', justifyContent: 'space-around' }}>
-              <li className='resultat-positif'>{score} réponses correctes</li>
-              <li className='resultat-negatif'>
-                {10 - score} réponses fausses
-              </li>
-            </ul>
-          </div>
-        </div>
+        <TableauScore score={score} />
       ) : (
         <div>
           {/* DIV CONTENANT LE CONTENEUR SUIVI QUEST  */}
@@ -111,7 +86,7 @@ export default function Quizz(props) {
             ___________
           ==> si score entre >6 et <10  Bravo {playerName} , tu as obtenus {score} réponses correctes à ce questionnaire!
                                       Retente ta chance et essais d'obtenir 10 réponses justes !
-             ___________         
+___________         
           ==> si score >3 && <7       {playerName}, tu ne te sentais pas bien aujourd'hui ? Tu as seulement {score} réponses juste à ce questionnaire!
                                       J'espère que tu n'as rien prévu cette semaine? Tu pourrais en profiter pour replonger dans les Films & Séries :p
             ___________

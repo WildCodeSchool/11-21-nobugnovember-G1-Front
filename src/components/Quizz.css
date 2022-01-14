@@ -11,7 +11,7 @@
 .title-suiviquestion-container { 
         width: 100%;
         margin-top: 3%;
-        border: 2px solid red;
+        /* border: 2px solid red; */
         display: flex;
         justify-content: flex-end;
         padding-right: 30px;
@@ -28,7 +28,7 @@
     }    
 
 .ConteneurQuestionReponse{
-   border: 3px solid green;
+   /* border: 3px solid green; */
     width: 100%;
     padding: 50px 30px 0 30px;
 } 
@@ -37,7 +37,7 @@
     display: flex;
     justify-content: center;  /* A REALIGNER */
     width: cover;
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 
 .questions{
@@ -67,7 +67,7 @@
     width: 100%;
     max-width: 950px;
     padding : 2% 0px;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     }
 
 .quizz-button{
@@ -87,90 +87,7 @@
     border-radius: 15px;
 }
 
-/******** Tableau résultat 1 *********/
 
-.titre-tableau-resultat{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-margin: 50px 0;
-text-align: center;
-/* border: 2px solid red; */
-font-size: 4vw;
-color: whitesmoke;
-text-shadow: 3px 2px 5px black;
-height: 100px;
-}
-
-.tableau-titre-resultat {
-    display: flex;
-    justify-content: center;
-    background-color: whitesmoke;
-    border: 5px solid rgba(151, 150, 150, 0.171);
-    box-shadow: 0 5px 15px #333333;
-    border-radius: 15px;
-    height:auto;
-    padding: 3%;
-    margin:0 5% 0 5%;
-
-    font-size: 27px;
-    text-align: center;
-color: black;
-width: auto;
-}
-
-.phrase-pre-score{
-    border-top: 3px solid black;
-margin-top: 10px;
-font-size: 20px;
-}
-
-.score-final {
-    color:#dbbf1c;
-    font-size: 1.7em;
-    text-shadow: 2px 3px 3px black;
-}
-
-}
-
-.tableau-resultat {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    font-size: 12px;
-    background-color: whitesmoke;
-    border: 5px solid rgba(151, 150, 150, 0.171);
-    box-shadow: 0 5px 15px #333333;
-    border-radius: 15px;
-    padding: 3%;
-    margin: 5%;
-    width: auto;
-
-}
-.phrase-pre-resultat{
-    text-align: center;
-    border-bottom: 3px solid black;
-    border-width: object;
-margin-top: 10px;
-font-size: 20px;
-font-weight: bold;
-padding-bottom: 10px;
-
-}
-
-
-
-.resultat-positif, .resultat-negatif {
-    margin-top: 15px;
-}
-
-.resultat-positif {
-    font-size: 1.7em;
-color: rgb(10, 87, 10);}
-
-.resultat-negatif {
-    font-size: 1.7em;
-color: rgb(138, 17, 17);}
 
 /******** Tableau résultat 2 *********/
 

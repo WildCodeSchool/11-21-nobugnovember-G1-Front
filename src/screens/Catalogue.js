@@ -13,15 +13,15 @@ const Catalogue = props => {
 
   useEffect(() => {
     setIsLoading(true)
-    axios
-      .get(
-        `https://imdb-api.com/API/AdvancedSearch/${apiKey}?title_type=${titleType}&genres=${props.emojiSelected.correspondance}&count=100`
-      )
-      .then(response => response.data)
-      .then(data => {
-        props.setResultat(data.results)
-        setIsLoading(false)
-      })
+    // axios
+    //   .get(
+    //     `https://imdb-api.com/API/AdvancedSearch/${apiKey}?title_type=${titleType}&genres=${props.emojiSelected.correspondance}&count=100`
+    //   )
+    //   .then(response => response.data)
+    //   .then(data => {
+    //     props.setResultat(data.results)
+    //     setIsLoading(false)
+    //   })
   }, [props.emojiSelected.correspondance])
   return (
     <div className='catalogPage'>
