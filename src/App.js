@@ -10,11 +10,12 @@ import { useState } from 'react'
 function App() {
   const [emojiSelected,setEmojiSelected]=useState('')
   const [resultat, setResultat] = useState([])
+  const [change,setChange]=useState(false)
   return (
     <div className='App'>
       <Routes>
-        <Route path='/' element={<Home emojiSelected={emojiSelected} setEmojiSelected={setEmojiSelected}/>} />
-        <Route path='/Catalogue' element={<Catalogue emojiSelected={emojiSelected} setEmojiSelected={setEmojiSelected} resultat={resultat} setResultat={setResultat}/>} />
+        <Route path='/' element={<Home emojiSelected={emojiSelected} setEmojiSelected={setEmojiSelected} change={change} setChange={setChange}/>} />
+        <Route path='/Catalogue' element={<Catalogue emojiSelected={emojiSelected} setEmojiSelected={setEmojiSelected} resultat={resultat} setResultat={setResultat} change={change} setChange={setChange}/>} />
         <Route path='/Films' element={<Films emojiSelected={emojiSelected} setEmojiSelected={setEmojiSelected} resultat={resultat} setResultat={setResultat}/>} />
         <Route path='/Series' element={<Series  emojiSelected={emojiSelected} setEmojiSelected={setEmojiSelected} resultat={resultat} setResultat={setResultat}/>} />
         <Route path='/MiniJeux' element={<MiniJeux />} />

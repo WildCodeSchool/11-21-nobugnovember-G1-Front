@@ -23,6 +23,7 @@ const Emojis = (props) => {
     const selection = correspondanceTab.filter(
       element => element.emotion === event.target.alt
     )
+    props.setChange(true);
     props.setEmojiSelected(selection[0])
 
   }

@@ -15,16 +15,22 @@ const Catalogue = props => {
   const titleType = 'movies&tv_series'
 
   useEffect(()=>{
-    setIsLoading(true);
-      axios.get(`https://imdb-api.com/API/AdvancedSearch/${apiKey}?title_type=${titleType}&genres=${props.emojiSelected.correspondance}&count=100`)
-      .then((response)=>response.data)
-      .then((data)=>{props.setResultat(data.results);
-      setIsLoading(false);});
+    console.log(props.change)
+      if(props.change){
+        props.setChange(false)
+        setIsLoading(true);
+        axios.get(`https://imdb-api.com/API/AdvancedSearch/${apiKey}?title_type=${titleType}&genres=${props.emojiSelected.correspondance}&count=100`)
+          .then((response) => response.data)
+          .then((data) => {
+            props.setResultat(data.results);
+            setIsLoading(false);
+          });
+      }
   },[props.emojiSelected.correspondance])
   return (
     <div className='catalogPage'>
       <div className='catalogContainer'>
-        <Header className='headerband' emojiSelected={props.emojiSelected} setEmojiSelected={props.setEmojiSelected}/>
+        <Header className='headerband' emojiSelected={props.emojiSelected} setEmojiSelected={props.setEmojiSelected} change={props.change} setChange={props.setChange}/>
         {isLoading?<Loading />:
         <div className='movie-grid'>
           {props.resultat.map(element => (

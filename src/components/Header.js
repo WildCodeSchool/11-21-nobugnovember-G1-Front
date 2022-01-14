@@ -30,6 +30,7 @@ const Header = props => {
       <EmojiChanger
         emojiSelected={props.emojiSelected}
         setEmojiSelected={props.setEmojiSelected}
+        change={props.change} setChange={props.setChange}
       />
     </div>
   )

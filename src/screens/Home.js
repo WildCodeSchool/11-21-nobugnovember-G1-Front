@@ -9,7 +9,7 @@ const Home = (props) => {
     <div className='home'>
       <Logo />
       <h1>Quel est votre mood ? </h1>
-      <Emojis emojiSelected={props.emojiSelected} setEmojiSelected={props.setEmojiSelected}/>
+      <Emojis emojiSelected={props.emojiSelected} setEmojiSelected={props.setEmojiSelected} change={props.change} setChange={props.setChange}/>
       <Footer />
     </div>
   )
