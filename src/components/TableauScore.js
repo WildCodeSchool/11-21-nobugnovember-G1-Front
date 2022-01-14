@@ -26,8 +26,8 @@ const TableauScore = props => {
       J'espère que tu n'as rien de prévu cette semaine?
       Tu pourrais en profiter pour replonger dans les Films & Séries :). `)
     } else {
-      setMessage(`{playerName}, tu me donnes envie de casser l'écran ? 
-      Tu as fait un score à s'en jeter du pont. 
+      setMessage(`{playerName}, tu me donnes envie de casser l'écran ?
+      Tu as fait un score à s'en jeter du pont.
       Ton score est seulement de ${props.score} réponses correctes à ce questionnaire!
       Petite astuce amicale : Tu as besoin d'allumer ton écran pour pouvoir regarder des Films et Séries afin savoir de quoi ça parle.
       Ecoutez les récits de tes amis ne fait pas de toi un cinéphile. Maintenant, tu es au courant. `)
