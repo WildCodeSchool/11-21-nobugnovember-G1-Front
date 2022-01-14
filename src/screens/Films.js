@@ -8,7 +8,7 @@ const Films = (props) => {
   const apiKey=process.env.REACT_APP_API_KEY;
 
   return(
-  <div>
+  <div className='catalogPage'>
     <Header emojiSelected={props.emojiSelected} setEmojiSelected={props.setEmojiSelected} />
     <div className='movie-grid'>
       {props.resultat.filter((element)=> !element.description.includes('–')).map(element => (

@@ -1,16 +1,16 @@
 /********* MOBILE FIRST MOD **********/
-@media screen and (max-width: 650px) { 
+@media screen and (max-width: 850px) { 
 
 .search-box {
     position: absolute; /* Position sur la page*/
-    top: 20px;
-    right: 20px;
+    top: 1%;
+    right: 2%;
     /* background-color: #565658; */
     background-image: linear-gradient(135deg, #2d2e31 0%, #3b3b3b 100%); /********** COULEUR BANDE EMOJI **************/
-    height: 43px; /* Hauteur bande grise etat initial */
-    width: 43px; /* Largeur bande grise etat initial */
+    height: 30px; /* Hauteur bande grise etat initial */
+    width: 30px; /* Largeur bande grise etat initial */
     /* si je change ca, ca retrecit le fond icone de base) */
-    border-radius: 43px;
+    border-radius: 30px;
     /* padding: 10px; */
     display: flex; /* Gestion du positionnement emoticone SOLO*/
     justify-content: center;
@@ -19,7 +19,7 @@
 }
 
 .search-box:hover {
-    height: 310px; /* Longueur bande deployée*/
+    height: 214px; /* Longueur bande deployée*/
     display: flex;
     align-items: flex-start; /* Verticalité Emojis déployés*/
     
@@ -33,7 +33,7 @@
     float: left;
     padding: 0;
     color: white;
-    font-size: 16px;
+    font-size: 8px;
     transition: 0.4s;
     /* line-height: 40px; */
     width: 100px;
@@ -41,7 +41,7 @@
 }
 
 .search-box:hover > .search-txt{
-    width: 43px;
+    width: 30px;
     transition: width 0.4s;
     display: flex;
     flex-direction: column;
@@ -66,8 +66,8 @@
 
 .lienSelection{
     /* color: #e84118; */
-   width: 43px;
-   height: 43px;
+   width: 30px;
+   height: 30px;
    border-radius: 50%;
    /* background: #2d2e31; */ /*********** COULEUR AUTOUR DES EMOJIS = INUTILE EN SOI***************/
    /*couleur background base #2f3640 */
@@ -82,7 +82,7 @@
 }
 
 .emojis {
-    width: 35px;
+    width: 22px;
     filter: grayscale(100%) Brightness(50%) contrast(130%);
 }
 
@@ -92,16 +92,16 @@
 
 .emojiactif {
     display:flex;
-    width: 35px;
+    width: 22px;
     filter: brightness(100%)
 }
 }
 
-@media screen and (min-width: 651px) {    
+@media screen and (min-width: 851px) {    
     .search-box {
         position: absolute;
-        top: 30px;
-        right: 30px;
+        top: 2%;
+        right: 2%;
         /* background-color: #565658; */
         background-image: linear-gradient(
     135deg, #2d2e31 0%, #3b3b3b 100%);
