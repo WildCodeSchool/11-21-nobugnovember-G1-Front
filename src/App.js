@@ -32,18 +32,6 @@ function App() {
             />
           }
         />
-        {/* <Route
-            path='/Catalogue/FicheFilm'
-            element={
-              <CardFilm
-                emojiSelected={emojiSelected}
-                setEmojiSelected={setEmojiSelected}
-                resultat={resultat}
-                setResultat={setResultat}
-              />
-            }
-          />
-        </Route> */}
         <Route
           path='/Films'
           element={
@@ -77,7 +65,7 @@ function App() {
             />
           }
         />
-        <Route
+        {/* <Route
           path='/FicheFilm'
           element={
             <CardFilm
@@ -87,7 +75,7 @@ function App() {
               setResultat={setResultat}
             />
           }
-        />
+        /> */}
       </Routes>
     </div>
   )
