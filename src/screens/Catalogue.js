@@ -12,7 +12,7 @@ const Catalogue = props => {
   const { isShowing, toggle } = useModal()
 
   const [isLoading, setIsLoading] = useState(false)
-  const apiKey = 'k_0nug4wnp'
+  const apiKey = 'k_1mq6o7sl'
   const titleType = 'movies&tv_series'
 
   const [isActive, setIsActive] = useState(false)
@@ -22,38 +22,40 @@ const Catalogue = props => {
   }
   const [getProps, setGetProps] = useState({})
 
-  let dataAPI = [] /* Variable pour données de l'API dans le local storage */
-  const recupAPI = () => {
-    dataAPI = JSON.parse(localStorage.getItem('dataAPI'))
-    console.log('localJsonParse', JSON.parse(localStorage.getItem('dataAPI')))
-    console.log('dataAPI', dataAPI)
-    props.setResultat(dataAPI)
-  }
+  // let dataAPI = [] /* Variable pour données de l'API dans le local storage */
+  // const recupAPI = () => {
+  //   dataAPI = JSON.parse(localStorage.getItem('dataAPI'))
+  //   console.log('localJsonParse', JSON.parse(localStorage.getItem('dataAPI')))
+  //   console.log('dataAPI', dataAPI)
+  //   props.setResultat(dataAPI)
+  // }
 
   /***************** APPEL API GENERAL *******************/
   useEffect(() => {
-    const appelAPI = () => {
-      setIsLoading(true)
-      axios
-        .get(
-          `https://imdb-api.com/API/AdvancedSearch/${apiKey}?title_type=${titleType}&genres=${props.emojiSelected.correspondance}&count=50` /* Requête de 50 le temps de dev, penser à remettre à 100 */
-        )
-        .then(response => response.data)
-        .then(data => {
+    // const appelAPI = () => {
+    setIsLoading(true)
+    axios
+      .get(
+        `https://imdb-api.com/API/AdvancedSearch/${apiKey}?title_type=${titleType}&genres=${props.emojiSelected.correspondance}&count=50` /* Requête de 50 le temps de dev, penser à remettre à 100 */
+      )
+      .then(response => response.data)
+      .then(
+        data => {
           props.setResultat(data.results)
           setIsLoading(false)
-          localStorage.setItem(
-            'dataAPI',
-            JSON.stringify(data.results)
-          ) /* création fichier local storage avec données de l'API */
-          dataAPI = localStorage.getItem('dataAPI')
-          console.log('BAITED')
-          /* BAITED si appel à l'API fait */
-        })
-    }
+        }
+        // localStorage.setItem(
+        //   'dataAPI',
+        //   JSON.stringify(data.results)
+      ) /* création fichier local storage avec données de l'API */
+    // dataAPI = localStorage.getItem('dataAPI')
+    console.log('BAITED')
+    /* BAITED si appel à l'API fait */
+
+    // }
 
     /* Local storage for API datas */
-    localStorage.getItem('dataAPI') ? recupAPI() : appelAPI()
+    // localStorage.getItem('dataAPI') ? recupAPI() : appelAPI()
     /*********************************************************/
   }, [props.emojiSelected.correspondance])
 
