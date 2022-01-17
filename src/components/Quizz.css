@@ -1,0 +1,112 @@
+
+  
+  .quizz-container {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 1;
+   width: 100vw;
+    }
+
+.title-suiviquestion-container { 
+        width: 100%;
+        margin-top: 3%;
+        /* border: 2px solid red; */
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 30px;
+        }
+
+.title-suiviquestion { 
+    text-align: left;
+    width: fit-content;
+    background-color: whitesmoke;
+    border: 5px solid rgba(151, 150, 150, 0.171);
+    box-shadow: 0 5px 15px #333333;
+    border-radius: 15px;
+    padding: 5px;
+    }    
+
+.ConteneurQuestionReponse{
+   /* border: 3px solid green; */
+    width: 100%;
+    padding: 50px 30px 0 30px;
+} 
+
+.questions-container{
+    display: flex;
+    justify-content: center;  /* A REALIGNER */
+    width: cover;
+    /* border: 2px solid black; */
+}
+
+.questions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    background-color: whitesmoke;
+    border: 5px solid rgba(151, 150, 150, 0.171);
+    box-shadow: 0 5px 15px #333333;
+    border-radius: 15px;
+    padding: 3% 5%;
+    height: 100px;
+    width: 100%;
+    max-width: 800px;
+    ;
+}
+
+
+.button-grid{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 950px;
+    padding : 2% 0px;
+    /* border: 2px solid red; */
+    }
+
+.quizz-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 300px;
+    font-size: 16px;
+    margin: 10px;
+    padding: 0 15px;
+    text-align: justify;
+    background-color: #FFDC6C;
+    border: 5px solid #bb951842;
+    box-shadow: 0 5px 15px #333333;
+    font-weight: bold;
+    border-radius: 15px;
+}
+
+
+
+/******** Tableau résultat 2 *********/
+
+/* .tableau-titre-resultat {
+    font-size: 12px;
+    background-color: whitesmoke;
+    border: 5px solid rgba(151, 150, 150, 0.171);
+    box-shadow: 0 5px 15px #333333;
+    border-radius: 15px;
+    padding: 3%;
+
+}
+
+.tableau-resultat {
+    font-size: 12px;
+    background-color: whitesmoke;
+    border: 5px solid rgba(151, 150, 150, 0.171);
+    box-shadow: 0 5px 15px #333333;
+    border-radius: 15px;
+    padding: 3%;
+
+} */
