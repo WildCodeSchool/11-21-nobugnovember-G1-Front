@@ -1,40 +1,68 @@
+import { useEffect } from 'react'
 import Header from '../components/Header'
-import { useEffect, useState } from 'react'
-import axios from 'axios'
 import Cards from '../components/Cards'
-import Loading from '../components/Loading'
-const Series = props => {
-  const [isLoading, setIsLoading] = useState(true)
+import CardFilm from '../components/CardFilm'
+import axios from 'axios'
+import './Catalogue.css'
 
+const Series = ({
+  setGetProps,
+  getProps,
+  isActive,
+  setIsActive,
+  toggle,
+  isShowing,
+  isLoading,
+  retourFunc,
+  getDetails,
+  setGetDetails,
+  ...props
+}) => {
   const apiKey = process.env.REACT_APP_API_KEY
-  //const titleType = 'tv_series'
-  //const [resultat, setResultat] = useState([])
-  // useEffect(()=>{
-  //   axios.get(`https://imdb-api.com/API/AdvancedSearch/${apiKey}?title_type=${titleType}&genres=${props.emojiSelected.correspondance}&count=100`)
-  //     .then((response)=>response.data)
-  //     .then((data)=>{setResultat(data.results);
-  //       setIsLoading(false);});
-  // },[])
+
+  useEffect(() => {
+    const appelAPIFilm = () => {
+      axios
+        .get(
+          `https://imdb-api.com/fr/API/Title/${apiKey}/${getProps.id}/FullActor,FullCast,Posters,Images,Trailer,Ratings,`
+        )
+        .then(res => res.data)
+        .then(res => {
+          setGetDetails(res)
+          console.log('lolol', getDetails)
+        })
+    }
+    isShowing && appelAPIFilm()
+  }, [isShowing])
+
   return (
-    <div>
-      <Header
-        emojiSelected={props.emojiSelected}
-        setEmojiSelected={props.setEmojiSelected}
-      />
-      <div className='movie-grid'>
-        {props.resultat
-          .filter(element => element.description.includes('–'))
-          .map(element => (
-            <Cards
-              key={element.key}
-              title={element.title}
-              poster={element.image}
-              description={element.description}
-            />
-          ))}
+    <div className='catalogPage'>
+      <div className='catalogContainer'>
+        <CardFilm
+          getProps={getProps}
+          isShowing={isShowing}
+          hide={toggle}
+          retourFunc={retourFunc}
+          getDetails={getDetails}
+        />
+        <Header
+          emojiSelected={props.emojiSelected}
+          setEmojiSelected={props.setEmojiSelected}
+        />
+        <div className={isActive ? 'none' : 'movie-grid'}>
+          {props.resultat
+            .filter(element => element.description.includes('–'))
+            .map(element => (
+              <Cards
+                key={element.key}
+                setGetProps={setGetProps}
+                setIsActive={setIsActive}
+                toggle={toggle}
+                data={element}
+              />
+            ))}
+        </div>
       </div>
-      {/* {console.log(props.resultat)} */}
-      {isLoading ? <Loading /> : ''}
     </div>
   )
 }

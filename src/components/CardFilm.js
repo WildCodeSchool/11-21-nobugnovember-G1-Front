@@ -5,7 +5,7 @@ import ActorCard from './ActorCard'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 
-import '../components/CardFilm.css'
+import './CardFilm.css'
 const CardFilm = ({ getProps, retourFunc, isShowing, getDetails }) =>
   isShowing
     ? ReactDOM.createPortal(

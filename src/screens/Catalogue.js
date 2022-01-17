@@ -5,22 +5,28 @@ import './Catalogue.css'
 import Footer from '../components/Footer'
 import Loading from '../components/Loading'
 import axios from 'axios'
-import useModal from '../components/useModale'
 import CardFilm from '../components/CardFilm'
 
-const Catalogue = props => {
-  const { isShowing, toggle } = useModal()
-
-  const [isLoading, setIsLoading] = useState(false)
+const Catalogue = ({
+  getDetails,
+  setGetDetails,
+  isActive,
+  setIsActive,
+  getProps,
+  setGetProps,
+  isShowing,
+  toggle,
+  setIsLoading,
+  isLoading,
+  ...props
+}) => {
   const apiKey = process.env.REACT_APP_API_KEY
   const titleType = 'movies&tv_series'
 
-  const [isActive, setIsActive] = useState(false)
   const retourFunc = () => {
     toggle()
     setIsActive(!isActive)
   }
-  const [getProps, setGetProps] = useState({})
 
   let dataAPI = [] /* Variable pour données de l'API dans le local storage */
   const recupAPI = () => {
@@ -55,8 +61,6 @@ const Catalogue = props => {
     localStorage.getItem('dataAPI') ? recupAPI() : appelAPI()
     /*********************************************************/
   }, [props.emojiSelected.correspondance])
-
-  const [getDetails, setGetDetails] = useState([])
 
   /*************** Appel API Details Film ****************************/
   useEffect(() => {
@@ -97,14 +101,9 @@ const Catalogue = props => {
             {props.resultat.map(element => (
               <Cards
                 key={element.key}
-                // title={element.title}
-                // poster={element.image}
-                // description={element.description}
                 toggle={toggle}
-                isShowing={isShowing}
                 setIsActive={setIsActive}
                 setGetProps={setGetProps}
-                getProps={getProps}
                 data={element}
               />
             ))}

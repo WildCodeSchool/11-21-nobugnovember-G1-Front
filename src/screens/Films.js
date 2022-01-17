@@ -1,29 +1,66 @@
 import Header from '../components/Header'
-import { useEffect, useState } from 'react'
-import axios from 'axios'
 import Cards from '../components/Cards'
-import Loading from '../components/Loading'
+import CardFilm from '../components/CardFilm'
+import axios from 'axios'
+import { useEffect } from 'react'
 
-const Films = props => {
-  const [isLoading, setIsLoading] = useState(true)
+const Films = ({
+  toggle,
+  isShowing,
+  isActive,
+  setIsActive,
+  retourFunc,
+  isLoading,
+  getProps,
+  getDetails,
+  setGetDetails,
+  ...props
+}) => {
   const apiKey = process.env.REACT_APP_API_KEY
 
+  useEffect(() => {
+    const appelAPIFilm = () => {
+      axios
+        .get(
+          `https://imdb-api.com/fr/API/Title/${apiKey}/${getProps.id}/FullActor,FullCast,Posters,Images,Trailer,Ratings,`
+        )
+        .then(res => res.data)
+        .then(res => {
+          setGetDetails(res)
+          console.log('lolol', getDetails)
+        })
+    }
+    isShowing && appelAPIFilm()
+  }, [isShowing])
+
   return (
-    <div>
-      <Header
-        emojiSelected={props.emojiSelected}
-        setEmojiSelected={props.setEmojiSelected}
-      />
-      <div className='movie-grid'>
-        {props.resultat
-          .filter(element => !element.description.includes('–'))
-          .map(element => (
-            <Cards
-              title={element.title}
-              poster={element.image}
-              description={element.description}
-            />
-          ))}
+    <div className='catalogPage'>
+      <div className='catalogContainer'>
+        <CardFilm
+          getProps={getProps}
+          isShowing={isShowing}
+          hide={toggle}
+          retourFunc={retourFunc}
+          getDetails={getDetails}
+        />
+        <Header
+          emojiSelected={props.emojiSelected}
+          setEmojiSelected={props.setEmojiSelected}
+        />
+
+        <div className={isActive ? 'none' : 'movie-grid'}>
+          {props.resultat
+            .filter(element => !element.description.includes('–'))
+            .map(element => (
+              <Cards
+                key={element.key}
+                setGetProps={props.setGetProps}
+                toggle={toggle}
+                data={element}
+                setIsActive={setIsActive}
+              />
+            ))}
+        </div>
       </div>
     </div>
   )

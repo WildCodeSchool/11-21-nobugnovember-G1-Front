@@ -3,12 +3,25 @@ import Catalogue from './screens/Catalogue'
 import Series from './screens/Series'
 import Films from './screens/Films'
 import MiniJeux from './screens/MiniJeux'
-import CardFilm from './components/CardFilm'
 import { Routes, Route } from 'react-router-dom'
 import { useState } from 'react'
+import useModale from './components/useModale'
+
 function App() {
   const [emojiSelected, setEmojiSelected] = useState('')
   const [resultat, setResultat] = useState([])
+  const [getProps, setGetProps] = useState({})
+  const [getDetails, setGetDetails] = useState([])
+  const [isActive, setIsActive] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
+
+  const { isShowing, toggle } = useModale()
+
+  const retourFunc = () => {
+    toggle()
+    setIsActive(!isActive)
+  }
+
   return (
     <div className='App'>
       <Routes>
@@ -29,6 +42,17 @@ function App() {
               setEmojiSelected={setEmojiSelected}
               resultat={resultat}
               setResultat={setResultat}
+              getDetails={getDetails}
+              setGetDetails={setGetDetails}
+              getProps={getProps}
+              setGetProps={setGetProps}
+              isActive={isActive}
+              setIsActive={setIsActive}
+              isLoading={isLoading}
+              setIsLoading={setIsLoading}
+              retourFunc={retourFunc}
+              isShowing={isShowing}
+              toggle={toggle}
             />
           }
         />
@@ -40,6 +64,17 @@ function App() {
               setEmojiSelected={setEmojiSelected}
               resultat={resultat}
               setResultat={setResultat}
+              getProps={getProps}
+              setGetProps={setGetProps}
+              getDetails={getDetails}
+              setGetDetails={setGetDetails}
+              isShowing={isShowing}
+              toggle={toggle}
+              isActive={isActive}
+              setIsActive={setIsActive}
+              isLoading={isLoading}
+              setIsLoading={setIsLoading}
+              retourFunc={retourFunc}
             />
           }
         />
@@ -51,6 +86,17 @@ function App() {
               setEmojiSelected={setEmojiSelected}
               resultat={resultat}
               setResultat={setResultat}
+              getProps={getProps}
+              setGetProps={setGetProps}
+              getDetails={getDetails}
+              setGetDetails={setGetDetails}
+              isShowing={isShowing}
+              toggle={toggle}
+              setIsActive={setIsActive}
+              isActive={isActive}
+              isLoading={isLoading}
+              setIsLoading={setIsLoading}
+              retourFunc={retourFunc}
             />
           }
         />

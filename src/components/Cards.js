@@ -1,13 +1,6 @@
 import './Cards.css'
 
-const Cards = ({
-  setGetProps,
-  getProps,
-  setIsActive,
-  toggle,
-  isShowing,
-  data
-}) => {
+const Cards = ({ setGetProps, setIsActive, toggle, data }) => {
   // console.log('test3', getProps)
   // console.log('test', toggle)
   // console.log('test2', isShowing)
