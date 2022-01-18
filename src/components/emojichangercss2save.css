@@ -1,4 +1,6 @@
-   
+/********* MOBILE FIRST MOD **********/
+/* @media screen and (max-width: 850px) {  */
+
     .search-box {
         /* position: absolute; */
         top: 2%;
@@ -13,7 +15,28 @@
         justify-content: center;
         align-items: start;
         flex-direction: row;
-
+    }
+    
+    .search-box:hover {
+        height: 214px; /* Longueur bande deployée*/
+        display: flex;
+        align-items: flex-start; /* Verticalité Emojis déployés*/
+        
+    }
+    
+    .search-txt{
+        display:none;
+        align-items: center;
+        background: none;
+        outline: none;
+        float: left;
+        padding: 0;
+        color: white;
+        font-size: 8px;
+        transition: 0.4s;
+        /* line-height: 40px; */
+        width: 100px;
+        overflow: hidden;
     }
     
     .search-box:hover > .search-txt {
@@ -21,18 +44,61 @@
         transition: width 0.4s;
         display: flex;
         justify-content: flex-start;
-        flex-direction: column; 
+        flex-direction: column;
         /* position: relative; */
         overflow: hidden;
         background-color: white;
         border-radius: 50px;
     }
-/*     
+    
+    .boiteSelection {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        /* border: 3px solid red; */
+    } 
+    
+    .search-box:hover > .boiteSelection {
+        display:none;
+    }
+    
+    .lienSelection{
+        /* color: #e84118; */
+       width: 30px;
+       height: 30px;
+       border-radius: 50%;
+       /* background: #2d2e31; */ /*********** COULEUR AUTOUR DES EMOJIS = INUTILE EN SOI***************/
+       /*couleur background base #2f3640 */
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+    
     .search-box:hover > .lienSelection{
         position: absolute; 
- } */
+ }
     
- /* .search-box {
+    .emojis {
+        width: 22px;
+        filter: grayscale(100%) Brightness(50%) contrast(130%);
+    }
+    
+    .emojis:hover {
+        filter: grayscale(0%)Brightness(100%)
+        }
+    
+    .emojiactif {
+        display:flex;
+        width: 22px;
+        filter: brightness(100%)
+    }
+    /* } */
+    
+
+
+
+@media screen and (min-width: 851px) {    
+    .search-box {
     top: 2%;
     right: 2%;
     background-image: linear-gradient(
@@ -43,22 +109,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: */
-
-        /* .search-box:hover > .search-txt {
-            width: 100%;
-            transition: width 0.4s;
-            display: flex;
-            justify-content: flex-end;
-            position: relative;
-            padding-right: 7px;
-            overflow: hidden;
-        }
-        
-        .search-box:hover > .lienSelection{
-            position: absolute; 
-            } */
-
+    flex-direction: row}
+    
+    .search-box:hover > .search-txt {
+        width: 100%;
+        transition: width 0.4s;
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        padding-right: 7px;
+        overflow: hidden;
+    }
+    
+    .search-box:hover > .lienSelection{
+        position: absolute; 
+        } 
+    
     .emojis:hover {
         filter: grayscale(0%)Brightness(100%)
         }
@@ -105,12 +171,6 @@
     
     .boiteSelection {
     } 
-
-    @media screen and (min-width: 851px) {    
-        .search-box:hover > .search-txt {
-    flex-direction: row; 
-    background-color: whitesmoke
-}
 }
 
 
