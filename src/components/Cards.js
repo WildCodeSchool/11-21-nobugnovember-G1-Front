@@ -9,12 +9,16 @@ const Cards = ({ setGetProps, setIsActive, toggle, data }) => {
 
   return (
     <div className='cards' onClick={() => handleClick(data)}>
-      <img src={data.image} className='poster' alt='poster'></img>
+      <img
+        src={`http://image.tmdb.org/t/p/w200${data.poster_path}`}
+        className='poster'
+        alt='poster'
+      ></img>
       <div className='caption'>
         <h3 className='cardTitle'>
           {data.title}
           {` `}
-          {data.description}
+          {data.release_date.slice(0, 4)}
         </h3>
       </div>
     </div>

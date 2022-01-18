@@ -21,17 +21,20 @@ import triste2 from '../quizzdata/triste.json'
 const EmojiChanger = (props) => {
    const handleChange = () => {
     const correspondanceTab = [
-      { emotion: 'Emoji joyeux', correspondance: 'comedy',emoji: joyeux, quizzSelected: joyeux2},
-      { emotion: 'Emoji pleure', correspondance: 'drama',emoji: pleure, quizzSelected: triste2},
-      { emotion: 'Emoji surprise', correspondance: 'fantasy,sci_fi',emoji: surprise, quizzSelected:surprise2},
-      { emotion: 'Emoji amoureux', correspondance: 'romance',emoji: amour, quizzSelected:amour2},
-      { emotion: 'Emoji colere', correspondance: 'action,war',emoji: colere, quizzSelected:colere2},
-      { emotion: 'Emoji peur', correspondance: 'horror',emoji: peur, quizzSelected:peur2},
+      { emotion: 'Emoji joyeux', correspondance: '35',emoji: joyeux, quizzSelected: joyeux2},
+      { emotion: 'Emoji pleure', correspondance: '18',emoji: pleure, quizzSelected: triste2},
+      { emotion: 'Emoji surprise', correspondance: '878',emoji: surprise, quizzSelected:surprise2},
+      { emotion: 'Emoji amoureux', correspondance: '10749',emoji: amour, quizzSelected:amour2},
+      { emotion: 'Emoji colere', correspondance: '10752',emoji: colere, quizzSelected:colere2},
+      { emotion: 'Emoji peur', correspondance: '27',emoji: peur, quizzSelected:peur2},
       { emotion: 'Emoji auberg', correspondance: '',emoji: aubergine, quizzSelected:aubergine2}
     ]
     const selection = correspondanceTab.filter(
       element => element.emotion === event.target.alt
     )
+    
+      console.log('test selection', selection);
+
     props.setEmojiSelected(selection[0])
     //console.log(selection[0].emoji)
     //localStorage.setItem('maSelection', selection[0])
