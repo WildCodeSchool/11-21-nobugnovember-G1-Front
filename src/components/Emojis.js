@@ -22,43 +22,50 @@ const Emojis = props => {
     const correspondanceTab = [
       {
         emotion: 'Emoji joyeux',
-        correspondance: 'comedy',
+        correspondance: '35',
+        correspondanceSerie: '35',
         emoji: joyeux,
         quizzSelected: joyeux2
       },
       {
         emotion: 'Emoji pleure',
-        correspondance: 'drama',
+        correspondance: '18',
+        correspondanceSerie: '18',
         emoji: pleure,
         quizzSelected: triste2
       },
       {
         emotion: 'Emoji surprise',
-        correspondance: 'fantasy,sci_fi',
+        correspondance: '878',
+        correspondanceSerie: '10765',
         emoji: surprise,
         quizzSelected: surprise2
       },
       {
         emotion: 'Emoji amoureux',
-        correspondance: 'romance',
+        correspondance: '10749',
+        correspondanceSerie: '10766',
         emoji: amour,
         quizzSelected: amour2
       },
       {
         emotion: 'Emoji colere',
-        correspondance: 'action,war',
+        correspondance: '10752',
+        correspondanceSerie: '10768',
         emoji: colere,
         quizzSelected: colere2
       },
       {
         emotion: 'Emoji peur',
-        correspondance: 'horror',
+        correspondance: '27',
+        correspondanceSerie: '9648',
         emoji: peur,
         quizzSelected: peur2
       },
       {
         emotion: 'Emoji auberg',
         correspondance: '',
+        correspondanceSerie: '',
         emoji: aubergine,
         quizzSelected: aubergine2
       }
@@ -66,6 +73,7 @@ const Emojis = props => {
     const selection = correspondanceTab.filter(
       element => element.emotion === event.target.alt
     )
+    console.log('test selection', selection)
     props.setEmojiSelected(selection[0])
   }
   return (

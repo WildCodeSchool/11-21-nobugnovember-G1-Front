@@ -5,14 +5,26 @@ import ActorCard from './ActorCard'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 
-import '../components/CardFilm.css'
-const CardFilm = ({ getProps, retourFunc, isShowing, getDetails }) =>
+import './CardFilm.css'
+const CardFilm = ({
+  getProps,
+  retourFunc,
+  isShowing,
+  getDetails,
+  casting,
+  setCasting
+}) =>
   isShowing
     ? ReactDOM.createPortal(
         <>
           <div>
             <div className='popUpModal'>
-              <div className='cardFilm'>
+              <div
+                className='cardFilm'
+                style={{
+                  backgroundImage: `url(http://image.tmdb.org/t/p/w1280${getDetails.backdrop_path})`
+                }}
+              >
                 <div className='cardFilmContainer'>
                   <div className='closeModal'>
                     <FontAwesomeIcon
@@ -24,63 +36,74 @@ const CardFilm = ({ getProps, retourFunc, isShowing, getDetails }) =>
                   </div>
                   <div className='infoContainer'>
                     <img
-                      src={getDetails.image}
+                      src={`http://image.tmdb.org/t/p/w500${getDetails.poster_path}`}
                       className='jaquette'
                       alt='jaquette'
                     ></img>
                     <div className='holderInfo'>
-                      <h3 className='titre'>{getProps.title}</h3>
-                      <p className='year'>{getDetails.year}</p>
+                      <h3 className='titre'>
+                        {getProps.title}
+                        {getProps.name}
+                      </h3>
+                      <p className='year'>{getProps.release_date}</p>
                       <div className='info'>
-                        <p className='duration'>{getProps.runtimeStr}</p>
+                        <p className='duration'>{getProps.runtime}</p>
                         <div className='holderPegi'>
-                          <p id='pegi'>{getProps.contentRating}</p>
+                          <p id='pegi'></p>
                         </div>
                         <img
                           src={popcorn}
                           className='popcorn'
                           alt='porpcorn'
                         ></img>{' '}
-                        <p>{getDetails.metacriticRating} %</p>
+                        <p>{getDetails.vote_average} /10</p>
                       </div>
                       <div className='synopsis'>
-                        <p>{getDetails.plotLocal}</p>
+                        <p>{getDetails.overview}</p>
                         <button className='playButton'>Play</button>
                       </div>
                       <p className='infoProd'>
                         {' '}
                         <span className='textGrey'>Producteur :</span>{' '}
-                        {getDetails.directors}{' '}
+                        {casting.crew !== undefined &&
+                          casting.crew
+                            .filter(el => el.department.includes('Production'))
+                            .slice(0, 1)
+                            .map(producer => producer.name)}
                       </p>
                       <p className='infoProd'>
                         {' '}
                         <span className='textGrey'>Scénario :</span>{' '}
-                        {getDetails.writers}{' '}
+                        {casting.crew !== undefined &&
+                          casting.crew
+                            .filter(el =>
+                              el.department.includes('Writing' || 'Writer')
+                            )
+                            .slice(0, 1)
+                            .map(writer => writer.name)}
                       </p>
                       <p className='infoProd'>
                         {' '}
                         <span className='textGrey'>Studio :</span>{' '}
-                        {getDetails.companies}{' '}
+                        {getDetails.production_companies !== undefined &&
+                          getDetails.production_companies.map(
+                            name => name.name + ', '
+                          )}{' '}
                       </p>
                       <p className='infoProd'>
                         {' '}
                         <span className='textGrey'>Genres :</span>{' '}
-                        {getDetails.genres}
+                        {getDetails.genres !== undefined &&
+                          getDetails.genres.map(genre => genre.name + ', ')}
                       </p>
                     </div>
-                    <video
-                      controls
-                      className='trailer'
-                      width='560'
-                      height='315'
-                      // src={`https://imdb-video.media-imdb.com/${getDetails.trailer.videoId}/1434659607842-pgv4ql-1596404706743.mp4?Expires=1642245486&Signature=AKAxTmMtuaNHs5B1-BIA-N-f0yzaNkpsqkImKPcLsTaLPA2sMQWgXaXy5ZBjXEGdq0Y-AQiF4E3i2izZHRYCGq52zv5qXqpINdfkb4Zcd6q~ZQprfCYD97jjVOqBuK~pcphcZZfj~BUfKP3WrCab-TB0RGVI83V6chs6Dpnop8r5crNw~em5GnVDGjwJaqFIrMSTUbzbEHpHn3SQdS1HOonZPgl3~cbrx7u7iIX6FO0rolREELgHkCpY4Fj7EsvfDSySZAxACqlRf-QfBf-mYeNpdeW9PQ2kvwIfbY4KElshQ8Rs68f1~0q8ZSygotJ~Z1jJ-8g556j3Yw8LQvSq7w__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA`}
-                      frameborder='0'
-                      allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-                      allowfullscreen='true'
-                    ></video>
                   </div>
                   <h4 className='casting'>Casting</h4>
-                  <ActorCard getDetails={getDetails} />
+                  <ActorCard
+                    casting={casting}
+                    setCasting={setCasting}
+                    getProps={getProps}
+                  />
                 </div>
               </div>
             </div>
