@@ -31,8 +31,6 @@ const Catalogue = ({
     setIsActive(!isActive)
   }
 
-  let dataAPI = []
-
   /***************** APPEL API GENERAL *******************/
   useEffect(() => {
     const appelAPI = () => {
@@ -40,7 +38,7 @@ const Catalogue = ({
       console.log('test correspondance 1', props.emojiSelected.correspondance)
       axios
         .get(
-          `https://api.themoviedb.org/3/discover/movie?api_key=430fd4a9e11f41d3009ea74bba3edc1a&with_genres=${props.emojiSelected.correspondance}&language=fr-FR&page=1`
+          `https://api.themoviedb.org/3/discover/movie?api_key=430fd4a9e11f41d3009ea74bba3edc1a&with_genres=${props.emojiSelected.correspondance}&language=fr-FR&page=2`
         )
         .then(response => response.data)
         .then(data => {
