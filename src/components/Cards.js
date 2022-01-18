@@ -1,34 +1,27 @@
 import './Cards.css'
 
-const Cards = ({
-  setGetProps,
-  getProps,
-  setIsActive,
-  toggle,
-  isShowing,
-  data
-}) => {
-  // console.log('test3', getProps)
-  // console.log('test', toggle)
-  // console.log('test2', isShowing)
-  // console.log('test1', data)
-  // console.log('test4', datas)
+const Cards = ({ setGetProps, setIsActive, toggle, data }) => {
   const handleClick = data => {
     setGetProps(data)
+
     setIsActive(true)
     toggle()
-    // console.log('test2', getProps)
-    // console.log('test poster', data.poster)
   }
 
   return (
     <div className='cards' onClick={() => handleClick(data)}>
-      <img loading='lazy' src={data.image}  className='poster' alt='poster'></img>
+      <img
+        src={`http://image.tmdb.org/t/p/w200${data.poster_path}`}
+        className='poster'
+        alt='poster'
+      ></img>
       <div className='caption'>
         <h3 className='cardTitle'>
-          {data.title}
+          {data.title ? data.title : data.original_name}
           {` `}
-          {data.description}
+          {data.release_date
+            ? data.release_date.slice(0, 4)
+            : data.first_air_date.slice(0, 4)}
         </h3>
       </div>
     </div>
