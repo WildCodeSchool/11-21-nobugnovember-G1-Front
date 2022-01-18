@@ -4,8 +4,6 @@ import CardFilm from '../components/CardFilm'
 import axios from 'axios'
 import { useEffect } from 'react'
 
-import 
-
 const Films = ({
   toggle,
   isShowing,
@@ -13,27 +11,33 @@ const Films = ({
   setIsActive,
   retourFunc,
   isLoading,
+  setIsLoading,
   getProps,
   getDetails,
   setGetDetails,
+  setCasting,
+  casting,
   ...props
 }) => {
   const apiKey = process.env.REACT_APP_API_KEY
 
   useEffect(() => {
-    const appelAPIFilm = () => {
+    const appelAPI = () => {
+      setIsLoading(true)
+      console.log('test correspondance 1', props.emojiSelected.correspondance)
       axios
         .get(
-          `https://imdb-api.com/fr/API/Title/${apiKey}/${getProps.id}/FullActor,FullCast,Posters,Images,Trailer,Ratings,`
+          `https://api.themoviedb.org/3/discover/movie?api_key=430fd4a9e11f41d3009ea74bba3edc1a&with_genres=${props.emojiSelected.correspondance}&language=fr-FR&page=1`
         )
-        .then(res => res.data)
-        .then(res => {
-          setGetDetails(res)
-          console.log('lolol', getDetails)
+        .then(response => response.data)
+        .then(data => {
+          props.setResultat(data.results)
+          setIsLoading(false)
         })
+      console.log('BAITED')
     }
-    isShowing && appelAPIFilm()
-  }, [isShowing])
+    appelAPI()
+  }, [props.emojiSelected.correspondance])
 
   return (
     <div className='catalogPage'>
@@ -44,6 +48,8 @@ const Films = ({
           hide={toggle}
           retourFunc={retourFunc}
           getDetails={getDetails}
+          casting={casting}
+          setCasting={setCasting}
         />
         <Header
           emojiSelected={props.emojiSelected}
@@ -51,17 +57,15 @@ const Films = ({
         />
 
         <div className={isActive ? 'none' : 'movie-grid'}>
-          {props.resultat
-            .filter(element => !element.description.includes('–'))
-            .map(element => (
-              <Cards
-                key={element.key}
-                setGetProps={props.setGetProps}
-                toggle={toggle}
-                data={element}
-                setIsActive={setIsActive}
-              />
-            ))}
+          {props.resultat.map(element => (
+            <Cards
+              key={element.key}
+              setGetProps={props.setGetProps}
+              toggle={toggle}
+              data={element}
+              setIsActive={setIsActive}
+            />
+          ))}
         </div>
       </div>
     </div>

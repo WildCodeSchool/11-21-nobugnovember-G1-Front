@@ -14,7 +14,7 @@ function App() {
   const [getDetails, setGetDetails] = useState([])
   const [isActive, setIsActive] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
-
+  const [casting, setCasting] = useState([])
   const { isShowing, toggle } = useModale()
 
   const retourFunc = () => {
@@ -53,6 +53,8 @@ function App() {
               retourFunc={retourFunc}
               isShowing={isShowing}
               toggle={toggle}
+              casting={casting}
+              setCasting={setCasting}
             />
           }
         />
@@ -75,6 +77,8 @@ function App() {
               isLoading={isLoading}
               setIsLoading={setIsLoading}
               retourFunc={retourFunc}
+              casting={casting}
+              setCasting={setCasting}
             />
           }
         />
@@ -97,6 +101,8 @@ function App() {
               isLoading={isLoading}
               setIsLoading={setIsLoading}
               retourFunc={retourFunc}
+              casting={casting}
+              setCasting={setCasting}
             />
           }
         />

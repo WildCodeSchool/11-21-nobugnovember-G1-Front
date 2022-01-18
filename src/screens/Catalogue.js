@@ -18,10 +18,13 @@ const Catalogue = ({
   toggle,
   setIsLoading,
   isLoading,
+  casting,
+  setCasting,
+  getPropsTv,
+  setGetPropsTv,
   ...props
 }) => {
   const apiKey = process.env.REACT_APP_API_KEY
-  const titleType = 'movies&tv_series'
 
   const retourFunc = () => {
     toggle()
@@ -52,10 +55,11 @@ const Catalogue = ({
   /*************** Appel API Details Film ****************************/
   useEffect(() => {
     const appelAPIFilm = () => {
-      fetch(
-        `https://api.themoviedb.org/3/movie/${getProps.id}?api_key=430fd4a9e11f41d3009ea74bba3edc1a&language=fr-FR`
-      )
-        .then(res => res.json())
+      axios
+        .get(
+          `https://api.themoviedb.org/3/movie/${getProps.id}?api_key=430fd4a9e11f41d3009ea74bba3edc1a&language=fr-FR`
+        )
+        .then(res => res.data)
         .then(res => {
           setGetDetails(res)
         })
@@ -72,6 +76,8 @@ const Catalogue = ({
           hide={toggle}
           retourFunc={retourFunc}
           getDetails={getDetails}
+          casting={casting}
+          setCasting={setCasting}
         />
 
         <Header
@@ -89,6 +95,7 @@ const Catalogue = ({
                 toggle={toggle}
                 setIsActive={setIsActive}
                 setGetProps={setGetProps}
+                setGetPropsTv={setGetPropsTv}
                 data={element}
               />
             ))}

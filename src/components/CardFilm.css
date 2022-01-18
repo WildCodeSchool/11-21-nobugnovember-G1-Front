@@ -26,7 +26,7 @@
 
 .cardFilmContainer {
     min-height: 100vh;
-    background : rgb(26 25 25 / 54%);
+    background : rgb(26 25 25 / 70%);
     background-repeat: no-repeat !important;   
     background-attachment: fixed !important;
     background-size: cover !important;
@@ -42,7 +42,7 @@
     justify-content: flex-end;
     padding-right: 2%;
     padding-top: 2%;
-    color: #292928;
+    color: #ffdc6c;
 }
 
 .closeIcone:hover {
@@ -149,7 +149,7 @@
 }
 
 .textGrey {
-    color: #333;
+    color: #ffdc6c;;
     font-style:normal;
     font-weight: bold;
     font-size: 1.9vh;
@@ -201,7 +201,7 @@
 .roleName {
     position: absolute;
     bottom: 8%;
-    color: #1f1f1d;
+    color: #ffdc6c;
 }
 
 .cardFilmOverlay {
