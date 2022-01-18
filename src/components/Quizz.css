@@ -69,7 +69,12 @@
     padding : 2% 0px;
     /* border: 2px solid red; */
     }
-
+.quizz-button:hover{
+    border-color: #030303;
+}
+.quizz-button:active{
+    background-color: #dbbf1c;
+}
 .quizz-button{
     display: flex;
     justify-content: center;
@@ -86,7 +91,16 @@
     font-weight: bold;
     border-radius: 15px;
 }
-
+.menu > input{
+    background-color: #FFDC6C;
+}
+.menu > button{
+    height: 25px;
+    width: 100px;
+    background-color: #FFDC6C;
+    border: 5px solid #bb951842;
+    border-radius: 15px;
+}
 
 
 /******** Tableau résultat 2 *********/

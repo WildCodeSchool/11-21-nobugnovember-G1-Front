@@ -14,13 +14,12 @@ const TableauScore = props => {
       Selectionne un autre émoji parmi la liste suivante et essaye d'obtenir un score maximal dans un autre quizz.
       " Bon chance.. " `)
     } else if (props.score < 10 && props.score > 6) {
-      setMessage(`Bravo {playerName} , tu as obtenus ${props.score} réponses correctes à ce questionnaire!
-
+      setMessage(`Bravo ${this.props.playerName} , tu as obtenus ${props.score} réponses correctes à ce questionnaire!
       Ta prestation est un peu du genre "Je participe mais je ne veux pas être le premier. Être un lâche me convient amplement."
 
       Retente ta chance et essais d'obtenir 10 réponses justes !`)
     } else if (props.score > 3 && props.score < 6) {
-      setMessage(`{playerName}, tu ne te sentais pas bien aujourd'hui ?
+      setMessage(`${props.playerName}, tu ne te sentais pas bien aujourd'hui ?
       Tu as seulement ${props.score} réponses justes à ce questionnaire!
 
       J'ai un peu honte de toi pour tout te dire.
@@ -28,8 +27,8 @@ const TableauScore = props => {
       J'espère que tu n'as rien de prévu cette semaine?
       Tu pourrais en profiter pour replonger dans les Films & Séries :). `)
     } else {
-      setMessage(`{playerName}, tu me donnes envie de casser l'écran !
-      Tu as fait un score "à s'en jeter d'un pont".\n
+      setMessage(`${props.playerName}, tu me donnes envie de casser l'écran ?
+      Tu as fait un score à s'en jeter du pont.
       Ton score est seulement de ${props.score} réponses correctes à ce questionnaire!
     
       PETITE ASTUCE AMICALE :
@@ -48,7 +47,7 @@ const TableauScore = props => {
       <div className='tableau-titre-resultat'>
         {/* DIV CONTENANT LE TABLEAU DE SCORE FINAL */}
         <h2>
-          <p>Bravo [userName] !</p>
+          <p>Bravo {props.playerName} !</p>
           <p className='phrase-pre-score'>Ton score est de </p>
 
           <p className='score-final'>{props.score}/10 !</p>

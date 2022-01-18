@@ -11,12 +11,15 @@ import TableauScore from './TableauScore'
 export default function Quizz(props) {
   const questionnaire = props.emojiSelected.quizzSelected
 
+
+
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [score, setScore] = useState(0)
   const [showScore, setShowScore] = useState(false)
   const handleAnswer = isCorrect => {
     if (isCorrect) {
       setScore(score + 1)
+
     }
 
     const nextQuestion = currentQuestion + 1
@@ -35,7 +38,7 @@ export default function Quizz(props) {
       {/* Conteneur général du quizz */}
       {/* CONDITION Conteneur Texte Résultat APPARAIT A LA FIN */}
       {showScore ? (
-        <TableauScore score={score} />
+        <TableauScore score={score} playerName={props.playerName}/>
       ) : (
         <div>
           {/* DIV CONTENANT LE CONTENEUR SUIVI QUEST  */}

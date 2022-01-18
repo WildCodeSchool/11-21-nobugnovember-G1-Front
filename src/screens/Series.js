@@ -7,6 +7,7 @@ const Series = props => {
   const [isLoading, setIsLoading] = useState(true)
 
   const apiKey = process.env.REACT_APP_API_KEY
+
   return (
     <div>
       <Header
@@ -18,13 +19,13 @@ const Series = props => {
           .filter(element => element.description.includes('–'))
           .map(element => (
             <Cards
+              key={element.key}
               title={element.title}
               poster={element.image}
               description={element.description}
             />
           ))}
       </div>
-      {console.log(props.resultat)}
       {isLoading ? <Loading /> : ''}
     </div>
   )

@@ -1,95 +1,93 @@
-import Header from './Header' 
-import affiche from '../assets/affichetest.jpg'
+import ReactDOM from 'react-dom'
+
 import popcorn from '../assets/popcorn.png'
-import cast1 from '../assets/cast1.jpg'
-import cast2 from '../assets/cast2.jpg'
-import cast3 from '../assets/cast3.jpg'
-import cast4 from '../assets/cast4.jpg'
-import cast5 from '../assets/cast5.jpg'
-import cast6 from '../assets/cast6.jpg'
+import ActorCard from './ActorCard'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 
 import '../components/CardFilm.css'
-
-const CardFilm = (props) => {
-    return (
-        <div>
-            <div className='cardFilm'>
+const CardFilm = ({ getProps, retourFunc, isShowing, getDetails }) =>
+  isShowing
+    ? ReactDOM.createPortal(
+        <>
+          <div>
+            <div className='popUpModal'>
+              <div className='cardFilm'>
                 <div className='cardFilmContainer'>
-                    <Header emojiSelected={props.emojiSelected} setEmojiSelected={props.setEmojiSelected} />
-                    <div className='infoContainer'>
-                        <img src={affiche} className='jaquette' alt='jaquette'></img>
-                        <div className='holderInfo'>
-                            <h3 className='titre'>Joker</h3>
-                            <p className='year'>2020</p>
-                            <div className='info'><p className='duration'>2 h 06 mins</p>
-                                <div className='holderPegi'><p id='pegi'>Tout public</p></div>
-                                <img src={popcorn} className='popcorn' alt='porpcorn'></img> <p>88%</p> 
-                            </div>
-                            <div className='synopsis'>
-                                <p>Arthur Fleck, comédien raté, rencontre des voyous violents en errant dans les rues de Gotham City déguisé en clown. Méprisé par la société, Fleck s'enfonce peu à peu dans la démence et devient le génie criminel connu sous le nom de Joker, un dangereux tueur psychotique.
-                                </p>  
-                                <button className='playButton'>Play</button>
-                            </div> 
-                            <p className='infoProd'> <span className='textGrey'>Producteur :</span> Todd Phillips </p>
-                            <p className='infoProd'> <span className='textGrey'>Scénario :</span> Todd Phillips, Scott Silver, Bob Kane </p>
-                            <p className='infoProd'> <span className='textGrey'>Studio :</span> Warner Bros., Village Ro…llage Roadshow Pictures </p>
-                            <p className='infoProd'> <span className='textGrey'>Genres :</span> Crime, Drame, Thriller</p>
-                                
+                  <div className='closeModal'>
+                    <FontAwesomeIcon
+                      icon={faTimesCircle}
+                      size='3x'
+                      className='closeIcone'
+                      onClick={() => retourFunc()}
+                    />
+                  </div>
+                  <div className='infoContainer'>
+                    <img
+                      src={getDetails.image}
+                      className='jaquette'
+                      alt='jaquette'
+                    ></img>
+                    <div className='holderInfo'>
+                      <h3 className='titre'>{getProps.title}</h3>
+                      <p className='year'>{getDetails.year}</p>
+                      <div className='info'>
+                        <p className='duration'>{getProps.runtimeStr}</p>
+                        <div className='holderPegi'>
+                          <p id='pegi'>{getProps.contentRating}</p>
                         </div>
-                        {/* <iframe className='trailer' width="560" height="315" src="https://www.youtube.com/embed/OoTx1cYC5u8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true">
-                        </iframe>             */}
-                        <video className='trailer' controls src="https://imdb-video.media-imdb.com/vi1723318041/1434659607842-pgv4ql-1567008550851.mp4?Expires=1642032222&Signature=DYUxmsqKaNPDsAJelPufbkQ9WECMpZ9CZcsg57cC1pQFFJZw7DvYuPiJlv0Hs6QEb-rtpbhweFVFO2sxT8-Ey9r07JhdqBHqEKW~r-L7a4-UpTOkl71vWT7-EhaoYcQ6MLBz6lk~IHbxgVFIvJEfcm03I8QRFvDyNxMLum3BFKdJWFNz4eNPyiYR2HU49mgkSLGu1lIt8LnhP~opmNk7EiTObqUBtSJ8QEq-gUSGTHqh-SmXh3wFbsFMepAXEF7bFv1C5Sptv1CTEUqb2YQlJ8zPtNOTqQ2ERsBMQUuBmJwB947FmNk8ORHrkjv8hhVYJa3-lF~5Up~WaNeWyrib4Q__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA"></video>
+                        <img
+                          src={popcorn}
+                          className='popcorn'
+                          alt='porpcorn'
+                        ></img>{' '}
+                        <p>{getDetails.metacriticRating} %</p>
+                      </div>
+                      <div className='synopsis'>
+                        <p>{getDetails.plotLocal}</p>
+                        <button className='playButton'>Play</button>
+                      </div>
+                      <p className='infoProd'>
+                        {' '}
+                        <span className='textGrey'>Producteur :</span>{' '}
+                        {getDetails.directors}{' '}
+                      </p>
+                      <p className='infoProd'>
+                        {' '}
+                        <span className='textGrey'>Scénario :</span>{' '}
+                        {getDetails.writers}{' '}
+                      </p>
+                      <p className='infoProd'>
+                        {' '}
+                        <span className='textGrey'>Studio :</span>{' '}
+                        {getDetails.companies}{' '}
+                      </p>
+                      <p className='infoProd'>
+                        {' '}
+                        <span className='textGrey'>Genres :</span>{' '}
+                        {getDetails.genres}
+                      </p>
                     </div>
-                    <h4 className='casting'>Casting</h4> 
-                    <div className='castingListe'>
-                        <div className='infoCasting'>
-                            <div className='divCarre'>
-                                <img src={cast1} className='imgCast' alt='casting'></img>              
-                            </div>
-                            <p className='actorName'>Joaquin Phoenix</p>
-                            <p className='roleName'>Arthur Fleckas Arthur Flec</p>
-                        </div>
-                        <div className='infoCasting'>
-                            <div className='divCarre'>
-                                <img src={cast2} className='imgCast' alt='casting'></img>
-                            </div>
-                            <p className='actorName'>Robert De Niro</p>
-                            <p className='roleName'>Murray Franklinas Murray Franklin</p>
-                        </div>
-                        <div className='infoCasting'>
-                            <div className='divCarre'>
-                                <img src={cast3} className='imgCast' alt='casting'></img>
-                            </div>
-                            <p className='actorName'>Zazie Beetz</p>
-                            <p className='roleName'>Arthur Fleckas Arthur Flec</p>
-                        </div>
-                        <div className='infoCasting'>
-                            <div className='divCarre'>
-                                <img src={cast4} className='imgCast' alt='casting'></img>
-                            </div>
-                            <p className='actorName'>Frances Conroy</p>
-                            <p className='roleName'>Penny Fleckas Penny Fleck</p>
-                        </div>
-                        <div className='infoCasting'>
-                            <div className='divCarre'>
-                                <img src={cast5} className='imgCast' alt='casting'></img>
-                            </div>
-                            <p className='actorName'>Brett Cullen</p>
-                            <p className='roleName'>Sophie Dumondas Sophie Dumond</p>
-                        </div>
-                        <div className='infoCasting'>
-                            <div className='divCarre'>
-                                <img src={cast6} className='imgCast' alt='casting'></img>
-                            </div>
-                            <p className='actorName'>Shea Whigham</p>
-                            <p className='roleName'>Detective Burkeas Detective Burke</p>
-                        </div>
-                    </div>
-                    <div></div><iframe SRC="https://uqload.org/embed-na65en0j8853.html" FRAMEBORDER='0' MARGINWIDTH='0' MARGINHEIGHT='0' SCROLLING='NO' WIDTH='640' HEIGHT='360' allowfullscreen='true'></iframe> 
-                </div>             
+                    <video
+                      controls
+                      className='trailer'
+                      width='560'
+                      height='315'
+                      // src={`https://imdb-video.media-imdb.com/${getDetails.trailer.videoId}/1434659607842-pgv4ql-1596404706743.mp4?Expires=1642245486&Signature=AKAxTmMtuaNHs5B1-BIA-N-f0yzaNkpsqkImKPcLsTaLPA2sMQWgXaXy5ZBjXEGdq0Y-AQiF4E3i2izZHRYCGq52zv5qXqpINdfkb4Zcd6q~ZQprfCYD97jjVOqBuK~pcphcZZfj~BUfKP3WrCab-TB0RGVI83V6chs6Dpnop8r5crNw~em5GnVDGjwJaqFIrMSTUbzbEHpHn3SQdS1HOonZPgl3~cbrx7u7iIX6FO0rolREELgHkCpY4Fj7EsvfDSySZAxACqlRf-QfBf-mYeNpdeW9PQ2kvwIfbY4KElshQ8Rs68f1~0q8ZSygotJ~Z1jJ-8g556j3Yw8LQvSq7w__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA`}
+                      frameborder='0'
+                      allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                      allowfullscreen='true'
+                    ></video>
+                  </div>
+                  <h4 className='casting'>Casting</h4>
+                  <ActorCard getDetails={getDetails} />
+                </div>
+              </div>
             </div>
-        </div>
-    )
-}
+          </div>
+        </>,
+        document.body
+      )
+    : null
 
 export default CardFilm
