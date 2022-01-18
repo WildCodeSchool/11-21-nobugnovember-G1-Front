@@ -47,7 +47,9 @@ const CardFilm = ({
                       </h3>
                       <p className='year'>{getProps.release_date}</p>
                       <div className='info'>
-                        <p className='duration'>{getProps.runtime}</p>
+                        <p className='duration'>
+                          Durée : {getDetails.runtime} min
+                        </p>
                         <div className='holderPegi'>
                           <p id='pegi'></p>
                         </div>
@@ -87,14 +89,26 @@ const CardFilm = ({
                         <span className='textGrey'>Studio :</span>{' '}
                         {getDetails.production_companies !== undefined &&
                           getDetails.production_companies.map(
-                            name => name.name + ', '
+                            (name, id, arr) => {
+                              if (id < arr.length - 1) {
+                                return name.name + ', '
+                              } else {
+                                return name.name
+                              }
+                            }
                           )}{' '}
                       </p>
                       <p className='infoProd'>
                         {' '}
                         <span className='textGrey'>Genres :</span>{' '}
                         {getDetails.genres !== undefined &&
-                          getDetails.genres.map(genre => genre.name + ', ')}
+                          getDetails.genres.map((genre, id, arr) => {
+                            if (id < arr.length - 1) {
+                              return genre.name + ', '
+                            } else {
+                              return genre.name
+                            }
+                          })}
                       </p>
                     </div>
                   </div>
