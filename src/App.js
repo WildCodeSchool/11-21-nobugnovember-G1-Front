@@ -3,6 +3,7 @@ import Catalogue from './screens/Catalogue'
 import Series from './screens/Series'
 import Films from './screens/Films'
 import MiniJeux from './screens/MiniJeux'
+import Quizz from './components/Quizz'
 import { Routes, Route } from 'react-router-dom'
 import { useState } from 'react'
 import useModale from './components/useModale'
@@ -16,7 +17,8 @@ function App() {
   const [isLoading, setIsLoading] = useState(false)
   const [casting, setCasting] = useState([])
   const { isShowing, toggle } = useModale()
-
+  const [playerName, setPlayerName] = useState()
+  
   const retourFunc = () => {
     toggle()
     setIsActive(!isActive)
@@ -114,9 +116,32 @@ function App() {
               setEmojiSelected={setEmojiSelected}
               resultat={resultat}
               setResultat={setResultat}
+              setPlayerName={setPlayerName}
             />
           }
         />
+        <Route
+          path='/MiniJeux/Quizz'
+          element={
+            <Quizz emojiSelected={emojiSelected}
+            setEmojiSelected={setEmojiSelected}
+            resultat={resultat}
+            setResultat={setResultat}
+            playerName={playerName}
+            setPlayerName={setPlayerName} />
+          }
+        />
+        {/* <Route
+          path='/MiniJeux/Blindtest'
+          element={
+            <MiniJeux
+              emojiSelected={emojiSelected}
+              setEmojiSelected={setEmojiSelected}
+              resultat={resultat}
+              setResultat={setResultat}
+            />
+          }
+        /> */}
         {/* <Route
           path='/FicheFilm'
           element={

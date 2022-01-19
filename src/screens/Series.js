@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import Header from '../components/Header'
 import Cards from '../components/Cards'
 import CardFilm from '../components/CardFilm'
+import Footer from '../components/Footer'
 import axios from 'axios'
 import './Catalogue.css'
 
@@ -89,6 +90,7 @@ const Series = ({
             />
           ))}
         </div>
+        <Footer />
       </div>
     </div>
   )

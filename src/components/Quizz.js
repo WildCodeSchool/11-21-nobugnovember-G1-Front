@@ -8,6 +8,10 @@ import peur2 from '../quizzdata/peur.json'
 import surprise2 from '../quizzdata/surprise.json'
 import triste2 from '../quizzdata/triste.json'
 import TableauScore from './TableauScore'
+import Header from './Header'
+import Footer from '../components/Footer'
+
+
 export default function Quizz(props) {
   const questionnaire = props.emojiSelected.quizzSelected
 
@@ -31,7 +35,10 @@ export default function Quizz(props) {
   }
 
   return (
-    <div className='quizz-container'>
+<div className='catalogPage'>
+      <Header emojiSelected={props.emojiSelected}
+          setEmojiSelected={props.setEmojiSelected}/>
+     <div className='quizz-container'>
       {console.log(
         `Test: ${questionnaire} et ${props.emojiSelected.quizzSelected}`
       )}
@@ -76,6 +83,8 @@ export default function Quizz(props) {
           </div>
         </div>
       )}
+    </div>
+    <Footer />
     </div>
   )
 }

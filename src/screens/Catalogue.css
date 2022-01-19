@@ -14,7 +14,7 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    height: 100vh;
+    height: 100vh; /*rectifie la taille page*/
 }
 
 .catalogContainer {

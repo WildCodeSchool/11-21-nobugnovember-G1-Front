@@ -14,7 +14,7 @@ const TableauScore = props => {
       Selectionne un autre émoji parmi la liste suivante et essaye d'obtenir un score maximal dans un autre quizz.
       " Bon chance.. " `)
     } else if (props.score < 10 && props.score > 6) {
-      setMessage(`Bravo ${this.props.playerName} , tu as obtenus ${props.score} réponses correctes à ce questionnaire!
+      setMessage(`Bravo ${props.playerName} , tu as obtenus ${props.score} réponses correctes à ce questionnaire!
       Ta prestation est un peu du genre "Je participe mais je ne veux pas être le premier. Être un lâche me convient amplement."
 
       Retente ta chance et essais d'obtenir 10 réponses justes !`)
