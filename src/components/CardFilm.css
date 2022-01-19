@@ -78,6 +78,7 @@
 .year {  
     font-size: 2vh;
     margin-bottom: 1vw;
+    
 }
     
 
@@ -90,12 +91,13 @@
     padding: 0 3vw;
 }
 
-.trailer {
+.trailerYT {
     border-radius: 10px 10px 10px 10px / 10px 10px 10px 10px;
     width: 400px;
     height: 295px;
-    
 }
+
+
 
 .info {
     display: flex;
@@ -103,7 +105,7 @@
     flex-wrap: nowrap;
     flex-direction: row;
     align-content: center;
-    width: 65%;
+    width: 55%;
     align-items: center;
     margin-bottom: 1vw;
     font-size: 2vh;
@@ -112,7 +114,7 @@
 
 #pegi {
     background-color: #65655d;
-    width: 6vw;
+    width: 3vw;
     height: 3vh;
     text-align: center;
     border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;

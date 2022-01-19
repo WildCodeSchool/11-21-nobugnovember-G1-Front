@@ -39,7 +39,7 @@ const Catalogue = ({
       setIsLoading(true)
       axios
         .get(
-          `https://api.themoviedb.org/3/discover/movie?api_key=430fd4a9e11f41d3009ea74bba3edc1a&with_genres=${props.emojiSelected.correspondance}&language=fr-FR&page=2`
+          `https://api.themoviedb.org/3/discover/movie?api_key=430fd4a9e11f41d3009ea74bba3edc1a&with_genres=${props.emojiSelected.correspondance}&language=fr-FR&page=3`
         )
         .then(response => response.data)
         .then(data => {

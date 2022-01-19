@@ -2,7 +2,6 @@ import ReactDOM from 'react-dom'
 
 import popcorn from '../assets/popcorn.png'
 import ActorCard from './ActorCard'
-import Pegi from './Pegi'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 
@@ -55,7 +54,7 @@ const CardFilm = ({
                           Durée : {getDetails.runtime} min
                         </p>
                         <div className='holderPegi'>
-                          {getDetails.release_dates !== undefined && getDetails.release_dates.results.filter(el => el.iso_3166_1.includes('FR')).map(el => el.release_dates[0].certification)}
+                          <p id='pegi'>{getDetails.release_dates !== undefined && getDetails.release_dates.results.filter(el => el.iso_3166_1.includes('FR')).map(el => el.release_dates[0].certification)}</p>
                         </div>
                         <img
                           src={popcorn}
@@ -115,6 +114,7 @@ const CardFilm = ({
                           })}
                       </p>
                     </div>
+                    {/* {getDetails.videos.results[0] ? <iframe className='trailerYT' width="560" height="315" src={`https://www.youtube.com/embed/${getDetails.videos.results[0].key}`} title="YouTube trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen='true' ></iframe> : <div>Poulet</div>} */}
                   </div>
                   <h4 className='casting'>Casting</h4>
                   <ActorCard

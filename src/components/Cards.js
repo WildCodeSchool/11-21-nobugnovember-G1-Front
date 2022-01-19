@@ -3,7 +3,6 @@ import './Cards.css'
 const Cards = ({ setGetProps, setIsActive, toggle, data }) => {
   const handleClick = data => {
     setGetProps(data)
-
     setIsActive(true)
     toggle()
   }
