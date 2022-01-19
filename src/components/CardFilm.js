@@ -6,13 +6,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 
 import './CardFilm.css'
+
 const CardFilm = ({
   getProps,
   retourFunc,
   isShowing,
   getDetails,
   casting,
-  setCasting
+  setCasting,
+  setPegi,
+  pegi
 }) =>
   isShowing
     ? ReactDOM.createPortal(
@@ -47,9 +50,11 @@ const CardFilm = ({
                       </h3>
                       <p className='year'>{getProps.release_date}</p>
                       <div className='info'>
-                        <p className='duration'>{getProps.runtime}</p>
+                        <p className='duration'>
+                          Durée : {getDetails.runtime} min
+                        </p>
                         <div className='holderPegi'>
-                          <p id='pegi'></p>
+                          <p id='pegi'>{getDetails.release_dates !== undefined && getDetails.release_dates.results.filter(el => el.iso_3166_1.includes('FR')).map(el => el.release_dates[0].certification)}</p>
                         </div>
                         <img
                           src={popcorn}
@@ -87,16 +92,29 @@ const CardFilm = ({
                         <span className='textGrey'>Studio :</span>{' '}
                         {getDetails.production_companies !== undefined &&
                           getDetails.production_companies.map(
-                            name => name.name + ', '
+                            (name, id, arr) => {
+                              if (id < arr.length - 1) {
+                                return name.name + ', '
+                              } else {
+                                return name.name
+                              }
+                            }
                           )}{' '}
                       </p>
                       <p className='infoProd'>
                         {' '}
                         <span className='textGrey'>Genres :</span>{' '}
                         {getDetails.genres !== undefined &&
-                          getDetails.genres.map(genre => genre.name + ', ')}
+                          getDetails.genres.map((genre, id, arr) => {
+                            if (id < arr.length - 1) {
+                              return genre.name + ', '
+                            } else {
+                              return genre.name
+                            }
+                          })}
                       </p>
                     </div>
+                    {/* {getDetails.videos.results[0] ? <iframe className='trailerYT' width="560" height="315" src={`https://www.youtube.com/embed/${getDetails.videos.results[0].key}`} title="YouTube trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen='true' ></iframe> : <div>Poulet</div>} */}
                   </div>
                   <h4 className='casting'>Casting</h4>
                   <ActorCard

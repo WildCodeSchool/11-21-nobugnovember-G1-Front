@@ -32,7 +32,6 @@ const ActorCard = ({ getProps, setCasting, casting }) => {
 
   return (
     <div className='castingListe'>
-      {console.log('test casting', casting)}
       {casting.cast !== undefined
         ? casting.cast.slice(0, 5).map(actor => (
             <div key={actor.id}>

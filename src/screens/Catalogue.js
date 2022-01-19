@@ -22,6 +22,8 @@ const Catalogue = ({
   setCasting,
   getPropsTv,
   setGetPropsTv,
+  pegi,
+  setPegi,
   ...props
 }) => {
   const apiKey = process.env.REACT_APP_API_KEY
@@ -31,23 +33,20 @@ const Catalogue = ({
     setIsActive(!isActive)
   }
 
-  let dataAPI = []
-
   /***************** APPEL API GENERAL *******************/
   useEffect(() => {
     const appelAPI = () => {
       setIsLoading(true)
-      console.log('test correspondance 1', props.emojiSelected.correspondance)
       axios
         .get(
-          `https://api.themoviedb.org/3/discover/movie?api_key=430fd4a9e11f41d3009ea74bba3edc1a&with_genres=${props.emojiSelected.correspondance}&language=fr-FR&page=1`
+          `https://api.themoviedb.org/3/discover/movie?api_key=430fd4a9e11f41d3009ea74bba3edc1a&with_genres=${props.emojiSelected.correspondance}&language=fr-FR&page=3`
         )
         .then(response => response.data)
         .then(data => {
           props.setResultat(data.results)
           setIsLoading(false)
         })
-      console.log('BAITED')
+     
     }
     appelAPI()
   }, [props.emojiSelected.correspondance])
@@ -57,7 +56,7 @@ const Catalogue = ({
     const appelAPIFilm = () => {
       axios
         .get(
-          `https://api.themoviedb.org/3/movie/${getProps.id}?api_key=430fd4a9e11f41d3009ea74bba3edc1a&language=fr-FR`
+          `https://api.themoviedb.org/3/movie/${getProps.id}?api_key=430fd4a9e11f41d3009ea74bba3edc1a&append_to_response=videos,images,release_dates&language=fr-FR`
         )
         .then(res => res.data)
         .then(res => {
@@ -78,6 +77,8 @@ const Catalogue = ({
           getDetails={getDetails}
           casting={casting}
           setCasting={setCasting}
+          setPegi={setPegi}
+          pegi={pegi}
         />
 
         <Header
@@ -97,6 +98,8 @@ const Catalogue = ({
                 setGetProps={setGetProps}
                 setGetPropsTv={setGetPropsTv}
                 data={element}
+                setPegi={setPegi}
+                getProps={getProps}
               />
             ))}
           </div>

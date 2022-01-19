@@ -20,18 +20,17 @@ const Series = ({
   resultat,
   casting,
   setCasting,
+  pegi,
+  setPegi,
   getPropsTv,
   ...props
 }) => {
   const apiKey = process.env.REACT_APP_API_KEY
 
-  const [getDetailsTv, setGetDetailsTv] = useState([])
-  // console.log(getPropsTv)
   /***************** APPEL API GENERAL SERIES*******************/
   useEffect(() => {
     const appelAPI = () => {
       setIsLoading(true)
-      console.log('test correspondance 1', props.emojiSelected.correspondance)
       axios
         .get(
           `https://api.themoviedb.org/3/tv/popular?api_key=430fd4a9e11f41d3009ea74bba3edc1a&with_genres=${props.emojiSelected.correspondanceSerie}&language=fr-FR&page=1`
@@ -41,7 +40,7 @@ const Series = ({
           props.setResultat(data.results)
           setIsLoading(false)
         })
-      console.log('BAITED')
+      
     }
     appelAPI()
   }, [props.emojiSelected.correspondanceSerie])
@@ -56,7 +55,6 @@ const Series = ({
         .then(res => res.data)
         .then(res => {
           setGetDetails(res)
-          console.log('test micka', getDetails)
         })
     }
     isShowing && appelAPIFilm()
@@ -73,6 +71,7 @@ const Series = ({
           getDetails={getDetails}
           casting={casting}
           setCasting={setCasting}
+          setPegi={setPegi}
         />
         <Header
           emojiSelected={props.emojiSelected}

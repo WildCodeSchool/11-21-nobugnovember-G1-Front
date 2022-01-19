@@ -15,6 +15,7 @@ function App() {
   const [isActive, setIsActive] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const [casting, setCasting] = useState([])
+  const [pegi, setPegi] = useState ([])
   const { isShowing, toggle } = useModale()
 
   const retourFunc = () => {
@@ -55,6 +56,8 @@ function App() {
               toggle={toggle}
               casting={casting}
               setCasting={setCasting}
+              setPegi={setPegi}
+              pegi={pegi}
             />
           }
         />
@@ -79,6 +82,8 @@ function App() {
               retourFunc={retourFunc}
               casting={casting}
               setCasting={setCasting}
+              setPegi={setPegi}
+              pegi={pegi}
             />
           }
         />
@@ -103,6 +108,8 @@ function App() {
               retourFunc={retourFunc}
               casting={casting}
               setCasting={setCasting}
+              setPegi={setPegi}
+              pegi={pegi}
             />
           }
         />
