@@ -17,6 +17,8 @@ const Films = ({
   setGetDetails,
   setCasting,
   casting,
+  setPegi,
+  pegi,
   ...props
 }) => {
   const apiKey = process.env.REACT_APP_API_KEY

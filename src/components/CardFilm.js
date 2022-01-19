@@ -2,17 +2,21 @@ import ReactDOM from 'react-dom'
 
 import popcorn from '../assets/popcorn.png'
 import ActorCard from './ActorCard'
+import Pegi from './Pegi'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 
 import './CardFilm.css'
+
 const CardFilm = ({
   getProps,
   retourFunc,
   isShowing,
   getDetails,
   casting,
-  setCasting
+  setCasting,
+  setPegi,
+  pegi
 }) =>
   isShowing
     ? ReactDOM.createPortal(
@@ -51,7 +55,7 @@ const CardFilm = ({
                           Durée : {getDetails.runtime} min
                         </p>
                         <div className='holderPegi'>
-                          <p id='pegi'></p>
+                          {getDetails.release_dates !== undefined && getDetails.release_dates.results.filter(el => el.iso_3166_1.includes('FR')).map(el => el.release_dates[0].certification)}
                         </div>
                         <img
                           src={popcorn}
