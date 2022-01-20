@@ -1,0 +1,547 @@
+/********* MOBILE FIRST MOD **********/
+/* @media screen and (max-width: 850px) {  */
+
+    .search-box {
+        /* position: absolute; */
+        top: 2%;
+        right: 2%;
+        /* background-color: #565658; */
+        background-image: linear-gradient(
+    135deg, #2d2e31 0%, #3b3b3b 100%);
+        height: 50px;
+        border-radius: 70px;
+        padding-right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: row;
+    }
+    
+    .search-box:hover {
+        height: 214px; /* Longueur bande deployée*/
+        display: flex;
+        align-items: flex-start; /* Verticalité Emojis déployés*/
+        
+    }
+    
+    .search-txt{
+        display:none;
+        align-items: center;
+        background: none;
+        outline: none;
+        float: left;
+        padding: 0;
+        color: white;
+        font-size: 8px;
+        transition: 0.4s;
+        /* line-height: 40px; */
+        width: 100px;
+        overflow: hidden;
+    }
+    
+    .search-box:hover > .search-txt {
+        width: 100%;
+        transition: width 0.4s;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        /* position: relative; */
+        overflow: hidden;
+        background-color: white;
+        border-radius: 50px;
+    }
+    
+    .boiteSelection {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        /* border: 3px solid red; */
+    } 
+    
+    .search-box:hover > .boiteSelection {
+        display:none;
+    }
+    
+    .lienSelection{
+        /* color: #e84118; */
+       width: 30px;
+       height: 30px;
+       border-radius: 50%;
+       /* background: #2d2e31; */ /*********** COULEUR AUTOUR DES EMOJIS = INUTILE EN SOI***************/
+       /*couleur background base #2f3640 */
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+    
+    .search-box:hover > .lienSelection{
+        position: absolute; 
+ }
+    
+    .emojis {
+        width: 22px;
+        filter: grayscale(100%) Brightness(50%) contrast(130%);
+    }
+    
+    .emojis:hover {
+        filter: grayscale(0%)Brightness(100%)
+        }
+    
+    .emojiactif {
+        display:flex;
+        width: 22px;
+        filter: brightness(100%)
+    }
+    /* } */
+    
+
+
+
+@media screen and (min-width: 851px) {    
+    .search-box {
+    top: 2%;
+    right: 2%;
+    background-image: linear-gradient(
+135deg, #2d2e31 0%, #3b3b3b 100%);
+    height: 50px;
+    border-radius: 70px;
+    padding-right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row}
+    
+    .search-box:hover > .search-txt {
+        width: 100%;
+        transition: width 0.4s;
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        padding-right: 7px;
+        overflow: hidden;
+    }
+    
+    .search-box:hover > .lienSelection{
+        position: absolute; 
+        } 
+    
+    .emojis:hover {
+        filter: grayscale(0%)Brightness(100%)
+        }
+    
+    .search-box:hover > .boiteSelection {
+            display:none;
+        }
+    
+        .emojis {
+            width: 40px;
+            filter: grayscale(100%) Brightness(50%) contrast(130%);
+        }
+    
+        .emojiactif {
+            display: flex;
+            width: 40px;
+            filter: brightness(100%);}
+    
+        .lienSelection {
+            /* color: #e84118; */
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            /* background: #2d2e31; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    }
+    
+    .search-txt{
+        display:none;
+        align-items: center;
+        background: none;
+        outline: none;
+        float: left;
+        padding: 0;
+        color: white;
+        font-size: 16px;
+        transition: 0.4s;
+        line-height: 40px;
+        width: 100px;
+        overflow: hidden;
+    }
+    
+    .boiteSelection {
+    } 
+}
+
+
+/***************************************************************/
+/***************************************************************/
+/****** VERSION OFFICIELLE : A REACTIVER AU BESOIN DESKTOP ******/
+/***************************************************************/
+/***************************************************************/
+
+/* .search-box {
+    position: absolute;
+    right: 20px;
+    background-image: linear-gradient(135deg, #2d2e31 0%, #3b3b3b 100%);
+    height: 50px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.search-box:hover > .search-txt{
+    width: 365px;
+    transition: width 0.4s;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    padding: 0 12px 0 0;
+    overflow: hidden;
+}
+
+.search-box:hover > .lienSelection{
+    position: absolute; 
+
+}
+
+.emojis:hover {
+    filter: grayscale(0%)Brightness(100%)
+    }
+
+.search-box:hover > .boiteSelection {
+        display:none;
+    }
+
+.emojis {
+    width: 40px;
+    filter: grayscale(100%) Brightness(50%) contrast(130%);
+}
+
+.emojiactif {
+    display:flex;
+    width: 40px;
+    filter: brightness(100%)
+}
+
+.lienSelection{
+width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-txt{
+    display:none;
+    align-items: center;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 100px;
+    overflow: hidden;
+}
+
+.boiteSelection {
+}  */
+
+
+
+
+/************************************************************/
+/******** VERSION PILLULE 2 EMOJIS V2 ****/
+
+/* body {
+    margin: 0;
+    padding: 10px;
+    background: #ecd1ca;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.search-box {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #2f3640;
+    height: 100px;
+    border-radius: 100px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.search-box:hover > .search-txt{
+    width: 700px;
+    transition: width 0.s;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    padding: 0 15px 0 0;
+    overflow: hidden;
+}
+
+.search-box:hover > .lienSelection{
+    background: white;
+    position: absolute; 
+
+}
+
+.emojis:hover {
+    filter: grayscale(0%)
+    
+    }
+
+.search-box:hover > .boiteSelection {
+        display:none;
+    }
+
+.emojis {
+width: 100px;
+filter: grayscale(100%) Brightness(50%)
+}
+
+.emoactif {
+    display:flex;
+    width: 100%;
+}
+
+.lienSelection{
+    color: #e84118;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.search-txt{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    float: left;
+    background: none;
+    outline: none;
+    overflow: hidden;
+    width: 100px;
+    height: auto;
+    line-height: 40px;
+    transition: 0.4s;
+}
+
+.search-txt{
+    
+}
+
+.boiteSelection {
+}  */
+
+
+
+
+/************************************************************/
+/* VERSION PILLULE 2 EMOJIS */
+
+/* body {
+    margin: 0;
+    padding: 10px;
+    background: #ecd1ca;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.search-box {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #2f3640;
+    height: 100px;
+    border-radius: 100px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.search-box:hover > .search-txt{
+    width: 700px;
+    transition: width 0.4s;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    padding: 0 15px 0 0;
+
+
+}
+
+.search-box:hover > .lienSelection{
+    background: white;
+    position: absolute; 
+
+}
+
+.emojis:hover {
+    filter: grayscale(0%)
+    
+    }
+
+.search-box:hover > .boiteSelection {
+        display:none;
+    }
+
+.emojis {
+width: 100px;
+filter: grayscale(100%) Brightness(50%)
+}
+
+.emoactif {
+    display:flex;
+    width: 100%;
+}
+
+.lienSelection{
+    color: #e84118;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.search-txt{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    float: left;
+    background: none;
+    outline: none;
+    overflow: hidden;
+    width: 100px;
+    height: auto;
+    line-height: 40px;
+    transition: 0.4s;   
+}
+
+.search-txt{
+    
+}
+
+.boiteSelection {} */
+
+
+
+
+
+
+
+/************************************************************/
+/* VERSION DE BASE AVC THOMAS 23h15*/
+
+/* 
+body {
+    margin: 0;
+    padding: 10px;
+    background: #ecd1ca;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.search-box {
+    position: absolute; 
+    top: 20px; 
+    right: 20px;
+    background: #2f3640;
+    height: 100px;
+    border-radius: 100px;
+    padding : 10px;
+}
+
+.search-box:hover > .search-txt{
+    width: 800px;
+    padding: 0 6px;
+    transition: width 0.4s;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.search-box:hover > .lienSelection{
+    background: white;
+    position: absolute; 
+
+}
+
+.emojis:hover {
+    
+    }
+
+.emojis {
+width: 100px;
+}
+
+#emoActif {
+    display:flex;
+    
+}
+
+.lienSelection{
+    position: absolute;
+    right:0;
+    top: -1px;
+    display: flex;
+    justify-content: flex-start;
+    color: #e84118;
+    float: right;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.search-txt{
+    display:flex;
+    align-items: center;
+
+    border: 3px solid green;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px; 
+    width: 100px; 
+}
+
+.search-txt{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    height: auto;
+}
+
+.boiteSelection {
+    border: 5px solid red;
+    width: 50px;
+} */
+

@@ -8,6 +8,23 @@
     background-color: transparent;
     /* padding: 10px; */
     margin-bottom: 5vh;
+    /* border: 2px solid green; */
+    /* padding-bottom: 1vw;  */
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bloc-logo-links{
+display: flex;
+/* border : 2px solid blue; */
+align-items: center;
+
+}
+
+.bloc-emojichanger {
+/* border: 2px solid red; */
+position: relative;
 }
 
 .logoContainer {
@@ -37,6 +54,8 @@ li:hover{
     width: 13vw;
     padding-top: 1vh;
 }
+
+
 
 @media screen and (max-width: 750px){
     li {

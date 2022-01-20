@@ -10,27 +10,30 @@ const TableauScore = props => {
       
       Tu penses tout connaitre en matière de Films & Séries ? 
       Nous avons une surprise pour toi.
+
       Selectionne un autre émoji parmi la liste suivante et essaye d'obtenir un score maximal dans un autre quizz.
-      
-      Bon chance..`)
+      " Bon chance.. " `)
     } else if (props.score < 10 && props.score > 6) {
-      setMessage(`Bravo {playerName} , tu as obtenus ${props.score} réponses correctes à ce questionnaire!
+      setMessage(`Bravo ${props.playerName} , tu as obtenus ${props.score} réponses correctes à ce questionnaire!
       Ta prestation est un peu du genre "Je participe mais je ne veux pas être le premier. Être un lâche me convient amplement."
 
       Retente ta chance et essais d'obtenir 10 réponses justes !`)
     } else if (props.score > 3 && props.score < 6) {
-      setMessage(`{playerName}, tu ne te sentais pas bien aujourd'hui ?
+      setMessage(`${props.playerName}, tu ne te sentais pas bien aujourd'hui ?
       Tu as seulement ${props.score} réponses justes à ce questionnaire!
+
       J'ai un peu honte de toi pour tout te dire.
 
       J'espère que tu n'as rien de prévu cette semaine?
       Tu pourrais en profiter pour replonger dans les Films & Séries :). `)
     } else {
-      setMessage(`{playerName}, tu me donnes envie de casser l'écran ?
+      setMessage(`${props.playerName}, tu me donnes envie de casser l'écran ?
       Tu as fait un score à s'en jeter du pont.
       Ton score est seulement de ${props.score} réponses correctes à ce questionnaire!
-      Petite astuce amicale : Tu as besoin d'allumer ton écran pour pouvoir regarder des Films et Séries afin savoir de quoi ça parle.
-      Ecoutez les récits de tes amis ne fait pas de toi un cinéphile. Maintenant, tu es au courant. `)
+    
+      PETITE ASTUCE AMICALE :
+      Tu as réellement besoin d'allumer ton écran pour pouvoir regarder des Films et Séries afin de savoir de quoi l'histoire parle réellement.
+      Faire semblant et raconter les récits de tes amis ne fait pas de toi un cinéphile. Maintenant, tu es au courant. `)
     }
   }, [])
 
@@ -44,7 +47,7 @@ const TableauScore = props => {
       <div className='tableau-titre-resultat'>
         {/* DIV CONTENANT LE TABLEAU DE SCORE FINAL */}
         <h2>
-          <p>Bravo [userName] !</p>
+          <p>Bravo {props.playerName} !</p>
           <p className='phrase-pre-score'>Ton score est de </p>
 
           <p className='score-final'>{props.score}/10 !</p>
@@ -61,8 +64,9 @@ const TableauScore = props => {
         </ul>
       </div>
       <div className='tableau-commentaire'>
-        <p className='phrase-pre-resultat'>LA NOTE DU MAITRE DU JEU</p>
-        <p>{message}</p>
+        <p className='phrase-pre-resultat'>LA NOTE DU MAÎTRE DU JEU</p>
+        <p className='display-linebreak'>{message}</p>{' '}
+        {/* Ajout de la className=display-linebreak pour sauter une ligne */}
       </div>
     </div>
   )

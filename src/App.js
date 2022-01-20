@@ -3,6 +3,7 @@ import Catalogue from './screens/Catalogue'
 import Series from './screens/Series'
 import Films from './screens/Films'
 import MiniJeux from './screens/MiniJeux'
+import Quizz from './components/Quizz'
 import {
   Routes,
   Route,
@@ -27,6 +28,8 @@ function App() {
   const [isActive, setIsActive] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const [casting, setCasting] = useState([])
+  const [playerName, setPlayerName] = useState()
+  
   const [pegi, setPegi] = useState([])
   const { isShowing, toggle } = useModal()
 
@@ -134,9 +137,43 @@ function App() {
               setEmojiSelected={setEmojiSelected}
               resultat={resultat}
               setResultat={setResultat}
+              setPlayerName={setPlayerName}
             />
           }
         />
+        <Route
+          path='/MiniJeux/Quizz'
+          element={
+            <Quizz emojiSelected={emojiSelected}
+            setEmojiSelected={setEmojiSelected}
+            resultat={resultat}
+            setResultat={setResultat}
+            playerName={playerName}
+            setPlayerName={setPlayerName} />
+          }
+        />
+        {/* <Route
+          path='/MiniJeux/Blindtest'
+          element={
+            <MiniJeux
+              emojiSelected={emojiSelected}
+              setEmojiSelected={setEmojiSelected}
+              resultat={resultat}
+              setResultat={setResultat}
+            />
+          }
+        /> */}
+        {/* <Route
+          path='/FicheFilm'
+          element={
+            <CardFilm
+              emojiSelected={emojiSelected}
+              setEmojiSelected={setEmojiSelected}
+              resultat={resultat}
+              setResultat={setResultat}
+            />
+          }
+        /> */}
       </Routes>
 
       {backgroundLocation && (

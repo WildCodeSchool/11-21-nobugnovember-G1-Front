@@ -1,6 +1,7 @@
 import Header from '../components/Header'
-import Cards from '../components/Cards'
 import Footer from '../components/Footer'
+
+import Cards from '../components/Cards'
 import axios from 'axios'
 import { useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
@@ -83,7 +84,6 @@ const Films = ({
             </Link>
           ))}
         </div>
-        <Footer />
       </div>
       <Footer className="footerCatalogue"/> 
     </div>

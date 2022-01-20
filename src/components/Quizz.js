@@ -8,8 +8,14 @@ import peur2 from '../quizzdata/peur.json'
 import surprise2 from '../quizzdata/surprise.json'
 import triste2 from '../quizzdata/triste.json'
 import TableauScore from './TableauScore'
+import Header from './Header'
+import Footer from '../components/Footer'
+
+
 export default function Quizz(props) {
   const questionnaire = props.emojiSelected.quizzSelected
+
+
 
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [score, setScore] = useState(0)
@@ -17,6 +23,7 @@ export default function Quizz(props) {
   const handleAnswer = isCorrect => {
     if (isCorrect) {
       setScore(score + 1)
+
     }
 
     const nextQuestion = currentQuestion + 1
@@ -28,14 +35,17 @@ export default function Quizz(props) {
   }
 
   return (
-    <div className='quizz-container'>
+<div className='catalogPage'>
+      <Header emojiSelected={props.emojiSelected}
+          setEmojiSelected={props.setEmojiSelected}/>
+     <div className='quizz-container'>
       {console.log(
         `Test: ${questionnaire} et ${props.emojiSelected.quizzSelected}`
       )}
       {/* Conteneur général du quizz */}
       {/* CONDITION Conteneur Texte Résultat APPARAIT A LA FIN */}
       {showScore ? (
-        <TableauScore score={score} />
+        <TableauScore score={score} playerName={props.playerName}/>
       ) : (
         <div>
           {/* DIV CONTENANT LE CONTENEUR SUIVI QUEST  */}
@@ -73,6 +83,8 @@ export default function Quizz(props) {
           </div>
         </div>
       )}
+    </div>
+    <Footer />
     </div>
   )
 }
