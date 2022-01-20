@@ -105,13 +105,13 @@ const MiniJeux = props => {
           >
             Quizz
           </NavLink>
-          {/* <NavLink to='/MiniJeux/BlindTest' className='' onClick={handleChoice}
+           <NavLink to='/MiniJeux/BlindTest' className='' onClick={handleChoice}
               value='Blind Test'
               className='BlindTest-btn'>
             
               Blind Test
             
-          </NavLink> */}
+          </NavLink>
         </div>
 
         <p>

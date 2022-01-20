@@ -17,7 +17,12 @@ import peur2 from '../quizzdata/peur.json'
 import surprise2 from '../quizzdata/surprise.json'
 import triste2 from '../quizzdata/triste.json'
 
-const EmojiChanger = props => {
+const EmojiChanger = ({setNumPage, ...props}) => {
+  
+  let numPage1 = () => {   
+    setNumPage(1)
+  }
+  
   const handleChange = () => {
     const correspondanceTab = [
       {
@@ -72,23 +77,24 @@ const EmojiChanger = props => {
     ]
     const selection = correspondanceTab.filter(
       element => element.emotion === event.target.alt
-    )
-
-    console.log('test selection', selection)
-
-    props.setEmojiSelected(selection[0])
-    //console.log(selection[0].emoji)
-    //localStorage.setItem('maSelection', selection[0])
-  }
-  return (
-    <div className='search-box'>
+      )
+      
+      console.log('test selection', selection)
+      
+      props.setEmojiSelected(selection[0])
+      
+    }
+    
+    return (
+      <div className='search-box'>
       <div className='search-txt'>
-        <NavLink to='/Catalogue' className='lienSelection'>
+        <NavLink to='/Catalogue' className='lienSelection' >
           <img
             className='emojis'
             src={joyeux}
             alt='Emoji joyeux'
             onClick={handleChange}
+            // onClick={numPage1}
           ></img>
         </NavLink>
         <NavLink to='/Catalogue' className='lienSelection'>
@@ -96,7 +102,7 @@ const EmojiChanger = props => {
             className='emojis'
             src={pleure}
             alt='Emoji pleure'
-            onClick={handleChange}
+            onClick={handleChange} 
           ></img>
         </NavLink>
         <NavLink to='/Catalogue' className='lienSelection'>

@@ -5,8 +5,7 @@ import EmojiChanger from './EmojiChanger'
 
 const Header = ({setNumPage, ...props})=> {
 
-  let numPage1 = () => {
-    
+  let numPage1 = () => {   
     setNumPage(1)
   }
 
@@ -38,6 +37,7 @@ const Header = ({setNumPage, ...props})=> {
         <EmojiChanger
           emojiSelected={props.emojiSelected}
           setEmojiSelected={props.setEmojiSelected}
+          setNumPage={props.setNumPage}
         />
       </div>
     </div>

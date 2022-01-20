@@ -88,6 +88,7 @@ const Catalogue = ({
           emojiSelected={props.emojiSelected}
           setEmojiSelected={props.setEmojiSelected}
           setNumPage={setNumPage} 
+          numPage={numPage}
         />
         {isLoading ? (
           <Loading />

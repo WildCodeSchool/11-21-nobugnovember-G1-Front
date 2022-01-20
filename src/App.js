@@ -4,6 +4,7 @@ import Series from './screens/Series'
 import Films from './screens/Films'
 import MiniJeux from './screens/MiniJeux'
 import Quizz from './components/Quizz'
+import MiniJeuxBlindTest from './screens/MiniJeux-BlindTest'
 import {
   Routes,
   Route,
@@ -78,6 +79,7 @@ function App() {
               pegi={pegi}
               setNumPage={setNumPage} 
               numPage={numPage}
+              emojiSelected={emojiSelected}
             />
           }
         />
@@ -160,17 +162,12 @@ function App() {
             setPlayerName={setPlayerName} />
           }
         />
-        {/* <Route
+         <Route
           path='/MiniJeux/Blindtest'
           element={
-            <MiniJeux
-              emojiSelected={emojiSelected}
-              setEmojiSelected={setEmojiSelected}
-              resultat={resultat}
-              setResultat={setResultat}
-            />
+            <MiniJeuxBlindTest/>
           }
-        /> */}
+        />
         {/* <Route
           path='/FicheFilm'
           element={
