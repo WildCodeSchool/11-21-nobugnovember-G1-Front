@@ -4,11 +4,23 @@ import Series from './screens/Series'
 import Films from './screens/Films'
 import MiniJeux from './screens/MiniJeux'
 import Quizz from './components/Quizz'
-import { Routes, Route } from 'react-router-dom'
+import {
+  Routes,
+  Route,
+  useLocation,
+  useNavigate,
+  useParams
+} from 'react-router-dom'
 import { useState } from 'react'
-import useModale from './components/useModale'
+import useModal from './components/useModal'
+import CardFilm from './components/CardFilm'
 
 function App() {
+  // POUR MODAL
+  let location = useLocation()
+  let navigate = useNavigate()
+  let backgroundLocation = location.state && location.state.backgroundLocation
+
   const [emojiSelected, setEmojiSelected] = useState('')
   const [resultat, setResultat] = useState([])
   const [getProps, setGetProps] = useState({})
@@ -16,17 +28,20 @@ function App() {
   const [isActive, setIsActive] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const [casting, setCasting] = useState([])
-  const { isShowing, toggle } = useModale()
   const [playerName, setPlayerName] = useState()
   
+  const [pegi, setPegi] = useState([])
+  const { isShowing, toggle } = useModal()
+
   const retourFunc = () => {
     toggle()
+    navigate(-1)
     setIsActive(!isActive)
   }
 
   return (
     <div className='App'>
-      <Routes>
+      <Routes location={backgroundLocation || location}>
         <Route
           path='/'
           element={
@@ -57,6 +72,8 @@ function App() {
               toggle={toggle}
               casting={casting}
               setCasting={setCasting}
+              setPegi={setPegi}
+              pegi={pegi}
             />
           }
         />
@@ -81,6 +98,8 @@ function App() {
               retourFunc={retourFunc}
               casting={casting}
               setCasting={setCasting}
+              setPegi={setPegi}
+              pegi={pegi}
             />
           }
         />
@@ -105,6 +124,8 @@ function App() {
               retourFunc={retourFunc}
               casting={casting}
               setCasting={setCasting}
+              setPegi={setPegi}
+              pegi={pegi}
             />
           }
         />
@@ -154,6 +175,25 @@ function App() {
           }
         /> */}
       </Routes>
+
+      {backgroundLocation && (
+        <Routes>
+          <Route
+            path='/card/:id'
+            element={
+              <CardFilm
+                getProps={getProps}
+                retourFunc={retourFunc}
+                isShowing={isShowing}
+                getDetails={getDetails}
+                casting={casting}
+                setCasting={setCasting}
+                setPegi={setPegi}
+              />
+            }
+          />
+        </Routes>
+      )}
     </div>
   )
 }
