@@ -11,21 +11,20 @@ const CardFilm = ({ getProps, retourFunc, getDetails }) => {
   let pegi = 'N/A'
   const [detailCard, setDetailCard] = useState([])
 
-  /*************** Appel API Details Film ****************************/
-
+  /***************** APPEL API DETAILS SERIES*******************/
   useEffect(() => {
-    const appelAPIFilm = () => {
+    const appelDetailsSerie = () => {
       axios
         .get(
-          `https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.REACT_APP_API_KEY}&append_to_response=videos,images,credits,release_dates&language=fr-FR`
+          `https://api.themoviedb.org/3/tv/${getProps.id}?api_key=${process.env.REACT_APP_API_KEY}&append_to_response=videos,images,credits,release_dates&language=fr-FR`
         )
         .then(res => res.data)
         .then(res => {
-          console.log('P02 : ', res)
+          console.log(res)
           setDetailCard(res)
         })
     }
-    appelAPIFilm()
+    appelDetailsSerie()
   }, [])
 
   return (

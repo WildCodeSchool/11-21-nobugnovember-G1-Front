@@ -46,6 +46,7 @@ const Series = ({
         )
         .then(res => res.data)
         .then(res => {
+          console.log(res)
           setGetDetails(res)
         })
     }
@@ -63,8 +64,8 @@ const Series = ({
           {resultat.map(element => (
             <Link
               key={element.key}
-              to={`/card/${getProps.id}`}
-              state={{ backgroundLocation: location }}
+              to={`/cardS/${element.id}`}
+              state={{ backgroundLocationSerie: location }}
               className='linkCard'
             >
               <Cards

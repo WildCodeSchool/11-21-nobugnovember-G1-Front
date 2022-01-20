@@ -14,7 +14,10 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    height: 100vh; /*rectifie la taille page*/
+    min-height: 100vh; /*rectifie la taille page*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .catalogContainer {
