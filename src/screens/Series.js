@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import Header from '../components/Header'
 import Cards from '../components/Cards'
@@ -15,23 +15,14 @@ const Series = ({
   setIsActive,
   toggle,
   isShowing,
-  isLoading,
   setIsLoading,
-  retourFunc,
-  getDetails,
   setGetDetails,
   resultat,
-  casting,
-  setCasting,
-  pegi,
-  setPegi,
-  getPropsTv,
   setNumPage, 
   numPage,
   ...props
 }) => {
   const location = useLocation()
-  const apiKey = process.env.REACT_APP_API_KEY
 
   /***************** APPEL API GENERAL SERIES*******************/
   useEffect(() => {
@@ -50,34 +41,19 @@ const Series = ({
     appelAPI()
   }, [props.emojiSelected.correspondanceSerie, numPage])
 
-  /***************** APPEL API DETAILS SERIES*******************/
-  useEffect(() => {
-    const appelDetailsSerie = () => {
-      axios
-        .get(
-          `https://api.themoviedb.org/3/tv/${getProps.id}?api_key=${process.env.REACT_APP_API_KEY}&append_to_response=videos,images,credits,release_dates&language=fr-FR`
-        )
-        .then(res => res.data)
-        .then(res => {
-          setGetDetails(res)
-        })
-    }
-    isShowing && appelDetailsSerie()
-  }, [isShowing])
-
   return (
-    <div className='catalogPage'>
+    <div className={isActive ? 'catalogPage none' : 'catalogPage movie-grid'}>
       <div className='catalogContainer'>
         <Header
           emojiSelected={props.emojiSelected}
           setEmojiSelected={props.setEmojiSelected}
         />
-        <div className={isActive ? 'none' : 'movie-grid'}>
+        <div className='cardContainer'>
           {resultat.map(element => (
             <Link
               key={element.key}
-              to={`/card/${getProps.id}`}
-              state={{ backgroundLocation: location }}
+              to={`/cardS/${element.id}`}
+              state={{ backgroundLocationSerie: location }}
               className='linkCard'
             >
               <Cards
@@ -97,7 +73,6 @@ const Series = ({
         <Footer />
       </div>
     </div>
-   
   )
 }
 

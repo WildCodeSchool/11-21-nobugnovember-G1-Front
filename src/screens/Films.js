@@ -12,22 +12,14 @@ const Films = ({
   isShowing,
   isActive,
   setIsActive,
-  retourFunc,
-  isLoading,
   setIsLoading,
   getProps,
-  getDetails,
   setGetDetails,
-  setCasting,
-  casting,
-  setPegi,
-  pegi,
   setNumPage, 
   numPage,
   ...props
 }) => {
   const location = useLocation()
-  const apiKey = process.env.REACT_APP_API_KEY
 
   useEffect(() => {
     const appelAPI = () => {
@@ -47,33 +39,19 @@ const Films = ({
     appelAPI()
   }, [props.emojiSelected.correspondance, numPage])
 
-  useEffect(() => {
-    const appelDetailsFilm = () => {
-      axios
-        .get(
-          `https://api.themoviedb.org/3/movie/${getProps.id}?api_key=${process.env.REACT_APP_API_KEY}&append_to_response=videos,images,credits,release_dates&language=fr-FR`
-        )
-        .then(res => res.data)
-        .then(res => {
-          setGetDetails(res)
-        })
-    }
-    isShowing && appelDetailsFilm()
-  }, [isShowing])
-
   return (
-    <div className='catalogPage'>
+    <div className={isActive ? 'catalogPage none' : 'catalogPage movie-grid'}>
       <div className='catalogContainer'>
         <Header
           emojiSelected={props.emojiSelected}
           setEmojiSelected={props.setEmojiSelected}
         />
 
-        <div className={isActive ? 'none' : 'movie-grid'}>
+        <div className='cardContainer'>
           {props.resultat.map(element => (
             <Link
               key={element.key}
-              to={`/card/${getProps.id}`}
+              to={`/card/${element.id}`}
               state={{ backgroundLocation: location }}
               className='linkCard'
             >
@@ -93,7 +71,6 @@ const Films = ({
         />
         <Footer className="footerCatalogue"/> 
       </div>
-     
     </div>
   )
 }

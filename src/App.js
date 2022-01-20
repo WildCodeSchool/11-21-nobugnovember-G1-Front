@@ -4,16 +4,11 @@ import Series from './screens/Series'
 import Films from './screens/Films'
 import MiniJeux from './screens/MiniJeux'
 import Quizz from './components/Quizz'
-import {
-  Routes,
-  Route,
-  useLocation,
-  useNavigate,
-  useParams
-} from 'react-router-dom'
+import { Routes, Route, useLocation, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import useModal from './components/useModal'
 import CardFilm from './components/CardFilm'
+import CardSerie from './components/CardSerie'
 
 
 function App() {
@@ -21,6 +16,8 @@ function App() {
   let location = useLocation()
   let navigate = useNavigate()
   let backgroundLocation = location.state && location.state.backgroundLocation
+  let backgroundLocationSerie =
+    location.state && location.state.backgroundLocationSerie
 
   const [emojiSelected, setEmojiSelected] = useState('')
   const [resultat, setResultat] = useState([])
@@ -31,7 +28,6 @@ function App() {
   const [casting, setCasting] = useState([])
   const [playerName, setPlayerName] = useState()
   const [numPage, setNumPage] = useState(1)
-  
   const [pegi, setPegi] = useState([])
   const { isShowing, toggle } = useModal()
 
@@ -43,7 +39,9 @@ function App() {
 
   return (
     <div className='App'>
-      <Routes location={backgroundLocation || location}>
+      <Routes
+        location={backgroundLocation || backgroundLocationSerie || location}
+      >
         <Route
           path='/'
           element={
@@ -152,29 +150,20 @@ function App() {
         <Route
           path='/MiniJeux/Quizz'
           element={
-            <Quizz emojiSelected={emojiSelected}
-            setEmojiSelected={setEmojiSelected}
-            resultat={resultat}
-            setResultat={setResultat}
-            playerName={playerName}
-            setPlayerName={setPlayerName} />
+            <Quizz
+              emojiSelected={emojiSelected}
+              setEmojiSelected={setEmojiSelected}
+              resultat={resultat}
+              setResultat={setResultat}
+              playerName={playerName}
+              setPlayerName={setPlayerName}
+            />
           }
         />
         {/* <Route
           path='/MiniJeux/Blindtest'
           element={
             <MiniJeux
-              emojiSelected={emojiSelected}
-              setEmojiSelected={setEmojiSelected}
-              resultat={resultat}
-              setResultat={setResultat}
-            />
-          }
-        /> */}
-        {/* <Route
-          path='/FicheFilm'
-          element={
-            <CardFilm
               emojiSelected={emojiSelected}
               setEmojiSelected={setEmojiSelected}
               resultat={resultat}
@@ -190,6 +179,24 @@ function App() {
             path='/card/:id'
             element={
               <CardFilm
+                getProps={getProps}
+                retourFunc={retourFunc}
+                isShowing={isShowing}
+                getDetails={getDetails}
+                casting={casting}
+                setCasting={setCasting}
+                setPegi={setPegi}
+              />
+            }
+          />
+        </Routes>
+      )}
+      {backgroundLocationSerie && (
+        <Routes>
+          <Route
+            path='/cardS/:id'
+            element={
+              <CardSerie
                 getProps={getProps}
                 retourFunc={retourFunc}
                 isShowing={isShowing}

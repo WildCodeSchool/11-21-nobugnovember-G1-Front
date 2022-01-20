@@ -12,7 +12,6 @@ import chevroninactif from '../assets/chevroninactif.png'
 import Pagination from '../components/Pagination'
 
 const Catalogue = ({
-  getDetails,
   setGetDetails,
   isActive,
   setIsActive,
@@ -21,11 +20,6 @@ const Catalogue = ({
   toggle,
   setIsLoading,
   isLoading,
-  casting,
-  setCasting,
-  getPropsTv,
-  setGetPropsTv,
-  pegi,
   setPegi,
   setIsShowing,
   isShowing,
@@ -35,16 +29,6 @@ const Catalogue = ({
 }) => {
   // POUR AFFICHAGE MODAL
   let location = useLocation()
-
-  const apiKey = process.env.REACT_APP_API_KEY
-
-  const retourFunc = () => {
-    toggle()
-    setIsActive(!isActive)
-  }
-
-  let dataAPI = [] 
-
 
   /***************** APPEL API GENERAL *******************/
   useEffect(() => {
@@ -63,25 +47,8 @@ const Catalogue = ({
     appelAPI()
   }, [props.emojiSelected.correspondance, numPage])
 
-  /*************** Appel API Details Film ****************************/
-  useEffect(() => {
-    const appelAPIFilm = () => {
-      axios
-        .get(
-          `https://api.themoviedb.org/3/movie/${getProps.id}?api_key=${process.env.REACT_APP_API_KEY}&append_to_response=videos,images,credits,release_dates&language=fr-FR`
-        )
-        .then(res => res.data)
-        .then(res => {
-          setGetDetails(res)
-        })
-    }
-    isShowing && appelAPIFilm()
-  }, [isShowing])
-
-
-
   return (
-    <div className='catalogPage'>
+    <div className={isActive ? 'catalogPage none' : 'catalogPage movie-grid'}>
       <div className='catalogContainer'>
         <Header
           className='headerband'
@@ -92,12 +59,11 @@ const Catalogue = ({
         {isLoading ? (
           <Loading />
         ) : (
-          <>
-          <div className={isActive ? 'none' : 'movie-grid'}>
+          <div className='cardContainer'>
             {props.resultat.map(element => (
               <Link
                 key={element.key}
-                to={`/card/${getProps.id}`}
+                to={`/card/${element.id}`}
                 state={{ backgroundLocation: location }}
                 className='linkCard'
               >
@@ -122,13 +88,10 @@ const Catalogue = ({
           </>
           )}
         
-          <Footer className="footerCatalogue"/> 
+          <Footer className="footerCatalogue"/>
       </div>
     </div>
   )
 }
 
 export default Catalogue
-
-
-
