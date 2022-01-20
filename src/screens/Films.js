@@ -85,6 +85,7 @@ const Films = ({
         </div>
         <Footer />
       </div>
+      <Footer className="footerCatalogue"/> 
     </div>
   )
 }

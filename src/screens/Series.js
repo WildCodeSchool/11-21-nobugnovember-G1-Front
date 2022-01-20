@@ -89,6 +89,7 @@ const Series = ({
         <Footer />
       </div>
     </div>
+   
   )
 }
 

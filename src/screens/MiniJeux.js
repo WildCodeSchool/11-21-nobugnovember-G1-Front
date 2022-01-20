@@ -1,6 +1,9 @@
 import Header from '../components/Header'
 import loadingSvg from '../assets/loadingImg.svg'
 import Quizz from '../components/Quizz'
+import Footer from '../components/Footer'
+
+
 const MiniJeux = props => {
   return (
     <div className='catalogPage'>
@@ -12,6 +15,7 @@ const MiniJeux = props => {
         emojiSelected={props.emojiSelected}
         setEmojiSelected={props.setEmojiSelected}
       />
+      <Footer />
     </div>
   )
 }
