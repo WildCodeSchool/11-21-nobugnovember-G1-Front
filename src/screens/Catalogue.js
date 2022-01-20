@@ -9,6 +9,7 @@ import axios from 'axios'
 import chevrondroit from '../assets/chevrondroit.png'
 import chevrongauche from '../assets/chevrongauche.png'
 import chevroninactif from '../assets/chevroninactif.png'
+import Pagination from '../components/Pagination'
 
 const Catalogue = ({
   setGetDetails,
@@ -22,20 +23,12 @@ const Catalogue = ({
   setPegi,
   setIsShowing,
   isShowing,
-  setGetPropsTv,
+  setNumPage, 
+  numPage,
   ...props
 }) => {
   // POUR AFFICHAGE MODAL
   let location = useLocation()
-
-  //pagination
-  const [numPage, setNumPage] = useState(1)
-  let changePage = () => {
-    setNumPage(numPage + 1)
-  }
-  let changePagePrev = () => {
-    setNumPage(numPage - 1)
-  }
 
   /***************** APPEL API GENERAL *******************/
   useEffect(() => {
@@ -61,12 +54,12 @@ const Catalogue = ({
           className='headerband'
           emojiSelected={props.emojiSelected}
           setEmojiSelected={props.setEmojiSelected}
+          setNumPage={setNumPage} 
         />
         {isLoading ? (
           <Loading />
         ) : (
           <div className='cardContainer'>
-            {console.log('P03 : ', props.resultat)}
             {props.resultat.map(element => (
               <Link
                 key={element.key}
@@ -88,40 +81,14 @@ const Catalogue = ({
               </Link>
             ))}
           </div>
-        )}
-        <div className='paginationContainer'>
-          <div className='pagination'>
-            {numPage === 1 ? (
-              <div className='page'>
-                <img
-                  className='chevroninactif'
-                  src={chevroninactif}
-                  alt='inactif'
-                />
-              </div>
-            ) : (
-              <div className='page' onClick={changePagePrev}>
-                {' '}
-                <img
-                  className='chevron'
-                  src={chevrongauche}
-                  alt='Page precedente'
-                />{' '}
-              </div>
-            )}
-            <div className='current'> {numPage}</div>
-            <div className='page' onClick={changePage}>
-              {' '}
-              <img
-                className='chevron'
-                src={chevrondroit}
-                alt='Page suivante'
-              />{' '}
-            </div>
-            {/* {numPage + 1}</div> */}
-          </div>
-        </div>
-        <Footer className='footerCatalogue' />
+          <Pagination
+          setNumPage={setNumPage} 
+          numPage={numPage}
+          />
+          </>
+          )}
+        
+          <Footer className="footerCatalogue"/>
       </div>
     </div>
   )
