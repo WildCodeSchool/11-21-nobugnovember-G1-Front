@@ -1,15 +1,21 @@
 .box-menu-jeux > h1 {
+    font-size: 4.5vw;
     margin-top: 10px;
+    text-align: center;
 }
 
 .box-menu-jeux > h3 {
     margin-top: 10px;
 padding: 0 10vw;
-font-size: 2vh;
+font-size: 1.5vh;
+text-align: left;
+color: #dbbf1c;
+width: 100%;
 }
 
 .box-menu-jeux > p {
 text-align: justify;
+font-size: 14px;
 margin: 10px 0;
 padding: 0 10vw;
 }
@@ -47,8 +53,12 @@ padding: 0 10vw;
         font-weight: bold;
         margin-top: 10px;
         font-size: 16px;
-
     }
+
+.italicP {
+    font-style: italic;
+}
+
 .inputPseudo{
         background-color: #dbbe1c23;
         width: 160px;
@@ -65,8 +75,7 @@ padding: 0 10vw;
         margin: 10px 0;
         padding: 10px;
         text-align: justify;
-/* padding: 0 10vw; */
-        width:75%;
+        width:68%;
     } 
         
 .choix-jeux {

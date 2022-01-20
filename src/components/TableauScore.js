@@ -11,7 +11,7 @@ const TableauScore = props => {
       Tu penses tout connaitre en matière de Films & Séries ? 
       Nous avons une surprise pour toi.
 
-      Selectionne un autre émoji parmi la liste suivante et essaye d'obtenir un score maximal dans un autre quizz.
+      Selectionne un autre émoji présent dans la barre des émojis et essais d'obtenir un score maximal dans un autre quizz.
       " Bon chance.. " `)
     } else if (props.score < 10 && props.score > 6) {
       setMessage(`Bravo ${props.playerName} , tu as obtenus ${props.score} réponses correctes à ce questionnaire!
@@ -29,6 +29,7 @@ const TableauScore = props => {
     } else {
       setMessage(`${props.playerName}, tu me donnes envie de casser l'écran ?
       Tu as fait un score à s'en jeter du pont.
+
       Ton score est seulement de ${props.score} réponses correctes à ce questionnaire!
     
       PETITE ASTUCE AMICALE :
@@ -40,9 +41,7 @@ const TableauScore = props => {
   return (
     <div className='tableau-score'>
       <div className='titre-tableau-resultat'>
-        <h2>
-          RESULTAT QUIZZ <span style={{ fontSize: '7vw' }}> [ EMOTION ]</span>{' '}
-        </h2>
+        <h2>RESULTAT QUIZZ</h2>
       </div>
       <div className='tableau-titre-resultat'>
         {/* DIV CONTENANT LE TABLEAU DE SCORE FINAL */}
