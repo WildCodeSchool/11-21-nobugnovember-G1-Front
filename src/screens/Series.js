@@ -1,43 +1,93 @@
-import Header from '../components/Header'
 import { useEffect, useState } from 'react'
-import axios from 'axios'
+import { Link, useLocation } from 'react-router-dom'
+import Header from '../components/Header'
 import Cards from '../components/Cards'
-import Loading from '../components/Loading'
 import Footer from '../components/Footer'
+import axios from 'axios'
+import './Catalogue.css'
 
-const Series = props => {
-  const [isLoading, setIsLoading] = useState(true)
-
+const Series = ({
+  setGetProps,
+  getProps,
+  isActive,
+  setIsActive,
+  toggle,
+  isShowing,
+  isLoading,
+  setIsLoading,
+  retourFunc,
+  getDetails,
+  setGetDetails,
+  resultat,
+  casting,
+  setCasting,
+  pegi,
+  setPegi,
+  getPropsTv,
+  ...props
+}) => {
+  const location = useLocation()
   const apiKey = process.env.REACT_APP_API_KEY
-  //const titleType = 'tv_series'
-  //const [resultat, setResultat] = useState([])
-  // useEffect(()=>{
-  //   axios.get(`https://imdb-api.com/API/AdvancedSearch/${apiKey}?title_type=${titleType}&genres=${props.emojiSelected.correspondance}&count=100`)
-  //     .then((response)=>response.data)
-  //     .then((data)=>{setResultat(data.results);
-  //       setIsLoading(false);});
-  // },[])
+
+  /***************** APPEL API GENERAL SERIES*******************/
+  useEffect(() => {
+    const appelAPI = () => {
+      setIsLoading(true)
+      axios
+        .get(
+          `https://api.themoviedb.org/3/tv/popular?api_key=${process.env.REACT_APP_API_KEY}&with_genres=${props.emojiSelected.correspondanceSerie}&language=fr-FR&page=1`
+        )
+        .then(response => response.data)
+        .then(data => {
+          props.setResultat(data.results)
+          setIsLoading(false)
+        })
+    }
+    appelAPI()
+  }, [props.emojiSelected.correspondanceSerie])
+
+  /***************** APPEL API DETAILS SERIES*******************/
+  useEffect(() => {
+    const appelDetailsSerie = () => {
+      axios
+        .get(
+          `https://api.themoviedb.org/3/tv/${getProps.id}?api_key=${process.env.REACT_APP_API_KEY}&append_to_response=videos,images,credits,release_dates&language=fr-FR`
+        )
+        .then(res => res.data)
+        .then(res => {
+          setGetDetails(res)
+        })
+    }
+    isShowing && appelDetailsSerie()
+  }, [isShowing])
+
   return (
-    <div className='catalogContainer'>
-      <Header
-        emojiSelected={props.emojiSelected}
-        setEmojiSelected={props.setEmojiSelected}
-      />
-      <div className='movie-grid'>
-        {props.resultat
-          .filter(element => element.description.includes('–'))
-          .map(element => (
-            <Cards
+    <div className='catalogPage'>
+      <div className='catalogContainer'>
+        <Header
+          emojiSelected={props.emojiSelected}
+          setEmojiSelected={props.setEmojiSelected}
+        />
+        <div className={isActive ? 'none' : 'movie-grid'}>
+          {resultat.map(element => (
+            <Link
               key={element.key}
-              title={element.title}
-              poster={element.image}
-              description={element.description}
-            />
+              to={`/card/${getProps.id}`}
+              state={{ backgroundLocation: location }}
+              className='linkCard'
+            >
+              <Cards
+                key={element.key}
+                setGetProps={setGetProps}
+                setIsActive={setIsActive}
+                toggle={toggle}
+                data={element}
+              />
+            </Link>
           ))}
+        </div>
+        <Footer />
       </div>
-      {/* {console.log(props.resultat)} */}
-      {isLoading ? <Loading /> : ''}
-      <Footer />
     </div>
    
   )
