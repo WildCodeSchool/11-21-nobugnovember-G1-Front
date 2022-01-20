@@ -13,18 +13,19 @@ const Header = props => {
           </div>
         </NavLink>
 
-        <ul>
-          <NavLink to='/Catalogue' className=''>
-            <li>Accueil</li>
+        <ul className='bloc-links-header'>
+          
+          <NavLink to='/Catalogue' className='a-links-header'>
+            <li className='links-header'>Accueil</li>{' '}
           </NavLink>
-          <NavLink to='/Films' className=''>
-            <li>Films</li>
+          <NavLink to='/Films' className='a-links-header'>
+            <li className='links-header'>Films</li>
           </NavLink>
-          <NavLink to='/Series' className=''>
-            <li>Séries</li>
+          <NavLink to='/Series' className='a-links-header'>
+            <li className='links-header'>Séries</li>
           </NavLink>
-          <NavLink to='/MiniJeux' className=''>
-            <li>Mini-jeux</li>
+          <NavLink to='/MiniJeux' className='a-links-header'>
+            <li className='links-header'>Mini-jeux</li>
           </NavLink>
         </ul>
       </div>

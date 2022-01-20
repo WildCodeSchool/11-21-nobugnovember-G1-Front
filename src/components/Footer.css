@@ -3,15 +3,14 @@
 }
 .footer {
     margin-top: 1rem;
-    padding: 1rem;
     background-color: #2d2e31;
-    position: absolute;
-    bottom: 0;
     left: 0;
     width: 100%;
     font-size: 0.8em;
     display: flex;
     justify-content: space-between;
+    padding-bottom: 1vh;
+    background-color: transparent;
 }
 
 .link{
@@ -56,4 +55,3 @@ a:hover{
         justify-content: space-evenly;
     }
 }
-

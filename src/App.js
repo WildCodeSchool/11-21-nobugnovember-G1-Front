@@ -138,6 +138,7 @@ function App() {
               resultat={resultat}
               setResultat={setResultat}
               setPlayerName={setPlayerName}
+
             />
           }
         />
@@ -149,7 +150,9 @@ function App() {
             resultat={resultat}
             setResultat={setResultat}
             playerName={playerName}
-            setPlayerName={setPlayerName} />
+            setPlayerName={setPlayerName} 
+
+            />
           }
         />
         {/* <Route
@@ -160,6 +163,9 @@ function App() {
               setEmojiSelected={setEmojiSelected}
               resultat={resultat}
               setResultat={setResultat}
+            playerName={playerName}
+            setPlayerName={setPlayerName} 
+
             />
           }
         /> */}

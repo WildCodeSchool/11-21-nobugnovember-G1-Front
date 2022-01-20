@@ -18,7 +18,7 @@ const MiniJeux = props => {
   /* Creation nouvelle page pour quizz, blind test + creation de routes*/
 
   return (
-    <div className='catalogPage'>
+    <div className="catalogPage classmilhan">
       <Header
         emojiSelected={props.emojiSelected}
         setEmojiSelected={props.setEmojiSelected}

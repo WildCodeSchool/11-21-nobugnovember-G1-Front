@@ -1,3 +1,17 @@
+.classmilhan {
+    background-color: rgb(45, 46, 49);
+    background: rgb(110,139,137);
+    background: linear-gradient(
+180deg
+, rgba(110,139,137,1) 7%, rgba(45,46,49,1) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;}
+
 .box-menu-jeux > h1 {
     margin-top: 10px;
 }
@@ -131,4 +145,8 @@ width: 150px;
 
 .signature {
     font-style: italic;
+}
+
+.PartieJeux {
+    display: block;
 }

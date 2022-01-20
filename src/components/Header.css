@@ -31,11 +31,11 @@ position: relative;
     display: flex;
 }
 
-ul, a {
+.bloc-links-header, .a-links-header {
     display: flex;
 }
 
-li {
+.links-header {
     font-size: 2vw;
     display: inline;
     text-decoration: none;
@@ -44,7 +44,7 @@ li {
     text-align: center;    
 }
 
-li:hover{
+.links-header:hover{
     color: #FFDC6C;
 }
 
@@ -56,9 +56,8 @@ li:hover{
 }
 
 
-
 @media screen and (max-width: 750px){
-    li {
+    .links-header {
         font-size: 2.5vw;
         margin: 0 10px;
     }
