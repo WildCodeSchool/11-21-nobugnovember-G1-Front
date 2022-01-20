@@ -15,6 +15,7 @@ import { useState } from 'react'
 import useModal from './components/useModal'
 import CardFilm from './components/CardFilm'
 
+
 function App() {
   // POUR MODAL
   let location = useLocation()
@@ -29,6 +30,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(false)
   const [casting, setCasting] = useState([])
   const [playerName, setPlayerName] = useState()
+  const [numPage, setNumPage] = useState(1)
   
   const [pegi, setPegi] = useState([])
   const { isShowing, toggle } = useModal()
@@ -74,6 +76,8 @@ function App() {
               setCasting={setCasting}
               setPegi={setPegi}
               pegi={pegi}
+              setNumPage={setNumPage} 
+              numPage={numPage}
             />
           }
         />
@@ -100,6 +104,8 @@ function App() {
               setCasting={setCasting}
               setPegi={setPegi}
               pegi={pegi}
+              setNumPage={setNumPage} 
+              numPage={numPage}
             />
           }
         />
@@ -126,6 +132,8 @@ function App() {
               setCasting={setCasting}
               setPegi={setPegi}
               pegi={pegi}
+              setNumPage={setNumPage} 
+              numPage={numPage}
             />
           }
         />
