@@ -67,6 +67,8 @@ const Series = ({
         <Header
           emojiSelected={props.emojiSelected}
           setEmojiSelected={props.setEmojiSelected}
+          link={props.link}
+          setLink={props.setLink}
         />
         <div className={isActive ? 'none' : 'movie-grid'}>
           {resultat.map(element => (

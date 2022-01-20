@@ -92,6 +92,8 @@ const Catalogue = ({
           className='headerband'
           emojiSelected={props.emojiSelected}
           setEmojiSelected={props.setEmojiSelected}
+          link={props.link}
+          setLink={props.setLink}
         />
         {isLoading ? (
           <Loading />

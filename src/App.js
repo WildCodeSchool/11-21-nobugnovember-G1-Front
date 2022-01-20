@@ -21,6 +21,8 @@ function App() {
   let navigate = useNavigate()
   let backgroundLocation = location.state && location.state.backgroundLocation
 
+  const [link,setLink]=useState('/catalogue')
+
   const [emojiSelected, setEmojiSelected] = useState('')
   const [resultat, setResultat] = useState([])
   const [getProps, setGetProps] = useState({})
@@ -48,6 +50,8 @@ function App() {
             <Home
               emojiSelected={emojiSelected}
               setEmojiSelected={setEmojiSelected}
+              link={link}
+              setLink={setLink}
             />
           }
         />
@@ -74,6 +78,8 @@ function App() {
               setCasting={setCasting}
               setPegi={setPegi}
               pegi={pegi}
+              link={link}
+              setLink={setLink}
             />
           }
         />
@@ -100,6 +106,8 @@ function App() {
               setCasting={setCasting}
               setPegi={setPegi}
               pegi={pegi}
+              link={link}
+              setLink={setLink}
             />
           }
         />
@@ -126,6 +134,8 @@ function App() {
               setCasting={setCasting}
               setPegi={setPegi}
               pegi={pegi}
+              link={link}
+              setLink={setLink}
             />
           }
         />
@@ -138,6 +148,8 @@ function App() {
               resultat={resultat}
               setResultat={setResultat}
               setPlayerName={setPlayerName}
+              link={link}
+              setLink={setLink}
             />
           }
         />
@@ -149,7 +161,9 @@ function App() {
             resultat={resultat}
             setResultat={setResultat}
             playerName={playerName}
-            setPlayerName={setPlayerName} />
+            setPlayerName={setPlayerName}
+            link={link}
+            setLink={setLink}/>
           }
         />
         {/* <Route

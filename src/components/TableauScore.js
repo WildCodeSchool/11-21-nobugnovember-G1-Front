@@ -1,10 +1,12 @@
 import './TableauScore.css'
 import { useEffect, useState } from 'react'
+import Emojis from './Emojis'
+import EmojiChanger from './EmojiChanger'
 const TableauScore = props => {
   const [message, setMessage] = useState('Message à la con')
   useEffect(() => {
     if (props.score === 10) {
-      setMessage(`Wow {playerName} ! 
+      setMessage(`Wow ${props.playerName} ! 
       Tu as réussi à avoir ${props.score} réponses justes !
       Incroyable !
       
@@ -68,6 +70,7 @@ const TableauScore = props => {
         <p className='display-linebreak'>{message}</p>{' '}
         {/* Ajout de la className=display-linebreak pour sauter une ligne */}
       </div>
+
     </div>
   )
 }
