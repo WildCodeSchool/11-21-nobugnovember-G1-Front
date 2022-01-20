@@ -74,6 +74,7 @@
 }
 .quizz-button:active{
     background-color: #dbbf1c;
+    transform: scale(0.9);
 }
 .quizz-button{
     display: flex;
