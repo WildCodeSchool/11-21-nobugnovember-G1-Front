@@ -5,6 +5,7 @@ import Cards from '../components/Cards'
 import axios from 'axios'
 import { useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import Pagination from '../components/Pagination'
 
 const Films = ({
   toggle,
@@ -21,6 +22,8 @@ const Films = ({
   casting,
   setPegi,
   pegi,
+  setNumPage, 
+  numPage,
   ...props
 }) => {
   const location = useLocation()
@@ -32,7 +35,7 @@ const Films = ({
       console.log('test correspondance 1', props.emojiSelected.correspondance)
       axios
         .get(
-          `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&with_genres=${props.emojiSelected.correspondance}&language=fr-FR&page=1`
+          `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&with_genres=${props.emojiSelected.correspondance}&language=fr-FR&page=${numPage}`
         )
         .then(response => response.data)
         .then(data => {
@@ -42,7 +45,7 @@ const Films = ({
       console.log('BAITED')
     }
     appelAPI()
-  }, [props.emojiSelected.correspondance])
+  }, [props.emojiSelected.correspondance, numPage])
 
   useEffect(() => {
     const appelDetailsFilm = () => {
@@ -84,8 +87,13 @@ const Films = ({
             </Link>
           ))}
         </div>
+        <Pagination
+         setNumPage={setNumPage} 
+         numPage={numPage}
+        />
+        <Footer className="footerCatalogue"/> 
       </div>
-      <Footer className="footerCatalogue"/> 
+     
     </div>
   )
 }

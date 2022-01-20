@@ -3,8 +3,10 @@ import { Link, useLocation } from 'react-router-dom'
 import Header from '../components/Header'
 import Cards from '../components/Cards'
 import Footer from '../components/Footer'
+import Pagination from '../components/Pagination'
 import axios from 'axios'
 import './Catalogue.css'
+
 
 const Series = ({
   setGetProps,
@@ -24,6 +26,8 @@ const Series = ({
   pegi,
   setPegi,
   getPropsTv,
+  setNumPage, 
+  numPage,
   ...props
 }) => {
   const location = useLocation()
@@ -35,7 +39,7 @@ const Series = ({
       setIsLoading(true)
       axios
         .get(
-          `https://api.themoviedb.org/3/tv/popular?api_key=${process.env.REACT_APP_API_KEY}&with_genres=${props.emojiSelected.correspondanceSerie}&language=fr-FR&page=1`
+          `https://api.themoviedb.org/3/tv/popular?api_key=${process.env.REACT_APP_API_KEY}&with_genres=${props.emojiSelected.correspondanceSerie}&language=fr-FR&page=${numPage}`
         )
         .then(response => response.data)
         .then(data => {
@@ -44,7 +48,7 @@ const Series = ({
         })
     }
     appelAPI()
-  }, [props.emojiSelected.correspondanceSerie])
+  }, [props.emojiSelected.correspondanceSerie, numPage])
 
   /***************** APPEL API DETAILS SERIES*******************/
   useEffect(() => {
@@ -86,6 +90,10 @@ const Series = ({
             </Link>
           ))}
         </div>
+        <Pagination 
+        setNumPage={setNumPage} 
+        numPage={numPage}
+        />
         <Footer />
       </div>
     </div>
