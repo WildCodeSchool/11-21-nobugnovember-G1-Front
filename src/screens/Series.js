@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import Cards from '../components/Cards'
 import Loading from '../components/Loading'
+import Footer from '../components/Footer'
+
 const Series = props => {
   const [isLoading, setIsLoading] = useState(true)
 
@@ -16,7 +18,7 @@ const Series = props => {
   //       setIsLoading(false);});
   // },[])
   return (
-    <div>
+    <div className='catalogContainer'>
       <Header
         emojiSelected={props.emojiSelected}
         setEmojiSelected={props.setEmojiSelected}
@@ -35,7 +37,9 @@ const Series = props => {
       </div>
       {/* {console.log(props.resultat)} */}
       {isLoading ? <Loading /> : ''}
+      <Footer />
     </div>
+   
   )
 }
 

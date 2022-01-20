@@ -3,13 +3,14 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import Cards from '../components/Cards'
 import Loading from '../components/Loading'
+import Footer from '../components/Footer'
 
 const Films = props => {
   const [isLoading, setIsLoading] = useState(true)
   const apiKey = process.env.REACT_APP_API_KEY
 
   return (
-    <div>
+    <div className='catalogContainer'>
       <Header
         emojiSelected={props.emojiSelected}
         setEmojiSelected={props.setEmojiSelected}
@@ -25,6 +26,7 @@ const Films = props => {
             />
           ))}
       </div>
+      <Footer className="footerCatalogue"/> 
     </div>
   )
 }

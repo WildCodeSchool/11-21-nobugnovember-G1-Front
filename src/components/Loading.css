@@ -6,7 +6,7 @@
 .loading-img{
     height: 150px;
     width: 150px;
-    margin-top: 20%;
+    /* margin-top: 20%; */
     animation: rotating 1s linear infinite;
 }
 
