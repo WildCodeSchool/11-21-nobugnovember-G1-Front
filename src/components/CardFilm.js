@@ -5,7 +5,7 @@ import './CardFilm.css'
 import { useParams } from 'react-router-dom'
 import { useEffect } from 'react'
 
-const CardFilm = ({ getProps, retourFunc, getDetails, casting }) => {
+const CardFilm = ({ getProps, retourFunc, getDetails }) => {
   let { id } = useParams()
   let pegi = 'N/A'
 
@@ -18,12 +18,12 @@ const CardFilm = ({ getProps, retourFunc, getDetails, casting }) => {
       <div
         onClick={retourFunc}
         style={{
-          position: 'absolute',
+          position: 'fixed',
           top: 0,
           left: 0,
           bottom: 0,
           right: 0,
-          background: 'rgba(0, 0, 0, 0.7)'
+          background: 'rgba(0, 0, 0, 0.8)'
         }}
       ></div>
       <div className='popUpModal'>
@@ -67,7 +67,7 @@ const CardFilm = ({ getProps, retourFunc, getDetails, casting }) => {
                     <p id='pegi'>{pegi}</p>
                   </div>
                   <img src={popcorn} className='popcorn' alt='porpcorn'></img>{' '}
-                  <p>{getDetails.vote_average} /10</p>
+                  <p>{getDetails.vote_average} / 10</p>
                 </div>
                 <div className='synopsis'>
                   <p>{getDetails.overview}</p>
@@ -128,12 +128,16 @@ const CardFilm = ({ getProps, retourFunc, getDetails, casting }) => {
                   height='315'
                   src={`https://www.youtube.com/embed/${getDetails.videos.results[0].key}`}
                   title='YouTube trailer'
-                  frameborder='0'
+                  frameBorder='0'
                   allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-                  allowfullscreen='true'
+                  allowFullScreen='true'
                 ></iframe>
               ) : (
-                <video className='trailerYT' controls></video>
+                <video
+                  className='trailerYT'
+                  controls
+                  poster='https://www.cinechronicle.com/wp-content/uploads/2020/01/20th-Century-Fox.jpg'
+                ></video>
               )}
             </div>
             <h4 className='casting'>Casting</h4>
@@ -149,13 +153,24 @@ const CardFilm = ({ getProps, retourFunc, getDetails, casting }) => {
                             alt='casting'
                           ></img>
                         </div>
-                        <p className='actorName'>{actor.name}</p>
-                        <p className='roleName'>{actor.character}</p>
+                        <div className='actorRole'>
+                          <p className='actorName'>{actor.name}</p>
+                          <p className='roleName'>{actor.character}</p>
+                        </div>
                       </div>
                     </div>
                   ))
                 : ''}
             </div>
+            {/* <iframe
+              width='660'
+              height='437'
+              src='https://tomacloud.com/iframe/ty0yt2g3g3Hu4'
+              scrolling='no'
+              frameborder='0'
+              allowfullscreen
+              webkitallowfullscreen
+            ></iframe> */}
           </div>
         </div>
       </div>

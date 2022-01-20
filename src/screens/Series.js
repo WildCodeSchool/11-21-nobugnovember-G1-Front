@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import Header from '../components/Header'
 import Cards from '../components/Cards'
@@ -13,21 +13,12 @@ const Series = ({
   setIsActive,
   toggle,
   isShowing,
-  isLoading,
   setIsLoading,
-  retourFunc,
-  getDetails,
   setGetDetails,
   resultat,
-  casting,
-  setCasting,
-  pegi,
-  setPegi,
-  getPropsTv,
   ...props
 }) => {
   const location = useLocation()
-  const apiKey = process.env.REACT_APP_API_KEY
 
   /***************** APPEL API GENERAL SERIES*******************/
   useEffect(() => {
@@ -62,13 +53,13 @@ const Series = ({
   }, [isShowing])
 
   return (
-    <div className='catalogPage'>
+    <div className={isActive ? 'catalogPage none' : 'catalogPage movie-grid'}>
       <div className='catalogContainer'>
         <Header
           emojiSelected={props.emojiSelected}
           setEmojiSelected={props.setEmojiSelected}
         />
-        <div className={isActive ? 'none' : 'movie-grid'}>
+        <div className='cardContainer'>
           {resultat.map(element => (
             <Link
               key={element.key}
@@ -89,7 +80,6 @@ const Series = ({
         <Footer />
       </div>
     </div>
-   
   )
 }
 

@@ -11,7 +11,6 @@ import chevrongauche from '../assets/chevrongauche.png'
 import chevroninactif from '../assets/chevroninactif.png'
 
 const Catalogue = ({
-  getDetails,
   setGetDetails,
   isActive,
   setIsActive,
@@ -20,30 +19,17 @@ const Catalogue = ({
   toggle,
   setIsLoading,
   isLoading,
-  casting,
-  setCasting,
-  getPropsTv,
-  setGetPropsTv,
-  pegi,
   setPegi,
   setIsShowing,
   isShowing,
+  setGetPropsTv,
   ...props
 }) => {
   // POUR AFFICHAGE MODAL
   let location = useLocation()
 
-  const apiKey = process.env.REACT_APP_API_KEY
-
-  const retourFunc = () => {
-    toggle()
-    setIsActive(!isActive)
-  }
-
-  const [numPage, setNumPage] = useState(1)
-  let dataAPI = [] 
-
   //pagination
+  const [numPage, setNumPage] = useState(1)
   let changePage = () => {
     setNumPage(numPage + 1)
   }
@@ -83,10 +69,8 @@ const Catalogue = ({
     isShowing && appelAPIFilm()
   }, [isShowing])
 
-
-
   return (
-    <div className='catalogPage'>
+    <div className={isActive ? 'catalogPage none' : 'catalogPage movie-grid'}>
       <div className='catalogContainer'>
         <Header
           className='headerband'
@@ -96,7 +80,7 @@ const Catalogue = ({
         {isLoading ? (
           <Loading />
         ) : (
-          <div className={isActive ? 'none' : 'movie-grid'}>
+          <div className='cardContainer'>
             {props.resultat.map(element => (
               <Link
                 key={element.key}
@@ -119,22 +103,42 @@ const Catalogue = ({
             ))}
           </div>
         )}
-          <div className='paginationContainer'>
-            <div className='pagination'> 
-            {numPage === 1 ? <div className='page'><img className='chevroninactif' src={chevroninactif} alt="inactif"/></div> : <div className='page' onClick={changePagePrev}> <img className="chevron" src={chevrongauche} alt="Page precedente"/> </div>}
+        <div className='paginationContainer'>
+          <div className='pagination'>
+            {numPage === 1 ? (
+              <div className='page'>
+                <img
+                  className='chevroninactif'
+                  src={chevroninactif}
+                  alt='inactif'
+                />
+              </div>
+            ) : (
+              <div className='page' onClick={changePagePrev}>
+                {' '}
+                <img
+                  className='chevron'
+                  src={chevrongauche}
+                  alt='Page precedente'
+                />{' '}
+              </div>
+            )}
             <div className='current'> {numPage}</div>
-            <div className='page' onClick={changePage}> <img className="chevron" src={chevrondroit} alt="Page suivante"/> </div> 
-            {/* {numPage + 1}</div> */}
+            <div className='page' onClick={changePage}>
+              {' '}
+              <img
+                className='chevron'
+                src={chevrondroit}
+                alt='Page suivante'
+              />{' '}
             </div>
+            {/* {numPage + 1}</div> */}
           </div>
-        
-          <Footer className="footerCatalogue"/> 
+        </div>
+        <Footer className='footerCatalogue' />
       </div>
     </div>
   )
 }
 
 export default Catalogue
-
-
-

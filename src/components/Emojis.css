@@ -12,6 +12,10 @@
     
 }
 
+.holderEmojibarre {
+    padding-bottom: 20vh;
+}
+
 .emojibarre {
     display:flex;
     justify-content: space-around;

@@ -11,20 +11,12 @@ const Films = ({
   isShowing,
   isActive,
   setIsActive,
-  retourFunc,
-  isLoading,
   setIsLoading,
   getProps,
-  getDetails,
   setGetDetails,
-  setCasting,
-  casting,
-  setPegi,
-  pegi,
   ...props
 }) => {
   const location = useLocation()
-  const apiKey = process.env.REACT_APP_API_KEY
 
   useEffect(() => {
     const appelAPI = () => {
@@ -59,14 +51,14 @@ const Films = ({
   }, [isShowing])
 
   return (
-    <div className='catalogPage'>
+    <div className={isActive ? 'catalogPage none' : 'catalogPage movie-grid'}>
       <div className='catalogContainer'>
         <Header
           emojiSelected={props.emojiSelected}
           setEmojiSelected={props.setEmojiSelected}
         />
 
-        <div className={isActive ? 'none' : 'movie-grid'}>
+        <div className='cardContainer'>
           {props.resultat.map(element => (
             <Link
               key={element.key}
@@ -85,7 +77,7 @@ const Films = ({
           ))}
         </div>
       </div>
-      <Footer className="footerCatalogue"/> 
+      <Footer className='footerCatalogue' />
     </div>
   )
 }

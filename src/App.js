@@ -4,13 +4,7 @@ import Series from './screens/Series'
 import Films from './screens/Films'
 import MiniJeux from './screens/MiniJeux'
 import Quizz from './components/Quizz'
-import {
-  Routes,
-  Route,
-  useLocation,
-  useNavigate,
-  useParams
-} from 'react-router-dom'
+import { Routes, Route, useLocation, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import useModal from './components/useModal'
 import CardFilm from './components/CardFilm'
@@ -29,7 +23,6 @@ function App() {
   const [isLoading, setIsLoading] = useState(false)
   const [casting, setCasting] = useState([])
   const [playerName, setPlayerName] = useState()
-  
   const [pegi, setPegi] = useState([])
   const { isShowing, toggle } = useModal()
 
@@ -144,12 +137,14 @@ function App() {
         <Route
           path='/MiniJeux/Quizz'
           element={
-            <Quizz emojiSelected={emojiSelected}
-            setEmojiSelected={setEmojiSelected}
-            resultat={resultat}
-            setResultat={setResultat}
-            playerName={playerName}
-            setPlayerName={setPlayerName} />
+            <Quizz
+              emojiSelected={emojiSelected}
+              setEmojiSelected={setEmojiSelected}
+              resultat={resultat}
+              setResultat={setResultat}
+              playerName={playerName}
+              setPlayerName={setPlayerName}
+            />
           }
         />
         {/* <Route
