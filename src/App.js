@@ -10,7 +10,6 @@ import useModal from './components/useModal'
 import CardFilm from './components/CardFilm'
 import CardSerie from './components/CardSerie'
 
-
 function App() {
   // POUR MODAL
   let location = useLocation()
@@ -21,6 +20,7 @@ function App() {
 
   const [emojiSelected, setEmojiSelected] = useState('')
   const [resultat, setResultat] = useState([])
+  const [resultatTv, setResultatTv] = useState([])
   const [getProps, setGetProps] = useState({})
   const [getDetails, setGetDetails] = useState([])
   const [isActive, setIsActive] = useState(false)
@@ -74,8 +74,10 @@ function App() {
               setCasting={setCasting}
               setPegi={setPegi}
               pegi={pegi}
-              setNumPage={setNumPage} 
+              setNumPage={setNumPage}
               numPage={numPage}
+              resultatTv={resultatTv}
+              setResultatTv={setResultatTv}
             />
           }
         />
@@ -102,7 +104,7 @@ function App() {
               setCasting={setCasting}
               setPegi={setPegi}
               pegi={pegi}
-              setNumPage={setNumPage} 
+              setNumPage={setNumPage}
               numPage={numPage}
             />
           }
@@ -130,7 +132,7 @@ function App() {
               setCasting={setCasting}
               setPegi={setPegi}
               pegi={pegi}
-              setNumPage={setNumPage} 
+              setNumPage={setNumPage}
               numPage={numPage}
             />
           }
