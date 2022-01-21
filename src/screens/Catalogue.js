@@ -23,7 +23,7 @@ const Catalogue = ({
   setPegi,
   setIsShowing,
   isShowing,
-  setNumPage, 
+  setNumPage,
   numPage,
   ...props
 }) => {
@@ -54,40 +54,39 @@ const Catalogue = ({
           className='headerband'
           emojiSelected={props.emojiSelected}
           setEmojiSelected={props.setEmojiSelected}
-          setNumPage={setNumPage} 
+          setNumPage={setNumPage}
         />
         {isLoading ? (
           <Loading />
-        ) : ( <>
-          <div className='cardContainer'>
-            {props.resultat.map(element => (
-              <Link
-                key={element.key}
-                to={`/card/${element.id}`}
-                state={{ backgroundLocation: location }}
-                className='linkCard'
-              >
-                <Cards
-                  toggle={toggle}
-                  setIsActive={setIsActive}
-                  setGetProps={setGetProps}
-                  data={element}
-                  setPegi={setPegi}
-                  getProps={getProps}
-                  setIsShowing={setIsShowing}
-                  isShowing={setIsShowing}
-                />
-              </Link>
-            ))}
-          </div>
-          <Pagination
-          setNumPage={setNumPage} 
-          numPage={numPage}
-          />
+        ) : (
+          <>
+            <div className='cardContainer'>
+              {props.resultat.map(element => (
+                <Link
+                  key={element.key}
+                  to={`/card/${element.id}`}
+                  state={{ backgroundLocation: location }}
+                  className='linkCard'
+                >
+                  <Cards
+                    toggle={toggle}
+                    setIsActive={setIsActive}
+                    setGetProps={setGetProps}
+                    data={element}
+                    setPegi={setPegi}
+                    getProps={getProps}
+                    setIsShowing={setIsShowing}
+                    isShowing={setIsShowing}
+                  />
+                </Link>
+              ))}
+            </div>
+            <Pagination setNumPage={setNumPage} numPage={numPage} />
+
           </>
-          )}
-        
-          <Footer className="footerCatalogue"/>
+        )}
+
+        <Footer className='footerCatalogue' />
       </div>
     </div>
   )
