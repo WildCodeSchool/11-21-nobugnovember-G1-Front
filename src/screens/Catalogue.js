@@ -58,7 +58,7 @@ const Catalogue = ({
         />
         {isLoading ? (
           <Loading />
-        ) : (
+        ) : ( <>
           <div className='cardContainer'>
             {props.resultat.map(element => (
               <Link
@@ -71,7 +71,6 @@ const Catalogue = ({
                   toggle={toggle}
                   setIsActive={setIsActive}
                   setGetProps={setGetProps}
-                  setGetPropsTv={setGetPropsTv}
                   data={element}
                   setPegi={setPegi}
                   getProps={getProps}
