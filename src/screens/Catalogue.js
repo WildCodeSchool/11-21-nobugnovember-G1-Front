@@ -25,6 +25,8 @@ const Catalogue = ({
   isShowing,
   setNumPage,
   numPage,
+  setResultatTv,
+  resultatTv,
   ...props
 }) => {
   // POUR AFFICHAGE MODAL
@@ -47,6 +49,24 @@ const Catalogue = ({
     appelAPI()
   }, [props.emojiSelected.correspondance, numPage])
 
+  useEffect(() => {
+    const appelAPITv = () => {
+      setIsLoading(true)
+      axios
+        .get(
+          `https://api.themoviedb.org/3/discover/tv?api_key=${process.env.REACT_APP_API_KEY}&with_genres=${props.emojiSelected.correspondanceSerie}&language=fr-FR&page=${numPage}`
+        )
+        .then(response => response.data)
+        .then(data => {
+          setResultatTv(data.results)
+          console.log(resultatTv)
+          setIsLoading(false)
+        })
+    }
+    appelAPITv()
+  }, [props.emojiSelected.correspondanceSerie, numPage])
+  console.log(resultatTv)
+
   return (
     <div className={isActive ? 'catalogPage none' : 'catalogPage movie-grid'}>
       <div className='catalogContainer'>
@@ -68,6 +88,25 @@ const Catalogue = ({
                   key={element.key}
                   to={`/card/${element.id}`}
                   state={{ backgroundLocation: location }}
+                  className='linkCard'
+                >
+                  <Cards
+                    toggle={toggle}
+                    setIsActive={setIsActive}
+                    setGetProps={setGetProps}
+                    data={element}
+                    setPegi={setPegi}
+                    getProps={getProps}
+                    setIsShowing={setIsShowing}
+                    isShowing={setIsShowing}
+                  />
+                </Link>
+              ))}
+              {resultatTv.map(element => (
+                <Link
+                  key={element.key}
+                  to={`/cardS/${element.id}`}
+                  state={{ backgroundLocationSerie: location }}
                   className='linkCard'
                 >
                   <Cards

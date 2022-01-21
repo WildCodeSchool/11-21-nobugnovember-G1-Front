@@ -10,7 +10,6 @@ import useModal from './components/useModal'
 import CardFilm from './components/CardFilm'
 import CardSerie from './components/CardSerie'
 
-
 function App() {
   // POUR MODAL
   let location = useLocation()
@@ -19,10 +18,11 @@ function App() {
   let backgroundLocationSerie =
     location.state && location.state.backgroundLocationSerie
 
-  const [link,setLink]=useState('/catalogue')
+  const [link, setLink] = useState('/catalogue')
 
   const [emojiSelected, setEmojiSelected] = useState('')
   const [resultat, setResultat] = useState([])
+  const [resultatTv, setResultatTv] = useState([])
   const [getProps, setGetProps] = useState({})
   const [getDetails, setGetDetails] = useState([])
   const [isActive, setIsActive] = useState(false)
@@ -82,6 +82,8 @@ function App() {
               setLink={setLink}
               setNumPage={setNumPage}
               numPage={numPage}
+              resultatTv={resultatTv}
+              setResultatTv={setResultatTv}
             />
           }
         />
@@ -162,14 +164,16 @@ function App() {
         <Route
           path='/MiniJeux/Quizz'
           element={
-            <Quizz emojiSelected={emojiSelected}
-            setEmojiSelected={setEmojiSelected}
-            resultat={resultat}
-            setResultat={setResultat}
-            playerName={playerName}
-            setPlayerName={setPlayerName}
-            link={link}
-            setLink={setLink}/>
+            <Quizz
+              emojiSelected={emojiSelected}
+              setEmojiSelected={setEmojiSelected}
+              resultat={resultat}
+              setResultat={setResultat}
+              playerName={playerName}
+              setPlayerName={setPlayerName}
+              link={link}
+              setLink={setLink}
+            />
           }
         />
         {/* <Route
