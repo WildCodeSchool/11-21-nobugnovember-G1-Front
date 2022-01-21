@@ -11,11 +11,8 @@ import TableauScore from './TableauScore'
 import Header from './Header'
 import Footer from '../components/Footer'
 
-
 export default function Quizz(props) {
   const questionnaire = props.emojiSelected.quizzSelected
-
-
 
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [score, setScore] = useState(0)
@@ -23,7 +20,6 @@ export default function Quizz(props) {
   const handleAnswer = isCorrect => {
     if (isCorrect) {
       setScore(score + 1)
-
     }
 
     const nextQuestion = currentQuestion + 1
@@ -35,62 +31,62 @@ export default function Quizz(props) {
   }
 
   return (
-<div className='catalogPage'>
-      <Header emojiSelected={props.emojiSelected}
-          setEmojiSelected={props.setEmojiSelected}
-              link={props.link}
-              setLink={props.setLink}
+
+    <div className='catalogPage'>
+      <Header
+        emojiSelected={props.emojiSelected}
+        setEmojiSelected={props.setEmojiSelected}
+        link={props.link}
+        setLink={props.setLink}
       />
-     <div className='quizz-container'>
-      {console.log(
-        `Test: ${questionnaire} et ${props.emojiSelected.quizzSelected}`
-      )}
-      {/* Conteneur général du quizz */}
-      {/* CONDITION Conteneur Texte Résultat APPARAIT A LA FIN */}
-      {showScore ? (
-        <TableauScore emojiSelected={props.emojiSelected}
-                      setEmojiSelected={props.setEmojiSelected}
-                      score={score} playerName={props.playerName} link={props.link}
-                      setLink={props.setLink}/>
-      ) : (
-        <div>
-          {/* DIV CONTENANT LE CONTENEUR SUIVI QUEST  */}
-          <div className='title-suiviquestion-container'>
-            {/* DIV CONTENANT LE SUIVI NUMERO QUIZZ */}
-            <h4 className='title-suiviquestion'>
-              Question {currentQuestion + 1}/{questionnaire.length}
-            </h4>
-          </div>
-          {/* FIN DIV SUIVI NUMERO QUIZZ */}
-
-          <div className='ConteneurQuestionReponse'>
-            <div className='questions-container'>
-              {/* DEBUT DIV QUESTION*/}
-              <h2 className='questions'>
-                {questionnaire[currentQuestion].questionText}
-              </h2>
+      <div className='quizz-container'>
+        {console.log(
+          `Test: ${questionnaire} et ${props.emojiSelected.quizzSelected}`
+        )}
+        {/* Conteneur général du quizz */}
+        {/* CONDITION Conteneur Texte Résultat APPARAIT A LA FIN */}
+        {showScore ? (
+          <TableauScore score={score} playerName={props.playerName} link={props.link}
+                        setLink={props.setLink}/>
+        ) : (
+          <div>
+            {/* DIV CONTENANT LE CONTENEUR SUIVI QUEST  */}
+            <div className='title-suiviquestion-container'>
+              {/* DIV CONTENANT LE SUIVI NUMERO QUIZZ */}
+              <h4 className='title-suiviquestion'>
+                Question {currentQuestion + 1}/{questionnaire.length}
+              </h4>
             </div>
-            {/* FIN DIV QUESTION*/}
+            {/* FIN DIV SUIVI NUMERO QUIZZ */}
 
-            <div className='button-grid'>
-              {/* DIV CONTENANT LES OPTIONS REPONSES*/}
-              {questionnaire[currentQuestion].answerOptions.map(
-                (element, index) => (
-                  <button
-                    onClick={() => handleAnswer(element.isCorrect)}
-                    className='quizz-button'
-                  >
-                    {element.answerText}
-                  </button>
-                )
-              )}
+            <div className='ConteneurQuestionReponse'>
+              <div className='questions-container'>
+                {/* DEBUT DIV QUESTION*/}
+                <h2 className='questions'>
+                  {questionnaire[currentQuestion].questionText}
+                </h2>
+              </div>
+              {/* FIN DIV QUESTION*/}
+
+              <div className='button-grid'>
+                {/* DIV CONTENANT LES OPTIONS REPONSES*/}
+                {questionnaire[currentQuestion].answerOptions.map(
+                  (element, index) => (
+                    <button
+                      onClick={() => handleAnswer(element.isCorrect)}
+                      className='quizz-button'
+                    >
+                      {element.answerText}
+                    </button>
+                  )
+                )}
+              </div>
+              {/* FIN DIV DE L'OPTION REPONSES*/}
             </div>
-            {/* FIN DIV DE L'OPTION REPONSES*/}
           </div>
-        </div>
-      )}
-    </div>
-    <Footer />
+        )}
+      </div>
+      <Footer />
     </div>
   )
 }

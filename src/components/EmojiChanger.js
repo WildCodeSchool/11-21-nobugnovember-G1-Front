@@ -8,7 +8,6 @@ import peur from '../assets/peur.png'
 import pleure from '../assets/pleure.png'
 import surprise from '../assets/surprise.png'
 import './EmojiChanger.css'
-import { useEffect, useState } from 'react'
 import amour2 from '../quizzdata/amour.json'
 import aubergine2 from '../quizzdata/aubergine.json'
 import colere2 from '../quizzdata/colere.json'
@@ -16,7 +15,7 @@ import joyeux2 from '../quizzdata/joyeux.json'
 import peur2 from '../quizzdata/peur.json'
 import surprise2 from '../quizzdata/surprise.json'
 import triste2 from '../quizzdata/triste.json'
-
+import { useEffect } from 'react'
 const EmojiChanger = props => {
 
   let page= (document.location.href).split('/');

@@ -5,26 +5,21 @@ import Cards from '../components/Cards'
 import axios from 'axios'
 import { useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import Pagination from '../components/Pagination'
 
 const Films = ({
   toggle,
   isShowing,
   isActive,
   setIsActive,
-  retourFunc,
-  isLoading,
   setIsLoading,
   getProps,
-  getDetails,
   setGetDetails,
-  setCasting,
-  casting,
-  setPegi,
-  pegi,
+  setNumPage, 
+  numPage,
   ...props
 }) => {
   const location = useLocation()
-  const apiKey = process.env.REACT_APP_API_KEY
 
   useEffect(() => {
     const appelAPI = () => {
@@ -32,7 +27,7 @@ const Films = ({
       console.log('test correspondance 1', props.emojiSelected.correspondance)
       axios
         .get(
-          `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&with_genres=${props.emojiSelected.correspondance}&language=fr-FR&page=1`
+          `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&with_genres=${props.emojiSelected.correspondance}&language=fr-FR&page=${numPage}`
         )
         .then(response => response.data)
         .then(data => {
@@ -42,24 +37,10 @@ const Films = ({
       console.log('BAITED')
     }
     appelAPI()
-  }, [props.emojiSelected.correspondance])
-
-  useEffect(() => {
-    const appelDetailsFilm = () => {
-      axios
-        .get(
-          `https://api.themoviedb.org/3/movie/${getProps.id}?api_key=${process.env.REACT_APP_API_KEY}&append_to_response=videos,images,credits,release_dates&language=fr-FR`
-        )
-        .then(res => res.data)
-        .then(res => {
-          setGetDetails(res)
-        })
-    }
-    isShowing && appelDetailsFilm()
-  }, [isShowing])
+  }, [props.emojiSelected.correspondance, numPage])
 
   return (
-    <div className='catalogPage'>
+    <div className={isActive ? 'catalogPage none' : 'catalogPage movie-grid'}>
       <div className='catalogContainer'>
         <Header
           emojiSelected={props.emojiSelected}
@@ -68,11 +49,11 @@ const Films = ({
           setLink={props.setLink}
         />
 
-        <div className={isActive ? 'none' : 'movie-grid'}>
+        <div className='cardContainer'>
           {props.resultat.map(element => (
             <Link
               key={element.key}
-              to={`/card/${getProps.id}`}
+              to={`/card/${element.id}`}
               state={{ backgroundLocation: location }}
               className='linkCard'
             >
@@ -86,8 +67,12 @@ const Films = ({
             </Link>
           ))}
         </div>
+        <Pagination
+         setNumPage={setNumPage} 
+         numPage={numPage}
+        />
+        <Footer className="footerCatalogue"/> 
       </div>
-      <Footer className="footerCatalogue"/> 
     </div>
   )
 }

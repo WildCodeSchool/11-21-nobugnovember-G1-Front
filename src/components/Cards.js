@@ -2,6 +2,7 @@ import './Cards.css'
 
 const Cards = ({ setGetProps, setIsActive, toggle, data }) => {
   const handleClick = data => {
+    console.log('P01 : ', data)
     setGetProps(data)
     setIsActive(true)
     toggle()
@@ -18,9 +19,8 @@ const Cards = ({ setGetProps, setIsActive, toggle, data }) => {
         <h3 className='cardTitle'>
           {data.title ? data.title : data.original_name}
           {` `}
-          {data.release_date
-            ? data.release_date.slice(0, 4)
-            : data.first_air_date.slice(0, 4)}
+          {data.release_date && data.release_date.slice(0, 4)}
+          {data.first_air_date && data.first_air_date.slice(0, 4)}
         </h3>
       </div>
     </div>

@@ -25,7 +25,7 @@
 }
 
 .cardFilmContainer {
-    min-height: 100vh;
+    height: 90vh;
     background : rgb(26 25 25 / 70%);
     background-repeat: no-repeat !important;   
     background-attachment: fixed !important;
@@ -35,6 +35,13 @@
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px)!important;
     z-index: 1060;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow: overlay;
+    padding-bottom: 1%;
+}
+.cardFilmContainer::-webkit-scrollbar {
+    display: none;
 }
 
 .closeModal {
@@ -60,13 +67,13 @@
 }
 
 .infoContainer {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 5vh;
+    padding-right: 5vh;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     z-index: -5;
-    padding-top: 2%;
+    padding-top: 5vh;
 }
 
 .titre {
@@ -93,7 +100,7 @@
 
 .trailerYT {
     border-radius: 10px 10px 10px 10px / 10px 10px 10px 10px;
-    width: 400px;
+    /* width: 400px; */
     height: 295px;
 }
 
@@ -105,7 +112,7 @@
     flex-wrap: nowrap;
     flex-direction: row;
     align-content: center;
-    width: 55%;
+    width: 65%;
     align-items: center;
     margin-bottom: 1vw;
     font-size: 2vh;
@@ -132,14 +139,14 @@
 
 .synopsis {
     font-size: 2vh;
-    margin-bottom: 3vw;
+    margin-bottom: 4vh;
 }
 
 .playButton {
     background: #FFDC6C;
     width: 5vw;
     height: 2.5vh;
-    margin-top: 3%;
+    margin-top: 4vh;
     border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
     cursor: pointer;
     border-style: none;
@@ -168,7 +175,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-around;
+    padding: 0 5vh;
 }
 
 .imgCast {
@@ -193,17 +201,25 @@
     justify-content: space-between;
     align-items: center;
 }
-
-.actorName {
+.actorRole{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: absolute;
-    bottom: 15%;
+    bottom: 2%;
+}
+.actorName {
+    /* position: absolute; */
+    /* bottom: 15%; */
     color: white;
+    text-align: center;
 }
 
 .roleName {
-    position: absolute;
-    bottom: 8%;
+    /* position: absolute; */
+    /* bottom: 8%; */
     color: #ffdc6c;
+    text-align: center;
 }
 
 .cardFilmOverlay {

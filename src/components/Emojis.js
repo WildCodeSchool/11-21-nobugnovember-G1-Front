@@ -78,7 +78,7 @@ const Emojis = props => {
     props.setEmojiSelected(selection[0])
   }
   return (
-    <div>
+    <div className='holderEmojibarre'>
       <div className='emojibarre'>
         <div className='container'>
           <NavLink to='/Catalogue' className=''>

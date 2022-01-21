@@ -14,7 +14,10 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    height: 100vh; /*rectifie la taille page*/
+    min-height: 100vh; /*rectifie la taille page*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .catalogContainer {
@@ -23,10 +26,7 @@
     background-attachment: fixed;
     margin: 0;
     min-height: 100vh;
-    position: relative;
-    /* backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); */
-
+    position: relative; 
 }
 
 .testFrost {
@@ -36,7 +36,6 @@
 .movie-grid {
     width: 100%;
     height: 100%;
-    padding-bottom: 50px;
     display: flex;
     flex-wrap: wrap; 
     justify-content: center;
@@ -56,11 +55,6 @@
     background: linear-gradient(180deg, rgba(110,139,137,1) 7%, rgba(45,46,49,1) 100%);
 }
 
-.footer {
-    background-color: transparent;
-    margin-top: 1rem;
-}
-
 .pagination{
     background: linear-gradient(135deg, #2d2e31 0%, #3b3b3b 100%);
     /* box-shadow: 5px 10px 6px #030303; */
@@ -78,7 +72,7 @@
 .paginationContainer {
     display: flex;
     justify-content: center;
-    padding-bottom: 100px;
+    /* padding-bottom: 100px; */
 }
 .page{
     padding: 15px;  
@@ -101,4 +95,11 @@
 .chevroninactif{
     width: 20px; 
     cursor: not-allowed; 
+}
+
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0px 1%;
 }

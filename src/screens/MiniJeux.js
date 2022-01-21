@@ -68,16 +68,13 @@ const MiniJeux = props => {
         en réponses.
       </p> */}
 
-        <h3>
-          Avant de lancer la partie, nous vous invitons à renseigner un
-          pseudonyme de jeu :
-        </h3>
-        <p className='parag-minijeux'>
+        <h3>Avant de lancer la partie, veuillez renseigner un pseudonyme :</h3>
+        <p className='parag-minijeux italicP'>
           Cela nous permettra de relier votre identifiant au score final obtenu
           et également de vous placer dans le classement des joueurs.
         </p>
 
-        <label className='label-miniJeux'>Veuillez indiquer un pseudo :</label>
+        <label className='label-miniJeux '>Veuillez indiquer un pseudo :</label>
         <input className='inputPseudo' onChange={handleChange} />
         {/* <button onClick={handleClick} required>
         Validation du pseudo
@@ -87,18 +84,17 @@ const MiniJeux = props => {
             NOTE IMPORTANTE : Changement de thème possible en fin de partie
           </h3>
           <p className='parag-minijeux'>
-            A la fin du test, sur la partie inférieure du tableau de résultat,
-            vous aurez la possibilité de changer de thème en sélectionnant un
-            emoji différent de celui que vous avez choisi initiallement. En
-            selectionnant un émoji différent, vous serez donc confronté à des
-            questions en rapport avec le thème de l'émoji. choisi.
+            A la fin du test, une fois les résultats affichées, vous aurez la
+            possibilité de changer de thème de jeux. Cela s'effectuera en
+            cliquant sur le seclecteur d'émojis situé sur la partie droite
+            supérieure de la page web.
           </p>
         </div>
         <h3>
           A partir de maintenant, vous n'avez plus qu'a choisir parmi les jeux
           proposés et essayez d'obtenir le meilleur score !
         </h3>
-        <p className='choix-jeux'>Veuillez choisir un jeu :</p>
+        <p className='choix-jeux'>Faites votre choix :</p>
         <div className='partie-buttons'>
           <NavLink
             to='/MiniJeux/Quizz'
@@ -117,8 +113,8 @@ const MiniJeux = props => {
         </div>
 
         <p>
-          Nous vous souhaitons bonne chance ainsi qu'une pleine réussite au
-          mini-jeu !!
+          Nous vous souhaitons bonne chance ainsi qu'une pleine réussite aux
+          mini-jeux !!
         </p>
         <p className='signature'>@ Les fondateurs Woody</p>
       </div>
