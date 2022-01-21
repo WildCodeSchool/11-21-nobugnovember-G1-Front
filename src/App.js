@@ -18,6 +18,8 @@ function App() {
   let backgroundLocationSerie =
     location.state && location.state.backgroundLocationSerie
 
+  const [link, setLink] = useState('/catalogue')
+
   const [emojiSelected, setEmojiSelected] = useState('')
   const [resultat, setResultat] = useState([])
   const [resultatTv, setResultatTv] = useState([])
@@ -48,6 +50,8 @@ function App() {
             <Home
               emojiSelected={emojiSelected}
               setEmojiSelected={setEmojiSelected}
+              link={link}
+              setLink={setLink}
             />
           }
         />
@@ -74,6 +78,8 @@ function App() {
               setCasting={setCasting}
               setPegi={setPegi}
               pegi={pegi}
+              link={link}
+              setLink={setLink}
               setNumPage={setNumPage}
               numPage={numPage}
               resultatTv={resultatTv}
@@ -104,6 +110,8 @@ function App() {
               setCasting={setCasting}
               setPegi={setPegi}
               pegi={pegi}
+              link={link}
+              setLink={setLink}
               setNumPage={setNumPage}
               numPage={numPage}
             />
@@ -132,6 +140,8 @@ function App() {
               setCasting={setCasting}
               setPegi={setPegi}
               pegi={pegi}
+              link={link}
+              setLink={setLink}
               setNumPage={setNumPage}
               numPage={numPage}
             />
@@ -146,6 +156,8 @@ function App() {
               resultat={resultat}
               setResultat={setResultat}
               setPlayerName={setPlayerName}
+              link={link}
+              setLink={setLink}
             />
           }
         />
@@ -159,6 +171,8 @@ function App() {
               setResultat={setResultat}
               playerName={playerName}
               setPlayerName={setPlayerName}
+              link={link}
+              setLink={setLink}
             />
           }
         />

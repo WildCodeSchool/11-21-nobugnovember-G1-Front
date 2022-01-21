@@ -22,6 +22,8 @@ const MiniJeux = props => {
       <Header
         emojiSelected={props.emojiSelected}
         setEmojiSelected={props.setEmojiSelected}
+        link={props.link}
+        setLink={props.setLink}
       />
       <div className='box-menu-jeux'>
         <h1>Bienvenue dans la section Mini-Jeux</h1>

@@ -74,6 +74,8 @@ const Catalogue = ({
           className='headerband'
           emojiSelected={props.emojiSelected}
           setEmojiSelected={props.setEmojiSelected}
+          link={props.link}
+          setLink={props.setLink}
           setNumPage={setNumPage}
         />
         {isLoading ? (
@@ -121,6 +123,7 @@ const Catalogue = ({
               ))}
             </div>
             <Pagination setNumPage={setNumPage} numPage={numPage} />
+
           </>
         )}
 

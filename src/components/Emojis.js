@@ -19,6 +19,7 @@ import './Emojis.css'
 
 const Emojis = props => {
   const handleChange = () => {
+
     const correspondanceTab = [
       {
         emotion: 'Emoji joyeux',
@@ -157,6 +158,7 @@ const Emojis = props => {
           <figcaption>Coquin</figcaption>
         </div>
       </div>
+
     </div>
   )
 }

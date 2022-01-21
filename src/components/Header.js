@@ -38,6 +38,8 @@ const Header = ({setNumPage, ...props})=> {
         <EmojiChanger
           emojiSelected={props.emojiSelected}
           setEmojiSelected={props.setEmojiSelected}
+          link={props.link}
+          setLink={props.setLink}
         />
       </div>
     </div>

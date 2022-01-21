@@ -31,10 +31,13 @@ export default function Quizz(props) {
   }
 
   return (
+
     <div className='catalogPage'>
       <Header
         emojiSelected={props.emojiSelected}
         setEmojiSelected={props.setEmojiSelected}
+        link={props.link}
+        setLink={props.setLink}
       />
       <div className='quizz-container'>
         {console.log(
@@ -43,7 +46,8 @@ export default function Quizz(props) {
         {/* Conteneur général du quizz */}
         {/* CONDITION Conteneur Texte Résultat APPARAIT A LA FIN */}
         {showScore ? (
-          <TableauScore score={score} playerName={props.playerName} />
+          <TableauScore score={score} playerName={props.playerName} link={props.link}
+                        setLink={props.setLink}/>
         ) : (
           <div>
             {/* DIV CONTENANT LE CONTENEUR SUIVI QUEST  */}

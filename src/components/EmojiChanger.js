@@ -15,9 +15,27 @@ import joyeux2 from '../quizzdata/joyeux.json'
 import peur2 from '../quizzdata/peur.json'
 import surprise2 from '../quizzdata/surprise.json'
 import triste2 from '../quizzdata/triste.json'
-
+import { useEffect } from 'react'
 const EmojiChanger = props => {
+
+  let page= (document.location.href).split('/');
+  console.log('CONTENU DE PAGE',page)
+  console.warn('LIEN DE LA PAGE',page)
+
+  useEffect(()=>{
+    console.log('PAGE DANS USEFFECT',page)
+    if(page[3]==='MiniJeux' || page[3]==='Quizz'){
+      props.setLink('/MiniJeux')
+      console.log('RENTRE DANS IF',props.link)
+    }
+    else{
+       props.setLink("/Catalogue")
+     }
+    console.log('NOUVEAU LIEN',props.link)
+  },[props.emojiSelected])
+
   const handleChange = () => {
+    props.setLink('/MiniJeux')
     const correspondanceTab = [
       {
         emotion: 'Emoji joyeux',
@@ -76,77 +94,77 @@ const EmojiChanger = props => {
     console.log('test selection', selection)
 
     props.setEmojiSelected(selection[0])
-    //console.log(selection[0].emoji)
-    //localStorage.setItem('maSelection', selection[0])
   }
   return (
     <div className='search-box'>
+      {console.log('ETAT DE LINK',props.link)}
       <div className='search-txt'>
-        <NavLink to='/Catalogue' className='lienSelection'>
+        <NavLink to={props.link} className='lienSelection'>
           <img
             className='emojis'
             src={joyeux}
             alt='Emoji joyeux'
             onClick={handleChange}
-          ></img>
+          />
         </NavLink>
-        <NavLink to='/Catalogue' className='lienSelection'>
+        <NavLink to={props.link} className='lienSelection'>
           <img
             className='emojis'
             src={pleure}
             alt='Emoji pleure'
             onClick={handleChange}
-          ></img>
+          />
         </NavLink>
-        <NavLink to='/Catalogue' className='lienSelection'>
+        <NavLink to={props.link} className='lienSelection'>
           <img
             className='emojis'
             src={surprise}
             alt='Emoji surprise'
             onClick={handleChange}
-          ></img>
+          />
         </NavLink>
-        <NavLink to='/Catalogue' className='lienSelection'>
+        <NavLink to={props.link} className='lienSelection'>
           <img
             className='emojis'
             src={amour}
             alt='Emoji amoureux'
             onClick={handleChange}
-          ></img>
+          />
         </NavLink>
-        <NavLink to='/Catalogue' className='lienSelection'>
+        <NavLink to={props.link} className='lienSelection'>
           <img
             className='emojis'
             src={colere}
             alt='Emoji colere'
             onClick={handleChange}
-          ></img>
+          />
         </NavLink>
-        <NavLink to='/Catalogue' className='lienSelection'>
+        <NavLink to={props.link} className='lienSelection'>
           <img
             className='emojis'
             src={peur}
             alt='Emoji peur'
             onClick={handleChange}
-          ></img>
+          />
         </NavLink>
-        <NavLink to='/Catalogue' className='lienSelection'>
+        <NavLink to={props.link} className='lienSelection'>
           <img
             className='emojis'
             src={aubergine}
             alt='Emoji auberg'
             onClick={handleChange}
-          ></img>
+          />
         </NavLink>
       </div>
       <div className='boiteSelection'>
-        <NavLink to='/Catalogue' className='lienSelection'>
+        <NavLink to={props.link} className='lienSelection'>
           <img
             className='emojiactif'
             src={props.emojiSelected.emoji}
             alt={props.emojiSelected.emotion}
-          ></img>
+          />
         </NavLink>
+        {console.log('INTERIEUR NAVLINK',props.link)}
       </div>
     </div>
   )
