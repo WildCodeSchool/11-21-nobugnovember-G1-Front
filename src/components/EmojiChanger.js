@@ -16,23 +16,83 @@ import peur2 from '../quizzdata/peur.json'
 import surprise2 from '../quizzdata/surprise.json'
 import triste2 from '../quizzdata/triste.json'
 import { useEffect } from 'react'
-const EmojiChanger = props => {
+import { useNavigate } from 'react-router-dom'
 
+const EmojiChanger = props => {
+  let navigate = useNavigate()
   let page= (document.location.href).split('/');
-  console.log('CONTENU DE PAGE',page)
-  console.warn('LIEN DE LA PAGE',page)
+  
 
   useEffect(()=>{
     console.log('PAGE DANS USEFFECT',page)
-    if(page[3]==='MiniJeux' || page[3]==='Quizz'){
-      props.setLink('/MiniJeux')
-      console.log('RENTRE DANS IF',props.link)
-    }
-    else{
-       props.setLink("/Catalogue")
-     }
-    console.log('NOUVEAU LIEN',props.link)
+    console.log('props.emojiSelected.emotion : ',props.emojiSelected.emotion)    
+      if(page[3]==='MiniJeux' || page[3]==='Quizz'){
+        props.setLink('/MiniJeux')
+        
+      } else {
+        props.setLink("/Catalogue")
+      }
   },[props.emojiSelected])
+
+  const handleChangeAuberg = () => {
+    props.setAubergine(!props.aubergine)
+    const correspondanceTab = [
+      {
+        emotion: 'Emoji joyeux',
+        correspondance: '35',
+        correspondanceSerie: '35',
+        emoji: joyeux,
+        quizzSelected: joyeux2
+      },
+      {
+        emotion: 'Emoji pleure',
+        correspondance: '18',
+        correspondanceSerie: '18',
+        emoji: pleure,
+        quizzSelected: triste2
+      },
+      {
+        emotion: 'Emoji surprise',
+        correspondance: '878',
+        correspondanceSerie: '10765',
+        emoji: surprise,
+        quizzSelected: surprise2
+      },
+      {
+        emotion: 'Emoji amoureux',
+        correspondance: '10749',
+        correspondanceSerie: '10766',
+        emoji: amour,
+        quizzSelected: amour2
+      },
+      {
+        emotion: 'Emoji colere',
+        correspondance: '10752',
+        correspondanceSerie: '10768',
+        emoji: colere,
+        quizzSelected: colere2
+      },
+      {
+        emotion: 'Emoji peur',
+        correspondance: '27',
+        correspondanceSerie: '9648',
+        emoji: peur,
+        quizzSelected: peur2
+      },
+      {
+        emotion: 'Emoji auberg',
+        correspondance: '',
+        correspondanceSerie: '',
+        emoji: aubergine,
+        quizzSelected: aubergine2
+      }
+    ]
+    const selection = correspondanceTab.filter(
+      element => element.emotion === event.target.alt
+    )
+    props.setEmojiSelected(selection[0])
+    
+  }
 
   const handleChange = () => {
     props.setLink('/MiniJeux')
@@ -90,14 +150,13 @@ const EmojiChanger = props => {
     const selection = correspondanceTab.filter(
       element => element.emotion === event.target.alt
     )
-
-    console.log('test selection', selection)
-
     props.setEmojiSelected(selection[0])
   }
+
+
   return (
     <div className='search-box'>
-      {console.log('ETAT DE LINK',props.link)}
+      
       <div className='search-txt'>
         <NavLink to={props.link} className='lienSelection'>
           <img
@@ -147,12 +206,12 @@ const EmojiChanger = props => {
             onClick={handleChange}
           />
         </NavLink>
-        <NavLink to={props.link} className='lienSelection'>
+        <NavLink to='/Films' className='lienSelection'>
           <img
             className='emojis'
             src={aubergine}
             alt='Emoji auberg'
-            onClick={handleChange}
+            onClick={handleChangeAuberg}
           />
         </NavLink>
       </div>
@@ -164,7 +223,6 @@ const EmojiChanger = props => {
             alt={props.emojiSelected.emotion}
           />
         </NavLink>
-        {console.log('INTERIEUR NAVLINK',props.link)}
       </div>
     </div>
   )

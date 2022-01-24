@@ -1,0 +1,206 @@
+{
+"queryString": "?genres=Coquin",
+"results": [
+    {
+        "id": "216015",
+        "poster_path":	"/qNc94aEFMtIbhv7GqQyJi7zUahW.jpg",
+        "backdrop_path": "/7IGKrY1f1KfwMipx9wZC4NRgIdF.jpg",
+        "title": "Cinquante nuances de Grey",
+        "description": "(2015)",
+        "runtimeStr": "125",
+        "type": "Movie"
+    },
+
+    {
+        "id": "341174",
+        "backdrop_path":"/16aJtXO6lObbBUr11IvkjB1QD1f.jpg",
+        "poster_path":"/7CBO9GhsUeMSsWQb47WTPZnKjdj.jpg",
+        "title": "Cinquante nuances plus sombres",
+        "description": "(2017)",
+        "runtimeStr": "118",
+        "type": "Movie"
+        
+    },
+
+    {
+        "id": "337167",
+        "backdrop_path":"/9ywA15OAiwjSTvg3cBs9B7kOCBF.jpg",
+        "poster_path":"/9ZedQHPQVveaIYmDSTazhT3y273.jpg",
+        "title": "Cinquante nuances plus claires",
+        "description": "(2018)",
+        "runtimeStr": "105",
+        "type": "Movie"
+        
+    },
+
+    {
+        "id": "664413",
+        "poster_path":"/6KwrHucIE3CvNT7kTm2MAlZ4fYF.jpg",
+        "backdrop_path":"/27nn2YJBwY7a1etZ0AiIcOrIgu3.jpg",
+        "title": "365 Days",
+        "description": "(2020)",
+        "runtimeStr": "144",
+        "type": "Movie"
+        
+    },
+
+
+    {
+        "id": "402",
+        "backdrop_path":"/lBZlIW0xg1AP66IkvCL0X4IuXfY.jpg",
+        "poster_path":"/76Ts0yoHk8kVQj9MMnoMixhRWoh.jpg",
+        "title": "Basic Instinct",
+        "description": "(1982)",
+        "runtimeStr": "127",
+        "type": "Movie"
+        
+    },
+
+    {
+        "id": "763152",
+        "backdrop_path":"/4v64DRdMtx8fQGUZ7hE1R2iChCr.jpg",
+        "poster_path":"/o7o8DJb33bOhhjVIjRXi25rl78e.jpg",
+        "title": "Plus on est de fous",
+        "description": "(2021)",
+        "runtimeStr": "110",
+        "type": "Movie"
+        
+    },
+
+    {
+        "id": "60519",
+        "backdrop_path":"/duwXFMeOXb2RsRw5soYV4FGDL5s.jpg",
+        "poster_path":"/y96yWv7ulX0YNixVXAnHkDlAPZm.jpg",
+        "title": "Top Guns",
+        "description": "(2017)",
+        "runtimeStr": "139",
+        "type": "Movie"
+    },
+
+    {
+        "id": "77377",
+        "backdrop_path":"/duwXFMeOXb2RsRw5soYV4FGDL5s.jpg",
+        "poster_path":"/uZXWCw4vUKUsIa0K8voDlsFqlbu.jpg",
+        "title": "Jesse Jane: Image",
+        "description": "(2017)",
+        "runtimeStr": "80",
+        "type": "Movie"
+    },
+
+    {
+        "id": "36905",
+        "backdrop_path":"/mcy9P013egec5kEPlKRm0nb4WEC.jpg",
+        "poster_path":"/qU59dhClsg6RLoyoD8VfQ2NfqX7.jpg",
+        "title": "Big Bang Theory: A XXX Parody",
+        "description": "(2010)",
+        "runtimeStr": "163",
+        "type": "Movie"
+    },
+
+    {
+        "id": "546333",
+        "backdrop_path":"/mpivmkUz4LXi4yXGDU9yRn5gXOb.jpg",
+        "poster_path":"/xTLQI4RnW1bZqPMlpIvGRu3JQVr.jpg",
+        "title": "40 ans, Tentations d'une Femme Mariée",
+        "description": "(2018)",
+        "runtimeStr": "118",
+        "type": "Movie"
+    },
+
+    {
+        "id": "657208",
+        "backdrop_path":"/zMkh6z7RFzCB0i9dNWGsmCW73Qc.jpg",
+        "poster_path":"/6JNOEo3Kugnb9uj7bE9qbVcxVpI.jpg",
+        "title": "Climax",
+        "description": "(2019)",
+        "runtimeStr": "75",
+        "type": "Movie"
+    },
+
+    {
+        "id": "636288",
+        "backdrop_path":"/6M11nwzVjoxBSGy0x9VbtA2ivVf.jpg",
+        "poster_path":"/g1FiyKhIb8dq4DgZ1CecHo2efFV.jpg",
+        "title": "Une nuit à Paris",
+        "description": "(2019)",
+        "runtimeStr": "110",
+        "type": "Movie"
+    },
+
+    {
+        "id": "447449",
+        "backdrop_path":"/rUXIa0DjRaOLjeNuE7jvPphE6Ux.jpg",
+        "poster_path":"/6MBbpaA2fGf0wbB6CQRxUe2aHz6.jpg",
+        "title": "Cara et Lucy, Escortes de Luxe",
+        "description": "(2017)",
+        "runtimeStr": "117",
+        "type": "Movie"
+    },
+
+    {
+        "id": "608352",
+        "backdrop_path":"/buWjTObIgh1XcCwsLhXDKQY4l7N.jpg",
+        "poster_path":"/zIhP2TM3jEpu3YgOkTinSrlI1He.jpg",
+        "title": "Road Trip",
+        "description": "(2019)",
+        "runtimeStr": "108",
+        "type": "Movie"
+    },
+
+    {
+        "id": "420309",
+        "backdrop_path":"/vlSi7UjUzTkr0umLq8YWaIvHV5R.jpg",
+        "poster_path":"/gQb31E3sp1kXdvlMbalwI6AkKuW.jpg",
+        "title": "Claire, la Sexologue",
+        "description": "(2016)",
+        "runtimeStr": "88",
+        "type": "Movie"
+    },
+
+    {
+        "id": "236755",
+        "backdrop_path":"/tvhFFqnCj4QgHYJco3OxB3zGeNc.jpg",
+        "poster_path":"/jNGZWzWmiYwKmS3WrejCN5wdV27.jpg",
+        "title": "Anissa Kate, La Veuve",
+        "description": "(2013)",
+        "runtimeStr": "111",
+        "type": "Movie"
+    },
+
+    {
+        "id": "683878",
+        "backdrop_path":"/k3UITVPWyZheGk95VOkMNKsc5Pd.jpg",
+        "poster_path":"/71NQaehHJMhcaDUHI0Fb7DEFIo1.jpg",
+        "title": "Stars",
+        "description": "(2020)",
+        "runtimeStr": "180",
+        "type": "Movie"
+    },
+
+    {
+        "id": "750035",
+        "poster_path":"/qeM0nx1wzar5GL7ky0rc1TsbpgQ.jpg",
+        "title": "Claire Castel Infinity 2",
+        "description": "(2020)"
+        
+    },
+
+    {
+        "id": "420705",
+        "poster_path":"/gYvoz0UXybWkvthqQPuZhgBnCrm.jpg",
+        "title": "Inès, Escorte de Luxe",
+        "description": "(2016)"
+        
+    },
+
+    {
+        "id": "48917",
+        "poster_path":"/hvnlWDw6ZlC6eSMQ1eWEIcqJoc6.jpg",
+        "title": "Mademoiselle de Paris",
+        "description": "(2010)"
+        
+    }
+
+],
+"errorMessage": null
+}

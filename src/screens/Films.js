@@ -6,6 +6,7 @@ import axios from 'axios'
 import { useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import Pagination from '../components/Pagination'
+import Coquin from '../auberginedata/Coquin.json'
 
 const Films = ({
   toggle,
@@ -17,14 +18,23 @@ const Films = ({
   setGetDetails,
   setNumPage, 
   numPage,
+  aubergine,
+  setAubergine,
   ...props
 }) => {
   const location = useLocation()
 
   useEffect(() => {
+
+    const appelAub = () => {
+      props.setResultat(Coquin.results)
+      console.log(props.resultat)      
+    }
+    
     const appelAPI = () => {
+      
       setIsLoading(true)
-      console.log('test correspondance 1', props.emojiSelected.correspondance)
+      
       axios
         .get(
           `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&with_genres=${props.emojiSelected.correspondance}&language=fr-FR&page=${numPage}`
@@ -33,11 +43,12 @@ const Films = ({
         .then(data => {
           props.setResultat(data.results)
           setIsLoading(false)
+          console.log(Coquin);
         })
-      console.log('BAITED')
+      
     }
-    appelAPI()
-  }, [props.emojiSelected.correspondance, numPage])
+    aubergine ? appelAub() : appelAPI()
+  }, [props.emojiSelected.correspondance, numPage, aubergine])
 
   return (
     <div className={isActive ? 'catalogPage none' : 'catalogPage movie-grid'}>
@@ -47,6 +58,7 @@ const Films = ({
           setEmojiSelected={props.setEmojiSelected}
           link={props.link}
           setLink={props.setLink}
+          setAubergine={setAubergine}
         />
 
         <div className='cardContainer'>

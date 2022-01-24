@@ -27,6 +27,7 @@ const Catalogue = ({
   numPage,
   setResultatTv,
   resultatTv,
+  aubergine,
   ...props
 }) => {
   // POUR AFFICHAGE MODAL
@@ -59,13 +60,13 @@ const Catalogue = ({
         .then(response => response.data)
         .then(data => {
           setResultatTv(data.results)
-          console.log(resultatTv)
+          
           setIsLoading(false)
         })
     }
     appelAPITv()
   }, [props.emojiSelected.correspondanceSerie, numPage])
-  console.log(resultatTv)
+  
 
   return (
     <div className={isActive ? 'catalogPage none' : 'catalogPage movie-grid'}>
@@ -77,6 +78,8 @@ const Catalogue = ({
           link={props.link}
           setLink={props.setLink}
           setNumPage={setNumPage}
+          setAubergine={props.setAubergine}
+          aubergine={aubergine}
         />
         {isLoading ? (
           <Loading />

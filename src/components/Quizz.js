@@ -32,7 +32,7 @@ export default function Quizz(props) {
 
   return (
 
-    <div className='catalogPage'>
+    <div className='PageQuizz'>
       <Header
         emojiSelected={props.emojiSelected}
         setEmojiSelected={props.setEmojiSelected}
@@ -40,9 +40,7 @@ export default function Quizz(props) {
         setLink={props.setLink}
       />
       <div className='quizz-container'>
-        {console.log(
-          `Test: ${questionnaire} et ${props.emojiSelected.quizzSelected}`
-        )}
+        
         {/* Conteneur général du quizz */}
         {/* CONDITION Conteneur Texte Résultat APPARAIT A LA FIN */}
         {showScore ? (
