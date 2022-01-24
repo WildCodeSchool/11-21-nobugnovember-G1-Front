@@ -19,6 +19,7 @@ function App() {
     location.state && location.state.backgroundLocationSerie
 
   const [link, setLink] = useState('/catalogue')
+  const [aubergine, setAubergine] = useState(false)
 
   const [emojiSelected, setEmojiSelected] = useState('')
   const [resultat, setResultat] = useState([])
@@ -52,6 +53,8 @@ function App() {
               setEmojiSelected={setEmojiSelected}
               link={link}
               setLink={setLink}
+              aubergine={aubergine}
+              setAubergine={setAubergine}
             />
           }
         />
@@ -84,6 +87,8 @@ function App() {
               numPage={numPage}
               resultatTv={resultatTv}
               setResultatTv={setResultatTv}
+              setAubergine={setAubergine}
+              aubergine={aubergine}
             />
           }
         />
@@ -114,6 +119,9 @@ function App() {
               setLink={setLink}
               setNumPage={setNumPage}
               numPage={numPage}
+              aubergine={aubergine}
+              setAubergine={setAubergine}
+              resultat={resultat}
             />
           }
         />

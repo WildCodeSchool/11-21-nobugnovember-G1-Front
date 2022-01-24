@@ -13,6 +13,8 @@ const Home = props => {
         <Emojis
           emojiSelected={props.emojiSelected}
           setEmojiSelected={props.setEmojiSelected}
+          aubergine={props.aubergine}
+          setAubergine={props.setAubergine}
         />
       </div>
       <Footer />
