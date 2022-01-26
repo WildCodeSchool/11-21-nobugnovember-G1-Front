@@ -1,3 +1,9 @@
+.fragmentContainer{
+    transition: opacity 0.4s ease-out;
+    visibility: visible;
+    transition: visibility 0.4s;
+}
+
 .popUpModal {
     z-index: 1060;
     position: absolute;
@@ -22,6 +28,10 @@
     overflow: hidden;
     border-radius: 2%;
     background-position: center;
+    visibility: visible;
+    transition: visibility 0.4s;
+    transition: opacity 0.4s ease-out,
+    transform 0.4s ease-out;
 }
 
 .cardFilmContainer {

@@ -29,7 +29,7 @@ const CardFilm = ({ getProps, retourFunc, getDetails }) => {
   }, [])
 
   return (
-    <>
+    <div className='fragmentContainer'>
       <div
         onClick={retourFunc}
         style={{
@@ -189,7 +189,7 @@ const CardFilm = ({ getProps, retourFunc, getDetails }) => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

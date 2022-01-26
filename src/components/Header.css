@@ -59,7 +59,16 @@ li:hover{
 
 @media screen and (max-width: 750px){
     li {
-        font-size: 2.5vw;
+        font-size: 3.5vw;
         margin: 0 10px;
+    }
+
+    .nav-style {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .logo-nav {
+        width: 23vw;
     }
 }
