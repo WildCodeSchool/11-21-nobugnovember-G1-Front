@@ -3,13 +3,7 @@ import { NavLink } from 'react-router-dom'
 import './Header.css'
 import EmojiChanger from './EmojiChanger'
 
-const Header = ({setNumPage, setAubergine, aubergine, ...props})=> {
-
-  let numPage1 = () => {
-    
-    setNumPage(1)
-  }
-
+const Header = ({ setAubergine, aubergine, ...props }) => {
   return (
     <div className='nav-style'>
       <div className='bloc-logo-links'>
@@ -19,18 +13,18 @@ const Header = ({setNumPage, setAubergine, aubergine, ...props})=> {
           </div>
         </NavLink>
 
-        <ul>
-          <NavLink to='/Catalogue' className='' onClick={numPage1}>
-            <li>Accueil</li>
+        <ul className='links-container'>
+          <NavLink to='/Catalogue' className=''>
+            <li className='navbar-links'>Accueil</li>
           </NavLink>
-          <NavLink to='/Films' className='' onClick={numPage1}>
-            <li>Films</li>
+          <NavLink to='/Films' className=''>
+            <li className='navbar-links'>Films</li>
           </NavLink>
-          <NavLink to='/Series' className='' onClick={numPage1}>
-            <li>Séries</li>
+          <NavLink to='/Series' className=''>
+            <li className='navbar-links'>Séries</li>
           </NavLink>
-          <NavLink to='/MiniJeux' className='' >
-            <li>Mini-jeux</li>
+          <NavLink to='/MiniJeux' className=''>
+            <li className='navbar-links'>Mini-jeux</li>
           </NavLink>
         </ul>
       </div>

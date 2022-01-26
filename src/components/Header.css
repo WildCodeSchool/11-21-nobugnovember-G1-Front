@@ -31,11 +31,11 @@ position: relative;
     display: flex;
 }
 
-ul, a {
+.links-container, .navbar-links {
     display: flex;
 }
 
-li {
+.navbar-links {
     font-size: 2vw;
     display: inline;
     text-decoration: none;
@@ -44,7 +44,7 @@ li {
     text-align: center;    
 }
 
-li:hover{
+.navbar-links:hover{
     color: #FFDC6C;
 }
 
