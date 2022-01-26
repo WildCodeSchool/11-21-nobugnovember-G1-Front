@@ -38,3 +38,21 @@
 .linkCard {
     margin: 15px 20px 65px 20px;
 }
+
+
+@media screen and (max-width: 750px){ 
+
+    .card {
+        box-shadow: transparent;
+    }
+
+    .cardTitle {
+        margin-top: 1vw;
+        font-size: 4vw;
+    }
+
+    .cards:hover {
+        transform:none;
+        transition:none;
+    }
+}

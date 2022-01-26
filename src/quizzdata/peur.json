@@ -27,7 +27,7 @@
       ]
     },
     {
-      "questionText": "Comment s'appelle le jouet tueur du petit Andy Barclay ?",
+      "questionText": "Comment s'appelle le jouet-tueur du petit Andy Barclay ?",
       "answerOptions": [
         { "answerText": "Buffy", "isCorrect": false },
         { "answerText": "Chucky", "isCorrect": true },
@@ -54,7 +54,7 @@
       ]
     },
     {
-      "questionText": "Quel est le vrai nom du tueur au puzzle dans la franchise 'Saw' ? ",
+      "questionText": "Quel est le vrai nom du tueur au puzzle dans la franchise 'Saw' ?",
       "answerOptions": [
         { "answerText": "John Kramer", "isCorrect": true },
         { "answerText": "Vladimir Ruskoff", "isCorrect": false },
@@ -63,7 +63,7 @@
       ]
     },
     {
-      "questionText": "Dans 'The Walkind Dead', comment sont appelés les morts-vivants ?",
+      "questionText": "Dans 'The Walkind Dead', quel nom est donné aux morts-vivants ?",
       "answerOptions": [
         { "answerText": "Les zombies", "isCorrect": false },
         { "answerText": "Les goules", "isCorrect": false },

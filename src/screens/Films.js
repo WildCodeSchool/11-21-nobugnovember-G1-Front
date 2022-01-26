@@ -80,8 +80,8 @@ const Films = ({
           ))}
         </div>
         <Pagination
-         setNumPage={setNumPage} 
-         numPage={numPage}
+        setNumPage={setNumPage} 
+        numPage={numPage}
         />
         <Footer className="footerCatalogue"/> 
       </div>
