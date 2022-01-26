@@ -61,8 +61,8 @@ const CardFilm = ({ getProps, retourFunc, getDetails }) => {
                 src={`http://image.tmdb.org/t/p/w500${detailCard.poster_path}`}
                 className='jaquette'
                 alt='jaquette'
-              ></img>
-              <div className='holderInfo'>
+                ></img>
+                <div className='holderInfo'>
                 <h3 className='titre'>
                   {getProps.title}
                   {getProps.name}
@@ -155,7 +155,9 @@ const CardFilm = ({ getProps, retourFunc, getDetails }) => {
                 ></video>
               )}
             </div>
-            <h4 className='casting'>Casting</h4>
+            <div className='mobileTitleCasting'>
+              <h4 className='casting'>Casting</h4>
+              </div>
             <div className='castingListe'>
               {detailCard.credits !== undefined
                 ? detailCard.credits.cast.slice(0, 5).map(actor => (

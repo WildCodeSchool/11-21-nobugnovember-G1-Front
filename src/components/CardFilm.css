@@ -18,7 +18,7 @@
 .cardFilm {
     /* background-image: url(../assets/background.jpg);  */
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
+    background-attachment: inherit;
     background-size: cover;
     width: 100%;
     position: absolute;
@@ -26,7 +26,7 @@
     left: 0;
     z-index: 1050;
     overflow: hidden;
-    border-radius: 2%;
+    border-radius: 20px 20px 20px 20px / 20px 20px 20px 20px;
     background-position: center;
     visibility: visible;
     transition: visibility 0.4s;
@@ -110,8 +110,9 @@
 
 .trailerYT {
     border-radius: 10px 10px 10px 10px / 10px 10px 10px 10px;
-    /* width: 400px; */
+    width: 400px;
     height: 295px;
+
 }
 
 
@@ -150,6 +151,7 @@
 .synopsis {
     font-size: 2vh;
     margin-bottom: 4vh;
+    text-align: justify;
 }
 
 .playButton {
@@ -186,7 +188,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    padding: 0 5vh;
+    margin: 0 5vh;
 }
 
 .imgCast {
@@ -200,6 +202,7 @@
     width: 300px;
     overflow: hidden;
     border-radius: 50%;
+    border : 5px solid #ffdc6c;
     transform: scale(0.5)
 }
 
@@ -240,4 +243,132 @@ width: 100vw;
 height: 100vh;
 z-index: 1040;
 background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 750px){
+
+    
+
+    .closeModal {
+        font-size: 3vw;
+        
+    }
+
+    .cards {
+        height: 380px;
+        width: 270px;
+    }
+
+    .poster {
+        min-height: 380px;
+    }
+
+    .cardFilm {
+        border-radius: 10px 10px 10px 10px / 10px 10px 10px 10px;
+        background-attachment: inherit
+    }
+
+    .infoContainer {
+        padding-left: 2vh;
+        padding-right: 2vh;
+        display: flex;
+        flex-direction: column;
+        padding-top: 2vh;
+        margin-bottom: 2vh
+    }
+
+    .holderInfo {
+        width: 100%;
+        padding: 0;
+    }
+
+    .titre {
+        text-align: center;
+        margin: 4vw;
+    }
+
+    .year {
+        text-align: center;
+    }
+
+    .info {
+        width: 100%;
+        margin-top: 3vw;
+    }
+
+    .holderPegi {
+        padding-left: 0px;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+    
+
+    #pegi {
+        width: 10vw;
+    }
+
+    .popcorn {
+        padding-left: 0px;
+        width: 30px;
+    }
+
+    .synopsis {
+        margin-top: 6vw;
+    }
+
+    .playButton {
+        width: 100%;
+        border-radius: 15px 15px 15px 15px / 15px 15px 15px 15px;
+    }
+
+    .infoProd {
+        text-align: justify;
+    }
+
+    .trailerYT {
+        border-radius: 10px 10px 10px 10px / 10px 10px 10px 10px;
+        width: 100%;
+        height: 200px;
+        margin: 4vh 0;
+    
+    }
+
+
+    .mobileTitleCasting {
+        background: #ffdc6c;
+        width: 70vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 5vw;
+        margin-left: 5vw;
+        align-content: center;
+        height: 4.5vh;
+        border-radius: 25px 25px 25px 25px / 25px 25px 25px 25px;
+        flex-direction: row;
+        position: absolute;
+    }
+    
+    
+    .casting {
+        
+        padding-left: 0;
+        text-align: center;
+        color: black;
+        font-size: 2.5vh;
+        font-weight: normal;
+        margin-block-start : 0;
+    }
+        
+    .castingListe{
+        overflow-y: scroll;
+        justify-content: flex-start;
+        margin: 0 0 5vh 0;
+    }
+
+    .infoCasting {
+        width: 80vw;
+    }
 }

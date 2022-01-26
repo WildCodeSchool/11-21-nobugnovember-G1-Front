@@ -52,20 +52,22 @@ position: relative;
     display: flex;    
     height: auto;
     width: 13vw;
-    padding-top: 1vh;
+    /* padding-top: 1vh; */
 }
 
 
 
 @media screen and (max-width: 750px){
-    li {
-        font-size: 3.5vw;
-        margin: 0 10px;
+    .navbar-links {
+        font-size: 4.1vw;
+        margin: 0px 1vw;
     }
 
     .nav-style {
         display: flex;
         justify-content: space-evenly;
+        padding-top: 1%;
+        padding-right: 0;
     }
 
     .logo-nav {
