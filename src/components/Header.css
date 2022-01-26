@@ -1,15 +1,10 @@
 .nav-style {
     height: auto;
-    /* min-width: 100vw; */
-    /* position: fixed; */
     display: flex;
     align-items: center; /* ALIGNEMENT DE MOODY LINKS et EMOTICONES */
-    /* background-color: #2d2e31; */
     background-color: transparent;
-    /* padding: 10px; */
+    padding-top: 1%;
     margin-bottom: 5vh;
-    /* border: 2px solid green; */
-    /* padding-bottom: 1vw;  */
     padding-right: 10px;
     display: flex;
     justify-content: space-between;
@@ -17,13 +12,10 @@
 
 .bloc-logo-links{
 display: flex;
-/* border : 2px solid blue; */
 align-items: center;
-
 }
 
 .bloc-emojichanger {
-/* border: 2px solid red; */
 position: relative;
 }
 
@@ -31,11 +23,11 @@ position: relative;
     display: flex;
 }
 
-.bloc-links-header, .a-links-header {
+.links-container, .navbar-links {
     display: flex;
 }
 
-.links-header {
+.navbar-links {
     font-size: 2vw;
     display: inline;
     text-decoration: none;
@@ -44,7 +36,7 @@ position: relative;
     text-align: center;    
 }
 
-.links-header:hover{
+.navbar-links:hover{
     color: #FFDC6C;
 }
 
@@ -52,13 +44,68 @@ position: relative;
     display: flex;    
     height: auto;
     width: 13vw;
-    padding-top: 1vh;
 }
 
+.logo-nav-mobile{
+    display: none;
+    
+}
 
 @media screen and (max-width: 750px){
-    .links-header {
-        font-size: 2.5vw;
-        margin: 0 10px;
+    
+    .logo-nav{
+        display: none;
     }
+
+    .logo-nav-mobile{
+        display: flex;
+        width: 10vw;
+        
+    }
+    
+    .navbar-links {
+        font-size: 5.5vw;
+        margin : 0;
+    }
+
+    .nav-style {
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 3%;
+        padding-right: 0;
+        background: #2d2e31;
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        padding-bottom: 4%;
+        margin-bottom: 0;
+    }
+
+    .logo-nav {
+        width: 23vw;
+    }
+
+    .bloc-logo-links {
+        width: 90vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        
+    }
+
+    .links-container {
+        width: 75vw;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .bloc-emojichanger {
+        width: 10vw;
+        
+    }
+
+    .navbar-links:hover{
+        color: white;
+    }
+
 }

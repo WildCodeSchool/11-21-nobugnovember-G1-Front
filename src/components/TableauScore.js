@@ -27,7 +27,7 @@ const TableauScore = props => {
       J'ai un peu honte de toi pour tout te dire.
 
       J'espère que tu n'as rien de prévu cette semaine?
-      Tu pourrais en profiter pour replonger dans les Films & Séries :). `)
+      Tu pourrais en profiter pour replonger dans les Films & Séries 😀. `)
     } else {
       setMessage(`${props.playerName}, tu me donnes envie de casser l'écran ?
       Tu as fait un score à s'en jeter du pont.
@@ -57,7 +57,7 @@ const TableauScore = props => {
 
       <div className='tableau-resultat'>
         <p className='phrase-pre-resultat'>DETAILS DES RESULTATS </p>
-        <ul style={{ display: 'flex', justifyContent: 'space-around' }}>
+        <ul className='ul-resultat'style={{ display: 'flex', justifyContent: 'space-around' }}>
           <li className='resultat-positif'>{props.score} réponses correctes</li>
           <li className='resultat-negatif'>
             {10 - props.score} réponses fausses

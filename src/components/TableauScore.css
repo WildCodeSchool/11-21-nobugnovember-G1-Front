@@ -1,25 +1,10 @@
-.tableau-score {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background: linear-gradient(
-180deg
-, rgba(110,139,137,1) 7%, rgba(45,46,49,1) 100%);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    height: 100%;
-    width: 100vw;
-}
 
 .extraitImportant {
     font-weight: bold;
 }
 
 .tableau-score{
-    /* background: black; */
     width: auto;
-    /* border: 2px solid red; */
     padding: 0 10vw;
 }
 
@@ -28,7 +13,6 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    /* border: 2px solid red; */
     font-size: 4vw;
     color: whitesmoke;
     text-shadow: 3px 2px 5px black;
@@ -92,17 +76,25 @@ font-size: 20px;
     width: auto;
 }
 
+.ul-resultat {
+    text-align: center;
+}
+
 .resultat-positif, .resultat-negatif {
     margin-top: 20px;
+    text-decoration: none;
+    list-style: none;
+    font-size: 1.5em;
+
+
 }
 
 .resultat-positif {
-    font-size: 1.7em;
 color: rgb(10, 87, 10);
-font-weight: bold;}
+font-weight: bold;
+}
 
 .resultat-negatif {
-    font-size: 1.7em;
 color: rgb(138, 17, 17);
 font-weight: bold;}
 
@@ -110,16 +102,40 @@ font-weight: bold;}
     text-align: center;
     border-bottom: 3px solid black;
     border-width: object;
-/* margin: 0 0 20px 0; */
-font-size: 20px;
-font-weight: bold;
-padding-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 10px;
 
 }
 
 .display-linebreak { /*SAUT DE LIGNE - M'empeche de commenter*/
     white-space: pre-line;
     margin-top: 20px;
-    text-align: justify;
+    text-align: center;
     font-size: 1.3em;
+}
+
+@media screen and (max-width: 750px){ 
+
+    .tableau-score {
+        padding: 0;
+        margin-top: 20%;
+    }
+
+    .score-final {
+        font-size: 1.3em;
+    }
+
+    .tableau-titre-resultat {
+        margin: 6% 1% 5% 1%;
+    }
+
+    .tableau-resultat {
+        margin: 6% 1% 5% 1%;
+    }
+
+    .tableau-commentaire {
+        margin: 6% 1% 5% 1%; 
+    }
+    
 }

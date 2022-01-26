@@ -1,28 +1,14 @@
 
-  .PageQuizz {
-    display : flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background: linear-gradient(180deg, rgba(110,139,137,1) 7%, rgba(45,46,49,1) 100%);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    height: 100vh;
-}
-
-
-  .quizz-container {
+.quizz-container {
     display: flex;
     align-content: center;
     justify-content: center;
     height: 1;
-    padding-bottom: 10%;
     }
 
 .title-suiviquestion-container { 
         width: 100%;
         margin-top: 3%;
-        /* border: 2px solid red; */
         display: flex;
         justify-content: flex-end;
         padding-right: 30px;
@@ -39,16 +25,15 @@
     }    
 
 .ConteneurQuestionReponse{
-   /* border: 3px solid green; */
     width: 100%;
     padding: 50px 30px 0 30px;
 } 
 
 .questions-container{
     display: flex;
-    justify-content: center;  /* A REALIGNER */
+    justify-content: center;  
     width: cover;
-    /* border: 2px solid black; */
+
 }
 
 .questions{
@@ -78,7 +63,6 @@
     width: 100%;
     max-width: 950px;
     padding : 2% 0px;
-    /* border: 2px solid red; */
     }
 .quizz-button:hover{
     border-color: #030303;
@@ -113,29 +97,6 @@
     border: 5px solid #bb951842;
     border-radius: 15px;
 }
-
-
-/******** Tableau résultat 2 *********/
-
-/* .tableau-titre-resultat {
-    font-size: 12px;
-    background-color: whitesmoke;
-    border: 5px solid rgba(151, 150, 150, 0.171);
-    box-shadow: 0 5px 15px #333333;
-    border-radius: 15px;
-    padding: 3%;
-
-}
-
-.tableau-resultat {
-    font-size: 12px;
-    background-color: whitesmoke;
-    border: 5px solid rgba(151, 150, 150, 0.171);
-    box-shadow: 0 5px 15px #333333;
-    border-radius: 15px;
-    padding: 3%;
-
-} */
 
 .PageQuizz {
     display : flex;

@@ -1,5 +1,4 @@
 import { NavLink } from 'react-router-dom'
-
 import amour from '../assets/amour.png'
 import colere from '../assets/colere.png'
 import aubergine from '../assets/aubergine.png'
@@ -20,19 +19,20 @@ import { useNavigate } from 'react-router-dom'
 
 const EmojiChanger = props => {
   let navigate = useNavigate()
-  let page= (document.location.href).split('/');
-  
+  let page = document.location.href.split('/')
+  // let numPage1 = () => {
+  //   setNumPage(1)
+  // }
 
-  useEffect(()=>{
-    console.log('PAGE DANS USEFFECT',page)
-    console.log('props.emojiSelected.emotion : ',props.emojiSelected.emotion)    
-      if(page[3]==='MiniJeux' || page[3]==='Quizz'){
-        props.setLink('/MiniJeux')
-        
-      } else {
-        props.setLink("/Catalogue")
-      }
-  },[props.emojiSelected])
+  useEffect(() => {
+    console.log('PAGE DANS USEFFECT', page)
+    console.log('props.emojiSelected.emotion : ', props.emojiSelected.emotion)
+    if (page[3] === 'MiniJeux' || page[3] === 'Quizz') {
+      props.setLink('/MiniJeux')
+    } else {
+      props.setLink('/Catalogue')
+    }
+  }, [props.emojiSelected])
 
   const handleChangeAuberg = () => {
     props.setAubergine(!props.aubergine)
@@ -91,7 +91,6 @@ const EmojiChanger = props => {
       element => element.emotion === event.target.alt
     )
     props.setEmojiSelected(selection[0])
-    
   }
 
   const handleChange = () => {
@@ -153,10 +152,8 @@ const EmojiChanger = props => {
     props.setEmojiSelected(selection[0])
   }
 
-
   return (
     <div className='search-box'>
-      
       <div className='search-txt'>
         <NavLink to={props.link} className='lienSelection'>
           <img

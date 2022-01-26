@@ -2,11 +2,10 @@
     display:flex;
     justify-content: center;
     color:#feda55;
- }
+}
 .loading-img{
     height: 150px;
     width: 150px;
-    /* margin-top: 20%; */
     animation: rotating 1s linear infinite;
 }
 

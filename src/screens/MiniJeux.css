@@ -22,7 +22,7 @@
     margin-top: 10px;
 padding: 0 10vw;
 font-size: 1.5vh;
-text-align: left;
+text-align: center;
 color: #dbbf1c;
 width: 100%;
 }
@@ -45,7 +45,6 @@ padding: 0 10vw;
 } 
 
 
-/* reprise de la mise en forme Quizz  */
 .box-menu-jeux{
     display: flex;
     justify-content: center;
@@ -58,15 +57,14 @@ padding: 0 10vw;
     border-radius: 15px;
     width: auto;
     margin: 0px 18% 1%;
-    /* height: 120%; */
     padding: 1%;
     }
     
     
     .label-miniJeux{
-        font-weight: bold;
-        margin-top: 10px;
-        font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 16px;
     }
 
 .italicP {
@@ -74,21 +72,21 @@ padding: 0 10vw;
 }
 
 .inputPseudo{
-        background-color: #dbbe1c23;
-        width: 160px;
-        height:40px;
-        margin: 10px 0 20px 0;
-        border-radius: 25px;
-        border: 5px solid #bb951842;
-        font-size: 16px;
-        text-align: center;
+    background-color: #dbbe1c23;
+    width: 160px;
+    height:40px;
+    margin: 10px 0 20px 0;
+    border-radius: 25px;
+    border: 5px solid #bb951842;
+    font-size: 16px;
+    text-align: center;
     }
 
     .bloc-asavoir-minijeux {
         border: 2px solid #dbbf1c;
         margin: 10px 0;
         padding: 10px;
-        text-align: justify;
+        text-align: center;
         width:68%;
     } 
         
@@ -125,17 +123,17 @@ width: 150px;
     }
 
     .Quizz-btn > a{
-        text-align: center;
+    text-align: center;
     }
 
     .BlindTest-btn{
-        width:150px;
-        height:50px;
-        background-color: #dbbf1c;
-        border: 5px solid #bb951842;
-        box-shadow: 0 5px 15px #333333;
-        font-weight: bold;
-        border-radius: 15px;
+    width:150px;
+    height:50px;
+    background-color: #dbbf1c;
+    border: 5px solid #bb951842;
+    box-shadow: 0 5px 15px #333333;
+    font-weight: bold;
+    border-radius: 15px;
 }
     
 .Quizz-btn:hover{
@@ -157,6 +155,21 @@ width: 150px;
     font-style: italic;
 }
 
-.PartieJeux {
-    display: block;
+@media screen and (max-width: 750px){ 
+    .box-menu-jeux {
+        margin: 30% 3% 1%;
+    }
+
+    .box-menu-jeux > h3 {
+        text-align: center;
+    } 
+
+    .box-menu-jeux > p {
+        text-align: center;
+    }
+
+    .bloc-asavoir-minijeux {
+        text-align: center;
+    }
+    
 }

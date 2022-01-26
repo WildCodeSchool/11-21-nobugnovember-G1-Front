@@ -11,7 +11,7 @@ const Cards = ({ setGetProps, setIsActive, toggle, data }) => {
   return (
     <div className='cards' onClick={() => handleClick(data)}>
       <img
-        src={`http://image.tmdb.org/t/p/w200${data.poster_path}`}
+        src={`http://image.tmdb.org/t/p/w500${data.poster_path}`}
         className='poster'
         alt='poster'
       ></img>
