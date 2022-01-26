@@ -24,7 +24,7 @@
         flex-direction: column; /*Change l'orientation de la barre*/
         /* position: relative; */
         overflow: hidden;
-        background-color: white;
+        background-color: #2d2e31;
         border-radius: 40px;
     }
 
@@ -75,33 +75,12 @@
     .boiteSelection {
     } 
     
-/* @media screen and (min-width: 520px){
-.search-box:hover > .search-txt {
-    flex-direction: row; 
-    background-color: whitesmoke;
-    border-radius: 40px;
-}
 
-.lienSelection {
-    width: 35px;
-    height: 35px;}
-
-.emojis {
-    width: 30px;
-}
-.emojiactif {
-    width: 30px;
-}
-.search-box {
-    height: 50px;
-}   
-} */
 
 
 @media screen and (min-width: 750px){
 .search-box:hover > .search-txt {
     flex-direction: row; /*Change l'orientation de la barre*/
-    background-color: whitesmoke;
     border-radius: 50px;
 }
 /*POINT ZERO  19/01 08h30 : changement ,  REVENIR EN ARRIERE JUSQU ICI au besoin*/

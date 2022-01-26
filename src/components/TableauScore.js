@@ -9,15 +9,15 @@ const TableauScore = props => {
       Incroyable !
       
       Tu penses tout connaitre en matière de Films & Séries ? 
-      Nous avons une surprise pour toi.
+      J'ai une une surprise pour toi.
 
-      Selectionne un autre émoji parmi la liste suivante et essaye d'obtenir un score maximal dans un autre quizz.
+      Selectionne un autre émoji dans la barre des émojis et essaye d'obtenir un score maximal dans un autre quizz.
       " Bon chance.. " `)
     } else if (props.score < 10 && props.score > 6) {
-      setMessage(`Bravo ${props.playerName} , tu as obtenus ${props.score} réponses correctes à ce questionnaire!
+      setMessage(`Bravo ${props.playerName} , tu as obtenu ${props.score} réponses correctes à ce questionnaire!
       Ta prestation est un peu du genre "Je participe mais je ne veux pas être le premier. Être un lâche me convient amplement."
 
-      Retente ta chance et essais d'obtenir 10 réponses justes !`)
+      Retente ta chance et essais d'obtenir 10 réponses correctes !`)
     } else if (props.score > 3 && props.score < 6) {
       setMessage(`${props.playerName}, tu ne te sentais pas bien aujourd'hui ?
       Tu as seulement ${props.score} réponses justes à ce questionnaire!

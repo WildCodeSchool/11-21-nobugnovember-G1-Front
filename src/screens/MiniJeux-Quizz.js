@@ -1,14 +1,12 @@
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import './MiniJeux-Quizz.css'
 
 import Quizz from '../components/Quizz'
 
-
-const MiniJeuxQuizz = () =>{
-return(
-            <div className='catalogPage'>
-
-                <Quizz />
-                </div>
-)
+const MiniJeuxQuizz = () => {
+  return (
+    <div className='PageQuizz'>
+      <Quizz />
+    </div>
+  )
 }
+export default MiniJeuxQuizz

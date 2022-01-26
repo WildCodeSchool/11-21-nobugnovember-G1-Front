@@ -15,7 +15,6 @@ const MiniJeux = props => {
     props.setPlayerName(EventTarget.value)
   }
 
-  /* Creation nouvelle page pour quizz, blind test + creation de routes*/
 
   return (
     <div className="catalogPage classmilhan">
