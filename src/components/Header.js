@@ -3,8 +3,10 @@ import { NavLink } from 'react-router-dom'
 import './Header.css'
 import EmojiChanger from './EmojiChanger'
 
-const Header = ({ setNumPage, setAubergine, aubergine, ...props }) => {
+const Header = ({setNumPage, setAubergine, aubergine, ...props})=> {
+
   let numPage1 = () => {
+    
     setNumPage(1)
   }
 
@@ -17,18 +19,18 @@ const Header = ({ setNumPage, setAubergine, aubergine, ...props }) => {
           </div>
         </NavLink>
 
-        <ul className='bloc-links-header'>
-          <NavLink to='/Catalogue' className='a-links-header'>
-            <li className='links-header'>Accueil</li>{' '}
+        <ul>
+          <NavLink to='/Catalogue' className='' onClick={numPage1}>
+            <li>Accueil</li>
           </NavLink>
-          <NavLink to='/Films' className='a-links-header'>
-            <li className='links-header'>Films</li>
+          <NavLink to='/Films' className='' onClick={numPage1}>
+            <li>Films</li>
           </NavLink>
-          <NavLink to='/Series' className='a-links-header'>
-            <li className='links-header'>Séries</li>
+          <NavLink to='/Series' className='' onClick={numPage1}>
+            <li>Séries</li>
           </NavLink>
-          <NavLink to='/MiniJeux' className='a-links-header'>
-            <li className='links-header'>Mini-jeux</li>
+          <NavLink to='/MiniJeux' className='' >
+            <li>Mini-jeux</li>
           </NavLink>
         </ul>
       </div>
