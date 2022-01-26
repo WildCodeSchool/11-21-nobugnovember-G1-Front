@@ -13,17 +13,23 @@
     justify-content: space-between;}
 
 .box-menu-jeux > h1 {
+    font-size: 4.5vw;
     margin-top: 10px;
+    text-align: center;
 }
 
 .box-menu-jeux > h3 {
     margin-top: 10px;
 padding: 0 10vw;
-font-size: 2vh;
+font-size: 1.5vh;
+text-align: left;
+color: #dbbf1c;
+width: 100%;
 }
 
 .box-menu-jeux > p {
 text-align: justify;
+font-size: 14px;
 margin: 10px 0;
 padding: 0 10vw;
 }
@@ -50,9 +56,10 @@ padding: 0 10vw;
     border: 5px solid rgba(151, 150, 150, 0.171);
     box-shadow: 0 5px 15px #333333;
     border-radius: 15px;
-    padding: 3%;
-    margin: 5% 10% 10% 10%;
     width: auto;
+    margin: 0px 18% 1%;
+    /* height: 120%; */
+    padding: 1%;
     }
     
     
@@ -60,8 +67,12 @@ padding: 0 10vw;
         font-weight: bold;
         margin-top: 10px;
         font-size: 16px;
-
     }
+
+.italicP {
+    font-style: italic;
+}
+
 .inputPseudo{
         background-color: #dbbe1c23;
         width: 160px;
@@ -78,8 +89,7 @@ padding: 0 10vw;
         margin: 10px 0;
         padding: 10px;
         text-align: justify;
-/* padding: 0 10vw; */
-        width:75%;
+        width:68%;
     } 
         
 .choix-jeux {

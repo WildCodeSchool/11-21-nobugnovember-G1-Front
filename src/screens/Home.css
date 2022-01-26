@@ -15,12 +15,15 @@
     background-color: #2d2e31;
     color: white;
     min-height: 100vh;
-    text-align: center;
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
 
 h1 {
     font-size: 4.5vw;
-    margin-top: 10vh;
     font-family: 'Bebas Neue', cursive;
 }
 

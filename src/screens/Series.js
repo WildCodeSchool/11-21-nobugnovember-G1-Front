@@ -1,10 +1,12 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import Header from '../components/Header'
 import Cards from '../components/Cards'
 import Footer from '../components/Footer'
+import Pagination from '../components/Pagination'
 import axios from 'axios'
 import './Catalogue.css'
+
 
 const Series = ({
   setGetProps,
@@ -13,21 +15,14 @@ const Series = ({
   setIsActive,
   toggle,
   isShowing,
-  isLoading,
   setIsLoading,
-  retourFunc,
-  getDetails,
   setGetDetails,
   resultat,
-  casting,
-  setCasting,
-  pegi,
-  setPegi,
-  getPropsTv,
+  setNumPage, 
+  numPage,
   ...props
 }) => {
   const location = useLocation()
-  const apiKey = process.env.REACT_APP_API_KEY
 
   /***************** APPEL API GENERAL SERIES*******************/
   useEffect(() => {
@@ -35,7 +30,7 @@ const Series = ({
       setIsLoading(true)
       axios
         .get(
-          `https://api.themoviedb.org/3/tv/popular?api_key=${process.env.REACT_APP_API_KEY}&with_genres=${props.emojiSelected.correspondanceSerie}&language=fr-FR&page=1`
+          `https://api.themoviedb.org/3/tv/popular?api_key=${process.env.REACT_APP_API_KEY}&with_genres=${props.emojiSelected.correspondanceSerie}&language=fr-FR&page=${numPage}`
         )
         .then(response => response.data)
         .then(data => {
@@ -44,36 +39,23 @@ const Series = ({
         })
     }
     appelAPI()
-  }, [props.emojiSelected.correspondanceSerie])
-
-  /***************** APPEL API DETAILS SERIES*******************/
-  useEffect(() => {
-    const appelDetailsSerie = () => {
-      axios
-        .get(
-          `https://api.themoviedb.org/3/tv/${getProps.id}?api_key=${process.env.REACT_APP_API_KEY}&append_to_response=videos,images,credits,release_dates&language=fr-FR`
-        )
-        .then(res => res.data)
-        .then(res => {
-          setGetDetails(res)
-        })
-    }
-    isShowing && appelDetailsSerie()
-  }, [isShowing])
+  }, [props.emojiSelected.correspondanceSerie, numPage])
 
   return (
-    <div className='catalogPage'>
+    <div className={isActive ? 'catalogPage none' : 'catalogPage movie-grid'}>
       <div className='catalogContainer'>
         <Header
           emojiSelected={props.emojiSelected}
           setEmojiSelected={props.setEmojiSelected}
+          link={props.link}
+          setLink={props.setLink}
         />
-        <div className={isActive ? 'none' : 'movie-grid'}>
+        <div className='cardContainer'>
           {resultat.map(element => (
             <Link
               key={element.key}
-              to={`/card/${getProps.id}`}
-              state={{ backgroundLocation: location }}
+              to={`/cardS/${element.id}`}
+              state={{ backgroundLocationSerie: location }}
               className='linkCard'
             >
               <Cards
@@ -86,10 +68,13 @@ const Series = ({
             </Link>
           ))}
         </div>
+        <Pagination 
+        setNumPage={setNumPage} 
+        numPage={numPage}
+        />
         <Footer />
       </div>
     </div>
-   
   )
 }
 

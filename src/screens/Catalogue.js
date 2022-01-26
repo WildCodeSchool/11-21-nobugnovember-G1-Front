@@ -9,9 +9,9 @@ import axios from 'axios'
 import chevrondroit from '../assets/chevrondroit.png'
 import chevrongauche from '../assets/chevrongauche.png'
 import chevroninactif from '../assets/chevroninactif.png'
+import Pagination from '../components/Pagination'
 
 const Catalogue = ({
-  getDetails,
   setGetDetails,
   isActive,
   setIsActive,
@@ -20,36 +20,18 @@ const Catalogue = ({
   toggle,
   setIsLoading,
   isLoading,
-  casting,
-  setCasting,
-  getPropsTv,
-  setGetPropsTv,
-  pegi,
   setPegi,
   setIsShowing,
   isShowing,
+  setNumPage,
+  numPage,
+  setResultatTv,
+  resultatTv,
+  aubergine,
   ...props
 }) => {
   // POUR AFFICHAGE MODAL
   let location = useLocation()
-
-  const apiKey = process.env.REACT_APP_API_KEY
-
-  const retourFunc = () => {
-    toggle()
-    setIsActive(!isActive)
-  }
-
-  const [numPage, setNumPage] = useState(1)
-  let dataAPI = [] 
-
-  //pagination
-  let changePage = () => {
-    setNumPage(numPage + 1)
-  }
-  let changePagePrev = () => {
-    setNumPage(numPage - 1)
-  }
 
   /***************** APPEL API GENERAL *******************/
   useEffect(() => {
@@ -68,73 +50,90 @@ const Catalogue = ({
     appelAPI()
   }, [props.emojiSelected.correspondance, numPage])
 
-  /*************** Appel API Details Film ****************************/
   useEffect(() => {
-    const appelAPIFilm = () => {
+    const appelAPITv = () => {
+      setIsLoading(true)
       axios
         .get(
-          `https://api.themoviedb.org/3/movie/${getProps.id}?api_key=${process.env.REACT_APP_API_KEY}&append_to_response=videos,images,credits,release_dates&language=fr-FR`
+          `https://api.themoviedb.org/3/discover/tv?api_key=${process.env.REACT_APP_API_KEY}&with_genres=${props.emojiSelected.correspondanceSerie}&language=fr-FR&page=${numPage}`
         )
-        .then(res => res.data)
-        .then(res => {
-          setGetDetails(res)
+        .then(response => response.data)
+        .then(data => {
+          setResultatTv(data.results)
+          
+          setIsLoading(false)
         })
     }
-    isShowing && appelAPIFilm()
-  }, [isShowing])
-
-
+    appelAPITv()
+  }, [props.emojiSelected.correspondanceSerie, numPage])
+  
 
   return (
-    <div className='catalogPage'>
+    <div className={isActive ? 'catalogPage none' : 'catalogPage movie-grid'}>
       <div className='catalogContainer'>
         <Header
           className='headerband'
           emojiSelected={props.emojiSelected}
           setEmojiSelected={props.setEmojiSelected}
+          link={props.link}
+          setLink={props.setLink}
+          setNumPage={setNumPage}
+          setAubergine={props.setAubergine}
+          aubergine={aubergine}
         />
         {isLoading ? (
           <Loading />
         ) : (
-          <div className={isActive ? 'none' : 'movie-grid'}>
-            {props.resultat.map(element => (
-              <Link
-                key={element.key}
-                to={`/card/${getProps.id}`}
-                state={{ backgroundLocation: location }}
-                className='linkCard'
-              >
-                <Cards
-                  toggle={toggle}
-                  setIsActive={setIsActive}
-                  setGetProps={setGetProps}
-                  setGetPropsTv={setGetPropsTv}
-                  data={element}
-                  setPegi={setPegi}
-                  getProps={getProps}
-                  setIsShowing={setIsShowing}
-                  isShowing={setIsShowing}
-                />
-              </Link>
-            ))}
-          </div>
-        )}
-          <div className='paginationContainer'>
-            <div className='pagination'> 
-            {numPage === 1 ? <div className='page'><img className='chevroninactif' src={chevroninactif} alt="inactif"/></div> : <div className='page' onClick={changePagePrev}> <img className="chevron" src={chevrongauche} alt="Page precedente"/> </div>}
-            <div className='current'> {numPage}</div>
-            <div className='page' onClick={changePage}> <img className="chevron" src={chevrondroit} alt="Page suivante"/> </div> 
-            {/* {numPage + 1}</div> */}
+          <>
+            <div className='cardContainer'>
+              {props.resultat.map(element => (
+                <Link
+                  key={element.key}
+                  to={`/card/${element.id}`}
+                  state={{ backgroundLocation: location }}
+                  className='linkCard'
+                >
+                  <Cards
+                    toggle={toggle}
+                    setIsActive={setIsActive}
+                    setGetProps={setGetProps}
+                    data={element}
+                    setPegi={setPegi}
+                    getProps={getProps}
+                    setIsShowing={setIsShowing}
+                    isShowing={setIsShowing}
+                  />
+                </Link>
+              ))}
+              {resultatTv.map(element => (
+                <Link
+                  key={element.key}
+                  to={`/cardS/${element.id}`}
+                  state={{ backgroundLocationSerie: location }}
+                  className='linkCard'
+                >
+                  <Cards
+                    toggle={toggle}
+                    setIsActive={setIsActive}
+                    setGetProps={setGetProps}
+                    data={element}
+                    setPegi={setPegi}
+                    getProps={getProps}
+                    setIsShowing={setIsShowing}
+                    isShowing={setIsShowing}
+                  />
+                </Link>
+              ))}
             </div>
-          </div>
-        
-          <Footer className="footerCatalogue"/> 
+            <Pagination setNumPage={setNumPage} numPage={numPage} />
+
+          </>
+        )}
+
+        <Footer className='footerCatalogue' />
       </div>
     </div>
   )
 }
 
 export default Catalogue
-
-
-

@@ -19,6 +19,7 @@ import './Emojis.css'
 
 const Emojis = props => {
   const handleChange = () => {
+
     const correspondanceTab = [
       {
         emotion: 'Emoji joyeux',
@@ -73,11 +74,72 @@ const Emojis = props => {
     const selection = correspondanceTab.filter(
       element => element.emotion === event.target.alt
     )
-    console.log('test selection', selection)
+    
     props.setEmojiSelected(selection[0])
   }
+
+  const handleChangeAuberg = () => {
+    props.setAubergine(!props.aubergine)
+    const correspondanceTab = [
+      {
+        emotion: 'Emoji joyeux',
+        correspondance: '35',
+        correspondanceSerie: '35',
+        emoji: joyeux,
+        quizzSelected: joyeux2
+      },
+      {
+        emotion: 'Emoji pleure',
+        correspondance: '18',
+        correspondanceSerie: '18',
+        emoji: pleure,
+        quizzSelected: triste2
+      },
+      {
+        emotion: 'Emoji surprise',
+        correspondance: '878',
+        correspondanceSerie: '10765',
+        emoji: surprise,
+        quizzSelected: surprise2
+      },
+      {
+        emotion: 'Emoji amoureux',
+        correspondance: '10749',
+        correspondanceSerie: '10766',
+        emoji: amour,
+        quizzSelected: amour2
+      },
+      {
+        emotion: 'Emoji colere',
+        correspondance: '10752',
+        correspondanceSerie: '10768',
+        emoji: colere,
+        quizzSelected: colere2
+      },
+      {
+        emotion: 'Emoji peur',
+        correspondance: '27',
+        correspondanceSerie: '9648',
+        emoji: peur,
+        quizzSelected: peur2
+      },
+      {
+        emotion: 'Emoji auberg',
+        correspondance: '',
+        correspondanceSerie: '',
+        emoji: aubergine,
+        quizzSelected: aubergine2
+      }
+    ]
+    const selection = correspondanceTab.filter(
+      element => element.emotion === event.target.alt
+    )
+    props.setEmojiSelected(selection[0])
+    
+  }
+
   return (
-    <div>
+    <div className='holderEmojibarre'>
       <div className='emojibarre'>
         <div className='container'>
           <NavLink to='/Catalogue' className=''>
@@ -146,9 +208,9 @@ const Emojis = props => {
           <figcaption>Effrayé</figcaption>
         </div>
         <div className='container'>
-          <NavLink to='/Catalogue' className=''>
+          <NavLink to='/Films' className=''>
             <img
-              onClick={handleChange}
+              onClick={handleChangeAuberg}
               className='emojiimg'
               src={aubergine}
               alt='Emoji auberg'
@@ -157,6 +219,7 @@ const Emojis = props => {
           <figcaption>Coquin</figcaption>
         </div>
       </div>
+
     </div>
   )
 }

@@ -1,0 +1,42 @@
+.pagination{
+    background: linear-gradient(135deg, #2d2e31 0%, #3b3b3b 100%);
+    /* box-shadow: 5px 10px 6px #030303; */
+    opacity: 1;
+    border-radius: 40px;
+    padding : 10px; 
+    display: flex; 
+    justify-content: center;
+    align-items:center;
+    color: white;
+    width: 150px;
+
+}
+
+.paginationContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.page{
+    padding: 15px;  
+    cursor:pointer; 
+}
+
+.current{
+    font-size: 18px; 
+    font-weight: 700;
+    border: 5px solid #FFDC6C; 
+    border-radius: 50%;
+    padding: 12px 15px; 
+}
+
+.chevron{
+    width: 20px; 
+
+}
+
+.chevroninactif{
+    width: 20px; 
+    cursor: not-allowed; 
+}
