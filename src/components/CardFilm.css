@@ -12,6 +12,7 @@
     left: 50%;
     transform: translateX(-50%);
     border-radius: 86%;
+    animation: appear 0.3s ease-in;
 }
 
 .cardFilm {
@@ -30,6 +31,13 @@
     transition: visibility 0.4s;
     transition: opacity 0.4s ease-out,
     transform 0.4s ease-out;
+    
+}
+
+@keyframes appear {
+    0% { opacity: 0 }
+    70% { opacity: 0.5 }
+    100% { opacity: 1 }
 }
 
 .cardFilmContainer {
@@ -47,7 +55,12 @@
     scrollbar-width: none;
     overflow: overlay;
     padding-bottom: 1%;
+    
+    
 }
+
+
+
 .cardFilmContainer::-webkit-scrollbar {
     display: none;
 }
