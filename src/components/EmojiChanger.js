@@ -1,5 +1,4 @@
 import { NavLink } from 'react-router-dom'
-
 import amour from '../assets/amour.png'
 import colere from '../assets/colere.png'
 import aubergine from '../assets/aubergine.png'

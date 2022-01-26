@@ -59,9 +59,7 @@
     }
 
     .current {
-        /* font-size: 18px; */
         font-weight: 700;
-        /* border: 5px solid #FFDC6C; */
         border-radius: 50%;
         padding: 4px 10px;
         vertical-align: center;
