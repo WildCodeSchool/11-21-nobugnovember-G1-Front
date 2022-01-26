@@ -36,7 +36,7 @@
       ]
     },
     {
-      "questionText": "Lequels de ces films n'existe pas ?",
+      "questionText": "Lequel de ces films n'existe pas ?",
       "answerOptions": [
         { "answerText": "French erection", "isCorrect": false },
         { "answerText": "Ça Glisse au Pays des Merveilles", "isCorrect": false },
@@ -45,7 +45,7 @@
       ]
     },
     {
-      "questionText": "Dans Austin Powers quel forme prend sa pilosité de torse ? ",
+      "questionText": "Dans Austin Powers, quelle forme a sa pilosité du torse ?",
       "answerOptions": [
         { "answerText": "Un pénis", "isCorrect": true },
         { "answerText": "Une bouche", "isCorrect": false },
@@ -54,7 +54,7 @@
       ]
     },
     {
-      "questionText": "Qui prononce 'J'aime me beurrer la biscotte' dans OSS 117 ?",
+      "questionText": "Dans OSS 117 Qui prononce 'J'aime me beurrer la biscotte' ?",
       "answerOptions": [
         { "answerText": "Princesse Al Tarouk", "isCorrect": true },
         { "answerText": "Loktar", "isCorrect": false },
@@ -73,7 +73,7 @@
     },
     {
       "questionText":
-        "Quelle actrice joue la celebre scene d'interrogatoire dans basic instinct ? ",
+        "Dans Basic Instinct, quelle actrice joue la celebre scene d'interrogatoire ?",
       "answerOptions": [
         { "answerText": "Sharon Stone", "isCorrect": true },
         { "answerText": "Megan Fox", "isCorrect": false },
@@ -82,7 +82,7 @@
       ]
     },
     {
-      "questionText":"Avec quoi joue Doofy dans sa chambre dans le film Scary Movie ? ",
+      "questionText":"Dans Scary Movie, avec quoi joue Doofy dans sa chambre ?",
       "answerOptions": [
         { "answerText": "Un aspirateur", "isCorrect": true },
         { "answerText": "Un hand-spinner", "isCorrect": false },

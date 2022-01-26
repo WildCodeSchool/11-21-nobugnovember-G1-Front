@@ -5,6 +5,7 @@ import './CardFilm.css'
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import noImage from '../assets/No_image_available.svg'
 
 const CardFilm = ({ getProps, retourFunc, getDetails }) => {
   let { id } = useParams()
@@ -148,11 +149,15 @@ const CardFilm = ({ getProps, retourFunc, getDetails }) => {
                   allowFullScreen='true'
                 ></iframe>
               ) : (
-                <video
-                  className='trailerYT'
-                  controls
-                  poster='https://www.cinechronicle.com/wp-content/uploads/2020/01/20th-Century-Fox.jpg'
-                ></video>
+                <iframe 
+                className='trailerYT'
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/-MBj2xT_WtQ" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen='true'
+                ></iframe>
               )}
             </div>
             <div className='mobileTitleCasting'>
@@ -164,6 +169,7 @@ const CardFilm = ({ getProps, retourFunc, getDetails }) => {
                     <div key={actor.id}>
                       <div className='infoCasting'>
                         <div className='divCarre'>
+                          <img src={noImage} className='noImage' />
                           <img
                             src={`http://image.tmdb.org/t/p/w200${actor.profile_path}`}
                             className='imgCast'

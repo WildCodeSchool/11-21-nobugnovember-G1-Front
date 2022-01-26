@@ -1,6 +1,6 @@
 [
     {
-      "questionText": "De quelle guerre dans l'histoire fait référence le film FURY ?",
+      "questionText": "De quelle guerre fait référence l'histoire du film FURY ?",
       "answerOptions": [
         { "answerText": "La première guerre mondiale", "isCorrect": false },
         { "answerText": "La guerre froide", "isCorrect": false },
@@ -18,7 +18,7 @@
       ]
     },
     {
-      "questionText": "Pourquoi le Punisher est il le Punisher ? ",
+      "questionText": "Pourquoi le Punisher est-il le Punisher ?",
       "answerOptions": [
         {
           "answerText": "Il est le seul survivant d'une attaque lors d'un pique-nique en famille ",
@@ -30,13 +30,13 @@
           "isCorrect": false
         },
         {
-          "answerText": "Il s'est fait agressé dans une boîte et cherche à se venger",
+          "answerText": "Il s'est fait agresser dans une boîte de nuit et cherche à se venger",
           "isCorrect": false
         }
       ]
     },
     {
-      "questionText": "Dans Old Boy quel partie du corp Oh Dae-su se coupe t'il ?",
+      "questionText": "Dans Old Boy, quel partie du corp Oh Dae-su se coupe t'il ?",
       "answerOptions": [
         { "answerText": "L'oreille droite", "isCorrect": false },
         { "answerText": "La langue", "isCorrect": true },
@@ -45,7 +45,7 @@
       ]
     },
     {
-      "questionText": "Dans Banshee, qui se fait troué la main dans le premier épisode de la série ?",
+      "questionText": "Dans Banshee, qui se fait trouer la main dans le premier épisode de la série ?",
       "answerOptions": [
         { "answerText": "Jesse Pinkman", "isCorrect": false },
         { "answerText": "Mr Burton, l'assistant de Proctor", "isCorrect": false },

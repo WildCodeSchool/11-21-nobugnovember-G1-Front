@@ -1,16 +1,16 @@
 [
     {
-      "questionText": "Comment s'appelle le gardien des clés et des lieux dans Harry Potter ?",
+      "questionText": "Dans Harry Potter, qui est le gardien des clés et des lieux ?",
       "answerOptions": [
         { "answerText": "Hagrid", "isCorrect": true },
-        { "answerText": "Sbotcho le gardien", "isCorrect": false },
-        { "answerText": "Heimdal", "isCorrect": false },
-        { "answerText": "Po Karaï", "isCorrect": false }
+        { "answerText": "Sbotcho le Gardien", "isCorrect": false },
+        { "answerText": "Aznoune le Magnifique", "isCorrect": false },
+        { "answerText": "Peter Pine", "isCorrect": false }
       ]
     },
     {
       "questionText":
-        "Quel est l'objet de toutes les convoitises dans Le Seigneur des Anneaux ?",
+        "Dan le Seigneur des anneaux, quel est l'objet de toutes les convoitises ?",
       "answerOptions": [
         { "answerText": "Une poupée gonflable", "isCorrect": false },
         { "answerText": "Le joyau des elfes", "isCorrect": false },
@@ -19,16 +19,16 @@
       ]
     },
     {
-      "questionText": "Que garde Smaug dans Le Hobbit ?",
+      "questionText": "Dans Le Hobbit, que garde Smaug ?",
       "answerOptions": [
         { "answerText": "La princesse", "isCorrect": false },
         { "answerText": "Moljnir", "isCorrect": false },
         { "answerText": "Le saint Graal", "isCorrect": false },
-        { "answerText": "l'Arkenstone", "isCorrect": true }
+        { "answerText": "L'Arkenstone", "isCorrect": true }
       ]
     },
     {
-      "questionText": "Qu'est ce qui donne leur pouvoir aux Jedis dans Star Wars ?",
+      "questionText": "Dans StarWars, qu'est ce qui donne leur pouvoir aux Jedis ?",
       "answerOptions": [
         { "answerText": "La RedBull", "isCorrect": false },
         { "answerText": "Leur sabre laser", "isCorrect": false },
@@ -37,16 +37,16 @@
       ]
     },
     {
-      "questionText": "Quelle est la seule matière capable d'affaiblir Super Man?",
+      "questionText": "Quelle est la seule matière capable d'affaiblir Super Man ?",
       "answerOptions": [
-        { "answerText": "le sel", "isCorrect": false },
-        { "answerText": "la cryptonite", "isCorrect": true },
-        { "answerText": "le paracétamol", "isCorrect": false },
-        { "answerText": "la coca", "isCorrect": false }
+        { "answerText": "Le sel", "isCorrect": false },
+        { "answerText": "La cryptonite", "isCorrect": true },
+        { "answerText": "Le paracétamol", "isCorrect": false },
+        { "answerText": "Le Cialis", "isCorrect": false }
       ]
     },
     {
-      "questionText": "Qui est le grand méchant dans le Seigneur des Anneaux ?",
+      "questionText": "Dans le Seigneur des Anneaux, qui est le grand méchant ?",
       "answerOptions": [
         { "answerText": "Frodon", "isCorrect": false },
         { "answerText": "Sarouman", "isCorrect": false },
@@ -73,12 +73,12 @@
       ]
     },
     {
-      "questionText": "Dans Starship Troopers, comment s'appellent les créatures qui mmenaces l'humanité ?",
+      "questionText": "Dans Starship Troopers, comment s'appellent les créatures qui menacent l'Humanité ?",
       "answerOptions": [
-        { "answerText": "les martiens", "isCorrect": false },
-        { "answerText": "les arachnides", "isCorrect": true },
-        { "answerText": "les minimoys", "isCorrect": false },
-        { "answerText": "les orcs", "isCorrect": false }
+        { "answerText": "Les Martiens", "isCorrect": false },
+        { "answerText": "Les Arachnides", "isCorrect": true },
+        { "answerText": "Les Minimoys", "isCorrect": false },
+        { "answerText": "Les Orcs", "isCorrect": false }
       ]
     },
     {

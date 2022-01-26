@@ -14,9 +14,7 @@
     border-radius: 86%;
 }
 
-
 .cardFilm {
-    /* background-image: url(../assets/background.jpg);  */
     background-repeat: no-repeat;
     background-attachment: inherit;
     background-size: cover;
@@ -89,16 +87,12 @@
 .titre {
     margin-bottom: 1vw;
     font-size: 4vh;
-    
 }
 
 .year {  
     font-size: 2vh;
     margin-bottom: 1vw;
-    
 }
-    
-
 
 .holderInfo {
     display: flex;
@@ -112,10 +106,13 @@
     border-radius: 10px 10px 10px 10px / 10px 10px 10px 10px;
     width: 400px;
     height: 295px;
-
 }
 
-
+.fakeTrailer {
+    border-radius: 10px 10px 10px 10px / 10px 10px 10px 10px;
+    width: 400px;
+    height: 295px;
+}
 
 .info {
     display: flex;
@@ -203,7 +200,8 @@
     overflow: hidden;
     border-radius: 50%;
     border : 5px solid #ffdc6c;
-    transform: scale(0.5)
+    transform: scale(0.5);
+    position: relative;
 }
 
 .infoCasting {
@@ -222,15 +220,11 @@
     bottom: 2%;
 }
 .actorName {
-    /* position: absolute; */
-    /* bottom: 15%; */
     color: white;
     text-align: center;
 }
 
 .roleName {
-    /* position: absolute; */
-    /* bottom: 8%; */
     color: #ffdc6c;
     text-align: center;
 }
@@ -243,6 +237,12 @@ width: 100vw;
 height: 100vh;
 z-index: 1040;
 background-color: rgba(0, 0, 0, 0.5);
+}
+
+.noImage {
+    z-index: -1;
+    position: absolute;
+    transform: translate(-5px, -5px);
 }
 
 @media screen and (max-width: 750px){
@@ -274,7 +274,9 @@ background-color: rgba(0, 0, 0, 0.5);
         display: flex;
         flex-direction: column;
         padding-top: 2vh;
-        margin-bottom: 2vh
+        margin-bottom: 2vh;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
     }
 
     .holderInfo {
@@ -332,12 +334,9 @@ background-color: rgba(0, 0, 0, 0.5);
         width: 100%;
         height: 200px;
         margin: 4vh 0;
-    
     }
 
-
     .mobileTitleCasting {
-        background: #ffdc6c;
         width: 70vw;
         display: flex;
         justify-content: center;
@@ -353,11 +352,9 @@ background-color: rgba(0, 0, 0, 0.5);
     
     
     .casting {
-        
+        font-size: 4vh;
         padding-left: 0;
         text-align: center;
-        color: black;
-        font-size: 2.5vh;
         font-weight: normal;
         margin-block-start : 0;
     }
@@ -366,6 +363,7 @@ background-color: rgba(0, 0, 0, 0.5);
         overflow-y: scroll;
         justify-content: flex-start;
         margin: 0 0 5vh 0;
+        padding-bottom: 6%;
     }
 
     .infoCasting {

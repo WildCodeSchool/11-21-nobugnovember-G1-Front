@@ -36,7 +36,7 @@
     ]
   },
   {
-    "questionText": "Quel sport collectif est pratiqué dans le film 'Rrrrrrr!'",
+    "questionText": "Quel sport collectif est pratiqué dans le film 'Rrrrrrr!' ?",
     "answerOptions": [
       { "answerText": "Froggy-Pong", "isCorrect": false },
       { "answerText": "Yorkmouth", "isCorrect": false },
@@ -45,7 +45,7 @@
     ]
   },
   {
-    "questionText": "Dans quel film aperçoit-on 'Double Gras' ? ",
+    "questionText": "Dans quel film aperçoit-on 'Double Gras' ?",
     "answerOptions": [
       { "answerText": "Austin Powers", "isCorrect": true },
       { "answerText": "Oss 117", "isCorrect": false },
@@ -54,7 +54,7 @@
     ]
   },
   {
-    "questionText": "Dans Family Business, que produit la famille ? ",
+    "questionText": "Dans Family Business, que produit la famille ?",
     "answerOptions": [
       { "answerText": "de la Marijuana", "isCorrect": true },
       { "answerText": "des Glaces", "isCorrect": false },
@@ -63,7 +63,7 @@
     ]
   },
   {
-    "questionText": "D'ou vient Borat ?",
+    "questionText": "D'où vient Borat ?",
     "answerOptions": [
       { "answerText": "Etats-Unis", "isCorrect": false },
       { "answerText": "Pologne", "isCorrect": false },

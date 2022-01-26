@@ -1,9 +1,7 @@
     .search-box {
-        /* position: absolute; */
         top: 2%;
         right: 2%;
-        /* background-color: #565658; */
-        background-image: linear-gradient(135deg, #2d2e31 0%, #3b3b3b 100%);
+        background: linear-gradient(135deg, #2d2e31 0%, #3b3b3b 100%);
         height: 40px;
         border-radius: 70px;
         padding-right: 0;
@@ -18,8 +16,7 @@
         transition: width 0.4s;
         display: flex;
         justify-content: flex-start;
-        flex-direction: column; /*Change l'orientation de la barre*/
-        /* position: relative; */
+        flex-direction: column; 
         overflow: hidden;
         background-color: #2d2e31;
         border-radius: 40px;
@@ -44,11 +41,9 @@
             filter: brightness(100%);}
     
         .lienSelection {
-            /* color: #e84118; */
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            /* background: #2d2e31; */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -72,25 +67,31 @@
 
 
 @media screen and (min-width: 750px){
-.search-box:hover > .search-txt {
-    flex-direction: row; /*Change l'orientation de la barre*/
-    background-color: #2d2e31;
-    border-radius: 50px;
+
+    .search-box:hover > .search-txt {
+        flex-direction: row; 
+        background-color: #2d2e31;
+        border-radius: 50px;
+    }
+
+    .lienSelection {
+        width: 50px;
+        height: 50px;}
+
+    .emojis {
+        width: 40px;
+    }
+    .emojiactif {
+        width: 40px;
+    }
+    .search-box {
+        height: 50px;
+    }
 }
 
-/*POINT ZERO  19/01 08h30 : changement ,  REVENIR EN ARRIERE JUSQU ICI au besoin*/
-.lienSelection {
-    width: 50px;
-    height: 50px;}
-
-.emojis {
-    width: 40px;
-}
-.emojiactif {
-    width: 40px;
-}
+@media screen and (max-width: 750px){
 .search-box {
-    height: 50px;
+    background: #2d2e31;
 }
 }
 

@@ -1,15 +1,15 @@
 [
     {
-      "questionText": "Quel âge à 'Bébé' dans Dirty Dancing ?",
+      "questionText": "Dans Dirty Dancing, quel âge à 'Bébé' ?",
       "answerOptions": [
-        { "answerText": "18", "isCorrect": false },
-        { "answerText": "19", "isCorrect": false },
-        { "answerText": "17", "isCorrect": true },
-        { "answerText": "20", "isCorrect": false }
+        { "answerText": "18 ans", "isCorrect": false },
+        { "answerText": "19 ans", "isCorrect": false },
+        { "answerText": "17 ans", "isCorrect": true },
+        { "answerText": "20 ans", "isCorrect": false }
       ]
     },
     {
-      "questionText": "Qui est la vrai Rose dans Titanic",
+      "questionText": "Dans Titanic, qui est la vraie Rose ?",
       "answerOptions": [
         { "answerText": "Gloria Stuart", "isCorrect": true },
         { "answerText": "Gloria Estefan", "isCorrect": false },
@@ -18,7 +18,7 @@
       ]
     },
     {
-      "questionText": "Dans La Proposition, pourquoi Margaret veut se marier avec Andrew? ",
+      "questionText": "Dans La Proposition, pourquoi Margaret veut se marier avec Andrew ?",
       "answerOptions": [
         { "answerText": "Elle l’aime", "isCorrect": false },
         { "answerText": "Pour avoir son visa", "isCorrect": true },
@@ -27,7 +27,7 @@
       ]
     },
     {
-      "questionText": "Qui est Elena Lincoln dans 50 Nuances de Grey?",
+      "questionText": "Dans 50 Nuances de Grey, qui est Elena Lincoln ?",
       "answerOptions": [
         { "answerText": "Sa mère", "isCorrect": false },
         { "answerText": "Sa soeur", "isCorrect": false },
@@ -45,7 +45,7 @@
       ]
     },
     {
-      "questionText": "Quel est le lien entre Graham et Iris dans The Holiday",
+      "questionText": "Dans The Holiday, quel est le lien entre Graham et Iris ?",
       "answerOptions": [
         { "answerText": "Amants", "isCorrect": false },
         { "answerText": "Frère et soeur", "isCorrect": true },
@@ -54,7 +54,7 @@
       ]
     },
     {
-      "questionText": "Quel est le métier d’Alex dans L’Arnaqueur",
+      "questionText": "Dans L’Arnacoeur, quel est le métier d’Alex ?",
       "answerOptions": [
         { "answerText": "Briseur de nuque professionnel", "isCorrect": false },
         { "answerText": "Briseur de coeur professionnel", "isCorrect": false },
@@ -63,7 +63,7 @@
       ]
     },
     {
-      "questionText": "Dans La Chronique des Bridgerton, qu'est-ce que Simon refuse d’avoir? ",
+      "questionText": "Dans La Chronique des Bridgerton, qu'est-ce que Simon refuse d’avoir ?",
       "answerOptions": [
         { "answerText": "Des Crocs, c’est moche", "isCorrect": false },
         { "answerText": "Des chats, ça griffe", "isCorrect": false },
@@ -72,7 +72,7 @@
       ]
     },
     {
-      "questionText": "Quel est le prénom de Mister Big dans Sex ans the City",
+      "questionText": "Dans Sex & the City, quel est le prénom de Mister Big ?",
       "answerOptions": [
         { "answerText": "John", "isCorrect": true },
         { "answerText": "Bob", "isCorrect": false },
@@ -81,7 +81,7 @@
       ]
     },
     {
-      "questionText": "Bridget Jones prépare un diner d’anniversaire, qui arrive à l’improviste et l’aide ? ",
+      "questionText": "Quand Bridget Jones prépare un diner d’anniversaire, qui arrive à l’improviste et l’aide ?",
       "answerOptions": [
         { "answerText": "Jack", "isCorrect": false },
         { "answerText": "Daniel", "isCorrect": false },
