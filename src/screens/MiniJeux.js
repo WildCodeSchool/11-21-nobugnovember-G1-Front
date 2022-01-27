@@ -3,7 +3,6 @@ import Footer from '../components/Footer'
 import Quizz from '../components/Quizz'
 import './MiniJeux.css'
 import { NavLink } from 'react-router-dom'
-
 import { useEffect, useState } from 'react'
 import NavbarMobile from '../components/NavbarMobile'
 
@@ -60,6 +59,8 @@ const MiniJeux = props => {
         setEmojiSelected={props.setEmojiSelected}
         aubergine={props.aubergine}
         setAubergine={props.setAubergine}
+        link={props.link}
+        setLink={props.setLink}
       />
       <Footer />
     </div>

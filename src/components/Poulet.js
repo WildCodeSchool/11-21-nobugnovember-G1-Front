@@ -14,10 +14,31 @@ import joyeux2 from '../quizzdata/joyeux.json'
 import peur2 from '../quizzdata/peur.json'
 import surprise2 from '../quizzdata/surprise.json'
 import triste2 from '../quizzdata/triste.json'
+import { useEffect } from 'react'
+import './EmojisNavBarMobile.css' // Fichier CSS DE POULET !! a ne pas supprimer
+import { useNavigate } from 'react-router-dom'
 
-import './EmojisNavBarMobile.css'
+const Poulet = props => {
+  let navigate = useNavigate()
+  let page = document.location.href.split('/')
+  // let numPage1 = () => {
+  //   setNumPage(1)
+  // }
+  const navbarsecret = document.querySelector('.navbarmobile-secret')
+  const navbarmobile = document.querySelector('.navbarmobile')
+  const circleBtn = document.querySelector('.circle-btn')
+ 
 
-const EmojisNavBarMobile = props => {
+  useEffect(() => {
+    console.log('PAGE DANS USEFFECT', page)
+    console.log('props.emojiSelected.emotion : ', props.emojiSelected.emotion)
+    if (page[3] === 'MiniJeux' || page[3] === 'Quizz') {
+      props.setLink('/MiniJeux')
+    } else {
+      props.setLink('/Catalogue')
+    }
+  }, [props.emojiSelected])
+
   const handleChange = () => {
     const correspondanceTab = [
       {
@@ -75,8 +96,13 @@ const EmojisNavBarMobile = props => {
     )
 
     props.setEmojiSelected(selection[0])
+    navbarsecret.style.display = 'none' /* ETAT PAR DEFAUT*/
+    navbarmobile.style.borderRadius = '10px 10px 0 0'
+    circleBtn.style.bottom = '20px'
+    circleBtn.style.height = '60px'
+    circleBtn.style.width = '60px'
+    circleBtn.style.filter = 'grayscale(0)'
   }
-
   const handleChangeAuberg = () => {
     props.setAubergine(!props.aubergine)
     const correspondanceTab = [
@@ -134,13 +160,19 @@ const EmojisNavBarMobile = props => {
       element => element.emotion === event.target.alt
     )
     props.setEmojiSelected(selection[0])
-  }
+    navbarsecret.style.display = 'none' /* ETAT PAR DEFAUT*/
+    navbarmobile.style.borderRadius = '10px 10px 0 0'
+    circleBtn.style.bottom = '20px'
+    circleBtn.style.height = '60px'
+    circleBtn.style.width = '60px'
+    circleBtn.style.filter = 'grayscale(0)'
 
+  }
   return (
     <div className='holderEmojibarre-NavBar'>
       <div className='emojibarre-NavBar'>
         <div className='container-NavBar'>
-          <NavLink to='/Catalogue' className='NavLink-NavBar'>
+          <NavLink to={props.link} className='NavLink-NavBar'>
             <img
               onClick={handleChange}
               className='emojiimg-NavBar'
@@ -148,10 +180,9 @@ const EmojisNavBarMobile = props => {
               alt='Emoji joyeux'
             ></img>
           </NavLink>
-          <figcaption className='Figcaption-NavBar'>Joyeux</figcaption>
         </div>
         <div className='container-NavBar'>
-          <NavLink to='/Catalogue' className='NavLink-NavBar'>
+          <NavLink to={props.link} className='NavLink-NavBar'>
             <img
               onClick={handleChange}
               className='emojiimg-NavBar'
@@ -159,10 +190,9 @@ const EmojisNavBarMobile = props => {
               alt='Emoji pleure'
             ></img>
           </NavLink>
-          <figcaption className='Figcaption-NavBar'>Triste</figcaption>
         </div>
         <div className='container-NavBar'>
-          <NavLink to='/Catalogue' className='NavLink-NavBar'>
+          <NavLink to={props.link} className='NavLink-NavBar'>
             <img
               onClick={handleChange}
               className='emojiimg-NavBar'
@@ -170,10 +200,9 @@ const EmojisNavBarMobile = props => {
               alt='Emoji surprise'
             ></img>
           </NavLink>
-          <figcaption className='Figcaption-NavBar'>Surpris</figcaption>
         </div>
         <div className='container-NavBar'>
-          <NavLink to='/Catalogue' className='NavLink-NavBar'>
+          <NavLink to={props.link} className='NavLink-NavBar'>
             <img
               onClick={handleChange}
               className='emojiimg-NavBar'
@@ -181,10 +210,9 @@ const EmojisNavBarMobile = props => {
               alt='Emoji amoureux'
             ></img>
           </NavLink>
-          <figcaption className='Figcaption-NavBar'>Amoureux</figcaption>
         </div>
         <div className='container-NavBar'>
-          <NavLink to='/Catalogue' className='NavLink-NavBar'>
+          <NavLink to={props.link} className='NavLink-NavBar'>
             <img
               onClick={handleChange}
               className='emojiimg-NavBar'
@@ -192,10 +220,9 @@ const EmojisNavBarMobile = props => {
               alt='Emoji colere'
             ></img>
           </NavLink>
-          <figcaption className='Figcaption-NavBar'>Enervé</figcaption>
         </div>
         <div className='container-NavBar'>
-          <NavLink to='/Catalogue' className='NavLink-NavBar'>
+          <NavLink to={props.link} className='NavLink-NavBar'>
             <img
               onClick={handleChange}
               className='emojiimg-NavBar'
@@ -203,10 +230,9 @@ const EmojisNavBarMobile = props => {
               alt='Emoji peur'
             ></img>
           </NavLink>
-          <figcaption className='Figcaption-NavBar'>Effrayé</figcaption>
         </div>
         <div className='container-NavBar'>
-          <NavLink to='/Films' className='NavLink-NavBar'>
+          <NavLink to={props.link} className='NavLink-NavBar'>
             <img
               onClick={handleChangeAuberg}
               className='emojiimg-NavBar'
@@ -214,11 +240,10 @@ const EmojisNavBarMobile = props => {
               alt='Emoji auberg'
             ></img>
           </NavLink>
-          <figcaption className='Figcaption-NavBar'>Coquin</figcaption>
         </div>
       </div>
     </div>
   )
 }
 
-export default EmojisNavBarMobile
+export default Poulet

@@ -8,6 +8,7 @@ import { Link, useLocation } from 'react-router-dom'
 import Pagination from '../components/Pagination'
 import Coquin from '../auberginedata/Coquin.json'
 import NavbarMobile from '../components/NavbarMobile'
+
 const Films = ({
   toggle,
   isShowing,
@@ -79,8 +80,10 @@ const Films = ({
         <NavbarMobile
           emojiSelected={props.emojiSelected}
           setEmojiSelected={props.setEmojiSelected}
-          aubergine={props.aubergine}
-          setAubergine={props.setAubergine}
+          aubergine={aubergine}
+          setAubergine={setAubergine}
+          link={props.link}
+        setLink={props.setLink}
         />{' '}
         <Footer className='footerCatalogue' />
       </div>

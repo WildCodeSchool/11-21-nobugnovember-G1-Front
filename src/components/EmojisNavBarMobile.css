@@ -1,39 +1,62 @@
-.emojiimg-NavBar, .aubergine{
-    width: 8vw;
-    height: auto;
-    /* box-shadow: 5px 10px 6px #030303; */
-    border-radius: 15%;
-    transition: all .5s ease-in-out;
+@media screen and (max-width: 750px) { 
+    .emojiimg-NavBar, .aubergine{
+        width: 30px;
+        height: 30px;
+        /* padding: 10px; */
+    }
+
+    .emojibarre-NavBar {
+        flex-flow: row wrap;
+    }  
+
+    .Figcaption-NavBar {
+        font-size: 1em;
+        padding-top: 12px;
+    }
+
+    div:hover>.Figcaption-NavBar {
+        font-size: 1em;
+    }
+    .emojiimg-NavBar, .aubergine{
+        width: 30px;
+        
+    }
+   
 }
 
-.emojiimg-NavBar:hover{
-    transform: scale(1.5);
-    transition: all .5s ease-in-out;
+
+
+
+.holderEmojibarre-NavBar {
+    /* padding-bottom: 20vh; */
+
+}.emojiimg-NavBar, .aubergine{
+    width: 35px;
+    height: 35px;
     
 }
 
-.holderEmojibarre-NavBar {
-    padding-bottom: 20vh;
-}
 
 .emojibarre-NavBar {
     display:flex;
-    justify-content: space-around;
-    width:70vw;
-    background: #403B3B 0% 0% no-repeat padding-box;
-    box-shadow: 5px 10px 6px #030303;
+    justify-content: space-between;
+    align-content: center;
+    width:100%;
     opacity: 1;
-    border-radius: 40px;
-    padding : 20px; 
+    border-radius: 10px 10px 0 0;
+    padding : 7px; 
     margin: 0 auto 0 auto;
     flex-flow: row wrap;
-    
+    /* border: 3px solid green;  */
+    height: 60px;
 }  
 
 .container-NavBar {
     display: flex; 
-    flex-direction: column;
+    /* flex-direction: column; */
     text-align: center;
+    align-items: center;
+    
 }
 
 /* .NavLink-NavBar{
@@ -59,47 +82,27 @@ div:hover>.Figcaption-NavBar {
 
 @media screen and (min-width: 750px) { 
     .container-NavBar {
-        position: relative;
+        position: relative;  
+        
     }
-
-    .Figcaption-NavBar {
+    
+    /* .Figcaption-NavBar {
         position: absolute;
         left: 50%;
         top: 150%;
         transform: translate(-50%, -50%);
-    }
+    } */
 
     
 }
 
 
 
-@media screen and (max-width: 750px) { 
-    .emojiimg-NavBar, .aubergine{
-        width: 90px;
-        height: auto;
-        padding: 10px;
-    }
 
-    .emojibarre-NavBar {
-        flex-flow: row wrap;
-    }  
-
-    .Figcaption-NavBar {
-        font-size: 1em;
-        padding-top: 12px;
-    }
-
-    div:hover>.Figcaption-NavBar {
-        font-size: 1em;
-    }
-}
-
-
-@media screen and (max-width: 650px) { 
+/* @media screen and (max-width: 650px) { 
     .emojiimg-NavBar, .aubergine{
         width: 70px;
         height: auto;
     }
     
-}
+} */

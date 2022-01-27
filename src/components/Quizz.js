@@ -10,6 +10,7 @@ import triste2 from '../quizzdata/triste.json'
 import TableauScore from './TableauScore'
 import Header from './Header'
 import Footer from '../components/Footer'
+import NavbarMobile from './NavbarMobile'
 
 export default function Quizz(props) {
   const questionnaire = props.emojiSelected.quizzSelected
@@ -39,12 +40,15 @@ export default function Quizz(props) {
         setLink={props.setLink}
       />
       <div className='quizz-container'>
-        
         {/* Conteneur général du quizz */}
         {/* CONDITION Conteneur Texte Résultat APPARAIT A LA FIN */}
         {showScore ? (
-          <TableauScore score={score} playerName={props.playerName} link={props.link}
-                        setLink={props.setLink}/>
+          <TableauScore
+            score={score}
+            playerName={props.playerName}
+            link={props.link}
+            setLink={props.setLink}
+          />
         ) : (
           <div>
             {/* DIV CONTENANT LE CONTENEUR SUIVI QUEST  */}
@@ -83,39 +87,15 @@ export default function Quizz(props) {
           </div>
         )}
       </div>
+      <NavbarMobile
+        emojiSelected={props.emojiSelected}
+        setEmojiSelected={props.setEmojiSelected}
+        aubergine={props.aubergine}
+        setAubergine={props.setAubergine}
+        setLink={props.setLink}
+        link={props.link}
+      />
       <Footer />
     </div>
   )
-}
-
-{
-  /* Faire une DIV DE RESULTAT avec :
-
-          Titre Différent selon score 
-          ==> si score === 10  =        Wow !! Felicitations {playerName} , tu as atteinds le score maximal de 10 réponses correctes à ce questionnaire!
-                                      Tente ta chance aux quizz des autres emojis pour voir si tu es un expert en Film & Série!
-            ___________
-          ==> si score entre >6 et <10  Bravo {playerName} , tu as obtenus {score} réponses correctes à ce questionnaire!
-                                      Retente ta chance et essais d'obtenir 10 réponses justes !
-___________         
-          ==> si score >3 && <7       {playerName}, tu ne te sentais pas bien aujourd'hui ? Tu as seulement {score} réponses juste à ce questionnaire!
-                                      J'espère que tu n'as rien prévu cette semaine? Tu pourrais en profiter pour replonger dans les Films & Séries :p
-            ___________
-          ==> si score <=3            {playerName}, tu me donnes envie de casser l'écran ? Tu as fait un score à s'en jeter du pont. Tu as un score de {score} à ce questionnaire!
-                                      Tu as besoin d'allumer ton écran pour pouvoir regarder des Films et Séries afin savoir de quoi ils parlent. 
-                                      Ecoutez les récits de tes amis ne fait pas de toi un cinéphile. Maintenant, tu es au courant.                           
-                                      
-                      ___________            ___________            ___________            ___________
-
-          Résultats des réponses : 
-            const resultatExport = clickchoice = (if true = V else if false = F)
-
-            (tableau avec bordure)
-          Question 1 : 
-          {Questions[].Questiontext}
-          Résultat suite à réponse = {resultExport} soit V soit F (ou icone :) )
-          Quest 2 3 4 5 6 7 8 9 10 + Rep 2 3 4 5 6 7 8 9 10 idem
-
-          Lien pour allez sur le quizz lié aux autres emojis QUIZZ
-          */
 }

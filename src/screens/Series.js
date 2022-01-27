@@ -74,6 +74,8 @@ const Series = ({
           setEmojiSelected={props.setEmojiSelected}
           aubergine={props.aubergine}
           setAubergine={props.setAubergine}
+          link={props.link}
+        setLink={props.setLink}
         />
         <Footer />
       </div>

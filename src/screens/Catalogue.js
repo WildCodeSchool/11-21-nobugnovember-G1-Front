@@ -29,6 +29,7 @@ const Catalogue = ({
   setResultatTv,
   resultatTv,
   aubergine,
+  setAubergine,
   ...props
 }) => {
   // POUR AFFICHAGE MODAL
@@ -131,8 +132,10 @@ const Catalogue = ({
         <NavbarMobile
           emojiSelected={props.emojiSelected}
           setEmojiSelected={props.setEmojiSelected}
-          aubergine={props.aubergine}
-          setAubergine={props.setAubergine}
+          aubergine={aubergine}
+          setAubergine={setAubergine}
+          link={props.link}
+        setLink={props.setLink}
         />
         <Footer className='footerCatalogue' />
       </div>
