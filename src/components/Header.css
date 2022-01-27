@@ -60,12 +60,14 @@ position: relative;
     .logo-nav-mobile{
         display: flex;
         width: 10vw;
+
         
     }
     
     .navbar-links {
         font-size: 5.5vw;
         margin : 0;
+        display:none;
     }
 
     .nav-style {
@@ -101,7 +103,7 @@ position: relative;
 
     .bloc-emojichanger {
         width: 10vw;
-        
+        display:none;
     }
 
     .navbar-links:hover{
