@@ -5,6 +5,7 @@ import './MiniJeux.css'
 import { NavLink } from 'react-router-dom'
 
 import { useEffect, useState } from 'react'
+import NavbarMobile from '../components/NavbarMobile'
 
 const MiniJeux = props => {
   const handleChoice = () => {
@@ -15,9 +16,8 @@ const MiniJeux = props => {
     props.setPlayerName(EventTarget.value)
   }
 
-
   return (
-    <div className="catalogPage classmilhan">
+    <div className='catalogPage classmilhan'>
       <Header
         emojiSelected={props.emojiSelected}
         setEmojiSelected={props.setEmojiSelected}
@@ -27,7 +27,8 @@ const MiniJeux = props => {
       <div className='box-menu-jeux'>
         <h1>Bienvenue dans la section Mini-Jeux</h1>
         <p className='parag-minijeux'>
-          Prenez une pause et testez vos connaissances en matière de films et séries, êtes-vous prêt à relever le défi?
+          Prenez une pause et testez vos connaissances en matière de films et
+          séries, êtes-vous prêt à relever le défi?
         </p>
         <label className='label-miniJeux '>Indiquez votre pseudo :</label>
         <input className='inputPseudo' onChange={handleChange} />
@@ -47,10 +48,19 @@ const MiniJeux = props => {
           mini-jeux !!
         </p>
         <div className='bloc-asavoir-minijeux'>
-          <h3>BONUS : Changez d'Emoji en fin de partie et recommencez un nouveau quizz 🤓</h3>
+          <h3>
+            BONUS : Changez d'Emoji en fin de partie et recommencez un nouveau
+            quizz 🤓
+          </h3>
         </div>
         <p className='signature'>@ Les fondateurs Moody</p>
       </div>
+      <NavbarMobile
+        emojiSelected={props.emojiSelected}
+        setEmojiSelected={props.setEmojiSelected}
+        aubergine={props.aubergine}
+        setAubergine={props.setAubergine}
+      />
       <Footer />
     </div>
   )

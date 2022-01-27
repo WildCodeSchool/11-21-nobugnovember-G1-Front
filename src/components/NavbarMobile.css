@@ -1,0 +1,47 @@
+.navbarmobile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    bottom: 0px;
+    height: 60px;
+    width: 100%;
+    background: rgb(230, 229, 229);
+    border-radius:10px 10px 0 0;
+    
+    
+}
+.circle-btn{
+    position: relative ;
+    bottom: 20px;
+    /* bottom: 10px; */
+    /* au click , il change de format */
+
+    height:60px;
+    width:60px;
+    background-color: rgb(231, 189, 52);
+    border-radius: 50%;
+    border : 4px solid rgb(230, 229, 229);
+}
+.circle-btn:active{
+    background-color: rgb(197, 173, 92);
+}
+
+.navbarmobile-secret {
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    position: fixed;
+    bottom: 50px;
+    height: 70px;
+    width: 100%;
+    background: rgb(197, 197, 197);
+    border-radius:10px 10px 0 0;
+    border : 4px solid rgb(230, 229, 229)
+}
+.icon{
+    height:35px;
+    width: 35px;
+
+}

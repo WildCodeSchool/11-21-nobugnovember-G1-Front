@@ -7,7 +7,7 @@ import { useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import Pagination from '../components/Pagination'
 import Coquin from '../auberginedata/Coquin.json'
-
+import NavbarMobile from '../components/NavbarMobile'
 const Films = ({
   toggle,
   isShowing,
@@ -16,7 +16,7 @@ const Films = ({
   setIsLoading,
   getProps,
   setGetDetails,
-  setNumPage, 
+  setNumPage,
   numPage,
   aubergine,
   setAubergine,
@@ -25,16 +25,14 @@ const Films = ({
   const location = useLocation()
 
   useEffect(() => {
-
     const appelAub = () => {
       props.setResultat(Coquin.results)
-      console.log(props.resultat)      
+      console.log(props.resultat)
     }
-    
+
     const appelAPI = () => {
-      
       setIsLoading(true)
-      
+
       axios
         .get(
           `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&with_genres=${props.emojiSelected.correspondance}&language=fr-FR&page=${numPage}`
@@ -43,9 +41,8 @@ const Films = ({
         .then(data => {
           props.setResultat(data.results)
           setIsLoading(false)
-          console.log(Coquin);
+          console.log(Coquin)
         })
-      
     }
     aubergine ? appelAub() : appelAPI()
   }, [props.emojiSelected.correspondance, numPage, aubergine])
@@ -60,7 +57,6 @@ const Films = ({
           setLink={props.setLink}
           setAubergine={setAubergine}
         />
-
         <div className='cardContainer'>
           {props.resultat.map(element => (
             <Link
@@ -79,11 +75,14 @@ const Films = ({
             </Link>
           ))}
         </div>
-        <Pagination
-        setNumPage={setNumPage} 
-        numPage={numPage}
-        />
-        <Footer className="footerCatalogue"/> 
+        <Pagination setNumPage={setNumPage} numPage={numPage} />
+        <NavbarMobile
+          emojiSelected={props.emojiSelected}
+          setEmojiSelected={props.setEmojiSelected}
+          aubergine={props.aubergine}
+          setAubergine={props.setAubergine}
+        />{' '}
+        <Footer className='footerCatalogue' />
       </div>
     </div>
   )

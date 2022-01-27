@@ -10,6 +10,7 @@ import chevrondroit from '../assets/chevrondroit.png'
 import chevrongauche from '../assets/chevrongauche.png'
 import chevroninactif from '../assets/chevroninactif.png'
 import Pagination from '../components/Pagination'
+import NavbarMobile from '../components/NavbarMobile'
 
 const Catalogue = ({
   setGetDetails,
@@ -60,13 +61,12 @@ const Catalogue = ({
         .then(response => response.data)
         .then(data => {
           setResultatTv(data.results)
-          
+
           setIsLoading(false)
         })
     }
     appelAPITv()
   }, [props.emojiSelected.correspondanceSerie, numPage])
-  
 
   return (
     <div className={isActive ? 'catalogPage none' : 'catalogPage movie-grid'}>
@@ -126,10 +126,14 @@ const Catalogue = ({
               ))}
             </div>
             <Pagination setNumPage={setNumPage} numPage={numPage} />
-
           </>
         )}
-
+        <NavbarMobile
+          emojiSelected={props.emojiSelected}
+          setEmojiSelected={props.setEmojiSelected}
+          aubergine={props.aubergine}
+          setAubergine={props.setAubergine}
+        />
         <Footer className='footerCatalogue' />
       </div>
     </div>

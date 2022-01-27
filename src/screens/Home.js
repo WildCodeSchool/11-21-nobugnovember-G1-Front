@@ -4,6 +4,8 @@ import '../components/Footer.css'
 import Emojis from '../components/Emojis'
 import Footer from '../components/Footer'
 
+import NavbarMobile from '../components/NavbarMobile'
+
 const Home = props => {
   return (
     <div className='home'>
@@ -17,6 +19,12 @@ const Home = props => {
           setAubergine={props.setAubergine}
         />
       </div>
+      <NavbarMobile
+        emojiSelected={props.emojiSelected}
+        setEmojiSelected={props.setEmojiSelected}
+        aubergine={props.aubergine}
+        setAubergine={props.setAubergine}
+      />
       <Footer />
     </div>
   )

@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 import Pagination from '../components/Pagination'
 import axios from 'axios'
 import './Catalogue.css'
-
+import NavbarMobile from '../components/NavbarMobile'
 
 const Series = ({
   setGetProps,
@@ -18,7 +18,7 @@ const Series = ({
   setIsLoading,
   setGetDetails,
   resultat,
-  setNumPage, 
+  setNumPage,
   numPage,
   ...props
 }) => {
@@ -68,9 +68,12 @@ const Series = ({
             </Link>
           ))}
         </div>
-        <Pagination 
-        setNumPage={setNumPage} 
-        numPage={numPage}
+        <Pagination setNumPage={setNumPage} numPage={numPage} />
+        <NavbarMobile
+          emojiSelected={props.emojiSelected}
+          setEmojiSelected={props.setEmojiSelected}
+          aubergine={props.aubergine}
+          setAubergine={props.setAubergine}
         />
         <Footer />
       </div>
