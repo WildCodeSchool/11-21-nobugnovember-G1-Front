@@ -149,15 +149,17 @@ const CardFilm = ({ getProps, retourFunc, getDetails }) => {
                   allowFullScreen='true'
                 ></iframe>
               ) : (
-                <iframe 
-                className='trailerYT'
-                width="560" 
-                height="315" 
-                src="https://www.youtube.com/embed/-MBj2xT_WtQ" 
-                title="YouTube video player" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen='true'
-                ></iframe>
+                <div>
+                  <iframe 
+                  className='trailerYT'
+                  width="560" 
+                  height="315" 
+                  src="https://www.youtube.com/embed/-MBj2xT_WtQ" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen='true'
+                  ></iframe>
+                </div>
               )}
             </div>
             <div className='mobileTitleCasting'>
