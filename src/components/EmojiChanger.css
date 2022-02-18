@@ -1,0 +1,97 @@
+    .search-box {
+        top: 2%;
+        right: 2%;
+        background: linear-gradient(135deg, #2d2e31 0%, #3b3b3b 100%);
+        height: 40px;
+        border-radius: 70px;
+        padding-right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: row;
+    }
+    
+    .search-box:hover > .search-txt {
+        width: 100%;
+        transition: width 0.4s;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column; 
+        overflow: hidden;
+        background-color: #2d2e31;
+        border-radius: 40px;
+    }
+
+    .emojis:hover {
+        filter: grayscale(0%)Brightness(100%)
+        }
+    
+    .search-box:hover > .boiteSelection {
+            display:none;
+        }
+    
+        .emojis {
+            width: 30px;
+            filter: grayscale(100%) Brightness(50%) contrast(130%);
+        }
+    
+        .emojiactif {
+            display: flex;
+            width: 30px;
+            filter: brightness(100%);}
+    
+        .lienSelection {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    }
+    
+    .search-txt{
+        display:none;
+        align-items: center;
+        background: none;
+        outline: none;
+        float: left;
+        padding: 0;
+        color: white;
+        font-size: 16px;
+        transition: 0.4s;
+        line-height: 40px;
+        width: 100px;
+        overflow: hidden; 
+        background-color: #2d2e31;
+    }
+
+
+@media screen and (min-width: 750px){
+
+    .search-box:hover > .search-txt {
+        flex-direction: row; 
+        background-color: #2d2e31;
+        border-radius: 50px;
+    }
+
+    .lienSelection {
+        width: 50px;
+        height: 50px;}
+
+    .emojis {
+        width: 40px;
+    }
+    .emojiactif {
+        width: 40px;
+    }
+    .search-box {
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 750px){
+.search-box {
+    background: #2d2e31;
+}
+}
+

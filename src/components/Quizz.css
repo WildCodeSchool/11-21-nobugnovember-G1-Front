@@ -1,0 +1,111 @@
+
+.quizz-container {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 1;
+    }
+
+.title-suiviquestion-container { 
+        width: 100%;
+        margin-top: 3%;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 30px;
+        }
+
+.title-suiviquestion { 
+    text-align: left;
+    width: fit-content;
+    background-color: whitesmoke;
+    border: 5px solid rgba(151, 150, 150, 0.171);
+    box-shadow: 0 5px 15px #333333;
+    border-radius: 15px;
+    padding: 5px;
+    }    
+
+.ConteneurQuestionReponse{
+    width: 100%;
+    padding: 50px 30px 0 30px;
+} 
+
+.questions-container{
+    display: flex;
+    justify-content: center;  
+    width: cover;
+
+}
+
+.questions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    background-color: whitesmoke;
+    border: 5px solid rgba(151, 150, 150, 0.171);
+    box-shadow: 0 5px 15px #333333;
+    border-radius: 15px;
+    padding: 3% 5%;
+    height: 100px;
+    width: 100%;
+    max-width: 800px;
+    ;
+}
+
+
+.button-grid{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 950px;
+    padding : 2% 0px;
+    }
+.quizz-button:hover{
+    border-color: #030303;
+}
+.quizz-button:active{
+    background-color: #dbbf1c;
+    transform: scale(0.9);
+}
+.quizz-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 300px;
+    font-size: 16px;
+    margin: 10px;
+    padding: 0 15px;
+    text-align: justify;
+    background-color: #FFDC6C;
+    border: 5px solid #bb951842;
+    box-shadow: 0 5px 15px #333333;
+    font-weight: bold;
+    border-radius: 15px;
+}
+.menu > input{
+    background-color: #FFDC6C;
+}
+.menu > button{
+    height: 25px;
+    width: 100px;
+    background-color: #FFDC6C;
+    border: 5px solid #bb951842;
+    border-radius: 15px;
+}
+
+.PageQuizz {
+    display : flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(180deg, rgba(110,139,137,1) 7%, rgba(45,46,49,1) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    min-height: 100vh;
+}

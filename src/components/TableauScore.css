@@ -1,0 +1,141 @@
+
+.extraitImportant {
+    font-weight: bold;
+}
+
+.tableau-score{
+    width: auto;
+    padding: 0 10vw;
+}
+
+.titre-tableau-resultat{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 4vw;
+    color: whitesmoke;
+    text-shadow: 3px 2px 5px black;
+    height: auto;
+}
+
+.tableau-titre-resultat {
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
+    border: 5px solid rgba(151, 150, 150, 0.171);
+    box-shadow: 0 5px 15px #333333;
+    border-radius: 15px;
+    height:auto;
+    padding: 3%;
+    margin: 2% 5% 5% 5%;
+
+    font-size: 27px;
+    text-align: center;
+color: black;
+width: auto;
+}
+
+.phrase-pre-score{
+    border-top: 3px solid black;
+margin-top: 10px;
+font-size: 20px;
+}
+
+.score-final {
+    color:#dbbf1c;
+    font-size: 1.7em;
+    text-shadow: 2px 3px 3px black;
+}
+
+.tableau-commentaire {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 12px;
+    background-color: whitesmoke;
+    border: 5px solid rgba(151, 150, 150, 0.171);
+    box-shadow: 0 5px 15px #333333;
+    border-radius: 15px;
+    padding: 3%;
+    margin: 5% ;
+    width: auto;;
+}
+
+.tableau-resultat {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 12px;
+    background-color: whitesmoke;
+    border: 5px solid rgba(151, 150, 150, 0.171);
+    box-shadow: 0 5px 15px #333333;
+    border-radius: 15px;
+    padding: 3%;
+    margin: 5%;
+    width: auto;
+}
+
+.ul-resultat {
+    text-align: center;
+}
+
+.resultat-positif, .resultat-negatif {
+    margin-top: 20px;
+    text-decoration: none;
+    list-style: none;
+    font-size: 1.5em;
+
+
+}
+
+.resultat-positif {
+color: rgb(10, 87, 10);
+font-weight: bold;
+}
+
+.resultat-negatif {
+color: rgb(138, 17, 17);
+font-weight: bold;}
+
+.phrase-pre-resultat{
+    text-align: center;
+    border-bottom: 3px solid black;
+    border-width: object;
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 10px;
+
+}
+
+.display-linebreak { /*SAUT DE LIGNE - M'empeche de commenter*/
+    white-space: pre-line;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+@media screen and (max-width: 750px){ 
+
+    .tableau-score {
+        padding: 0;
+        margin-top: 20%;
+    }
+
+    .score-final {
+        font-size: 1.3em;
+    }
+
+    .tableau-titre-resultat {
+        margin: 6% 1% 5% 1%;
+    }
+
+    .tableau-resultat {
+        margin: 6% 1% 5% 1%;
+    }
+
+    .tableau-commentaire {
+        margin: 6% 1% 5% 1%; 
+    }
+    
+}

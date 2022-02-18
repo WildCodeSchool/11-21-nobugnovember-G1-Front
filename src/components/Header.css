@@ -1,0 +1,111 @@
+.nav-style {
+    height: auto;
+    display: flex;
+    align-items: center; /* ALIGNEMENT DE MOODY LINKS et EMOTICONES */
+    background-color: transparent;
+    padding-top: 1%;
+    margin-bottom: 5vh;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bloc-logo-links{
+display: flex;
+align-items: center;
+}
+
+.bloc-emojichanger {
+position: relative;
+}
+
+.logoContainer {
+    display: flex;
+}
+
+.links-container, .navbar-links {
+    display: flex;
+}
+
+.navbar-links {
+    font-size: 2vw;
+    display: inline;
+    text-decoration: none;
+    margin: 0 20px;
+    color: white;
+    text-align: center;    
+}
+
+.navbar-links:hover{
+    color: #FFDC6C;
+}
+
+.logo-nav{
+    display: flex;    
+    height: auto;
+    width: 13vw;
+}
+
+.logo-nav-mobile{
+    display: none;
+    
+}
+
+@media screen and (max-width: 750px){
+    
+    .logo-nav{
+        display: none;
+    }
+
+    .logo-nav-mobile{
+        display: flex;
+        width: 10vw;
+        
+    }
+    
+    .navbar-links {
+        font-size: 5.5vw;
+        margin : 0;
+    }
+
+    .nav-style {
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 3%;
+        padding-right: 0;
+        background: #2d2e31;
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        padding-bottom: 4%;
+        margin-bottom: 0;
+    }
+
+    .logo-nav {
+        width: 23vw;
+    }
+
+    .bloc-logo-links {
+        width: 90vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        
+    }
+
+    .links-container {
+        width: 75vw;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .bloc-emojichanger {
+        width: 10vw;
+        
+    }
+
+    .navbar-links:hover{
+        color: white;
+    }
+
+}

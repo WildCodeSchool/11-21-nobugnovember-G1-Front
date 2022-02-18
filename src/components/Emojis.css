@@ -1,0 +1,98 @@
+.emojiimg, .aubergine{
+    width: 8vw;
+    height: auto;
+    /* box-shadow: 5px 10px 6px #030303; */
+    border-radius: 15%;
+    transition: all .5s ease-in-out;
+}
+
+.emojiimg:hover{
+    transform: scale(1.5);
+    transition: all .5s ease-in-out;
+    
+}
+
+.holderEmojibarre {
+    padding-bottom: 20vh;
+}
+
+.emojibarre {
+    display:flex;
+    justify-content: space-around;
+    width:70vw;
+    background: #403B3B 0% 0% no-repeat padding-box;
+    box-shadow: 5px 10px 6px #030303;
+    opacity: 1;
+    border-radius: 40px;
+    padding : 20px; 
+    margin: 10vh auto 0 auto;
+    flex-flow: row wrap;
+    
+}  
+
+.container {
+    display: flex; 
+    flex-direction: column;
+    text-align: center;
+}
+
+figcaption {
+
+    font-family: 'Bebas Neue', cursive;
+    font-size: 0em;
+    color: #FFDB58;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+    padding-top: 30px;
+}
+
+
+div:hover>figcaption {
+    font-size: 1.5em;
+    opacity: 1;
+    transition: all .5s ease-in-out;
+} 
+
+
+@media screen and (min-width: 750px) { 
+    .container {
+        position: relative;
+    }
+
+    figcaption {
+        position: absolute;
+        left: 50%;
+        top: 150%;
+        transform: translate(-50%, -50%);
+    }
+
+    
+}
+
+@media screen and (max-width: 750px) { 
+    .emojiimg, .aubergine{
+        width: 90px;
+        height: auto;
+        padding: 10px;
+    }
+
+    .emojibarre {
+        flex-flow: row wrap;
+    }  
+
+    figcaption {
+        font-size: 1em;
+        padding-top: 12px;
+    }
+
+    div:hover>figcaption {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 650px) { 
+    .emojiimg, .aubergine{
+        width: 70px;
+        height: auto;
+    }
+}

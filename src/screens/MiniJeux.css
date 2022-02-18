@@ -1,0 +1,161 @@
+.box-menu-jeux > h1 {
+    font-size: 4.5vw;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.box-menu-jeux > h3 {
+    margin-top: 10px;
+padding: 0 10vw;
+font-size: 1.5vh;
+text-align: center;
+color: #dbbf1c;
+width: 100%;
+}
+
+.box-menu-jeux > p {
+text-align: justify;
+font-size: 14px;
+margin: 10px 0;
+padding: 0 10vw;
+}
+
+.ul-box-menu-jeux{
+    justify-content: center;
+    margin: 10px;
+}
+
+.li-box-menu-jeux {
+    font-size: 18px;
+    font-weight: bold;
+} 
+
+
+.box-menu-jeux{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 12px;
+    background-color: whitesmoke;
+    border: 5px solid rgba(151, 150, 150, 0.171);
+    box-shadow: 0 5px 15px #333333;
+    border-radius: 15px;
+    width: auto;
+    margin: 0px 18% 1%;
+    padding: 1%;
+    }
+    
+    
+    .label-miniJeux{
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 16px;
+    }
+
+.italicP {
+    font-style: italic;
+}
+
+.inputPseudo{
+    background-color: #dbbe1c23;
+    width: 160px;
+    height:40px;
+    margin: 10px 0 20px 0;
+    border-radius: 25px;
+    border: 5px solid #bb951842;
+    font-size: 16px;
+    text-align: center;
+    }
+
+    .bloc-asavoir-minijeux {
+        border: 2px solid #dbbf1c;
+        margin: 10px 0;
+        padding: 10px;
+        text-align: center;
+        width:68%;
+    } 
+        
+.choix-jeux {
+    font-weight: bold;
+    font-size: 16px;
+
+}
+
+    .partie-buttons{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: black;
+        margin-bottom: 20px;
+width: 150px;
+    }
+
+
+    .Quizz-btn{
+        width:150px;
+        height:30px;
+        background-color: #dbbf1c;
+        border: 5px solid #bb951842;
+        box-shadow: 0 5px 10px #333333;
+        font-weight: bold;
+        border-radius: 15px;
+        display : flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .Quizz-btn > a{
+    text-align: center;
+    }
+
+    .BlindTest-btn{
+    width:150px;
+    height:50px;
+    background-color: #dbbf1c;
+    border: 5px solid #bb951842;
+    box-shadow: 0 5px 15px #333333;
+    font-weight: bold;
+    border-radius: 15px;
+}
+    
+.Quizz-btn:hover{
+    
+    border-color: #030303;
+}
+.Quizz-btn:active{
+    background-color: #dbbf1c;
+}
+.BlindTest-btn:hover{
+    
+    border-color: #030303;
+}
+.BlindTest-btn:active{
+    background-color: #dbbf1c;
+}
+
+.signature {
+    font-style: italic;
+}
+
+@media screen and (max-width: 750px){ 
+    .box-menu-jeux {
+        margin: 30% 3% 1%;
+    }
+
+    .box-menu-jeux > h3 {
+        text-align: center;
+    } 
+
+    .box-menu-jeux > p {
+        text-align: center;
+    }
+
+    .bloc-asavoir-minijeux {
+        text-align: center;
+    }
+    
+}

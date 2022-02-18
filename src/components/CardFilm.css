@@ -1,0 +1,385 @@
+.fragmentContainer{
+    transition: opacity 0.4s ease-out;
+    visibility: visible;
+    transition: visibility 0.4s;
+}
+
+.popUpModal {
+    z-index: 1060;
+    position: absolute;
+    top: 33px;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 86%;
+    animation: appear 0.3s ease-in;
+}
+
+.cardFilm {
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    background-size: cover;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    overflow: hidden;
+    border-radius: 20px 20px 20px 20px / 20px 20px 20px 20px;
+    background-position: center;
+    visibility: visible;
+    transition: visibility 0.4s;
+    transition: opacity 0.4s ease-out,
+    transform 0.4s ease-out;
+    
+}
+
+@keyframes appear {
+    0% { opacity: 0 }
+    70% { opacity: 0.5 }
+    100% { opacity: 1 }
+}
+
+.cardFilmContainer {
+    height: 90vh;
+    background : rgb(26 25 25 / 70%);
+    background-repeat: no-repeat !important;   
+    background-attachment: fixed !important;
+    background-size: cover !important;
+    margin: 0;
+    position: relative;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px)!important;
+    z-index: 1060;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow: overlay;
+    padding-bottom: 1%;
+    
+    
+}
+
+
+
+.cardFilmContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.closeModal {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2%;
+    padding-top: 2%;
+    color: #ffdc6c;
+}
+
+.closeIcone:hover {
+    color: white;  
+}
+
+.testFrost {
+    z-index: 1;
+}
+
+.jaquette {
+    width: auto;
+    height: 50vh;
+    border-radius: 10px;
+}
+
+.infoContainer {
+    padding-left: 5vh;
+    padding-right: 5vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    z-index: -5;
+    padding-top: 5vh;
+}
+
+.titre {
+    margin-bottom: 1vw;
+    font-size: 4vh;
+}
+
+.year {  
+    font-size: 2vh;
+    margin-bottom: 1vw;
+}
+
+.holderInfo {
+    display: flex;
+    flex-direction: column;
+    width: 50%; 
+    color: white;
+    padding: 0 3vw;
+}
+
+.trailerYT {
+    border-radius: 10px 10px 10px 10px / 10px 10px 10px 10px;
+    width: 400px;
+    height: 295px;
+}
+
+.noTrailer {
+    border-radius: 10px 10px 10px 10px / 10px 10px 10px 10px;
+    width: 400px;
+    height: 295px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: center;
+    width: 65%;
+    align-items: center;
+    margin-bottom: 1vw;
+    font-size: 2vh;
+}
+
+
+#pegi {
+    background-color: #65655d;
+    width: 3vw;
+    height: 3vh;
+    text-align: center;
+    border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+}
+
+.holderPegi {
+    padding-left: 20px;
+}
+
+.popcorn {
+    height: 30px;
+    width: 55px;
+    padding-left: 20px;
+}
+
+.synopsis {
+    font-size: 2vh;
+    margin-bottom: 4vh;
+    text-align: justify;
+}
+
+.playButton {
+    background: #FFDC6C;
+    width: 5vw;
+    height: 2.5vh;
+    margin-top: 4vh;
+    border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+    cursor: pointer;
+    border-style: none;
+}
+
+.infoProd {
+    margin-bottom: 0.5vw;
+    font-size: 1.9vh;
+}
+
+.textGrey {
+    color: #ffdc6c;;
+    font-style:normal;
+    font-weight: bold;
+    font-size: 1.9vh;
+}
+
+.casting {
+    color: white;
+    margin-top: 2vh;
+    padding-left: 5vh;
+    font-size: 3vh;
+}
+
+.castingListe {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 5vh;
+}
+
+.imgCast {
+    object-fit: cover;
+    width: 300px;
+    height: auto;
+}
+
+.divCarre {
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 50%;
+    border : 5px solid #ffdc6c;
+    transform: scale(0.5);
+    position: relative;
+}
+
+.infoCasting {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+}
+.actorRole{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: 2%;
+}
+.actorName {
+    color: white;
+    text-align: center;
+}
+
+.roleName {
+    color: #ffdc6c;
+    text-align: center;
+}
+
+.cardFilmOverlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100vw;
+height: 100vh;
+z-index: 1040;
+background-color: rgba(0, 0, 0, 0.5);
+}
+
+.noImage {
+    z-index: -1;
+    position: absolute;
+    transform: translate(-5px, -5px);
+}
+
+@media screen and (max-width: 750px){
+
+    
+
+    .closeModal {
+        font-size: 3vw;
+        
+    }
+
+    .cards {
+        height: 380px;
+        width: 270px;
+    }
+
+    .poster {
+        min-height: 380px;
+    }
+
+    .cardFilm {
+        border-radius: 10px 10px 10px 10px / 10px 10px 10px 10px;
+        background-attachment: inherit
+    }
+
+    .infoContainer {
+        padding-left: 2vh;
+        padding-right: 2vh;
+        display: flex;
+        flex-direction: column;
+        padding-top: 2vh;
+        margin-bottom: 2vh;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .holderInfo {
+        width: 100%;
+        padding: 0;
+    }
+
+    .titre {
+        text-align: center;
+        margin: 4vw;
+    }
+
+    .year {
+        text-align: center;
+    }
+
+    .info {
+        width: 100%;
+        margin-top: 3vw;
+    }
+
+    .holderPegi {
+        padding-left: 0px;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+    
+
+    #pegi {
+        width: 10vw;
+    }
+
+    .popcorn {
+        padding-left: 0px;
+        width: 30px;
+    }
+
+    .synopsis {
+        margin-top: 6vw;
+    }
+
+    .playButton {
+        width: 100%;
+        border-radius: 15px 15px 15px 15px / 15px 15px 15px 15px;
+    }
+
+    .infoProd {
+        text-align: justify;
+    }
+
+    .trailerYT {
+        border-radius: 10px 10px 10px 10px / 10px 10px 10px 10px;
+        width: 100%;
+        height: 200px;
+        margin: 4vh 0;
+    }
+
+    .mobileTitleCasting {
+        width: 70vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 5vw;
+        margin-left: 5vw;
+        align-content: center;
+        height: 4.5vh;
+        border-radius: 25px 25px 25px 25px / 25px 25px 25px 25px;
+        flex-direction: row;
+        position: absolute;
+    }
+    
+    
+    .casting {
+        font-size: 4vh;
+        padding-left: 0;
+        text-align: center;
+        font-weight: normal;
+        margin-block-start : 0;
+    }
+        
+    .castingListe{
+        overflow-y: scroll;
+        justify-content: flex-start;
+        margin: 0 0 5vh 0;
+        padding-bottom: 6%;
+    }
+
+    .infoCasting {
+        width: 80vw;
+    }
+}

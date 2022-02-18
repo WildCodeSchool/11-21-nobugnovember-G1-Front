@@ -1,0 +1,92 @@
+[
+    {
+      "questionText": "Dans Dirty Dancing, quel âge à 'Bébé' ?",
+      "answerOptions": [
+        { "answerText": "18 ans", "isCorrect": false },
+        { "answerText": "19 ans", "isCorrect": false },
+        { "answerText": "17 ans", "isCorrect": true },
+        { "answerText": "20 ans", "isCorrect": false }
+      ]
+    },
+    {
+      "questionText": "Dans Titanic, qui est la vraie Rose ?",
+      "answerOptions": [
+        { "answerText": "Gloria Stuart", "isCorrect": true },
+        { "answerText": "Gloria Estefan", "isCorrect": false },
+        { "answerText": "Gloria Gaynor", "isCorrect": false },
+        { "answerText": "Gloria Stanford", "isCorrect": false }
+      ]
+    },
+    {
+      "questionText": "Dans La Proposition, pourquoi Margaret veut se marier avec Andrew ?",
+      "answerOptions": [
+        { "answerText": "Elle l’aime", "isCorrect": false },
+        { "answerText": "Pour avoir son visa", "isCorrect": true },
+        { "answerText": "Pour sa fortune", "isCorrect": false },
+        { "answerText": "A cause de la pression sociale", "isCorrect": false }
+      ]
+    },
+    {
+      "questionText": "Dans 50 Nuances de Grey, qui est Elena Lincoln ?",
+      "answerOptions": [
+        { "answerText": "Sa mère", "isCorrect": false },
+        { "answerText": "Sa soeur", "isCorrect": false },
+        { "answerText": "Sa maîtresse SM", "isCorrect": true },
+        { "answerText": "Sa voisine", "isCorrect": false }
+      ]
+    },
+    {
+      "questionText": "Quel est l’American Dream de Gatsby ?",
+      "answerOptions": [
+        { "answerText": "L’argent", "isCorrect": false },
+        { "answerText": "C’est Daisy", "isCorrect": true },
+        { "answerText": "La célébrité", "isCorrect": false },
+        { "answerText": "Avoir une piscine", "isCorrect": false }
+      ]
+    },
+    {
+      "questionText": "Dans The Holiday, quel est le lien entre Graham et Iris ?",
+      "answerOptions": [
+        { "answerText": "Amants", "isCorrect": false },
+        { "answerText": "Frère et soeur", "isCorrect": true },
+        { "answerText": "Père et fille", "isCorrect": false },
+        { "answerText": "Chien et chatte", "isCorrect": false }
+      ]
+    },
+    {
+      "questionText": "Dans L’Arnacoeur, quel est le métier d’Alex ?",
+      "answerOptions": [
+        { "answerText": "Briseur de nuque professionnel", "isCorrect": false },
+        { "answerText": "Briseur de coeur professionnel", "isCorrect": false },
+        { "answerText": "Briseur de couple professionnel", "isCorrect": true },
+        { "answerText": "Briseur de rêve professionnel", "isCorrect": false }
+      ]
+    },
+    {
+      "questionText": "Dans La Chronique des Bridgerton, qu'est-ce que Simon refuse d’avoir ?",
+      "answerOptions": [
+        { "answerText": "Des Crocs, c’est moche", "isCorrect": false },
+        { "answerText": "Des chats, ça griffe", "isCorrect": false },
+        { "answerText": "Une femme, c’est chiant", "isCorrect": false },
+        { "answerText": "Des enfants, rejet du paternel", "isCorrect": true }
+      ]
+    },
+    {
+      "questionText": "Dans Sex & the City, quel est le prénom de Mister Big ?",
+      "answerOptions": [
+        { "answerText": "John", "isCorrect": true },
+        { "answerText": "Bob", "isCorrect": false },
+        { "answerText": "Lewis", "isCorrect": false },
+        { "answerText": "Aidan", "isCorrect": false }
+      ]
+    },
+    {
+      "questionText": "Quand Bridget Jones prépare un diner d’anniversaire, qui arrive à l’improviste et l’aide ?",
+      "answerOptions": [
+        { "answerText": "Jack", "isCorrect": false },
+        { "answerText": "Daniel", "isCorrect": false },
+        { "answerText": "Mark", "isCorrect": true },
+        { "answerText": "Philippe", "isCorrect": false }
+      ]
+    }
+  ]

@@ -1,0 +1,125 @@
+[
+    {
+      "questionText": "Comment s'appelle le paquebot dans Titanic ?",
+      "answerOptions": [
+        { "answerText": "Santa Maria", "isCorrect": false },
+        { "answerText": "Titanic", "isCorrect": true },
+        { "answerText": "Mayflower", "isCorrect": false },
+        { "answerText": "Charles de Gaulle", "isCorrect": false }
+      ]
+    },
+    {
+      "questionText": "Dans Million Dollar Baby, que devient la boxeuse à la fin du film ?",
+      "answerOptions": [
+        { "answerText": "Elle devient championne du monde", "isCorrect": false },
+        { "answerText": "Elle devient entraineuse de boxe", "isCorrect": false },
+        { "answerText": "Elle chûte et devient tétrapligue", "isCorrect": true },
+        { "answerText": "Elle se casse les mains", "isCorrect": false }
+      ]
+    },
+    {
+      "questionText": "De quoi parle le film Hatchi ?",
+      "answerOptions": [
+        { "answerText": "Un chien qui attend son maitre", "isCorrect": true },
+        { "answerText": "Un enfant recherchant son père", "isCorrect": false },
+        { "answerText": "Un poisson qui recherche sa famille", "isCorrect": false },
+        { "answerText": "Un étudiant qui cherche l'amour", "isCorrect": false }
+      ]
+    },
+    {
+      "questionText": "Dans The NoteBook / N'oublie Jamais', de quelle maladie est atteinte Allie ?",
+      "answerOptions": [
+        { "answerText": "Gilles de la Tourette", "isCorrect": false },
+        { "answerText": "Parkinson", "isCorrect": false },
+        { "answerText": "Cancer", "isCorrect": false },
+        { "answerText": "Alzheimer", "isCorrect": true }
+      ]
+    },
+    {
+      "questionText": "Dans PS. I LOVE YOU, qu'a fait le mari avant de mourir ?",
+      "answerOptions": [
+        {
+          "answerText": "Il a mis en place un jeu de gages à executer afin que sa femme retrouve la joie de vivre malgré sa perte",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Il a légué son richissime héritage quelques heures avant sa mort",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Il a couché avec de nombreuses ex-copines",
+          "isCorrect": false
+        },
+        {
+          "''answerText''": "Il s'est caché dans une benne et a fini compresser dans le camion de la voirie",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "questionText": "Dans Le Pianiste, au début du film, oùse cache le pianiste ?",
+      "answerOptions": [
+        { "answerText": "Dans le grenier", "isCorrect": true },
+        { "answerText": "Dans la cave", "isCorrect": false },
+        { "answerText": "Dans le garage", "isCorrect": false },
+        { "answerText": "Sous l'escalier de l'hotel", "isCorrect": false }
+      ]
+    },
+    {
+      "questionText": "Dans Les petits mouchoirs, que fait le personnage de Jean Dujardin ?",
+      "answerOptions": [
+        {
+          "answerText": "Il recherche sa femme en Corse et part travailler en Italie",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Il danse en boîte, conduit un scooter, meurt à l'hopital",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Il réussit un concours de Police et devient lieutenant en brigade",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Il vend du crack et devient un riche dealer parisien",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Dans The Walking Dead, quel nom porte la batte de baseball de Negan ? ",
+      "answerOptions": [
+        {
+          "answerText": "Molly",
+          "isCorrect": false
+        },
+        { "answerText": "Rebecca", "isCorrect": false },
+        { "answerText": "Lucille", "isCorrect": true },
+        { "answerText": "Cindy", "isCorrect": false }
+      ]
+    },
+    {
+      "questionText": "Dans le dernier épisode de la série Desperate Housewives, que se passe t-il ?",
+      "answerOptions": [
+        {
+          "answerText": "Gabrielle Solis se fait écraser par un camion et meurt sur le coup",
+          "isCorrect": false
+        },
+        { "answerText": "Peter McCaloway tue Carlos Solis et kidnappe Chacal", "isCorrect": false },
+        { "answerText": "Mike se fait tirer dessus et meurt dans les bras de sa femme", "isCorrect": true },
+        { "answerText": "Le jardinier tue Gabrielle Solis et kidnappe Carlos Solis", "isCorrect": false }
+      ]
+    },
+    {
+      "questionText": "Dans la ligne Verte, pourquoi John Coffey est en prison ?",
+      "answerOptions": [
+        { "answerText": "Homicide sur 2 policiers", "isCorrect": false },
+        { "answerText": "Viol et homicide sur 2 fillettes", "isCorrect": true },
+        { "answerText": "Il est aller en boîte avec la carted'identité de John Smith", "isCorrect": false },
+        {
+          "answerText": "Conduite d'une voiture en état d'ivresse ",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]

@@ -1,0 +1,92 @@
+[
+{
+    "questionText": "Quelle citation est attitrée au personnage principal de The Mask ?",
+    "answerOptions": [
+      { "answerText": "ENOOOOOOOOOORME !", "isCorrect": false },
+      { "answerText": "PAS MAAAAAAAAAL !", "isCorrect": false },
+      { "answerText": "SPLEEEEEEENDIDE !", "isCorrect": true },
+      { "answerText": "OH MY GOD! BECKY LOOK AT HER BUTT !", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Dans quel film entend-on 'Tu es un laidron mais tu es bien bonne !' ?",
+    "answerOptions": [
+      { "answerText": "Very Bad Trip", "isCorrect": false },
+      { "answerText": "Les visiteurs", "isCorrect": true },
+      { "answerText": "Brice de Nice", "isCorrect": false },
+      { "answerText": "Austin Powers", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Quel personnage célèbre est joué par Rowan Atkinson ?",
+    "answerOptions": [
+      { "answerText": "Dr Strange", "isCorrect": false },
+      { "answerText": "Mr Bean", "isCorrect": true },
+      { "answerText": "The Arrow", "isCorrect": false },
+      { "answerText": "The Witcher", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "De quel film provient l'expression : 'Pas de bras, pas de chocolat !'",
+    "answerOptions": [
+      { "answerText": "Les Bronzés font du ski", "isCorrect": false },
+      { "answerText": "Oss 117", "isCorrect": false },
+      { "answerText": "Babysitter", "isCorrect": false },
+      { "answerText": "Intouchables", "isCorrect": true }
+    ]
+  },
+  {
+    "questionText": "Quel sport collectif est pratiqué dans le film 'Rrrrrrr!' ?",
+    "answerOptions": [
+      { "answerText": "Froggy-Pong", "isCorrect": false },
+      { "answerText": "Yorkmouth", "isCorrect": false },
+      { "answerText": "Fourche-Ball", "isCorrect": false },
+      { "answerText": "Biche-Volley", "isCorrect": true }
+    ]
+  },
+  {
+    "questionText": "Dans quel film aperçoit-on 'Double Gras' ?",
+    "answerOptions": [
+      { "answerText": "Austin Powers", "isCorrect": true },
+      { "answerText": "Oss 117", "isCorrect": false },
+      { "answerText": "Fatal Bazooka", "isCorrect": false },
+      { "answerText": "La tour Montparnasse Infernale", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Dans Family Business, que produit la famille ?",
+    "answerOptions": [
+      { "answerText": "de la Marijuana", "isCorrect": true },
+      { "answerText": "des Glaces", "isCorrect": false },
+      { "answerText": "de la Musique", "isCorrect": false },
+      { "answerText": "de l'Alcool", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "D'où vient Borat ?",
+    "answerOptions": [
+      { "answerText": "Etats-Unis", "isCorrect": false },
+      { "answerText": "Pologne", "isCorrect": false },
+      { "answerText": "Ouzbékistan", "isCorrect": false },
+      { "answerText": "Kazakhstan", "isCorrect": true }
+    ]
+  },
+  {
+    "questionText": "Dans Scary Movie, que fait la journaliste lors de l'interview avec Doofy ?",
+    "answerOptions": [
+      { "answerText": "Elle lui donne son numéro", "isCorrect": false },
+      { "answerText": "Elle lui suce le doigt ", "isCorrect": true },
+      { "answerText": "Elle lui demande de visiter le campus", "isCorrect": false },
+      { "answerText": "Elle lui dit d'aller à la bibliothèque", "isCorrect": true }
+    ]
+  },
+  {
+    "questionText": "Comment s'appele le héros de OSS117 ?",
+    "answerOptions": [
+      { "answerText": "Jean-luc", "isCorrect": false },
+      { "answerText": "Hubert Bonisseur de la Bath", "isCorrect": true },
+      { "answerText": "Fatal Bazooka", "isCorrect": false },
+      { "answerText": "Bill Tremendous", "isCorrect": false }
+    ]
+  }
+]

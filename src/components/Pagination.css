@@ -1,0 +1,77 @@
+.pagination{
+    background: linear-gradient(135deg, #2d2e31 0%, #3b3b3b 100%);
+    box-shadow: 0px 0px 8px  #ffdd6c4d; /*C est ici qu'on change le contour*/
+    opacity: 1;
+    border: 2px solid #ffffff57;
+    border-radius: 40px;
+    padding : 10px; 
+    display: flex; 
+    justify-content: center;
+    align-items:center;
+    color: white;
+    width: 150px;
+
+}
+
+.paginationContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.page{
+    padding: 15px;  
+    cursor:pointer; 
+}
+
+.current{
+    font-size: 18px; 
+    font-weight: 700;
+    border: 5px solid #FFDC6C; 
+    border-radius: 50%;
+    padding: 12px 15px; 
+}
+
+.chevron{
+    width: 20px; 
+
+}
+
+.chevroninactif{
+    width: 20px; 
+    cursor: not-allowed; 
+}
+
+@media screen and (max-width: 750px){
+    .pagination {
+        background: linear-gradient(135deg
+    , #2d2e31 0%, #3b3b3b 100%);
+        box-shadow: 0px 3px 10px 1px #030303;
+        opacity: 1;
+        border-radius: 25px;
+        padding: 1%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        width: auto;
+        margin: 0;
+    }
+
+    .current {
+        font-weight: 700;
+        border-radius: 50%;
+        padding: 4px 10px;
+        vertical-align: center;
+    }
+
+    .page {
+        padding: 0 10px;
+        cursor: pointer;
+    }
+
+
+
+
+
+}

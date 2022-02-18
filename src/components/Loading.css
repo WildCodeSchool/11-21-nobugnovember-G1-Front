@@ -1,0 +1,26 @@
+.loading-container{
+    display:flex;
+    justify-content: center;
+    color:#feda55;
+}
+.loading-img{
+    height: 150px;
+    width: 150px;
+    animation: rotating 1s linear infinite;
+}
+
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width : 800px){
+    .loading-img{
+        height: 80px;
+        width: 80px; 
+    }
+}

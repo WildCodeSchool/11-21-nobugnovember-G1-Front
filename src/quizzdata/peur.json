@@ -1,0 +1,92 @@
+[
+    {
+      "questionText": "Quel film existe vraiment ? ",
+      "answerOptions": [
+        { "answerText": "Lundi 06", "isCorrect": false },
+        { "answerText": "Vendredi 13", "isCorrect": true },
+        { "answerText": "Samedi 30", "isCorrect": false },
+        { "answerText": "Mercredi 24", "isCorrect": false }
+      ]
+    },
+    {
+      "questionText": "Quel personnage peut tuer ses victimes dans leur sommeil ?",
+      "answerOptions": [
+        { "answerText": "Magneto", "isCorrect": false },
+        { "answerText": "Deadpool", "isCorrect": false },
+        { "answerText": "Freddy", "isCorrect": true },
+        { "answerText": "Gollum", "isCorrect": false }
+      ]
+    },
+    {
+      "questionText": "En quelle année se passe le premier 'Conjuring' ?",
+      "answerOptions": [
+        { "answerText": "1971", "isCorrect": true },
+        { "answerText": "1912", "isCorrect": false },
+        { "answerText": "1944", "isCorrect": false },
+        { "answerText": "1936", "isCorrect": false }
+      ]
+    },
+    {
+      "questionText": "Comment s'appelle le jouet-tueur du petit Andy Barclay ?",
+      "answerOptions": [
+        { "answerText": "Buffy", "isCorrect": false },
+        { "answerText": "Chucky", "isCorrect": true },
+        { "answerText": "Annabelle", "isCorrect": false },
+        { "answerText": "Malory", "isCorrect": false }
+      ]
+    },
+    {
+      "questionText": "Comment s'appelle le fils de Chucky ?",
+      "answerOptions": [
+        { "answerText": "Vlad", "isCorrect": false },
+        { "answerText": "Connor", "isCorrect": false },
+        { "answerText": "Mika", "isCorrect": false },
+        { "answerText": "Glen", "isCorrect": true }
+      ]
+    },
+    {
+      "questionText": "Dans 'True Blood', comment s'appelle le vampire d'origine Viking ?",
+      "answerOptions": [
+        { "answerText": "Kibwe Akinjide", "isCorrect": false },
+        { "answerText": "Stan Baker", "isCorrect": false },
+        { "answerText": "Eric Northman", "isCorrect": true },
+        { "answerText": "Bill Compton", "isCorrect": false }
+      ]
+    },
+    {
+      "questionText": "Quel est le vrai nom du tueur au puzzle dans la franchise 'Saw' ?",
+      "answerOptions": [
+        { "answerText": "John Kramer", "isCorrect": true },
+        { "answerText": "Vladimir Ruskoff", "isCorrect": false },
+        { "answerText": "Will Alstead", "isCorrect": false },
+        { "answerText": "Mike Levy", "isCorrect": false }
+      ]
+    },
+    {
+      "questionText": "Dans 'The Walkind Dead', quel nom est donné aux morts-vivants ?",
+      "answerOptions": [
+        { "answerText": "Les zombies", "isCorrect": false },
+        { "answerText": "Les goules", "isCorrect": false },
+        { "answerText": "Les moches", "isCorrect": false },
+        { "answerText": "Les rôdeurs", "isCorrect": true }
+      ]
+    },
+    {
+      "questionText": "Dans la franchise 'Scream', quel est le nom du tueur en série ?",
+      "answerOptions": [
+        { "answerText": "Jigsaw", "isCorrect": false },
+        { "answerText": "Ghostface", "isCorrect": true },
+        { "answerText": "Zodiac", "isCorrect": false },
+        { "answerText": "Jhin", "isCorrect": false }
+      ]
+    },
+    {
+    "questionText": "Quelle est l'arme de prédilection de Jason dans 'Vendredi 13' ? ",
+      "answerOptions": [
+        { "answerText": "La tronçonneuse", "isCorrect": false },
+        { "answerText": "Le poison", "isCorrect": false },
+        { "answerText": "Les griffes", "isCorrect": false },
+        { "answerText": "La machette", "isCorrect": true }
+      ]
+    }
+  ]
